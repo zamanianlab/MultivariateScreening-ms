@@ -65,3 +65,5 @@ fig4 <- plot_grid(left, right,
 
 save_plot(here('Fig4/Fig4.pdf'),
           fig4, base_width = 8.66, base_height = 11)
+save_plot(here('Fig4/Fig4.png'),
+          fig4, base_width = 8.66, base_height = 11)

@@ -234,7 +234,8 @@ repeated <- rescaled_data %>%
     NULL
 )
 
-save_plot(here('Fig2', 'supplementary', 'SupplementaryFig1a.pdf'), 
+write_rds(repeated_plot, here('Fig2', 'supplementary', 'SupplementaryFig2a.rds'))
+save_plot(here('Fig2', 'supplementary', 'SupplementaryFig2a.pdf'), 
           repeated_plot, base_width = 8, base_height = 4)
 
 repeated_summary <- repeated %>%
@@ -472,6 +473,16 @@ area_between_curves <- comp_predict %>%
     ) +
     NULL)
 
-save_plot(here('Fig2/supplementary/SupplementaryFig1b.pdf'), comp_plot, base_width = 8, base_height = 6)
+write_rds(comp_plot, here('Fig2', 'supplementary', 'SupplementaryFig2b.rds'))
+save_plot(here('Fig2/supplementary/SupplementaryFig2b.pdf'), comp_plot, base_width = 8, base_height = 6)
 
 
+# export data -------------------------------------------------------------
+
+bind_cols(fit, temp) %>%
+  rename(estimate = V1, std_error = V2) %>%
+  mutate(name = str_c(assay_type, time_point, sep = '_')) %>% 
+  select(treatment, name, estimate) %>%
+  mutate(treatment = str_remove(treatment, " hydrochloride| maleate| citrate")) %>%
+  pivot_wider(names_from = name, values_from = estimate) %>% 
+  write_rds(here("Fig2/data/ec50.rds"))

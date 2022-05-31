@@ -213,4 +213,4 @@ saveRDS(optimization_plot, here("Fig3/subplots/optimized_fecundity.rds"))
    NULL
 )
 
-save_plot(here("Fig3/supplementary/SupplementaryFig2.pdf"), batch, base_width = 6, base_height = 6)
+save_plot(here("Fig3/supplementary/SupplementaryFig3.pdf"), batch, base_width = 6, base_height = 6)

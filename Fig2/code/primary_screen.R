@@ -461,7 +461,7 @@ save_plot(here('Fig2/subplots/Fig2h.pdf'), hit_bar,
 
 # export data -------------------------------------------------------------
 
-# hits %>%
-#   select(number, treatment, z_motility, z_viability) %>%
-#   mutate(treatment = str_remove(treatment, " hydrochloride| maleate| citrate")) %>%
-#   write_rds("data/z_scores.rds")
+hits %>%
+  select(number, treatment, z_motility, z_viability) %>%
+  mutate(treatment = str_remove(treatment, " hydrochloride| maleate| citrate")) %>%
+  write_rds(here("Fig2/data/z_scores.rds"))
