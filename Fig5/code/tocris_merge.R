@@ -171,6 +171,9 @@ cluster_labels <- tribble(
   19, 30.5, "**↓ Mf EC<sub>50</sub><br>↑ Adult effects**"
 )
 
+d_pal <- RColorBrewer::brewer.pal(11, 'RdGy')
+d_pal <- d_pal[-c(4, 5, 6, 7, 8)]
+
 # heatmap showing euclidean distances between treatments
 (dist_map <- hm %>%
     mutate(
@@ -184,7 +187,7 @@ cluster_labels <- tribble(
       rescale = scales::rescale(dist, to = c(-1, 1))
     ) %>%
     ggplot() +
-    geom_tile(aes(x = treatment, y = treatment2, fill = rescale)) +
+    geom_tile(aes(x = treatment, y = treatment2, color = rescale, fill = rescale)) +
     # highlight positive control
     annotate(
       geom = "rect",
@@ -248,6 +251,10 @@ cluster_labels <- tribble(
       low = "#ffbf46", high = "grey20", mid = "#575761",
       na.value = "black"
     ) +
+    scale_color_gradient2(
+      low = "#ffbf46", high = "grey20", mid = "#575761",
+      na.value = "black"
+    ) +
     coord_fixed() +
     theme_void() +
     theme(
@@ -264,7 +271,7 @@ cluster_labels <- tribble(
     mutate(across(.cols = c("Mf viability", "Mf motility"), ~ scales::rescale(.x, to = c(1, 0)))) %>%
     pivot_longer(where(is.numeric), names_to = "phenotype", values_to = "value") %>%
     ggplot() +
-    geom_tile(aes(x = treatment, y = phenotype, fill = value)) +
+    geom_tile(aes(x = treatment, y = phenotype, fill = value, color = value)) +
     annotate(
       geom = "rect",
       xmin = 5.5, ymin = 0.5,
@@ -287,6 +294,10 @@ cluster_labels <- tribble(
       color = "#273046", linetype = "solid", size = 1
     ) +
     scale_fill_gradient(
+      low = "#ffbf46", high = "grey20",
+      na.value = "black"
+    ) +
+    scale_color_gradient(
       low = "#ffbf46", high = "grey20",
       na.value = "black"
     ) +
@@ -329,7 +340,99 @@ cluster_labels <- tribble(
 heatmaps <- dist_map / pheno_map
 
 join <- ggdraw(heatmaps, xlim = c(0, 1), ylim = c(0, 1.3)) +
-  draw_plot(dendro, 0.182, 0.98, 0.8, 0.3)
+  draw_plot(dendro, 0.19, 0.98, 0.79, 0.2)
 
-save_plot(here("Fig5/Fig5.pdf"), join, base_height = 8.8, base_width = 6.5)
-ggsave(here("Fig5/Fig5.png"), join, height = 8.8, width = 6.5, units = "in", bg = "white")
+save_plot(here("Fig5/Fig5b.pdf"), join,
+          base_height = 8, base_width = 6)
+
+save_plot(here("Fig5/Fig5b.png"), join,
+          base_height = 8, base_width = 6)
+
+
+# upset plot --------------------------------------------------------------
+
+
+f_hits <- read_rds(here('Fig4/data/fecundity_hits.rds')) %>% 
+  mutate(stages = 'Adult female', phenotype = 'fecundity')
+m_hits <- read_rds(here('Fig4/data/motility_hits.rds')) %>% 
+  mutate(phenotype = 'motility')
+l_hits <- read_rds(here('Fig4/data/metabolism_hits.rds')) %>% 
+  mutate(phenotype = 'metabolism')
+
+hits <- bind_rows(f_hits, m_hits, l_hits) %>% 
+  select(-treatment_mean, -n, -n_hit) %>% 
+  filter(hit == 'Hit') 
+
+x_order <- c('Adult female_fecundity',
+             'Adult female_fecundity-Adult female_motility',
+             'Adult female_fecundity-Adult female_metabolism',
+             'Adult female_fecundity-Adult female_metabolism-Adult female_motility',
+             
+             'Adult female_fecundity-Adult female_metabolism-Adult female_motility-Adult male_metabolism-Adult male_motility',
+             'Adult female_fecundity-Adult female_metabolism-Adult female_motility-Adult male_motility',
+             'Adult female_fecundity-Adult female_metabolism-Adult male_metabolism',
+             'Adult female_fecundity-Adult male_motility',
+             'Adult female_metabolism-Adult male_motility',
+             
+             'Adult male_motility',
+             'Adult male_metabolism'
+)
+
+(upset <- hits %>%
+    mutate(phenotype = str_c(stages, phenotype, sep = "_")) %>%
+    group_by(treatment) %>%
+    summarise(phenotype = list(phenotype)) %>%
+    ggplot(aes(x = phenotype)) +
+    geom_bar(fill = 'grey20') +
+    scale_y_continuous(expand = expansion(mult = c(0, 0.05))) +
+    labs(x = 'Hit type', y = 'Assay hits') +
+    theme_nw2() +
+    theme(
+      axis.ticks.x = element_blank(),
+      axis.title.x = element_blank()
+    ) +
+    ggupset::scale_x_mergelist(sep = "-", limits = x_order) +
+    ggupset::axis_combmatrix(sep = "-", override_plotting_function = function(df) {
+      
+      df <- df %>%
+        mutate(
+          stages = case_when(
+            str_detect(single_label, 'female') ~ 'Female',
+            TRUE ~ 'Male'
+          ),
+          single_label = str_remove(single_label, 'Adult ') %>%
+            str_replace(., '_', ' ') %>% str_to_sentence(.)
+        )
+
+      # View(df)
+      
+      ggplot(df, aes(x = at, y = single_label)) +
+        geom_rect(aes(fill = index %% 2 == 0), ymin = df$index - 0.5, ymax = df$index + 0.5, xmin = 0, xmax = 1) +
+        geom_point(aes(color = stages, alpha = observed), size = 3) +
+        ylab("") +
+        xlab("") +
+        scale_x_continuous(limits = c(0, 1), expand = c(0, 0)) +
+        scale_fill_manual(values = c(`TRUE` = "white", `FALSE` = "#F7F7F7")) +
+        scale_color_manual(values = c('black', 'grey50')) +
+        guides(fill = "none", alpha = 'none') +
+        theme(
+          panel.background = element_blank(),
+          legend.position = 'none',
+          legend.title = element_blank(),
+          axis.text.x = element_blank(),
+          axis.ticks.y = element_blank(),
+          axis.ticks.length = unit(0, "pt"),
+          axis.title.y = element_blank(),
+          axis.title.x = element_blank(),
+          axis.line = element_blank(),
+          panel.border = element_blank()
+        )
+    }) +
+    theme(combmatrix.label.total_extra_spacing = unit(30, "pt"),
+          
+          )
+)
+
+save_plot(here("Fig5/Fig5a.pdf"), upset,
+          base_height = 3, base_width = 6)
+

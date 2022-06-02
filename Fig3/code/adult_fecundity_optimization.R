@@ -175,7 +175,7 @@ media_timeline <- tibble(
   theme_nw2() +
   theme(
     strip.text.y = element_blank(),
-    panel.grid.major.x = element_blank(),
+    # panel.grid.major.x = element_blank(),
     axis.line.x = element_blank(),
     axis.text.x = element_markdown(angle = 0, hjust = 0.5)
   ) +

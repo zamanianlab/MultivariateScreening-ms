@@ -57,7 +57,7 @@ data <- read_rds(here("Fig3/data/fecundity_data.rds")) %>%
     show.legend = FALSE, color = "black"
   ) +
   scale_y_continuous(labels = scales::percent, expand = expansion(mult = c(0, 0.05))) +
-  labs(x = "", y = "Inferred progeny<br>(percent 0 hr)", color = "Treatment") +
+  labs(x = "", y = "Inferred progeny<br>(Percent 0 hr)", color = "Treatment") +
   theme_nw2() +
   theme(
     panel.grid.major.x = element_blank(),

@@ -297,7 +297,7 @@ treatment_summary <- plot_data %>%
   theme_nw2() +
   theme(
     strip.text.x = element_blank(),
-    panel.grid.major.x = element_blank(),
+    # panel.grid.major.x = element_blank(),
     legend.position = "right"
   ) +
   NULL)
@@ -305,6 +305,7 @@ treatment_summary <- plot_data %>%
 distinct_plot <- lemon::reposition_legend(distinct_plot, "bottom right", panel = "panel-2-7")
 
 save_plot(here("Fig4/subplots/Fig4b.pdf"), distinct_plot, base_width = 5, base_height = 6)
+save_plot(here("Fig4/subplots/Fig4b.png"), distinct_plot, base_width = 5, base_height = 6)
 write_rds(distinct_plot, here("Fig4/subplots/distinct_lines.rds"))
 
 

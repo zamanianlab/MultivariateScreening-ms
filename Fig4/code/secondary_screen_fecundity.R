@@ -160,7 +160,7 @@ save_plot(here("Fig4/subplots/Fig4c_inset.pdf"), baseline, base_width = 3)
   ) +
   scale_y_continuous(labels = scales::percent, expand = expansion(mult = c(0, 0.05))) +
   facet_grid(cols = vars(stages), scales = "free_x") +
-  labs(x = "", y = "Inferred progeny, 48 hr<br>(percent 0 hr)", fill = "", color = "") +
+  labs(x = "", y = "Inferred progeny, 48 hr<br>(Percent 0 hr)", fill = "", color = "") +
   theme_nw2() +
   theme(
     panel.grid.major.x = element_blank(),

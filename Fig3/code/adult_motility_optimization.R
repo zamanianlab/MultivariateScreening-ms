@@ -165,7 +165,7 @@ pruned <- normalized %>%
   labs(x = "Time point (hr)", y = "Self-normalized motility", color = "Media", fill = "Media") +
   theme_nw2() +
   theme(
-    panel.grid.major.x = element_blank(),
+    # panel.grid.major.x = element_blank(),
     axis.text.x = element_markdown(angle = 0, hjust = 0.5)
   ) +
   NULL)
