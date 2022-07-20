@@ -1,0 +1,57 @@
+#nexus
+
+BEGIN Taxa;
+DIMENSIONS ntax=7;
+TAXLABELS
+[1] 'Homo_sapiens|sp|P51575|P2RX1_HUMAN'
+[2] 'Homo_sapiens|sp|Q99571|P2RX4_HUMAN'
+[3] 'Homo_sapiens|sp|Q93086|P2RX5_HUMAN'
+[4] 'Homo_sapiens|sp|Q9UBL9|P2RX2_HUMAN'
+[5] 'Homo_sapiens|sp|Q99572|P2RX7_HUMAN'
+[6] 'Homo_sapiens|sp|P56373|P2RX3_HUMAN'
+[7] 'Homo_sapiens|sp|O15547|P2RX6_HUMAN'
+;
+END; [Taxa]
+
+BEGIN Splits;
+DIMENSIONS ntax=7 nsplits=35;
+FORMAT labels=no weights=yes confidences=no intervals=no;
+MATRIX
+	100	 2,
+	100	 5,
+	67	 2 5,
+	100	 3,
+	100	 7,
+	86	 3 7,
+	100	 4,
+	100	 6,
+	75	 4 6,
+	94	 1 2 5,
+	100	 1,
+	9	 1 5,
+	23	 1 2,
+	25	 3 4 7,
+	0	 3 5 7,
+	2	 1 4 6,
+	1	 2 3 7,
+	6	 4 6 7,
+	0	 6 7,
+	3	 4 7,
+	1	 5 6,
+	1	 3 4,
+	3	 3 4 6,
+	0	 2 4 5,
+	1	 3 6 7,
+	0	 1 2 6,
+	0	 1 3 7,
+	1	 2 5 6,
+	0	 1 6,
+	0	 1 7,
+	1	 4 5 6,
+	0	 4 5,
+	0	 5 7,
+	0	 1 5 6,
+	0	 1 2 3,
+;
+END; [Splits]
+

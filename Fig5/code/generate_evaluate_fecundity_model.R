@@ -83,4 +83,4 @@ lm_testing_pred %>%
   NULL
 )
 
-cowplot::save_plot(here("Fig5/supplementary/SupplementaryFig4.pdf"), model_performance, base_height = 4, base_asp = 1)
+cowplot::save_plot(here("Fig5/supplementary/SupplementaryFig5.pdf"), model_performance, base_height = 4, base_asp = 1)

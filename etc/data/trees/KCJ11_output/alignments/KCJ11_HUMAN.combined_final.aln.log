@@ -1,0 +1,355 @@
+IQ-TREE multicore version 2.0.3 for Linux 64-bit built Dec 20 2020
+Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor,
+Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+
+Host:    ktryan2-9829147.5-parabyte2000.chtc.wisc.edu (AVX512, FMA3, 503 GB RAM)
+Command: iqtree -s work/alignments/KCJ11_HUMAN.combined_final.aln -nt AUTO -alrt 1000 -bb 1000 -redo
+Seed:    464590 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Sat Feb 19 01:25:36 2022
+Kernel:  AVX+FMA - auto-detect threads (80 CPU cores detected)
+
+Reading alignment file work/alignments/KCJ11_HUMAN.combined_final.aln ... Fasta format detected
+Alignment most likely contains protein sequences
+Alignment has 47 sequences with 355 columns, 341 distinct patterns
+311 parsimony-informative, 17 singleton sites, 27 constant sites
+                                          Gap/Ambiguity  Composition  p-value
+   1  Homo_sapiens|sp|Q9NPI9|KCJ16_HUMAN          3.66%    passed     97.96%
+   2  Homo_sapiens|sp|B7U540|KCJ18_HUMAN          0.85%    passed     92.22%
+   3  Homo_sapiens|sp|Q14500|KCJ12_HUMAN          0.85%    passed     95.94%
+   4  Homo_sapiens|sp|P63252|KCNJ2_HUMAN          0.85%    passed     97.65%
+   5  Homo_sapiens|sp|P48050|KCNJ4_HUMAN          3.66%    passed     69.40%
+   6  Homo_sapiens|sp|Q9UNX9|KCJ14_HUMAN          0.28%    failed      0.00%
+   7  Homo_sapiens|sp|P48549|KCNJ3_HUMAN          0.85%    passed     86.53%
+   8  Homo_sapiens|sp|P48051|KCNJ6_HUMAN          1.69%    passed     99.06%
+   9  Homo_sapiens|sp|P48544|KCNJ5_HUMAN          1.97%    passed     98.02%
+  10  Homo_sapiens|sp|Q92806|KCNJ9_HUMAN          3.94%    passed     14.60%
+  11  Homo_sapiens|sp|Q14654|KCJ11_HUMAN          4.51%    passed     81.02%
+  12  Homo_sapiens|sp|Q15842|KCNJ8_HUMAN          1.41%    passed     68.31%
+  13  Homo_sapiens|sp|P48048|KCNJ1_HUMAN          0.56%    passed     65.43%
+  14  Homo_sapiens|sp|P78508|KCJ10_HUMAN          4.23%    passed     44.27%
+  15  Homo_sapiens|sp|Q99712|KCJ15_HUMAN          3.94%    passed     85.43%
+  16  ascaris_suum|AgR023_g052_t01                0.28%    passed     99.65%
+  17  ascaris_suum|AgR023_g052_t03                0.28%    passed     99.65%
+  18  ascaris_suum|AgR023_g052_t02                0.00%    passed     99.57%
+  19  ascaris_suum|AgR023_g052_t04                0.00%    passed     99.57%
+  20  brugia_malayi|Bm5060a.1                     1.41%    passed     84.60%
+  21  brugia_malayi|Bm5060b.1                     2.25%    passed     84.70%
+  22  caenorhabditis_elegans|M02A10.2a.1          1.41%    passed    100.00%
+  23  caenorhabditis_elegans|M02A10.2a.2          1.41%    passed    100.00%
+  24  caenorhabditis_elegans|M02A10.2d.1          1.41%    passed    100.00%
+  25  caenorhabditis_elegans|M02A10.2b.1          1.41%    passed    100.00%
+  26  caenorhabditis_elegans|M02A10.2c.1          1.41%    passed    100.00%
+  27  caenorhabditis_elegans|M02A10.2e.1          0.00%    passed    100.00%
+  28  caenorhabditis_elegans|M02A10.2f.1          0.00%    passed    100.00%
+  29  strongyloides_ratti|SRAE_X000010200.1       0.56%    passed     83.89%
+  30  caenorhabditis_elegans|R03E9.4.1            0.00%    passed     87.66%
+  31  caenorhabditis_elegans|R03E9.4.2            0.00%    passed     87.66%
+  32  ancylostoma_caninum|ANCCAN_22100            2.25%    passed     96.84%
+  33  haemonchus_contortus|HCON_00166530-00001    2.25%    passed     94.59%
+  34  caenorhabditis_elegans|K04G11.5a.1          1.69%    passed     99.98%
+  35  caenorhabditis_elegans|K04G11.5a.2          1.69%    passed     99.98%
+  36  caenorhabditis_elegans|K04G11.5a.3          1.69%    passed     99.98%
+  37  caenorhabditis_elegans|K04G11.5c.1          1.69%    passed     99.98%
+  38  caenorhabditis_elegans|K04G11.5d.1          1.69%    passed     99.98%
+  39  caenorhabditis_elegans|K04G11.5b.1          1.69%    passed     99.98%
+  40  ascaris_suum|AgR008_g108_t01                1.13%    passed     70.00%
+  41  ascaris_suum|AgR008_g108_t02                1.13%    passed     70.00%
+  42  ascaris_suum|AgR008_g108_t03                1.13%    passed     70.00%
+  43  ascaris_suum|AgR008_g108_t05                1.13%    passed     70.00%
+  44  strongyloides_ratti|SRAE_1000165600.1       0.00%    passed     67.85%
+  45  brugia_malayi|Bm11664.1                     2.82%    passed     19.08%
+  46  trichuris_muris|TMUE_2000006470.1           2.82%    passed     37.67%
+  47  Homo_sapiens|sp|O60928|KCJ13_HUMAN          5.63%    passed     42.04%
+****  TOTAL                                       1.61%  1 sequences failed composition chi2 test (p-value<5%; df=19)
+NOTE: ascaris_suum|AgR023_g052_t03 is identical to ascaris_suum|AgR023_g052_t01 but kept for subsequent analysis
+NOTE: ascaris_suum|AgR023_g052_t04 is identical to ascaris_suum|AgR023_g052_t02 but kept for subsequent analysis
+NOTE: caenorhabditis_elegans|M02A10.2a.2 is identical to caenorhabditis_elegans|M02A10.2a.1 but kept for subsequent analysis
+NOTE: caenorhabditis_elegans|M02A10.2f.1 is identical to caenorhabditis_elegans|M02A10.2e.1 but kept for subsequent analysis
+NOTE: caenorhabditis_elegans|R03E9.4.2 is identical to caenorhabditis_elegans|R03E9.4.1 but kept for subsequent analysis
+NOTE: caenorhabditis_elegans|K04G11.5a.2 is identical to caenorhabditis_elegans|K04G11.5a.1 but kept for subsequent analysis
+NOTE: ascaris_suum|AgR008_g108_t02 is identical to ascaris_suum|AgR008_g108_t01 but kept for subsequent analysis
+NOTE: 9 identical sequences (see below) will be ignored for subsequent analysis
+NOTE: caenorhabditis_elegans|M02A10.2d.1 (identical to caenorhabditis_elegans|M02A10.2a.1) is ignored but added at the end
+NOTE: caenorhabditis_elegans|M02A10.2b.1 (identical to caenorhabditis_elegans|M02A10.2a.1) is ignored but added at the end
+NOTE: caenorhabditis_elegans|M02A10.2c.1 (identical to caenorhabditis_elegans|M02A10.2a.1) is ignored but added at the end
+NOTE: caenorhabditis_elegans|K04G11.5a.3 (identical to caenorhabditis_elegans|K04G11.5a.1) is ignored but added at the end
+NOTE: caenorhabditis_elegans|K04G11.5c.1 (identical to caenorhabditis_elegans|K04G11.5a.1) is ignored but added at the end
+NOTE: caenorhabditis_elegans|K04G11.5d.1 (identical to caenorhabditis_elegans|K04G11.5a.1) is ignored but added at the end
+NOTE: caenorhabditis_elegans|K04G11.5b.1 (identical to caenorhabditis_elegans|K04G11.5a.1) is ignored but added at the end
+NOTE: ascaris_suum|AgR008_g108_t03 (identical to ascaris_suum|AgR008_g108_t01) is ignored but added at the end
+NOTE: ascaris_suum|AgR008_g108_t05 (identical to ascaris_suum|AgR008_g108_t01) is ignored but added at the end
+Alignment was printed to work/alignments/KCJ11_HUMAN.combined_final.aln.uniqueseq.phy
+
+For your convenience alignment with unique sequences printed to work/alignments/KCJ11_HUMAN.combined_final.aln.uniqueseq.phy
+
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.008 seconds
+Measuring multi-threading efficiency up to 80 CPU cores
+Increase to 10 rounds for branch lengths
+149 trees examined
+Threads: 1 / Time: 80.409 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -20416
+Threads: 2 / Time: 43.134 sec / Speedup: 1.864 / Efficiency: 93% / LogL: -20416
+Threads: 3 / Time: 37.570 sec / Speedup: 2.140 / Efficiency: 71% / LogL: -20416
+Threads: 4 / Time: 23.879 sec / Speedup: 3.367 / Efficiency: 84% / LogL: -20416
+Threads: 5 / Time: 24.167 sec / Speedup: 3.327 / Efficiency: 67% / LogL: -20416
+Threads: 6 / Time: 24.373 sec / Speedup: 3.299 / Efficiency: 55% / LogL: -20416
+Threads: 7 / Time: 31.864 sec / Speedup: 2.524 / Efficiency: 36% / LogL: -20416
+BEST NUMBER OF THREADS: 4
+
+Perform fast likelihood tree search using LG+I+G model...
+Estimate model parameters (epsilon = 5.000)
+Perform nearest neighbor interchange...
+Estimate model parameters (epsilon = 1.000)
+1. Initial log-likelihood: -13281.112
+Optimal log-likelihood: -13280.736
+Proportion of invariable sites: 0.045
+Gamma shape alpha: 1.181
+Parameters optimization took 1 rounds (0.084 sec)
+Time for fast ML tree search: 0.509 seconds
+
+NOTE: ModelFinder requires 22 MB RAM!
+ModelFinder will test up to 546 protein models (sample size: 355) ...
+ No. Model         -LnL         df  AIC          AICc         BIC
+  1  LG            13893.462    73  27932.923    27971.372    28215.588
+  2  LG+I          13741.593    74  27631.185    27670.828    27917.722
+  3  LG+G4         13286.045    74  26720.089    26759.732    27006.626
+  4  LG+I+G4       13280.598    75  26711.196    26752.056    27001.605
+  5  LG+R2         13352.191    75  26854.381    26895.241    27144.790
+  6  LG+R3         13297.342    77  26748.684    26792.049    27046.837
+  7  LG+R4         13265.176    79  26688.352    26734.315    26994.249
+  8  LG+R5         13265.033    81  26692.066    26740.725    27005.707
+ 17  LG+F+I+G4     13280.770    94  26749.539    26818.232    27113.518
+ 20  LG+F+R4       13265.241    98  26726.481    26802.278    27105.949
+ 30  WAG+I+G4      13357.833    75  26865.665    26906.525    27156.074
+ 33  WAG+R4        13350.323    79  26858.646    26904.609    27164.543
+ 43  WAG+F+I+G4    13314.526    94  26817.052    26885.744    27181.031
+ 46  WAG+F+R4      13305.865    98  26807.730    26883.527    27187.198
+ 56  JTT+I+G4      13368.179    75  26886.358    26927.219    27176.767
+ 59  JTT+R4        13358.940    79  26875.881    26921.844    27181.778
+ 69  JTT+F+I+G4    13339.639    94  26867.278    26935.970    27231.257
+ 72  JTT+F+R4      13331.059    98  26858.118    26933.915    27237.586
+ 82  JTTDCMut+I+G4 13369.617    75  26889.234    26930.094    27179.642
+ 85  JTTDCMut+R4   13360.485    79  26878.970    26924.933    27184.867
+ 95  JTTDCMut+F+I+G4 13339.554    94  26867.108    26935.800    27231.087
+ 98  JTTDCMut+F+R4 13330.893    98  26857.786    26933.583    27237.254
+108  DCMut+I+G4    13516.675    75  27183.350    27224.210    27473.758
+111  DCMut+R4      13508.085    79  27174.170    27220.133    27480.067
+121  DCMut+F+I+G4  13411.800    94  27011.600    27080.292    27375.579
+124  DCMut+F+R4    13402.037    98  27000.074    27075.871    27379.541
+134  VT+I+G4       13360.979    75  26871.957    26912.817    27162.366
+137  VT+R4         13354.324    79  26866.648    26912.612    27172.546
+147  VT+F+I+G4     13344.185    94  26876.369    26945.061    27240.348
+150  VT+F+R4       13337.248    98  26870.496    26946.293    27249.964
+160  PMB+I+G4      13435.834    75  27021.667    27062.527    27312.076
+163  PMB+R4        13427.328    79  27012.656    27058.619    27318.553
+173  PMB+F+I+G4    13451.582    94  27091.165    27159.857    27455.144
+176  PMB+F+R4      13442.520    98  27081.040    27156.836    27460.507
+186  Blosum62+I+G4 13428.595    75  27007.190    27048.050    27297.598
+189  Blosum62+R4   13423.834    79  27005.668    27051.632    27311.565
+199  Blosum62+F+I+G4 13439.073    94  27066.145    27134.837    27430.124
+202  Blosum62+F+R4 13433.208    98  27062.415    27138.212    27441.883
+212  Dayhoff+I+G4  13516.108    75  27182.217    27223.077    27472.626
+215  Dayhoff+R4    13507.498    79  27172.997    27218.961    27478.894
+225  Dayhoff+F+I+G4 13411.262    94  27010.524    27079.217    27374.503
+228  Dayhoff+F+R4  13401.504    98  26999.007    27074.804    27378.475
+238  mtREV+I+G4    13837.085    75  27824.169    27865.029    28114.578
+241  mtREV+R4      13826.673    79  27811.345    27857.309    28117.243
+251  mtREV+F+I+G4  13461.178    94  27110.355    27179.048    27474.334
+254  mtREV+F+R4    13445.766    98  27087.531    27163.328    27466.999
+264  mtART+I+G4    13941.827    75  28033.654    28074.514    28324.063
+267  mtART+R4      13914.813    79  27987.627    28033.591    28293.524
+277  mtART+F+I+G4  13601.200    94  27390.400    27459.092    27754.379
+280  mtART+F+R4    13576.789    98  27349.578    27425.375    27729.046
+290  mtZOA+I+G4    13671.247    75  27492.494    27533.355    27782.903
+293  mtZOA+R4      13650.288    79  27458.576    27504.540    27764.474
+303  mtZOA+F+I+G4  13447.677    94  27083.354    27152.047    27447.334
+306  mtZOA+F+R4    13426.102    98  27048.204    27124.001    27427.671
+316  mtMet+I+G4    13808.791    75  27767.583    27808.443    28057.991
+319  mtMet+R4      13796.596    79  27751.192    27797.156    28057.089
+329  mtMet+F+I+G4  13456.224    94  27100.449    27169.141    27464.428
+332  mtMet+F+R4    13441.771    98  27079.541    27155.338    27459.009
+342  mtVer+I+G4    13937.763    75  28025.527    28066.387    28315.936
+345  mtVer+R4      13931.358    79  28020.716    28066.679    28326.613
+355  mtVer+F+I+G4  13623.418    94  27434.836    27503.529    27798.816
+358  mtVer+F+R4    13608.796    98  27413.591    27489.388    27793.059
+368  mtInv+I+G4    13893.167    75  27936.334    27977.195    28226.743
+371  mtInv+R4      13880.568    79  27919.136    27965.099    28225.033
+381  mtInv+F+I+G4  13391.683    94  26971.365    27040.058    27335.344
+384  mtInv+F+R4    13374.127    98  26944.255    27020.052    27323.723
+394  mtMAM+I+G4    14062.476    75  28274.952    28315.812    28565.360
+397  mtMAM+R4      14043.241    79  28244.483    28290.446    28550.380
+407  mtMAM+F+I+G4  13728.172    94  27644.344    27713.036    28008.323
+410  mtMAM+F+R4    13712.342    98  27620.684    27696.481    28000.151
+420  HIVb+I+G4     13599.111    75  27348.221    27389.081    27638.630
+423  HIVb+R4       13587.554    79  27333.108    27379.072    27639.005
+433  HIVb+F+I+G4   13570.578    94  27329.156    27397.848    27693.135
+436  HIVb+F+R4     13557.832    98  27311.664    27387.460    27691.131
+446  HIVw+I+G4     14186.853    75  28523.705    28564.566    28814.114
+449  HIVw+R4       14183.971    79  28525.942    28571.905    28831.839
+459  HIVw+F+I+G4   13902.833    94  27993.666    28062.358    28357.645
+462  HIVw+F+R4     13897.755    98  27991.511    28067.308    28370.978
+472  FLU+I+G4      13605.893    75  27361.786    27402.647    27652.195
+475  FLU+R4        13595.198    79  27348.395    27394.359    27654.293
+485  FLU+F+I+G4    13534.064    94  27256.129    27324.821    27620.108
+488  FLU+F+R4      13526.858    98  27249.715    27325.512    27629.183
+498  rtREV+I+G4    13448.331    75  27046.662    27087.522    27337.071
+501  rtREV+R4      13434.614    79  27027.228    27073.192    27333.126
+511  rtREV+F+I+G4  13377.135    94  26942.270    27010.962    27306.249
+514  rtREV+F+R4    13363.916    98  26923.833    26999.630    27303.300
+524  cpREV+I+G4    13381.782    75  26913.564    26954.424    27203.973
+527  cpREV+R4      13375.270    79  26908.539    26954.503    27214.436
+537  cpREV+F+I+G4  13359.147    94  26906.295    26974.987    27270.274
+540  cpREV+F+R4    13351.720    98  26899.440    26975.237    27278.908
+Akaike Information Criterion:           LG+R4
+Corrected Akaike Information Criterion: LG+R4
+Bayesian Information Criterion:         LG+R4
+Best-fit model: LG+R4 chosen according to BIC
+
+All model information printed to work/alignments/KCJ11_HUMAN.combined_final.aln.model.gz
+CPU time for ModelFinder: 1018.132 seconds (0h:16m:58s)
+Wall-clock time for ModelFinder: 327.411 seconds (0h:5m:27s)
+Generating 1000 samples for ultrafast bootstrap (seed: 464590)...
+
+NOTE: 9 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -13265.176
+Optimal log-likelihood: -13265.051
+Site proportion and rates:  (0.157,0.090) (0.424,0.434) (0.307,1.378) (0.112,3.375)
+Parameters optimization took 1 rounds (0.205 sec)
+Computing ML distances based on estimated model parameters... 0.237 sec
+Computing BIONJ tree...
+0.001 seconds
+Log-likelihood of BIONJ tree: -13283.047
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 1.158 second
+Computing log-likelihood of 98 initial trees ... 2.385 seconds
+Current best score: -13265.051
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -13264.915
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 2: -13263.533
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 5: -13262.844
+Estimate model parameters (epsilon = 0.100)
+UPDATE BEST LOG-LIKELIHOOD: -13262.736
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 7: -13262.634
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 8: -13262.537
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 9: -13262.447
+UPDATE BEST LOG-LIKELIHOOD: -13262.437
+Iteration 10 / LogL: -13262.437 / Time: 0h:0m:10s
+UPDATE BEST LOG-LIKELIHOOD: -13262.437
+Iteration 20 / LogL: -13262.437 / Time: 0h:0m:14s
+Finish initializing candidate tree set (12)
+Current best tree score: -13262.437 / CPU time: 14.240
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Iteration 30 / LogL: -13262.438 / Time: 0h:0m:19s (0h:0m:52s left)
+Iteration 40 / LogL: -13262.439 / Time: 0h:0m:23s (0h:0m:42s left)
+Iteration 50 / LogL: -13262.438 / Time: 0h:0m:29s (0h:0m:36s left)
+Log-likelihood cutoff on original alignment: -13298.659
+UPDATE BEST LOG-LIKELIHOOD: -13262.437
+Iteration 60 / LogL: -13262.680 / Time: 0h:0m:36s (0h:0m:30s left)
+Iteration 70 / LogL: -13262.438 / Time: 0h:0m:43s (0h:0m:24s left)
+Iteration 80 / LogL: -13262.440 / Time: 0h:0m:49s (0h:0m:18s left)
+UPDATE BEST LOG-LIKELIHOOD: -13262.437
+Iteration 90 / LogL: -13262.538 / Time: 0h:0m:55s (0h:0m:11s left)
+Iteration 100 / LogL: -13262.438 / Time: 0h:1m:1s (0h:0m:5s left)
+Log-likelihood cutoff on original alignment: -13298.659
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.998
+Iteration 110 / LogL: -13262.438 / Time: 0h:1m:8s (0h:0m:56s left)
+TREE SEARCH COMPLETED AFTER 110 ITERATIONS / Time: 0h:1m:8s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -13262.437
+2. Current log-likelihood: -13262.383
+3. Current log-likelihood: -13262.316
+4. Current log-likelihood: -13262.249
+5. Current log-likelihood: -13262.185
+6. Current log-likelihood: -13262.124
+7. Current log-likelihood: -13262.066
+8. Current log-likelihood: -13262.011
+9. Current log-likelihood: -13261.960
+10. Current log-likelihood: -13261.910
+11. Current log-likelihood: -13261.863
+12. Current log-likelihood: -13261.819
+13. Current log-likelihood: -13261.777
+14. Current log-likelihood: -13261.737
+15. Current log-likelihood: -13261.698
+16. Current log-likelihood: -13261.660
+17. Current log-likelihood: -13261.625
+18. Current log-likelihood: -13261.591
+19. Current log-likelihood: -13261.559
+20. Current log-likelihood: -13261.528
+21. Current log-likelihood: -13261.498
+22. Current log-likelihood: -13261.469
+23. Current log-likelihood: -13261.451
+24. Current log-likelihood: -13261.422
+25. Current log-likelihood: -13261.405
+26. Current log-likelihood: -13261.378
+27. Current log-likelihood: -13261.362
+28. Current log-likelihood: -13261.346
+29. Current log-likelihood: -13261.330
+30. Current log-likelihood: -13261.314
+31. Current log-likelihood: -13261.300
+32. Current log-likelihood: -13261.285
+33. Current log-likelihood: -13261.271
+34. Current log-likelihood: -13261.257
+35. Current log-likelihood: -13261.244
+36. Current log-likelihood: -13261.231
+37. Current log-likelihood: -13261.218
+38. Current log-likelihood: -13261.205
+39. Current log-likelihood: -13261.193
+40. Current log-likelihood: -13261.181
+41. Current log-likelihood: -13261.170
+42. Current log-likelihood: -13261.159
+43. Current log-likelihood: -13261.148
+44. Current log-likelihood: -13261.137
+45. Current log-likelihood: -13261.127
+Optimal log-likelihood: -13261.113
+Site proportion and rates:  (0.143,0.066) (0.440,0.430) (0.309,1.391) (0.107,3.468)
+Parameters optimization took 45 rounds (9.617 sec)
+BEST SCORE FOUND : -13261.113
+
+Testing tree branches by SH-like aLRT with 1000 replicates...
+0.239 sec.
+Creating bootstrap support values...
+Split supports printed to NEXUS file work/alignments/KCJ11_HUMAN.combined_final.aln.splits.nex
+Total tree length: 14.975
+
+Total number of iterations: 110
+CPU time used for tree search: 264.128 sec (0h:4m:24s)
+Wall-clock time used for tree search: 67.758 sec (0h:1m:7s)
+Total CPU time used: 305.207 sec (0h:5m:5s)
+Total wall-clock time used: 78.196 sec (0h:1m:18s)
+
+Computing bootstrap consensus tree...
+Reading input file work/alignments/KCJ11_HUMAN.combined_final.aln.splits.nex...
+38 taxa and 147 splits.
+Consensus tree written to work/alignments/KCJ11_HUMAN.combined_final.aln.contree
+Reading input trees file work/alignments/KCJ11_HUMAN.combined_final.aln.contree
+Log-likelihood of consensus tree: -13261.118
+
+Analysis results written to: 
+  IQ-TREE report:                work/alignments/KCJ11_HUMAN.combined_final.aln.iqtree
+  Maximum-likelihood tree:       work/alignments/KCJ11_HUMAN.combined_final.aln.treefile
+  Likelihood distances:          work/alignments/KCJ11_HUMAN.combined_final.aln.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          work/alignments/KCJ11_HUMAN.combined_final.aln.splits.nex
+  Consensus tree:                work/alignments/KCJ11_HUMAN.combined_final.aln.contree
+  Screen log file:               work/alignments/KCJ11_HUMAN.combined_final.aln.log
+
+Date and Time: Sat Feb 19 01:32:22 2022

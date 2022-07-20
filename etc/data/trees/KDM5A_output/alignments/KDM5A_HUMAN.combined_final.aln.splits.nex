@@ -1,0 +1,78 @@
+#nexus
+
+BEGIN Taxa;
+DIMENSIONS ntax=14;
+TAXLABELS
+[1] 'Homo_sapiens|sp|P41229|KDM5C_HUMAN'
+[2] 'Homo_sapiens|sp|Q9BY66|KDM5D_HUMAN'
+[3] 'Homo_sapiens|sp|Q9UGL1|KDM5B_HUMAN'
+[4] 'Homo_sapiens|sp|P29375|KDM5A_HUMAN'
+[5] 'trichuris_muris|TMUE_3000012252.1'
+[6] 'ascaris_suum|AgR010_g263_t01'
+[7] 'ascaris_suum|AgR010_g263_t04'
+[8] 'ascaris_suum|AgR010_g263_t05'
+[9] 'ascaris_suum|AgR010_g263_t06'
+[10] 'ascaris_suum|AgR010_g263_t07'
+[11] 'brugia_malayi|Bm7498.1'
+[12] 'caenorhabditis_elegans|ZK593.4a.1'
+[13] 'caenorhabditis_elegans|ZK593.4b.1'
+[14] 'haemonchus_contortus|HCON_00111910-00001'
+;
+END; [Taxa]
+
+BEGIN Splits;
+DIMENSIONS ntax=14 nsplits=49;
+FORMAT labels=no weights=yes confidences=no intervals=no;
+MATRIX
+	100	 2,
+	100	 3,
+	100	 5,
+	100	 6,
+	100	 7,
+	100	 10,
+	54	 7 10,
+	100	 8,
+	31	 7 8 10,
+	100	 9,
+	68	 7 8 9 10,
+	100	 6 7 8 9 10,
+	100	 11,
+	100	 6 7 8 9 10 11,
+	100	 12,
+	100	 13,
+	100	 12 13,
+	100	 14,
+	100	 12 13 14,
+	100	 1 2 3 4 5,
+	100	 1 2 3 4,
+	82	 1 2 4,
+	100	 4,
+	100	 1 2,
+	100	 1,
+	11	 3 4,
+	34	 7 9 10,
+	9	 6 8,
+	10	 7 9,
+	3	 6 9,
+	7	 6 7 9 10,
+	16	 7 8,
+	3	 6 7 8,
+	13	 9 10,
+	11	 8 9,
+	5	 8 9 10,
+	7	 1 2 3,
+	6	 6 7 8 10,
+	4	 7 8 9,
+	11	 8 10,
+	1	 6 7 10,
+	1	 6 9 10,
+	0	 6 8 10,
+	2	 6 7 9,
+	3	 6 7 8 9,
+	1	 6 10,
+	5	 6 8 9,
+	0	 6 7,
+	1	 6 8 9 10,
+;
+END; [Splits]
+

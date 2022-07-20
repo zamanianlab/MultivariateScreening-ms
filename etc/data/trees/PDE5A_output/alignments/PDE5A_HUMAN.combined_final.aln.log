@@ -1,0 +1,237 @@
+IQ-TREE multicore version 2.0.3 for Linux 64-bit built Dec 20 2020
+Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor,
+Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+
+Host:    ktryan2-9829290.1-e2005.chtc.wisc.edu (AVX512, FMA3, 503 GB RAM)
+Command: iqtree -s work/alignments/PDE5A_HUMAN.combined_final.aln -nt AUTO -alrt 1000 -bb 1000 -redo
+Seed:    11623 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Sun Feb 20 11:33:34 2022
+Kernel:  AVX+FMA - auto-detect threads (40 CPU cores detected)
+
+Reading alignment file work/alignments/PDE5A_HUMAN.combined_final.aln ... Fasta format detected
+Alignment most likely contains protein sequences
+Alignment has 28 sequences with 628 columns, 609 distinct patterns
+565 parsimony-informative, 24 singleton sites, 39 constant sites
+                                          Gap/Ambiguity  Composition  p-value
+   1  Homo_sapiens|sp|P35913|PDE6B_HUMAN          0.00%    passed     66.99%
+   2  Homo_sapiens|sp|P16499|PDE6A_HUMAN          0.00%    passed     63.17%
+   3  Homo_sapiens|sp|P51160|PDE6C_HUMAN          0.00%    passed     33.71%
+   4  Homo_sapiens|sp|O76074|PDE5A_HUMAN          1.43%    passed     26.41%
+   5  Homo_sapiens|sp|Q9HCR9|PDE11_HUMAN          0.00%    passed     80.35%
+   6  Homo_sapiens|sp|Q9Y233|PDE10_HUMAN          0.64%    passed     78.30%
+   7  ancylostoma_caninum|ANCCAN_17225           29.62%    passed     98.49%
+   8  ancylostoma_caninum|ANCCAN_21457           14.97%    passed     99.97%
+   9  haemonchus_contortus|HCON_00032050-00001    0.00%    passed     98.99%
+  10  ascaris_suum|AgB27X_g007_t01                2.07%    passed     99.63%
+  11  ascaris_suum|AgB27X_g007_t03                2.07%    passed     99.63%
+  12  ascaris_suum|AgB27X_g007_t05                0.00%    passed     99.92%
+  13  ascaris_suum|AgB27X_g007_t06                2.07%    passed     99.63%
+  14  ascaris_suum|AgB27X_g007_t07                0.00%    passed     99.92%
+  15  ascaris_suum|AgB27X_g007_t02                0.00%    passed     99.92%
+  16  ascaris_suum|AgB27X_g007_t04                0.00%    passed     99.92%
+  17  caenorhabditis_elegans|C32E12.2.1           0.16%    passed     94.50%
+  18  brugia_malayi|Bm2519a.1                     8.60%    passed     65.40%
+  19  brugia_malayi|Bm2519b.1                     0.64%    passed     50.66%
+  20  strongyloides_ratti|SRAE_2000123600.1       0.16%    passed     51.89%
+  21  brugia_malayi|Bm5306.1                      0.64%    passed     26.73%
+  22  haemonchus_contortus|HCON_00071770-00001   19.75%    passed     48.91%
+  23  strongyloides_ratti|SRAE_2000251300.1       0.32%    passed     33.06%
+  24  caenorhabditis_elegans|R08D7.6a.1          14.97%    passed     80.31%
+  25  caenorhabditis_elegans|R08D7.6b.1          14.97%    passed     80.31%
+  26  trichuris_muris|TMUE_0000001708.1           2.39%    passed     22.38%
+  27  trichuris_muris|TMUE_2000010242.1           2.39%    passed     22.38%
+  28  trichuris_muris|TMUE_3000012208.1           2.87%    passed     35.90%
+****  TOTAL                                       4.31%  0 sequences failed composition chi2 test (p-value<5%; df=19)
+NOTE: ascaris_suum|AgB27X_g007_t03 is identical to ascaris_suum|AgB27X_g007_t01 but kept for subsequent analysis
+NOTE: ascaris_suum|AgB27X_g007_t07 is identical to ascaris_suum|AgB27X_g007_t05 but kept for subsequent analysis
+NOTE: caenorhabditis_elegans|R08D7.6b.1 is identical to caenorhabditis_elegans|R08D7.6a.1 but kept for subsequent analysis
+NOTE: trichuris_muris|TMUE_2000010242.1 is identical to trichuris_muris|TMUE_0000001708.1 but kept for subsequent analysis
+NOTE: 3 identical sequences (see below) will be ignored for subsequent analysis
+NOTE: ascaris_suum|AgB27X_g007_t06 (identical to ascaris_suum|AgB27X_g007_t01) is ignored but added at the end
+NOTE: ascaris_suum|AgB27X_g007_t02 (identical to ascaris_suum|AgB27X_g007_t05) is ignored but added at the end
+NOTE: ascaris_suum|AgB27X_g007_t04 (identical to ascaris_suum|AgB27X_g007_t05) is ignored but added at the end
+Alignment was printed to work/alignments/PDE5A_HUMAN.combined_final.aln.uniqueseq.phy
+
+For your convenience alignment with unique sequences printed to work/alignments/PDE5A_HUMAN.combined_final.aln.uniqueseq.phy
+
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.010 seconds
+Measuring multi-threading efficiency up to 40 CPU cores
+Increase to 10 rounds for branch lengths
+53 trees examined
+Threads: 1 / Time: 40.170 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -25734
+Threads: 2 / Time: 28.374 sec / Speedup: 1.416 / Efficiency: 71% / LogL: -25734
+Threads: 3 / Time: 19.114 sec / Speedup: 2.102 / Efficiency: 70% / LogL: -25734
+Threads: 4 / Time: 14.328 sec / Speedup: 2.804 / Efficiency: 70% / LogL: -25734
+Threads: 5 / Time: 12.157 sec / Speedup: 3.304 / Efficiency: 66% / LogL: -25734
+Threads: 6 / Time: 16.968 sec / Speedup: 2.367 / Efficiency: 39% / LogL: -25734
+BEST NUMBER OF THREADS: 5
+
+Perform fast likelihood tree search using LG+I+G model...
+Estimate model parameters (epsilon = 5.000)
+Perform nearest neighbor interchange...
+Estimate model parameters (epsilon = 1.000)
+1. Initial log-likelihood: -18138.570
+Optimal log-likelihood: -18138.486
+Proportion of invariable sites: 0.049
+Gamma shape alpha: 2.112
+Parameters optimization took 1 rounds (0.158 sec)
+Time for fast ML tree search: 0.822 seconds
+
+NOTE: ModelFinder requires 26 MB RAM!
+ModelFinder will test up to 546 protein models (sample size: 628) ...
+ No. Model         -LnL         df  AIC          AICc         BIC
+  1  LG            18574.760    47  37243.520    37251.300    37452.320
+  2  LG+I          18403.382    48  36902.763    36910.888    37116.005
+  3  LG+G4         18159.142    48  36414.284    36422.408    36627.525
+  4  LG+I+G4       18138.484    49  36374.968    36383.446    36592.653
+  5  LG+R2         18194.951    49  36487.902    36496.380    36705.587
+  6  LG+R3         18138.378    51  36378.756    36387.964    36605.325
+  7  LG+R4         18132.723    53  36371.446    36381.418    36606.901
+ 17  LG+F+I+G4     18110.224    68  36356.448    36373.235    36658.541
+ 30  WAG+I+G4      18288.746    49  36675.492    36683.970    36893.177
+ 43  WAG+F+I+G4    18191.606    68  36519.212    36535.999    36821.305
+ 56  JTT+I+G4      18361.250    49  36820.499    36828.977    37038.184
+ 69  JTT+F+I+G4    18252.773    68  36641.545    36658.332    36943.638
+ 82  JTTDCMut+I+G4 18359.866    49  36817.732    36826.209    37035.416
+ 95  JTTDCMut+F+I+G4 18251.936    68  36639.872    36656.660    36941.965
+108  DCMut+I+G4    18567.638    49  37233.275    37241.753    37450.960
+121  DCMut+F+I+G4  18382.554    68  36901.107    36917.895    37203.200
+134  VT+I+G4       18278.577    49  36655.154    36663.631    36872.838
+147  VT+F+I+G4     18208.159    68  36552.317    36569.104    36854.410
+160  PMB+I+G4      18383.294    49  36864.587    36873.065    37082.272
+173  PMB+F+I+G4    18305.717    68  36747.434    36764.221    37049.527
+186  Blosum62+I+G4 18344.437    49  36786.875    36795.352    37004.559
+199  Blosum62+F+I+G4 18290.410    68  36716.820    36733.608    37018.913
+212  Dayhoff+I+G4  18567.713    49  37233.427    37241.904    37451.111
+225  Dayhoff+F+I+G4 18382.856    68  36901.712    36918.499    37203.804
+238  mtREV+I+G4    19202.899    49  38503.799    38512.276    38721.483
+251  mtREV+F+I+G4  18480.848    68  37097.697    37114.484    37399.790
+264  mtART+I+G4    19345.152    49  38788.305    38796.782    39005.989
+277  mtART+F+I+G4  18593.298    68  37322.596    37339.383    37624.688
+290  mtZOA+I+G4    18979.100    49  38056.201    38064.678    38273.885
+303  mtZOA+F+I+G4  18398.492    68  36932.984    36949.771    37235.077
+316  mtMet+I+G4    19178.364    49  38454.728    38463.206    38672.413
+329  mtMet+F+I+G4  18479.045    68  37094.090    37110.877    37396.183
+342  mtVer+I+G4    19423.213    49  38944.426    38952.904    39162.111
+355  mtVer+F+I+G4  18752.979    68  37641.958    37658.745    37944.051
+368  mtInv+I+G4    19233.974    49  38565.948    38574.426    38783.632
+381  mtInv+F+I+G4  18336.847    68  36809.693    36826.480    37111.786
+394  mtMAM+I+G4    19595.784    49  39289.567    39298.045    39507.252
+407  mtMAM+F+I+G4  18891.415    68  37918.830    37935.617    38220.922
+420  HIVb+I+G4     18765.635    49  37629.270    37637.747    37846.954
+433  HIVb+F+I+G4   18625.061    68  37386.122    37402.909    37688.215
+446  HIVw+I+G4     19568.762    49  39235.525    39244.002    39453.209
+459  HIVw+F+I+G4   19086.456    68  38308.912    38325.699    38611.004
+472  FLU+I+G4      18738.499    49  37574.998    37583.476    37792.683
+485  FLU+F+I+G4    18570.039    68  37276.078    37292.865    37578.171
+498  rtREV+I+G4    18344.213    49  36786.426    36794.903    37004.110
+511  rtREV+F+I+G4  18181.908    68  36499.816    36516.603    36801.908
+524  cpREV+I+G4    18370.593    49  36839.187    36847.664    37056.871
+537  cpREV+F+I+G4  18281.989    68  36699.978    36716.766    37002.071
+Akaike Information Criterion:           LG+F+I+G4
+Corrected Akaike Information Criterion: LG+F+I+G4
+Bayesian Information Criterion:         LG+I+G4
+Best-fit model: LG+I+G4 chosen according to BIC
+
+All model information printed to work/alignments/PDE5A_HUMAN.combined_final.aln.model.gz
+CPU time for ModelFinder: 482.126 seconds (0h:8m:2s)
+Wall-clock time for ModelFinder: 157.414 seconds (0h:2m:37s)
+Generating 1000 samples for ultrafast bootstrap (seed: 11623)...
+
+NOTE: 12 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+Thoroughly optimizing +I+G parameters from 10 start values...
+Init pinv, alpha: 0.000, 2.119 / Estimate: 0.000, 1.461 / LogL: -18159.132
+Init pinv, alpha: 0.007, 2.119 / Estimate: 0.048, 2.114 / LogL: -18138.485
+Init pinv, alpha: 0.014, 2.119 / Estimate: 0.048, 2.112 / LogL: -18138.486
+Init pinv, alpha: 0.021, 2.119 / Estimate: 0.049, 2.116 / LogL: -18138.484
+Init pinv, alpha: 0.028, 2.119 / Estimate: 0.048, 2.112 / LogL: -18138.487
+Init pinv, alpha: 0.035, 2.119 / Estimate: 0.049, 2.116 / LogL: -18138.485
+Init pinv, alpha: 0.041, 2.119 / Estimate: 0.048, 2.112 / LogL: -18138.486
+Init pinv, alpha: 0.048, 2.119 / Estimate: 0.049, 2.117 / LogL: -18138.484
+Init pinv, alpha: 0.055, 2.119 / Estimate: 0.049, 2.124 / LogL: -18138.485
+Init pinv, alpha: 0.062, 2.119 / Estimate: 0.050, 2.128 / LogL: -18138.488
+Optimal pinv,alpha: 0.049, 2.117 / LogL: -18138.484
+
+Parameters optimization took 3.328 sec
+Computing ML distances based on estimated model parameters... 0.190 sec
+Computing BIONJ tree...
+0.001 seconds
+Log-likelihood of BIONJ tree: -18214.026
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 1.004 second
+Computing log-likelihood of 98 initial trees ... 2.681 seconds
+Current best score: -18138.484
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -18138.484
+Iteration 10 / LogL: -18138.484 / Time: 0h:0m:11s
+Iteration 20 / LogL: -18138.484 / Time: 0h:0m:16s
+Finish initializing candidate tree set (2)
+Current best tree score: -18138.484 / CPU time: 13.425
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Iteration 30 / LogL: -18138.484 / Time: 0h:0m:24s (0h:0m:58s left)
+UPDATE BEST LOG-LIKELIHOOD: -18138.484
+Iteration 40 / LogL: -18138.484 / Time: 0h:0m:30s (0h:0m:47s left)
+Iteration 50 / LogL: -18138.738 / Time: 0h:0m:37s (0h:0m:39s left)
+Log-likelihood cutoff on original alignment: -18161.097
+UPDATE BEST LOG-LIKELIHOOD: -18138.484
+Iteration 60 / LogL: -18138.484 / Time: 0h:0m:45s (0h:0m:31s left)
+UPDATE BEST LOG-LIKELIHOOD: -18138.484
+Iteration 70 / LogL: -18138.484 / Time: 0h:0m:52s (0h:0m:23s left)
+Iteration 80 / LogL: -18138.484 / Time: 0h:0m:59s (0h:0m:15s left)
+Iteration 90 / LogL: -18138.484 / Time: 0h:1m:5s (0h:0m:8s left)
+Iteration 100 / LogL: -18138.484 / Time: 0h:1m:12s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -18161.381
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.999
+TREE SEARCH COMPLETED AFTER 102 ITERATIONS / Time: 0h:1m:14s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -18138.484
+Optimal log-likelihood: -18138.484
+Proportion of invariable sites: 0.049
+Gamma shape alpha: 2.121
+Parameters optimization took 1 rounds (0.093 sec)
+BEST SCORE FOUND : -18138.484
+
+Testing tree branches by SH-like aLRT with 1000 replicates...
+0.268 sec.
+Creating bootstrap support values...
+Split supports printed to NEXUS file work/alignments/PDE5A_HUMAN.combined_final.aln.splits.nex
+Total tree length: 10.661
+
+Total number of iterations: 102
+CPU time used for tree search: 342.008 sec (0h:5m:42s)
+Wall-clock time used for tree search: 70.724 sec (0h:1m:10s)
+Total CPU time used: 361.674 sec (0h:6m:1s)
+Total wall-clock time used: 74.808 sec (0h:1m:14s)
+
+Computing bootstrap consensus tree...
+Reading input file work/alignments/PDE5A_HUMAN.combined_final.aln.splits.nex...
+25 taxa and 76 splits.
+Consensus tree written to work/alignments/PDE5A_HUMAN.combined_final.aln.contree
+Reading input trees file work/alignments/PDE5A_HUMAN.combined_final.aln.contree
+Log-likelihood of consensus tree: -18138.494
+
+Analysis results written to: 
+  IQ-TREE report:                work/alignments/PDE5A_HUMAN.combined_final.aln.iqtree
+  Maximum-likelihood tree:       work/alignments/PDE5A_HUMAN.combined_final.aln.treefile
+  Likelihood distances:          work/alignments/PDE5A_HUMAN.combined_final.aln.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          work/alignments/PDE5A_HUMAN.combined_final.aln.splits.nex
+  Consensus tree:                work/alignments/PDE5A_HUMAN.combined_final.aln.contree
+  Screen log file:               work/alignments/PDE5A_HUMAN.combined_final.aln.log
+
+Date and Time: Sun Feb 20 11:37:26 2022

@@ -1,0 +1,2612 @@
+#nexus
+
+BEGIN Taxa;
+DIMENSIONS ntax=559;
+TAXLABELS
+[1] 'Homo_sapiens|sp|P08069|IGF1R_HUMAN'
+[2] 'Homo_sapiens|sp|P06213|INSR_HUMAN'
+[3] 'Homo_sapiens|sp|P14616|INSRR_HUMAN'
+[4] 'Homo_sapiens|sp|P08922|ROS1_HUMAN'
+[5] 'ancylostoma_caninum|ANCCAN_13331'
+[6] 'haemonchus_contortus|HCON_00016780-00001'
+[7] 'ascaris_suum|AgR001_g332_t01'
+[8] 'caenorhabditis_elegans|T04B2.2a.1'
+[9] 'caenorhabditis_elegans|T04B2.2a.2'
+[10] 'ascaris_suum|AgB03_g258_t01'
+[11] 'ascaris_suum|AgB03_g258_t03'
+[12] 'ascaris_suum|AgB03_g258_t04'
+[13] 'ascaris_suum|AgB03_g259_t01'
+[14] 'ascaris_suum|AgE03_g026_t02'
+[15] 'ascaris_suum|AgE03_g026_t03'
+[16] 'ascaris_suum|AgE03_g026_t06'
+[17] 'ascaris_suum|AgE03_g026_t07'
+[18] 'ascaris_suum|AgR005_g334_t01'
+[19] 'ascaris_suum|AgR005_g334_t02'
+[20] 'brugia_malayi|Bm3515.1'
+[21] 'brugia_malayi|Bm10726.1'
+[22] 'caenorhabditis_elegans|F22D6.1.1'
+[23] 'caenorhabditis_elegans|T21G5.1.1'
+[24] 'ascaris_suum|AgE12_g003_t14'
+[25] 'ascaris_suum|AgE12_g003_t15'
+[26] 'ascaris_suum|AgR003_g169_t01'
+[27] 'ascaris_suum|AgR003_g169_t02'
+[28] 'ascaris_suum|AgR003_g169_t03'
+[29] 'ascaris_suum|AgR003_g230_t01'
+[30] 'ascaris_suum|AgR003_g230_t02'
+[31] 'ascaris_suum|AgR003_g230_t03'
+[32] 'haemonchus_contortus|HCON_00013010-00001'
+[33] 'haemonchus_contortus|HCON_00153450-00001'
+[34] 'ascaris_suum|AgR033_g076_t01'
+[35] 'ascaris_suum|AgR033_g076_t04'
+[36] 'ascaris_suum|AgR033_g076_t06'
+[37] 'ascaris_suum|AgR033_g076_t05'
+[38] 'strongyloides_ratti|SRAE_2000123800.1'
+[39] 'strongyloides_ratti|SRAE_1000203700.1'
+[40] 'ascaris_suum|AgR028_g103_t01'
+[41] 'ascaris_suum|AgR028_g103_t02'
+[42] 'ascaris_suum|AgR028_g103_t06'
+[43] 'brugia_malayi|Bm12873a.1'
+[44] 'brugia_malayi|Bm12873b.1'
+[45] 'ancylostoma_caninum|ANCCAN_24689'
+[46] 'haemonchus_contortus|HCON_00114470-00001'
+[47] 'haemonchus_contortus|HCON_00114440-00001'
+[48] 'haemonchus_contortus|HCON_00116950-00001'
+[49] 'ancylostoma_caninum|ANCCAN_18104'
+[50] 'haemonchus_contortus|HCON_00116930-00001'
+[51] 'haemonchus_contortus|HCON_00126800-00001'
+[52] 'caenorhabditis_elegans|R11E3.1.1'
+[53] 'caenorhabditis_elegans|M176.9b.1'
+[54] 'caenorhabditis_elegans|T06C10.3.1'
+[55] 'caenorhabditis_elegans|T06C10.3.2'
+[56] 'ascaris_suum|AgB03_g095_t01'
+[57] 'ascaris_suum|AgB03_g095_t04'
+[58] 'ascaris_suum|AgB03_g095_t05'
+[59] 'ascaris_suum|AgB03_g095_t02'
+[60] 'ascaris_suum|AgR049_g024_t02'
+[61] 'ascaris_suum|AgR049_g024_t04'
+[62] 'ascaris_suum|AgR049_g024_t05'
+[63] 'ascaris_suum|AgR049_g024_t06'
+[64] 'ascaris_suum|AgR222_g001_t01'
+[65] 'brugia_malayi|Bm18123.1'
+[66] 'ascaris_suum|AgE03_g022_t01'
+[67] 'ascaris_suum|AgE03_g022_t02'
+[68] 'ascaris_suum|AgE03_g022_t03'
+[69] 'ascaris_suum|AgE03_g022_t04'
+[70] 'ascaris_suum|AgR025_g107_t01'
+[71] 'ascaris_suum|AgR025_g107_t03'
+[72] 'ascaris_suum|AgR025_g107_t05'
+[73] 'ascaris_suum|AgR025_g107_t04'
+[74] 'ascaris_suum|AgR041_g058_t01'
+[75] 'ascaris_suum|AgR041_g058_t02'
+[76] 'brugia_malayi|Bm7313.1'
+[77] 'ascaris_suum|AgB05_g157_t01'
+[78] 'ascaris_suum|AgB05_g157_t02'
+[79] 'ancylostoma_caninum|ANCCAN_16061'
+[80] 'ancylostoma_caninum|ANCCAN_28301'
+[81] 'haemonchus_contortus|HCON_00134790-00001'
+[82] 'haemonchus_contortus|HCON_00134790-00002'
+[83] 'ancylostoma_caninum|ANCCAN_16063'
+[84] 'haemonchus_contortus|HCON_00134810-00001'
+[85] 'ascaris_suum|AgR041_g065_t01'
+[86] 'ascaris_suum|AgR041_g065_t03'
+[87] 'brugia_malayi|Bm5610.1'
+[88] 'caenorhabditis_elegans|T13H10.1.1'
+[89] 'caenorhabditis_elegans|C25A8.5.1'
+[90] 'caenorhabditis_elegans|F23C8.7.1'
+[91] 'strongyloides_ratti|SRAE_2000201500.1'
+[92] 'caenorhabditis_elegans|C35E7.10.1'
+[93] 'caenorhabditis_elegans|C55C3.4.1'
+[94] 'ascaris_suum|AgB01_g429_t01'
+[95] 'ascaris_suum|AgB01_g429_t02'
+[96] 'ascaris_suum|AgR055_g041_t02'
+[97] 'ascaris_suum|AgR055_g041_t04'
+[98] 'brugia_malayi|Bm3119.1'
+[99] 'ascaris_suum|AgR002_g443_t08'
+[100] 'ascaris_suum|AgR002_g443_t09'
+[101] 'strongyloides_ratti|SRAE_2000245300.1'
+[102] 'strongyloides_ratti|SRAE_1000212900.1'
+[103] 'strongyloides_ratti|SRAE_2000068700.1'
+[104] 'strongyloides_ratti|SRAE_1000257100.1'
+[105] 'caenorhabditis_elegans|T06C10.6.1'
+[106] 'caenorhabditis_elegans|F57B9.8.1'
+[107] 'strongyloides_ratti|SRAE_2000072200.1'
+[108] 'ancylostoma_caninum|ANCCAN_00767'
+[109] 'haemonchus_contortus|HCON_00050640-00001'
+[110] 'caenorhabditis_elegans|ZK622.1.1'
+[111] 'caenorhabditis_elegans|ZK622.1.2'
+[112] 'ascaris_suum|AgR010_g019_t03'
+[113] 'brugia_malayi|Bm10530.1'
+[114] 'ancylostoma_caninum|ANCCAN_15056'
+[115] 'ancylostoma_caninum|ANCCAN_19452'
+[116] 'haemonchus_contortus|HCON_00139520-00001'
+[117] 'ancylostoma_caninum|ANCCAN_15915'
+[118] 'haemonchus_contortus|HCON_00139600-00001'
+[119] 'haemonchus_contortus|HCON_00139600-00002'
+[120] 'ancylostoma_caninum|ANCCAN_19662'
+[121] 'caenorhabditis_elegans|T25B9.4.1'
+[122] 'ancylostoma_caninum|ANCCAN_05078'
+[123] 'haemonchus_contortus|HCON_00194210-00001'
+[124] 'haemonchus_contortus|HCON_00106760-00001'
+[125] 'haemonchus_contortus|HCON_00120900-00001'
+[126] 'haemonchus_contortus|HCON_00003480-00001'
+[127] 'haemonchus_contortus|HCON_00003510-00001'
+[128] 'haemonchus_contortus|HCON_00003500-00001'
+[129] 'ascaris_suum|AgE02_g027_t01'
+[130] 'ascaris_suum|AgE02_g027_t03'
+[131] 'ascaris_suum|AgE02_g027_t05'
+[132] 'ascaris_suum|AgE02_g027_t10'
+[133] 'ascaris_suum|AgE02_g027_t04'
+[134] 'ascaris_suum|AgE02_g027_t06'
+[135] 'ascaris_suum|AgR024_g076_t01'
+[136] 'ascaris_suum|AgR024_g076_t02'
+[137] 'ascaris_suum|AgR024_g076_t03'
+[138] 'brugia_malayi|Bm8738.1'
+[139] 'haemonchus_contortus|HCON_00039770-00001'
+[140] 'haemonchus_contortus|HCON_00014530-00001'
+[141] 'haemonchus_contortus|HCON_00014530-00002'
+[142] 'ascaris_suum|AgB19_g078_t01'
+[143] 'ascaris_suum|AgB19_g078_t02'
+[144] 'ascaris_suum|AgR015_g188_t01'
+[145] 'ascaris_suum|AgE04_g018_t01'
+[146] 'ascaris_suum|AgE04_g018_t02'
+[147] 'ascaris_suum|AgE04_g018_t03'
+[148] 'ascaris_suum|AgE04_g018_t04'
+[149] 'ascaris_suum|AgE04_g018_t05'
+[150] 'ascaris_suum|AgE04_g018_t06'
+[151] 'ascaris_suum|AgE04_g018_t07'
+[152] 'brugia_malayi|Bm4322.1'
+[153] 'ancylostoma_caninum|ANCCAN_30435'
+[154] 'haemonchus_contortus|HCON_00135660-00001'
+[155] 'ancylostoma_caninum|ANCCAN_10685'
+[156] 'haemonchus_contortus|HCON_00132770-00001'
+[157] 'ancylostoma_caninum|ANCCAN_03321'
+[158] 'haemonchus_contortus|HCON_00143980-00001'
+[159] 'caenorhabditis_elegans|F26E4.5.1'
+[160] 'caenorhabditis_elegans|F53G12.6.1'
+[161] 'brugia_malayi|Bm10576a.1'
+[162] 'brugia_malayi|Bm10576b.1'
+[163] 'ascaris_suum|AgR017_g072_t02'
+[164] 'brugia_malayi|Bm7413.1'
+[165] 'caenorhabditis_elegans|R05H5.4.1'
+[166] 'caenorhabditis_elegans|C18H7.4.1'
+[167] 'caenorhabditis_elegans|C18H7.4.2'
+[168] 'caenorhabditis_elegans|ZC581.7.1'
+[169] 'Homo_sapiens|sp|Q9H3Y6|SRMS_HUMAN'
+[170] 'Homo_sapiens|sp|P00519|ABL1_HUMAN'
+[171] 'Homo_sapiens|sp|P42684|ABL2_HUMAN'
+[172] 'Homo_sapiens|sp|P09769|FGR_HUMAN'
+[173] 'Homo_sapiens|sp|P06241|FYN_HUMAN'
+[174] 'Homo_sapiens|sp|P12931|SRC_HUMAN'
+[175] 'Homo_sapiens|sp|P07947|YES_HUMAN'
+[176] 'haemonchus_contortus|HCON_00013780-00001'
+[177] 'caenorhabditis_elegans|F49B2.5.1'
+[178] 'brugia_malayi|Bm4215a.1'
+[179] 'brugia_malayi|Bm4215b.1'
+[180] 'trichuris_muris|TMUE_1000004991.1'
+[181] 'strongyloides_ratti|SRAE_2000156700.1'
+[182] 'Homo_sapiens|sp|P42685|FRK_HUMAN'
+[183] 'Homo_sapiens|sp|P06239|LCK_HUMAN'
+[184] 'Homo_sapiens|sp|P51451|BLK_HUMAN'
+[185] 'Homo_sapiens|sp|P08631|HCK_HUMAN'
+[186] 'haemonchus_contortus|HCON_00026740-00001'
+[187] 'caenorhabditis_elegans|Y92H12A.1a.1'
+[188] 'caenorhabditis_elegans|Y92H12A.1b.1'
+[189] 'caenorhabditis_elegans|Y92H12A.1c.1'
+[190] 'brugia_malayi|Bm7182.1'
+[191] 'ascaris_suum|AgB08X_g072_t03'
+[192] 'ascaris_suum|AgB08X_g072_t04'
+[193] 'strongyloides_ratti|SRAE_2000106200.1'
+[194] 'trichuris_muris|TMUE_1000005973.1'
+[195] 'ascaris_suum|AgB08X_g073_t01'
+[196] 'ascaris_suum|AgB08X_g073_t02'
+[197] 'ascaris_suum|AgB14_g072_t01'
+[198] 'ascaris_suum|AgB14_g072_t02'
+[199] 'ascaris_suum|AgB14_g072_t05'
+[200] 'ascaris_suum|AgB14_g072_t07'
+[201] 'caenorhabditis_elegans|M79.1a.1'
+[202] 'caenorhabditis_elegans|M79.1b.1'
+[203] 'caenorhabditis_elegans|M79.1c.1'
+[204] 'Homo_sapiens|sp|P42679|MATK_HUMAN'
+[205] 'ascaris_suum|AgB08X_g086_t02'
+[206] 'ascaris_suum|AgB08X_g086_t03'
+[207] 'brugia_malayi|Bm6666.1'
+[208] 'caenorhabditis_elegans|Y48G1C.2a.1'
+[209] 'caenorhabditis_elegans|Y48G1C.2a.2'
+[210] 'haemonchus_contortus|HCON_00013590-00001'
+[211] 'strongyloides_ratti|SRAE_1000189250.1'
+[212] 'ascaris_suum|AgR027X_g118_t01'
+[213] 'ascaris_suum|AgR027X_g118_t05'
+[214] 'ascaris_suum|AgR027X_g118_t03'
+[215] 'ascaris_suum|AgR027X_g118_t02'
+[216] 'brugia_malayi|Bm4535.1'
+[217] 'caenorhabditis_elegans|F58A3.2a.1'
+[218] 'caenorhabditis_elegans|F58A3.2a.2'
+[219] 'haemonchus_contortus|HCON_00187950-00001'
+[220] 'strongyloides_ratti|SRAE_X000010000.1'
+[221] 'ancylostoma_caninum|ANCCAN_04412'
+[222] 'haemonchus_contortus|HCON_00068340-00001'
+[223] 'brugia_malayi|Bm5431a.1'
+[224] 'caenorhabditis_elegans|R151.1a.1'
+[225] 'caenorhabditis_elegans|R151.1b.1'
+[226] 'caenorhabditis_elegans|R151.1c.1'
+[227] 'trichuris_muris|TMUE_1000004100.1'
+[228] 'Homo_sapiens|sp|Q5JZY3|EPHAA_HUMAN'
+[229] 'Homo_sapiens|sp|Q9UF33|EPHA6_HUMAN'
+[230] 'Homo_sapiens|sp|P54756|EPHA5_HUMAN'
+[231] 'Homo_sapiens|sp|P29320|EPHA3_HUMAN'
+[232] 'Homo_sapiens|sp|P54764|EPHA4_HUMAN'
+[233] 'Homo_sapiens|sp|Q15375|EPHA7_HUMAN'
+[234] 'Homo_sapiens|sp|P54762|EPHB1_HUMAN'
+[235] 'Homo_sapiens|sp|P29323|EPHB2_HUMAN'
+[236] 'Homo_sapiens|sp|P54753|EPHB3_HUMAN'
+[237] 'Homo_sapiens|sp|P54760|EPHB4_HUMAN'
+[238] 'Homo_sapiens|sp|P29317|EPHA2_HUMAN'
+[239] 'Homo_sapiens|sp|P21709|EPHA1_HUMAN'
+[240] 'Homo_sapiens|sp|O15197|EPHB6_HUMAN'
+[241] 'ancylostoma_caninum|ANCCAN_24727'
+[242] 'haemonchus_contortus|HCON_00042040-00001'
+[243] 'ascaris_suum|AgB13X_g016_t01'
+[244] 'ascaris_suum|AgB13X_g016_t02'
+[245] 'ascaris_suum|AgR002_g307_t02'
+[246] 'ascaris_suum|AgR002_g307_t05'
+[247] 'ascaris_suum|AgR002_g307_t07'
+[248] 'brugia_malayi|Bm5071.1'
+[249] 'caenorhabditis_elegans|M03A1.1.1'
+[250] 'trichuris_muris|TMUE_1000005134.1'
+[251] 'ancylostoma_caninum|ANCCAN_04109'
+[252] 'haemonchus_contortus|HCON_00157730-00001'
+[253] 'ascaris_suum|AgR016_g071_t01'
+[254] 'ascaris_suum|AgR016_g071_t02'
+[255] 'brugia_malayi|Bm2341a.1'
+[256] 'caenorhabditis_elegans|C24G6.2a.1'
+[257] 'caenorhabditis_elegans|C24G6.2a.2'
+[258] 'strongyloides_ratti|SRAE_0000015500.1'
+[259] 'trichuris_muris|TMUE_3000011346.1'
+[260] 'trichuris_muris|TMUE_3000011346.2'
+[261] 'brugia_malayi|Bm8960.1'
+[262] 'caenorhabditis_elegans|F08F1.1a.1'
+[263] 'caenorhabditis_elegans|F08F1.1b.1'
+[264] 'caenorhabditis_elegans|F08F1.1c.1'
+[265] 'ancylostoma_caninum|ANCCAN_05460'
+[266] 'haemonchus_contortus|HCON_00008330-00001'
+[267] 'ascaris_suum|AgR004_g272_t06'
+[268] 'caenorhabditis_elegans|F09A5.2a.1'
+[269] 'caenorhabditis_elegans|F09A5.2b.1'
+[270] 'ascaris_suum|AgR002_g374_t02'
+[271] 'ascaris_suum|AgR004_g254_t01'
+[272] 'Homo_sapiens|sp|P08581|MET_HUMAN'
+[273] 'caenorhabditis_elegans|F11E6.8a.1'
+[274] 'caenorhabditis_elegans|F11E6.8b.1'
+[275] 'haemonchus_contortus|HCON_00098530-00001'
+[276] 'haemonchus_contortus|HCON_00098530-00002'
+[277] 'Homo_sapiens|sp|Q9UM73|ALK_HUMAN'
+[278] 'Homo_sapiens|sp|P29376|LTK_HUMAN'
+[279] 'ascaris_suum|AgB29_g016_t01'
+[280] 'ascaris_suum|AgB29_g016_t02'
+[281] 'ascaris_suum|AgB34_g005_t01'
+[282] 'ascaris_suum|AgB34_g005_t02'
+[283] 'ascaris_suum|AgB34_g005_t05'
+[284] 'ascaris_suum|AgB34_g005_t03'
+[285] 'ascaris_suum|AgB34_g005_t04'
+[286] 'haemonchus_contortus|HCON_00163880-00001'
+[287] 'caenorhabditis_elegans|D1073.1.1'
+[288] 'strongyloides_ratti|SRAE_1000090600.1'
+[289] 'Homo_sapiens|sp|Q16620|NTRK2_HUMAN'
+[290] 'Homo_sapiens|sp|Q16288|NTRK3_HUMAN'
+[291] 'Homo_sapiens|sp|Q16832|DDR2_HUMAN'
+[292] 'Homo_sapiens|sp|Q08345|DDR1_HUMAN'
+[293] 'ascaris_suum|AgB01_g492_t03'
+[294] 'brugia_malayi|Bm3311c.1'
+[295] 'strongyloides_ratti|SRAE_1000069800.1'
+[296] 'caenorhabditis_elegans|F11D5.3a.1'
+[297] 'caenorhabditis_elegans|F11D5.3b.1'
+[298] 'caenorhabditis_elegans|F11D5.3b.2'
+[299] 'haemonchus_contortus|HCON_00109060-00001'
+[300] 'ancylostoma_caninum|ANCCAN_11416'
+[301] 'haemonchus_contortus|HCON_00066590-00001'
+[302] 'ascaris_suum|AgR043_g081_t01'
+[303] 'ascaris_suum|AgR043_g081_t02'
+[304] 'ascaris_suum|AgR043_g081_t05'
+[305] 'ascaris_suum|AgR043_g081_t04'
+[306] 'brugia_malayi|Bm6845.1'
+[307] 'strongyloides_ratti|SRAE_1000288200a.1'
+[308] 'strongyloides_ratti|SRAE_1000288200b.1'
+[309] 'caenorhabditis_elegans|Y55D5A.5a.1'
+[310] 'caenorhabditis_elegans|Y55D5A.5d.1'
+[311] 'caenorhabditis_elegans|Y55D5A.5f.1'
+[312] 'caenorhabditis_elegans|Y55D5A.5g.1'
+[313] 'trichuris_muris|TMUE_1000005019.1'
+[314] 'trichuris_muris|TMUE_1000005019.2'
+[315] 'ascaris_suum|AgR016_g165_t05'
+[316] 'brugia_malayi|Bm8409.1'
+[317] 'trichuris_muris|TMUE_2000007156.1'
+[318] 'trichuris_muris|TMUE_3000012213.1'
+[319] 'trichuris_muris|TMUE_0000000539.1'
+[320] 'trichuris_muris|TMUE_2000009584.1'
+[321] 'trichuris_muris|TMUE_2000006472.1'
+[322] 'trichuris_muris|TMUE_2000009122.1'
+[323] 'trichuris_muris|TMUE_2000008116.1'
+[324] 'trichuris_muris|TMUE_2000010647.1'
+[325] 'trichuris_muris|TMUE_1000004640.1'
+[326] 'trichuris_muris|TMUE_2000008608.1'
+[327] 'trichuris_muris|TMUE_1000005406.1'
+[328] 'ancylostoma_caninum|ANCCAN_00812'
+[329] 'haemonchus_contortus|HCON_00011500-00001'
+[330] 'haemonchus_contortus|HCON_00011500-00002'
+[331] 'ascaris_suum|AgR017_g041_t06'
+[332] 'ascaris_suum|AgR017_g041_t09'
+[333] 'ascaris_suum|AgR017_g041_t08'
+[334] 'ascaris_suum|AgR017_g041_t10'
+[335] 'ascaris_suum|AgR064_g006_t01'
+[336] 'ascaris_suum|AgR064_g006_t02'
+[337] 'ascaris_suum|AgR064_g006_t04'
+[338] 'ascaris_suum|AgR064_g006_t05'
+[339] 'ascaris_suum|AgR064_g006_t03'
+[340] 'brugia_malayi|Bm14822.1'
+[341] 'ascaris_suum|AgR032_g113_t01'
+[342] 'ascaris_suum|AgR032_g113_t04'
+[343] 'ascaris_suum|AgR032_g113_t06'
+[344] 'ascaris_suum|AgR032_g113_t02'
+[345] 'ascaris_suum|AgR032_g113_t03'
+[346] 'ascaris_suum|AgR032_g113_t05'
+[347] 'ascaris_suum|AgR061_g006_t04'
+[348] 'ascaris_suum|AgR061_g006_t05'
+[349] 'ascaris_suum|AgR061_g006_t06'
+[350] 'brugia_malayi|Bm720a.1'
+[351] 'brugia_malayi|Bm720b.1'
+[352] 'brugia_malayi|Bm9214a.1'
+[353] 'strongyloides_ratti|SRAE_2000201900.1'
+[354] 'caenorhabditis_elegans|K07F5.4.1'
+[355] 'Homo_sapiens|sp|P42680|TEC_HUMAN'
+[356] 'Homo_sapiens|sp|P51813|BMX_HUMAN'
+[357] 'ascaris_suum|AgB15X_g070_t04'
+[358] 'trichuris_muris|TMUE_2000007016.1'
+[359] 'caenorhabditis_elegans|M176.6a.1'
+[360] 'caenorhabditis_elegans|M176.7.1'
+[361] 'haemonchus_contortus|HCON_00185500-00001'
+[362] 'caenorhabditis_elegans|M01B2.1.1'
+[363] 'caenorhabditis_elegans|R09D1.12.1'
+[364] 'caenorhabditis_elegans|C08H9.5.1'
+[365] 'caenorhabditis_elegans|ZK938.5.1'
+[366] 'caenorhabditis_elegans|W04G5.10.1'
+[367] 'caenorhabditis_elegans|Y50D4B.6.1'
+[368] 'caenorhabditis_elegans|R09D1.13.1'
+[369] 'Homo_sapiens|sp|Q06418|TYRO3_HUMAN'
+[370] 'Homo_sapiens|sp|P30530|UFO_HUMAN'
+[371] 'Homo_sapiens|sp|Q12866|MERTK_HUMAN'
+[372] 'ancylostoma_caninum|ANCCAN_08674'
+[373] 'haemonchus_contortus|HCON_00065800-00001'
+[374] 'Homo_sapiens|sp|Q07912|ACK1_HUMAN'
+[375] 'ancylostoma_caninum|ANCCAN_06845'
+[376] 'haemonchus_contortus|HCON_00124290-00002'
+[377] 'ascaris_suum|AgB05_g284_t01'
+[378] 'ascaris_suum|AgR012_g085_t03'
+[379] 'brugia_malayi|Bm1870a.1'
+[380] 'brugia_malayi|Bm1870b.1'
+[381] 'caenorhabditis_elegans|C01C7.1b.1'
+[382] 'strongyloides_ratti|SRAE_X000142300.1'
+[383] 'trichuris_muris|TMUE_3000013561.1'
+[384] 'ancylostoma_caninum|ANCCAN_24121'
+[385] 'ancylostoma_caninum|ANCCAN_24316'
+[386] 'caenorhabditis_elegans|C30F8.4a.1'
+[387] 'caenorhabditis_elegans|C30F8.4b.1'
+[388] 'ascaris_suum|AgB04_g018_t01'
+[389] 'ascaris_suum|AgB04_g018_t06'
+[390] 'ascaris_suum|AgB04_g018_t08'
+[391] 'brugia_malayi|Bm1743a.1'
+[392] 'brugia_malayi|Bm1743b.1'
+[393] 'caenorhabditis_elegans|B0302.1a.1'
+[394] 'strongyloides_ratti|SRAE_2000253400.1'
+[395] 'Homo_sapiens|sp|P29597|TYK2_HUMAN'
+[396] 'trichuris_muris|TMUE_2000006995.1'
+[397] 'trichuris_muris|TMUE_2000006924.1'
+[398] 'Homo_sapiens|sp|P11362|FGFR1_HUMAN'
+[399] 'ancylostoma_caninum|ANCCAN_06752'
+[400] 'ancylostoma_caninum|ANCCAN_25203'
+[401] 'haemonchus_contortus|HCON_00032380-00001'
+[402] 'ascaris_suum|AgR011_g322_t01'
+[403] 'ascaris_suum|AgR011_g322_t02'
+[404] 'brugia_malayi|Bm5676.1'
+[405] 'Homo_sapiens|sp|P80192|M3K9_HUMAN'
+[406] 'Homo_sapiens|sp|Q16584|M3K11_HUMAN'
+[407] 'trichuris_muris|TMUE_3000013091.1'
+[408] 'trichuris_muris|TMUE_3000013091.2'
+[409] 'ascaris_suum|AgR009X_g088_t05'
+[410] 'ascaris_suum|AgR009X_g088_t06'
+[411] 'ancylostoma_caninum|ANCCAN_11558'
+[412] 'caenorhabditis_elegans|K11D12.10a.1'
+[413] 'caenorhabditis_elegans|K11D12.10c.1'
+[414] 'ancylostoma_caninum|ANCCAN_13153'
+[415] 'ancylostoma_caninum|ANCCAN_11482'
+[416] 'haemonchus_contortus|HCON_00026710-00001'
+[417] 'haemonchus_contortus|HCON_00026710-00002'
+[418] 'ascaris_suum|AgR019X_g085_t01'
+[419] 'ascaris_suum|AgR019X_g085_t02'
+[420] 'brugia_malayi|Bm10748.1'
+[421] 'trichuris_muris|TMUE_1000005692.1'
+[422] 'Homo_sapiens|sp|Q12852|M3K12_HUMAN'
+[423] 'Homo_sapiens|sp|O43283|M3K13_HUMAN'
+[424] 'ancylostoma_caninum|ANCCAN_10276'
+[425] 'haemonchus_contortus|HCON_00004580-00002'
+[426] 'caenorhabditis_elegans|F33E2.2a.1'
+[427] 'caenorhabditis_elegans|F33E2.2d.1'
+[428] 'caenorhabditis_elegans|F33E2.2b.1'
+[429] 'ascaris_suum|AgR018X_g175_t03'
+[430] 'ascaris_suum|AgR018X_g175_t05'
+[431] 'brugia_malayi|Bm3798b.1'
+[432] 'brugia_malayi|Bm3798c.1'
+[433] 'trichuris_muris|TMUE_1000004635.1'
+[434] 'ancylostoma_caninum|ANCCAN_09437'
+[435] 'ancylostoma_caninum|ANCCAN_15888'
+[436] 'ascaris_suum|AgR013X_g136_t01'
+[437] 'ascaris_suum|AgR013X_g136_t03'
+[438] 'brugia_malayi|Bm5465a.1'
+[439] 'brugia_malayi|Bm5465b.1'
+[440] 'haemonchus_contortus|HCON_00164160-00002'
+[441] 'strongyloides_ratti|SRAE_2000233100.1'
+[442] 'ascaris_suum|AgR013X_g136_t02'
+[443] 'haemonchus_contortus|HCON_00128920-00001'
+[444] 'caenorhabditis_elegans|F49C5.4.1'
+[445] 'ascaris_suum|AgR041_g043_t04'
+[446] 'ascaris_suum|AgR041_g043_t05'
+[447] 'ascaris_suum|AgR037_g018_t01'
+[448] 'brugia_malayi|Bm9377a.1'
+[449] 'ascaris_suum|AgB06_g205_t06'
+[450] 'brugia_malayi|Bm8041a.1'
+[451] 'brugia_malayi|Bm8041b.1'
+[452] 'brugia_malayi|Bm8893.1'
+[453] 'haemonchus_contortus|HCON_00091420-00002'
+[454] 'trichuris_muris|TMUE_2000010198.1'
+[455] 'ancylostoma_caninum|ANCCAN_04910'
+[456] 'brugia_malayi|Bm11054a.1'
+[457] 'brugia_malayi|Bm11054b.1'
+[458] 'caenorhabditis_elegans|C01G6.8a.1'
+[459] 'caenorhabditis_elegans|C01G6.8b.1'
+[460] 'caenorhabditis_elegans|C01G6.8c.1'
+[461] 'caenorhabditis_elegans|C01G6.8c.2'
+[462] 'haemonchus_contortus|HCON_00047290-00001'
+[463] 'ascaris_suum|AgB02_g009_t01'
+[464] 'ascaris_suum|AgB02_g009_t02'
+[465] 'brugia_malayi|Bm5197a.1'
+[466] 'caenorhabditis_elegans|R03G5.2.1'
+[467] 'haemonchus_contortus|HCON_00105100-00001'
+[468] 'haemonchus_contortus|HCON_00105100-00002'
+[469] 'brugia_malayi|Bm3094b.1'
+[470] 'haemonchus_contortus|HCON_00173670-00001'
+[471] 'strongyloides_ratti|SRAE_0000023400.1'
+[472] 'brugia_malayi|Bm5826.1'
+[473] 'caenorhabditis_elegans|T19A5.2d.1'
+[474] 'haemonchus_contortus|HCON_00162520-00001'
+[475] 'trichuris_muris|TMUE_3000011683.1'
+[476] 'trichuris_muris|TMUE_3000011683.2'
+[477] 'strongyloides_ratti|SRAE_2000394200.1'
+[478] 'ancylostoma_caninum|ANCCAN_16555'
+[479] 'haemonchus_contortus|HCON_00111880-00001'
+[480] 'brugia_malayi|Bm7093b.1'
+[481] 'trichuris_muris|TMUE_1000003611.1'
+[482] 'Homo_sapiens|sp|P43405|KSYK_HUMAN'
+[483] 'Homo_sapiens|sp|P43403|ZAP70_HUMAN'
+[484] 'caenorhabditis_elegans|Y47G6A.5a.1'
+[485] 'caenorhabditis_elegans|Y47G6A.5b.1'
+[486] 'trichuris_muris|TMUE_3000014521.1'
+[487] 'trichuris_muris|TMUE_1000004862.1'
+[488] 'ascaris_suum|AgR005_g052_t02'
+[489] 'ancylostoma_caninum|ANCCAN_10612'
+[490] 'haemonchus_contortus|HCON_00040785-00001'
+[491] 'brugia_malayi|Bm1712a.1'
+[492] 'caenorhabditis_elegans|B0218.3.1'
+[493] 'strongyloides_ratti|SRAE_X000155200.1'
+[494] 'caenorhabditis_elegans|F42G8.3a.1'
+[495] 'caenorhabditis_elegans|F42G8.3b.1'
+[496] 'haemonchus_contortus|HCON_00099700-00001'
+[497] 'haemonchus_contortus|HCON_00111580-00001'
+[498] 'brugia_malayi|Bm1975.1'
+[499] 'caenorhabditis_elegans|C05D10.2a.1'
+[500] 'ancylostoma_caninum|ANCCAN_20887'
+[501] 'ancylostoma_caninum|ANCCAN_22205'
+[502] 'ancylostoma_caninum|ANCCAN_03186'
+[503] 'haemonchus_contortus|HCON_00149630-00001'
+[504] 'ascaris_suum|AgR005_g223_t01'
+[505] 'ascaris_suum|AgR005_g223_t02'
+[506] 'brugia_malayi|Bm6048.1'
+[507] 'ascaris_suum|AgR025_g033_t02'
+[508] 'brugia_malayi|Bm7352.1'
+[509] 'brugia_malayi|Bm10326.1'
+[510] 'ascaris_suum|AgR024_g035_t01'
+[511] 'brugia_malayi|Bm13749.1'
+[512] 'ascaris_suum|AgR013X_g057_t01'
+[513] 'brugia_malayi|Bm9760.1'
+[514] 'caenorhabditis_elegans|M04C9.5a.1'
+[515] 'caenorhabditis_elegans|M04C9.5b.1'
+[516] 'haemonchus_contortus|HCON_00023420-00001'
+[517] 'trichuris_muris|TMUE_3000013737.1'
+[518] 'trichuris_muris|TMUE_3000013737.2'
+[519] 'haemonchus_contortus|HCON_00099740-00001'
+[520] 'ancylostoma_caninum|ANCCAN_11212'
+[521] 'ancylostoma_caninum|ANCCAN_22624'
+[522] 'caenorhabditis_elegans|R13F6.6c.1'
+[523] 'trichuris_muris|TMUE_1000002603.1'
+[524] 'brugia_malayi|Bm6129a.1'
+[525] 'brugia_malayi|Bm6129b.1'
+[526] 'caenorhabditis_elegans|F22B3.8.1'
+[527] 'caenorhabditis_elegans|W01B6.5.1'
+[528] 'caenorhabditis_elegans|F59A3.8.1'
+[529] 'ascaris_suum|AgE04_g029_t13'
+[530] 'strongyloides_ratti|SRAE_0000007300.1'
+[531] 'Homo_sapiens|sp|P34925|RYK_HUMAN'
+[532] 'ascaris_suum|AgR002_g464_t01'
+[533] 'ascaris_suum|AgR002_g464_t02'
+[534] 'ascaris_suum|AgR002_g464_t04'
+[535] 'ascaris_suum|AgR002_g464_t05'
+[536] 'caenorhabditis_elegans|C16B8.1.1'
+[537] 'trichuris_muris|TMUE_0000000202.1'
+[538] 'trichuris_muris|TMUE_3000014898.1'
+[539] 'trichuris_muris|TMUE_3000014724.1'
+[540] 'brugia_malayi|Bm6151a.1'
+[541] 'strongyloides_ratti|SRAE_X000258100.1'
+[542] 'trichuris_muris|TMUE_3000014930.1'
+[543] 'trichuris_muris|TMUE_0000000234.1'
+[544] 'caenorhabditis_elegans|W08D2.8.1'
+[545] 'caenorhabditis_elegans|K09B11.5a.1'
+[546] 'caenorhabditis_elegans|K09B11.5b.1'
+[547] 'caenorhabditis_elegans|T25B9.5a.1'
+[548] 'caenorhabditis_elegans|T25B9.5b.1'
+[549] 'caenorhabditis_elegans|Y69E1A.3.1'
+[550] 'caenorhabditis_elegans|Y52D5A.2.1'
+[551] 'ascaris_suum|AgB12_g002_t02'
+[552] 'ascaris_suum|AgR020_g177_t01'
+[553] 'ancylostoma_caninum|ANCCAN_21407'
+[554] 'ancylostoma_caninum|ANCCAN_18648'
+[555] 'ancylostoma_caninum|ANCCAN_23211'
+[556] 'Homo_sapiens|sp|Q13546|RIPK1_HUMAN'
+[557] 'trichuris_muris|TMUE_3000013188.1'
+[558] 'haemonchus_contortus|HCON_00167260-00001'
+[559] 'ascaris_suum|AgR029_g128_t01'
+;
+END; [Taxa]
+
+BEGIN Splits;
+DIMENSIONS ntax=559 nsplits=2038;
+FORMAT labels=no weights=yes confidences=no intervals=no;
+MATRIX
+	100	 2,
+	100	 4,
+	100	 277,
+	100	 278,
+	100	 277 278,
+	100	 554,
+	100	 277 278 554,
+	100	 4 277 278 554,
+	100	 5,
+	100	 6,
+	100	 5 6,
+	100	 8,
+	100	 9,
+	100	 8 9,
+	100	 22,
+	100	 23,
+	97	 22 23,
+	94	 8 9 22 23,
+	94	 5 6 8 9 22 23,
+	100	 7,
+	94	 5 6 7 8 9 22 23,
+	100	 10,
+	100	 11,
+	100	 12,
+	100	 11 12,
+	100	 10 11 12,
+	100	 13,
+	100	 10 11 12 13,
+	100	 21,
+	100	 10 11 12 13 21,
+	100	 14,
+	100	 15,
+	100	 16,
+	100	 17,
+	99	 16 17,
+	40	 15 16 17,
+	100	 14 15 16 17,
+	100	 18,
+	100	 19,
+	100	 18 19,
+	98	 14 15 16 17 18 19,
+	100	 20,
+	100	 14 15 16 17 18 19 20,
+	100	 10 11 12 13 14 15 16 17 18 19 20 21,
+	100	 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23,
+	100	 315,
+	100	 316,
+	100	 315 316,
+	100	 372,
+	100	 373,
+	100	 372 373,
+	99	 315 316 372 373,
+	100	 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 315 316 372 373,
+	100	 40,
+	100	 41,
+	57	 40 41,
+	100	 42,
+	100	 40 41 42,
+	100	 43,
+	100	 44,
+	100	 43 44,
+	100	 40 41 42 43 44,
+	98	 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 40 41 42 43 44 315 316 372 373,
+	100	 24,
+	100	 25,
+	100	 24 25,
+	100	 26,
+	100	 28,
+	67	 26 28,
+	100	 27,
+	100	 26 27 28,
+	98	 24 25 26 27 28,
+	100	 32,
+	100	 33,
+	100	 32 33,
+	9	 24 25 26 27 28 32 33,
+	100	 29,
+	100	 31,
+	35	 29 31,
+	100	 30,
+	100	 29 30 31,
+	10	 24 25 26 27 28 29 30 31 32 33,
+	100	 34,
+	100	 35,
+	100	 36,
+	100	 35 36,
+	100	 37,
+	30	 35 36 37,
+	100	 34 35 36 37,
+	100	 39,
+	100	 394,
+	76	 39 394,
+	6	 34 35 36 37 39 394,
+	76	 24 25 26 27 28 29 30 31 32 33 34 35 36 37 39 394,
+	100	 38,
+	88	 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 394,
+	100	 544,
+	100	 547,
+	100	 548,
+	100	 547 548,
+	100	 549,
+	100	 547 548 549,
+	100	 550,
+	100	 547 548 549 550,
+	100	 544 547 548 549 550,
+	100	 545,
+	100	 546,
+	100	 545 546,
+	100	 544 545 546 547 548 549 550,
+	100	 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 394 544 545 546 547 548 549 550,
+	87	 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 315 316 372 373 394 544 545 546 547 548 549 550,
+	100	 328,
+	100	 354,
+	85	 328 354,
+	100	 329,
+	100	 330,
+	100	 329 330,
+	86	 328 329 330 354,
+	100	 353,
+	81	 328 329 330 353 354,
+	100	 335,
+	100	 336,
+	100	 337,
+	100	 338,
+	53	 337 338,
+	57	 336 337 338,
+	100	 339,
+	95	 336 337 338 339,
+	100	 335 336 337 338 339,
+	100	 340,
+	100	 335 336 337 338 339 340,
+	83	 328 329 330 335 336 337 338 339 340 353 354,
+	100	 341,
+	100	 342,
+	99	 341 342,
+	100	 343,
+	96	 341 342 343,
+	100	 345,
+	85	 341 342 343 345,
+	100	 346,
+	53	 341 342 343 345 346,
+	100	 344,
+	100	 341 342 343 344 345 346,
+	100	 347,
+	100	 349,
+	25	 347 349,
+	100	 348,
+	100	 347 348 349,
+	100	 341 342 343 344 345 346 347 348 349,
+	100	 350,
+	100	 351,
+	100	 350 351,
+	100	 341 342 343 344 345 346 347 348 349 350 351,
+	39	 328 329 330 335 336 337 338 339 340 341 342 343 344 345 346 347 348 349 350 351 353 354,
+	100	 352,
+	6	 328 329 330 335 336 337 338 339 340 341 342 343 344 345 346 347 348 349 350 351 352 353 354,
+	100	 331,
+	100	 332,
+	76	 331 332,
+	100	 333,
+	16	 331 332 333,
+	100	 334,
+	100	 331 332 333 334,
+	84	 328 329 330 331 332 333 334 335 336 337 338 339 340 341 342 343 344 345 346 347 348 349 350 351 352 353 354,
+	100	 456,
+	100	 457,
+	100	 456 457,
+	100	 328 329 330 331 332 333 334 335 336 337 338 339 340 341 342 343 344 345 346 347 348 349 350 351 352 353 354 456 457,
+	63	 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 315 316 328 329 330 331 332 333 334 335 336 337 338 339 340 341 342 343 344 345 346 347 348 349 350 351 352 353 354 372 373 394 456 457 544 545 546 547 548 549 550,
+	100	 45,
+	100	 46,
+	100	 47,
+	100	 46 47,
+	100	 45 46 47,
+	100	 48,
+	100	 49,
+	100	 50,
+	100	 49 50,
+	100	 48 49 50,
+	100	 45 46 47 48 49 50,
+	100	 51,
+	100	 45 46 47 48 49 50 51,
+	100	 52,
+	100	 53,
+	100	 54,
+	100	 55,
+	100	 54 55,
+	100	 53 54 55,
+	84	 52 53 54 55,
+	99	 45 46 47 48 49 50 51 52 53 54 55,
+	100	 114,
+	100	 115,
+	100	 114 115,
+	100	 116,
+	100	 114 115 116,
+	100	 120,
+	9	 114 115 116 120,
+	100	 117,
+	100	 118,
+	100	 119,
+	100	 118 119,
+	100	 117 118 119,
+	100	 114 115 116 117 118 119 120,
+	100	 121,
+	100	 114 115 116 117 118 119 120 121,
+	100	 526,
+	100	 527,
+	100	 528,
+	100	 527 528,
+	100	 526 527 528,
+	76	 114 115 116 117 118 119 120 121 526 527 528,
+	94	 45 46 47 48 49 50 51 52 53 54 55 114 115 116 117 118 119 120 121 526 527 528,
+	100	 56,
+	100	 57,
+	51	 56 57,
+	100	 58,
+	67	 56 57 58,
+	100	 59,
+	100	 56 57 58 59,
+	100	 60,
+	100	 61,
+	100	 60 61,
+	100	 62,
+	100	 63,
+	100	 62 63,
+	100	 60 61 62 63,
+	100	 64,
+	100	 60 61 62 63 64,
+	98	 56 57 58 59 60 61 62 63 64,
+	100	 65,
+	93	 56 57 58 59 60 61 62 63 64 65,
+	100	 66,
+	100	 69,
+	71	 66 69,
+	100	 68,
+	45	 66 68 69,
+	100	 67,
+	100	 66 67 68 69,
+	100	 70,
+	100	 71,
+	81	 70 71,
+	100	 72,
+	79	 70 71 72,
+	100	 73,
+	100	 70 71 72 73,
+	98	 66 67 68 69 70 71 72 73,
+	100	 74,
+	100	 75,
+	100	 74 75,
+	99	 66 67 68 69 70 71 72 73 74 75,
+	100	 76,
+	100	 66 67 68 69 70 71 72 73 74 75 76,
+	100	 77,
+	100	 78,
+	100	 77 78,
+	100	 529,
+	100	 77 78 529,
+	100	 66 67 68 69 70 71 72 73 74 75 76 77 78 529,
+	100	 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 529,
+	93	 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 114 115 116 117 118 119 120 121 526 527 528 529,
+	100	 94,
+	100	 95,
+	100	 94 95,
+	100	 96,
+	100	 97,
+	100	 96 97,
+	100	 94 95 96 97,
+	100	 98,
+	100	 94 95 96 97 98,
+	100	 99,
+	100	 100,
+	100	 99 100,
+	100	 94 95 96 97 98 99 100,
+	94	 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 94 95 96 97 98 99 100 114 115 116 117 118 119 120 121 526 527 528 529,
+	100	 79,
+	100	 80,
+	100	 79 80,
+	100	 81,
+	100	 82,
+	100	 81 82,
+	100	 79 80 81 82,
+	100	 83,
+	100	 84,
+	100	 83 84,
+	100	 79 80 81 82 83 84,
+	100	 85,
+	100	 86,
+	100	 85 86,
+	100	 87,
+	100	 85 86 87,
+	100	 79 80 81 82 83 84 85 86 87,
+	100	 88,
+	100	 89,
+	100	 90,
+	100	 89 90,
+	100	 92,
+	100	 93,
+	100	 92 93,
+	100	 89 90 92 93,
+	100	 88 89 90 92 93,
+	3	 79 80 81 82 83 84 85 86 87 88 89 90 92 93,
+	100	 105,
+	100	 106,
+	2	 105 106,
+	97	 79 80 81 82 83 84 85 86 87 88 89 90 92 93 105 106,
+	100	 91,
+	100	 101,
+	100	 91 101,
+	100	 102,
+	100	 103,
+	100	 102 103,
+	100	 107,
+	100	 102 103 107,
+	100	 104,
+	100	 102 103 104 107,
+	100	 91 101 102 103 104 107,
+	100	 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 101 102 103 104 105 106 107,
+	92	 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 114 115 116 117 118 119 120 121 526 527 528 529,
+	100	 129,
+	100	 134,
+	99	 129 134,
+	100	 132,
+	53	 129 132 134,
+	100	 130,
+	88	 129 130 132 134,
+	100	 131,
+	100	 133,
+	63	 131 133,
+	100	 129 130 131 132 133 134,
+	100	 135,
+	100	 136,
+	30	 135 136,
+	100	 137,
+	100	 135 136 137,
+	100	 138,
+	99	 135 136 137 138,
+	100	 129 130 131 132 133 134 135 136 137 138,
+	96	 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 114 115 116 117 118 119 120 121 129 130 131 132 133 134 135 136 137 138 526 527 528 529,
+	100	 122,
+	100	 123,
+	100	 124,
+	100	 123 124,
+	100	 122 123 124,
+	100	 125,
+	100	 122 123 124 125,
+	100	 126,
+	100	 128,
+	95	 126 128,
+	100	 127,
+	100	 126 127 128,
+	100	 122 123 124 125 126 127 128,
+	100	 139,
+	100	 122 123 124 125 126 127 128 139,
+	89	 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 526 527 528 529,
+	100	 108,
+	100	 109,
+	100	 108 109,
+	100	 110,
+	100	 111,
+	100	 110 111,
+	100	 108 109 110 111,
+	100	 112,
+	100	 113,
+	100	 112 113,
+	100	 108 109 110 111 112 113,
+	98	 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 526 527 528 529,
+	63	 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 315 316 328 329 330 331 332 333 334 335 336 337 338 339 340 341 342 343 344 345 346 347 348 349 350 351 352 353 354 372 373 394 456 457 526 527 528 529 544 545 546 547 548 549 550,
+	100	 161,
+	100	 162,
+	100	 161 162,
+	100	 163,
+	100	 164,
+	100	 163 164,
+	100	 165,
+	100	 166,
+	100	 167,
+	100	 166 167,
+	86	 165 166 167,
+	100	 168,
+	100	 165 166 167 168,
+	100	 163 164 165 166 167 168,
+	100	 161 162 163 164 165 166 167 168,
+	63	 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 161 162 163 164 165 166 167 168 315 316 328 329 330 331 332 333 334 335 336 337 338 339 340 341 342 343 344 345 346 347 348 349 350 351 352 353 354 372 373 394 456 457 526 527 528 529 544 545 546 547 548 549 550,
+	100	 140,
+	100	 141,
+	100	 140 141,
+	100	 142,
+	100	 143,
+	29	 142 143,
+	100	 144,
+	100	 142 143 144,
+	100	 145,
+	100	 148,
+	100	 145 148,
+	100	 149,
+	95	 145 148 149,
+	100	 146,
+	100	 150,
+	77	 146 150,
+	29	 145 146 148 149 150,
+	100	 147,
+	100	 151,
+	87	 147 151,
+	100	 145 146 147 148 149 150 151,
+	99	 142 143 144 145 146 147 148 149 150 151,
+	100	 152,
+	100	 142 143 144 145 146 147 148 149 150 151 152,
+	98	 140 141 142 143 144 145 146 147 148 149 150 151 152,
+	100	 153,
+	100	 154,
+	100	 153 154,
+	100	 155,
+	100	 156,
+	100	 155 156,
+	100	 153 154 155 156,
+	81	 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156,
+	100	 157,
+	100	 158,
+	100	 157 158,
+	100	 159,
+	100	 157 158 159,
+	52	 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159,
+	100	 160,
+	100	 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160,
+	100	 279,
+	100	 280,
+	99	 279 280,
+	100	 281,
+	100	 283,
+	73	 281 283,
+	100	 284,
+	100	 285,
+	95	 284 285,
+	56	 281 283 284 285,
+	100	 282,
+	98	 281 282 283 284 285,
+	100	 279 280 281 282 283 284 285,
+	87	 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 279 280 281 282 283 284 285,
+	96	 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 279 280 281 282 283 284 285 315 316 328 329 330 331 332 333 334 335 336 337 338 339 340 341 342 343 344 345 346 347 348 349 350 351 352 353 354 372 373 394 456 457 526 527 528 529 544 545 546 547 548 549 550,
+	100	 317,
+	100	 318,
+	100	 319,
+	100	 318 319,
+	100	 317 318 319,
+	100	 325,
+	100	 317 318 319 325,
+	100	 323,
+	100	 324,
+	100	 323 324,
+	86	 317 318 319 323 324 325,
+	100	 320,
+	100	 322,
+	100	 320 322,
+	100	 321,
+	100	 320 321 322,
+	100	 326,
+	100	 320 321 322 326,
+	100	 327,
+	92	 320 321 322 326 327,
+	92	 317 318 319 320 321 322 323 324 325 326 327,
+	100	 487,
+	99	 317 318 319 320 321 322 323 324 325 326 327 487,
+	100	 396,
+	100	 397,
+	100	 396 397,
+	100	 539,
+	100	 396 397 539,
+	97	 317 318 319 320 321 322 323 324 325 326 327 396 397 487 539,
+	99	 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 279 280 281 282 283 284 285 315 316 317 318 319 320 321 322 323 324 325 326 327 328 329 330 331 332 333 334 335 336 337 338 339 340 341 342 343 344 345 346 347 348 349 350 351 352 353 354 372 373 394 396 397 456 457 487 526 527 528 529 539 544 545 546 547 548 549 550,
+	100	 540,
+	89	 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 279 280 281 282 283 284 285 315 316 317 318 319 320 321 322 323 324 325 326 327 328 329 330 331 332 333 334 335 336 337 338 339 340 341 342 343 344 345 346 347 348 349 350 351 352 353 354 372 373 394 396 397 456 457 487 526 527 528 529 539 540 544 545 546 547 548 549 550,
+	100	 169,
+	100	 182,
+	80	 169 182,
+	100	 176,
+	100	 177,
+	100	 176 177,
+	100	 178,
+	100	 179,
+	100	 178 179,
+	28	 176 177 178 179,
+	100	 181,
+	100	 176 177 178 179 181,
+	100	 180,
+	100	 176 177 178 179 180 181,
+	80	 169 176 177 178 179 180 181 182,
+	100	 172,
+	100	 174,
+	100	 175,
+	100	 174 175,
+	100	 172 174 175,
+	100	 173,
+	100	 172 173 174 175,
+	100	 183,
+	100	 184,
+	100	 183 184,
+	100	 185,
+	100	 183 184 185,
+	100	 172 173 174 175 183 184 185,
+	79	 169 172 173 174 175 176 177 178 179 180 181 182 183 184 185,
+	100	 186,
+	100	 187,
+	100	 189,
+	37	 187 189,
+	100	 188,
+	100	 187 188 189,
+	99	 186 187 188 189,
+	100	 190,
+	100	 191,
+	100	 192,
+	100	 191 192,
+	100	 190 191 192,
+	100	 193,
+	99	 190 191 192 193,
+	100	 186 187 188 189 190 191 192 193,
+	100	 195,
+	100	 196,
+	100	 195 196,
+	93	 186 187 188 189 190 191 192 193 195 196,
+	100	 194,
+	100	 186 187 188 189 190 191 192 193 194 195 196,
+	99	 169 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196,
+	100	 204,
+	100	 205,
+	100	 206,
+	100	 205 206,
+	100	 207,
+	100	 205 206 207,
+	100	 208,
+	100	 209,
+	100	 208 209,
+	100	 210,
+	100	 208 209 210,
+	100	 205 206 207 208 209 210,
+	100	 211,
+	100	 205 206 207 208 209 210 211,
+	99	 204 205 206 207 208 209 210 211,
+	100	 558,
+	77	 204 205 206 207 208 209 210 211 558,
+	100	 355,
+	100	 356,
+	100	 355 356,
+	69	 204 205 206 207 208 209 210 211 355 356 558,
+	36	 169 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 204 205 206 207 208 209 210 211 355 356 558,
+	100	 170,
+	100	 171,
+	100	 170 171,
+	100	 197,
+	100	 198,
+	88	 197 198,
+	100	 199,
+	28	 197 198 199,
+	100	 200,
+	98	 197 198 199 200,
+	100	 201,
+	100	 202,
+	54	 201 202,
+	100	 203,
+	100	 201 202 203,
+	100	 197 198 199 200 201 202 203,
+	100	 170 171 197 198 199 200 201 202 203,
+	58	 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 355 356 558,
+	100	 484,
+	100	 485,
+	100	 484 485,
+	74	 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 355 356 484 485 558,
+	100	 228,
+	100	 233,
+	97	 228 233,
+	100	 232,
+	100	 234,
+	100	 236,
+	100	 237,
+	100	 240,
+	88	 237 240,
+	96	 236 237 240,
+	96	 234 236 237 240,
+	100	 235,
+	99	 234 235 236 237 240,
+	98	 232 234 235 236 237 240,
+	71	 228 232 233 234 235 236 237 240,
+	100	 230,
+	70	 228 230 232 233 234 235 236 237 240,
+	100	 231,
+	82	 228 230 231 232 233 234 235 236 237 240,
+	100	 229,
+	95	 228 229 230 231 232 233 234 235 236 237 240,
+	100	 238,
+	100	 239,
+	99	 238 239,
+	100	 228 229 230 231 232 233 234 235 236 237 238 239 240,
+	100	 241,
+	100	 242,
+	100	 241 242,
+	100	 249,
+	100	 241 242 249,
+	100	 243,
+	100	 244,
+	100	 247,
+	51	 244 247,
+	98	 243 244 247,
+	100	 245,
+	100	 246,
+	96	 245 246,
+	100	 243 244 245 246 247,
+	100	 248,
+	100	 243 244 245 246 247 248,
+	100	 241 242 243 244 245 246 247 248 249,
+	100	 250,
+	100	 241 242 243 244 245 246 247 248 249 250,
+	100	 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250,
+	76	 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 355 356 484 485 558,
+	100	 374,
+	100	 391,
+	100	 392,
+	100	 391 392,
+	100	 393,
+	100	 391 392 393,
+	100	 374 391 392 393,
+	100	 375,
+	100	 376,
+	100	 375 376,
+	100	 381,
+	100	 375 376 381,
+	100	 377,
+	100	 378,
+	100	 377 378,
+	100	 379,
+	100	 380,
+	100	 379 380,
+	100	 377 378 379 380,
+	100	 382,
+	100	 377 378 379 380 382,
+	100	 375 376 377 378 379 380 381 382,
+	100	 383,
+	100	 375 376 377 378 379 380 381 382 383,
+	100	 374 375 376 377 378 379 380 381 382 383 391 392 393,
+	100	 384,
+	100	 385,
+	100	 384 385,
+	100	 386,
+	100	 387,
+	100	 386 387,
+	100	 384 385 386 387,
+	100	 388,
+	100	 389,
+	95	 388 389,
+	100	 390,
+	100	 388 389 390,
+	100	 384 385 386 387 388 389 390,
+	100	 481,
+	100	 384 385 386 387 388 389 390 481,
+	100	 482,
+	100	 483,
+	100	 482 483,
+	84	 384 385 386 387 388 389 390 481 482 483,
+	81	 374 375 376 377 378 379 380 381 382 383 384 385 386 387 388 389 390 391 392 393 481 482 483,
+	100	 395,
+	85	 374 375 376 377 378 379 380 381 382 383 384 385 386 387 388 389 390 391 392 393 395 481 482 483,
+	68	 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 355 356 374 375 376 377 378 379 380 381 382 383 384 385 386 387 388 389 390 391 392 393 395 481 482 483 484 485 558,
+	100	 399,
+	100	 400,
+	100	 399 400,
+	100	 401,
+	100	 399 400 401,
+	100	 402,
+	100	 403,
+	100	 402 403,
+	100	 404,
+	100	 402 403 404,
+	100	 399 400 401 402 403 404,
+	100	 472,
+	100	 475,
+	100	 476,
+	100	 475 476,
+	93	 472 475 476,
+	100	 473,
+	100	 474,
+	100	 473 474,
+	93	 472 473 474 475 476,
+	100	 477,
+	100	 472 473 474 475 476 477,
+	100	 553,
+	95	 472 473 474 475 476 477 553,
+	96	 399 400 401 402 403 404 472 473 474 475 476 477 553,
+	100	 463,
+	100	 464,
+	100	 463 464,
+	100	 465,
+	100	 463 464 465,
+	100	 466,
+	100	 467,
+	100	 468,
+	100	 467 468,
+	99	 466 467 468,
+	100	 463 464 465 466 467 468,
+	100	 469,
+	100	 470,
+	86	 469 470,
+	99	 463 464 465 466 467 468 469 470,
+	100	 471,
+	100	 463 464 465 466 467 468 469 470 471,
+	78	 399 400 401 402 403 404 463 464 465 466 467 468 469 470 471 472 473 474 475 476 477 553,
+	100	 434,
+	100	 435,
+	100	 440,
+	100	 435 440,
+	100	 438,
+	100	 439,
+	100	 438 439,
+	96	 435 438 439 440,
+	100	 436,
+	100	 437,
+	99	 436 437,
+	100	 442,
+	100	 436 437 442,
+	97	 435 436 437 438 439 440 442,
+	100	 441,
+	100	 435 436 437 438 439 440 441 442,
+	100	 434 435 436 437 438 439 440 441 442,
+	100	 444,
+	100	 447,
+	100	 448,
+	100	 447 448,
+	100	 524,
+	100	 525,
+	100	 524 525,
+	99	 447 448 524 525,
+	34	 444 447 448 524 525,
+	100	 434 435 436 437 438 439 440 441 442 444 447 448 524 525,
+	100	 555,
+	96	 434 435 436 437 438 439 440 441 442 444 447 448 524 525 555,
+	100	 443,
+	100	 445,
+	100	 446,
+	100	 445 446,
+	97	 443 445 446,
+	100	 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 524 525 555,
+	100	 449,
+	100	 450,
+	100	 451,
+	100	 450 451,
+	100	 452,
+	100	 450 451 452,
+	98	 449 450 451 452,
+	100	 453,
+	100	 449 450 451 452 453,
+	100	 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 524 525 555,
+	100	 489,
+	100	 490,
+	100	 489 490,
+	100	 491,
+	100	 493,
+	75	 491 493,
+	100	 492,
+	75	 491 492 493,
+	100	 494,
+	100	 495,
+	100	 494 495,
+	100	 496,
+	100	 494 495 496,
+	100	 491 492 493 494 495 496,
+	100	 497,
+	100	 491 492 493 494 495 496 497,
+	100	 489 490 491 492 493 494 495 496 497,
+	100	 498,
+	100	 499,
+	100	 498 499,
+	83	 489 490 491 492 493 494 495 496 497 498 499,
+	100	 519,
+	74	 489 490 491 492 493 494 495 496 497 498 499 519,
+	100	 500,
+	100	 501,
+	100	 500 501,
+	100	 502,
+	100	 503,
+	100	 502 503,
+	90	 500 501 502 503,
+	100	 504,
+	100	 506,
+	85	 504 506,
+	100	 505,
+	100	 504 505 506,
+	100	 507,
+	100	 508,
+	100	 507 508,
+	100	 504 505 506 507 508,
+	94	 500 501 502 503 504 505 506 507 508,
+	100	 509,
+	100	 500 501 502 503 504 505 506 507 508 509,
+	100	 510,
+	100	 511,
+	100	 510 511,
+	100	 500 501 502 503 504 505 506 507 508 509 510 511,
+	100	 512,
+	100	 513,
+	100	 512 513,
+	100	 514,
+	100	 515,
+	100	 514 515,
+	14	 512 513 514 515,
+	100	 516,
+	100	 512 513 514 515 516,
+	100	 517,
+	100	 518,
+	100	 517 518,
+	100	 512 513 514 515 516 517 518,
+	83	 500 501 502 503 504 505 506 507 508 509 510 511 512 513 514 515 516 517 518,
+	100	 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 504 505 506 507 508 509 510 511 512 513 514 515 516 517 518 519,
+	100	 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 504 505 506 507 508 509 510 511 512 513 514 515 516 517 518 519 524 525 555,
+	100	 399 400 401 402 403 404 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 463 464 465 466 467 468 469 470 471 472 473 474 475 476 477 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 504 505 506 507 508 509 510 511 512 513 514 515 516 517 518 519 524 525 553 555,
+	100	 405,
+	100	 406,
+	100	 405 406,
+	100	 407,
+	100	 408,
+	100	 407 408,
+	100	 405 406 407 408,
+	100	 409,
+	100	 410,
+	100	 409 410,
+	100	 411,
+	100	 412,
+	100	 413,
+	100	 412 413,
+	100	 411 412 413,
+	75	 409 410 411 412 413,
+	100	 405 406 407 408 409 410 411 412 413,
+	100	 422,
+	100	 423,
+	100	 422 423,
+	100	 433,
+	98	 422 423 433,
+	100	 424,
+	100	 425,
+	100	 424 425,
+	100	 426,
+	100	 428,
+	84	 426 428,
+	100	 427,
+	100	 426 427 428,
+	99	 424 425 426 427 428,
+	100	 429,
+	100	 430,
+	100	 429 430,
+	100	 431,
+	100	 432,
+	100	 431 432,
+	100	 429 430 431 432,
+	100	 424 425 426 427 428 429 430 431 432,
+	100	 422 423 424 425 426 427 428 429 430 431 432 433,
+	100	 520,
+	100	 521,
+	100	 520 521,
+	100	 522,
+	100	 520 521 522,
+	68	 422 423 424 425 426 427 428 429 430 431 432 433 520 521 522,
+	94	 405 406 407 408 409 410 411 412 413 422 423 424 425 426 427 428 429 430 431 432 433 520 521 522,
+	100	 478,
+	100	 479,
+	100	 478 479,
+	100	 480,
+	100	 478 479 480,
+	72	 405 406 407 408 409 410 411 412 413 422 423 424 425 426 427 428 429 430 431 432 433 478 479 480 520 521 522,
+	100	 414,
+	100	 415,
+	93	 414 415,
+	100	 416,
+	100	 417,
+	100	 416 417,
+	100	 414 415 416 417,
+	100	 418,
+	100	 419,
+	100	 418 419,
+	100	 420,
+	85	 418 419 420,
+	100	 421,
+	82	 418 419 420 421,
+	100	 414 415 416 417 418 419 420 421,
+	46	 405 406 407 408 409 410 411 412 413 414 415 416 417 418 419 420 421 422 423 424 425 426 427 428 429 430 431 432 433 478 479 480 520 521 522,
+	32	 399 400 401 402 403 404 405 406 407 408 409 410 411 412 413 414 415 416 417 418 419 420 421 422 423 424 425 426 427 428 429 430 431 432 433 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 463 464 465 466 467 468 469 470 471 472 473 474 475 476 477 478 479 480 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 504 505 506 507 508 509 510 511 512 513 514 515 516 517 518 519 520 521 522 524 525 553 555,
+	100	 541,
+	100	 542,
+	100	 543,
+	100	 542 543,
+	100	 541 542 543,
+	100	 556,
+	100	 559,
+	37	 556 559,
+	37	 541 542 543 556 559,
+	92	 399 400 401 402 403 404 405 406 407 408 409 410 411 412 413 414 415 416 417 418 419 420 421 422 423 424 425 426 427 428 429 430 431 432 433 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 463 464 465 466 467 468 469 470 471 472 473 474 475 476 477 478 479 480 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 504 505 506 507 508 509 510 511 512 513 514 515 516 517 518 519 520 521 522 524 525 541 542 543 553 555 556 559,
+	54	 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 355 356 374 375 376 377 378 379 380 381 382 383 384 385 386 387 388 389 390 391 392 393 395 399 400 401 402 403 404 405 406 407 408 409 410 411 412 413 414 415 416 417 418 419 420 421 422 423 424 425 426 427 428 429 430 431 432 433 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 463 464 465 466 467 468 469 470 471 472 473 474 475 476 477 478 479 480 481 482 483 484 485 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 504 505 506 507 508 509 510 511 512 513 514 515 516 517 518 519 520 521 522 524 525 541 542 543 553 555 556 558 559,
+	74	 1 2 3 4 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 251 252 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 272 273 274 275 276 277 278 286 287 288 289 290 291 292 293 294 295 296 297 298 299 300 301 302 303 304 305 306 307 308 309 310 311 312 313 314 357 358 359 360 361 362 363 364 365 366 367 368 369 370 371 398 454 455 458 459 460 461 462 486 488 523 530 531 532 533 534 535 536 537 538 551 552 554 557,
+	100	 212,
+	100	 213,
+	99	 212 213,
+	100	 214,
+	51	 212 213 214,
+	100	 215,
+	100	 212 213 214 215,
+	100	 216,
+	100	 212 213 214 215 216,
+	100	 217,
+	100	 218,
+	100	 217 218,
+	99	 212 213 214 215 216 217 218,
+	100	 219,
+	99	 212 213 214 215 216 217 218 219,
+	100	 220,
+	100	 212 213 214 215 216 217 218 219 220,
+	100	 398,
+	100	 454,
+	100	 398 454,
+	100	 212 213 214 215 216 217 218 219 220 398 454,
+	100	 357,
+	100	 359,
+	100	 362,
+	100	 363,
+	100	 362 363,
+	100	 364,
+	100	 365,
+	100	 364 365,
+	100	 362 363 364 365,
+	100	 366,
+	100	 367,
+	100	 366 367,
+	2	 362 363 364 365 366 367,
+	100	 368,
+	25	 362 363 364 365 366 367 368,
+	99	 359 362 363 364 365 366 367 368,
+	100	 360,
+	100	 359 360 362 363 364 365 366 367 368,
+	100	 361,
+	99	 359 360 361 362 363 364 365 366 367 368,
+	22	 357 359 360 361 362 363 364 365 366 367 368,
+	100	 552,
+	98	 357 359 360 361 362 363 364 365 366 367 368 552,
+	100	 358,
+	100	 357 358 359 360 361 362 363 364 365 366 367 368 552,
+	79	 212 213 214 215 216 217 218 219 220 357 358 359 360 361 362 363 364 365 366 367 368 398 454 552,
+	100	 221,
+	100	 222,
+	100	 221 222,
+	100	 223,
+	90	 221 222 223,
+	100	 224,
+	100	 225,
+	85	 224 225,
+	100	 226,
+	100	 224 225 226,
+	100	 221 222 223 224 225 226,
+	100	 227,
+	100	 221 222 223 224 225 226 227,
+	100	 523,
+	76	 221 222 223 224 225 226 227 523,
+	100	 251,
+	100	 252,
+	100	 251 252,
+	100	 256,
+	100	 257,
+	100	 256 257,
+	100	 251 252 256 257,
+	100	 253,
+	100	 254,
+	100	 253 254,
+	100	 255,
+	100	 253 254 255,
+	82	 251 252 253 254 255 256 257,
+	100	 258,
+	100	 251 252 253 254 255 256 257 258,
+	100	 259,
+	100	 260,
+	100	 259 260,
+	100	 251 252 253 254 255 256 257 258 259 260,
+	100	 261,
+	100	 262,
+	100	 263,
+	100	 264,
+	100	 263 264,
+	100	 262 263 264,
+	100	 261 262 263 264,
+	100	 265,
+	100	 266,
+	100	 265 266,
+	100	 268,
+	100	 269,
+	100	 268 269,
+	100	 265 266 268 269,
+	100	 267,
+	100	 271,
+	100	 267 271,
+	100	 265 266 267 268 269 271,
+	100	 270,
+	91	 265 266 267 268 269 270 271,
+	95	 261 262 263 264 265 266 267 268 269 270 271,
+	96	 251 252 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270 271,
+	100	 455,
+	37	 251 252 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 455,
+	100	 530,
+	31	 251 252 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 455 530,
+	100	 551,
+	92	 251 252 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 455 530 551,
+	31	 221 222 223 224 225 226 227 251 252 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 455 523 530 551,
+	87	 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 251 252 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 357 358 359 360 361 362 363 364 365 366 367 368 398 454 455 523 530 551 552,
+	63	 1 2 3 4 272 273 274 275 276 277 278 286 287 288 289 290 291 292 293 294 295 296 297 298 299 300 301 302 303 304 305 306 307 308 309 310 311 312 313 314 369 370 371 458 459 460 461 462 486 488 531 532 533 534 535 536 537 538 554 557,
+	100	 272,
+	100	 273,
+	100	 274,
+	100	 273 274,
+	100	 275,
+	100	 276,
+	100	 275 276,
+	100	 273 274 275 276,
+	100	 557,
+	100	 273 274 275 276 557,
+	100	 272 273 274 275 276 557,
+	100	 488,
+	100	 272 273 274 275 276 488 557,
+	100	 369,
+	100	 370,
+	100	 371,
+	86	 370 371,
+	100	 369 370 371,
+	100	 272 273 274 275 276 369 370 371 488 557,
+	100	 531,
+	100	 532,
+	100	 534,
+	100	 535,
+	92	 534 535,
+	47	 532 534 535,
+	100	 533,
+	100	 532 533 534 535,
+	100	 536,
+	100	 532 533 534 535 536,
+	100	 537,
+	100	 538,
+	100	 537 538,
+	100	 532 533 534 535 536 537 538,
+	100	 531 532 533 534 535 536 537 538,
+	100	 272 273 274 275 276 369 370 371 488 531 532 533 534 535 536 537 538 557,
+	73	 1 2 3 4 277 278 286 287 288 289 290 291 292 293 294 295 296 297 298 299 300 301 302 303 304 305 306 307 308 309 310 311 312 313 314 458 459 460 461 462 486 554,
+	100	 286,
+	100	 287,
+	100	 286 287,
+	100	 288,
+	100	 286 287 288,
+	100	 289,
+	100	 290,
+	100	 289 290,
+	99	 286 287 288 289 290,
+	100	 291,
+	100	 292,
+	100	 291 292,
+	100	 293,
+	100	 294,
+	100	 295,
+	100	 294 295,
+	100	 293 294 295,
+	100	 296,
+	100	 298,
+	53	 296 298,
+	100	 297,
+	100	 296 297 298,
+	100	 299,
+	100	 296 297 298 299,
+	100	 293 294 295 296 297 298 299,
+	100	 291 292 293 294 295 296 297 298 299,
+	100	 458,
+	100	 459,
+	90	 458 459,
+	100	 461,
+	23	 458 459 461,
+	100	 460,
+	100	 458 459 460 461,
+	100	 462,
+	100	 458 459 460 461 462,
+	88	 291 292 293 294 295 296 297 298 299 458 459 460 461 462,
+	33	 286 287 288 289 290 291 292 293 294 295 296 297 298 299 458 459 460 461 462,
+	100	 486,
+	78	 286 287 288 289 290 291 292 293 294 295 296 297 298 299 458 459 460 461 462 486,
+	100	 1 2 3 4 277 278 300 301 302 303 304 305 306 307 308 309 310 311 312 313 314 554,
+	100	 1 2 3 300 301 302 303 304 305 306 307 308 309 310 311 312 313 314,
+	100	 300,
+	100	 301,
+	100	 300 301,
+	100	 309,
+	100	 310,
+	85	 309 310,
+	100	 311,
+	80	 309 310 311,
+	100	 312,
+	100	 309 310 311 312,
+	65	 300 301 309 310 311 312,
+	100	 302,
+	100	 304,
+	51	 302 304,
+	100	 303,
+	95	 302 303 304,
+	100	 305,
+	100	 302 303 304 305,
+	100	 306,
+	100	 302 303 304 305 306,
+	64	 300 301 302 303 304 305 306 309 310 311 312,
+	100	 307,
+	100	 308,
+	100	 307 308,
+	100	 300 301 302 303 304 305 306 307 308 309 310 311 312,
+	100	 313,
+	100	 314,
+	100	 313 314,
+	100	 300 301 302 303 304 305 306 307 308 309 310 311 312 313 314,
+	100	 1 2 3,
+	98	 1 3,
+	100	 3,
+	100	 1,
+	52	 14 15,
+	28	 40 42,
+	70	 34 37,
+	86	 24 25 26 27 28 34 35 36 37,
+	87	 24 25 26 27 28 32 33 34 35 36 37,
+	57	 29 30,
+	85	 24 25 26 27 28 29 30 31 32 33 34 35 36 37,
+	23	 24 25 26 27 28 29 30 31 32 33 34 35 36 37 39,
+	23	 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39,
+	11	 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 544 545 546 547 548 549 550,
+	64	 143 144,
+	55	 146 147 150 151,
+	41	 157 158 159 160,
+	19	 140 141 142 143 144 145 146 147 148 149 150 151 152 157 158 159 160,
+	12	 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 394 544 545 546 547 548 549 550,
+	5	 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 315 316 372 373 394 544 545 546 547 548 549 550,
+	5	 328 329 330 335 336 337 338 339 340 354,
+	1	 328 329 330 335 336 337 338 339 340 352 354,
+	74	 331 332 334,
+	42	 344 346,
+	70	 347 348,
+	3	 331 332 333 334 341 342 343 344 345 346 347 348 349 350 351,
+	2	 331 332 333 334 341 342 343 344 345 346 347 348 349 350 351 353,
+	3	 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 315 316 328 329 330 331 332 333 334 335 336 337 338 339 340 341 342 343 344 345 346 347 348 349 350 351 352 353 354 372 373 394 456 457 544 545 546 547 548 549 550,
+	14	 45 46 47 48 49 50 51 53 54 55,
+	91	 114 115 116 117 118 119,
+	23	 45 46 47 48 49 50 51 52 53 54 55 114 115 116 117 118 119 120 121,
+	29	 56 58,
+	97	 79 80 81 82 83 84 85 86 87 105,
+	95	 88 89 90 92 93 106,
+	46	 129 130 134,
+	65	 136 137,
+	3	 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 315 316 328 329 330 331 332 333 334 335 336 337 338 339 340 341 342 343 344 345 346 347 348 349 350 351 352 353 354 372 373 394 456 457 526 527 528 529 544 545 546 547 548 549 550,
+	3	 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 315 316 328 329 330 331 332 333 334 335 336 337 338 339 340 341 342 343 344 345 346 347 348 349 350 351 352 353 354 372 373 394 456 457 526 527 528 529 544 545 546 547 548 549 550,
+	71	 176 177 181,
+	18	 176 177 178 179 180 181 182,
+	15	 172 173 174 175 176 177 178 179 180 181 182 183 184 185,
+	53	 187 188,
+	20	 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196,
+	46	 199 200,
+	40	 201 203,
+	25	 170 171 197 198 199 200 201 202 203 355 356,
+	4	 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 355 356,
+	18	 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 355 356,
+	25	 230 231,
+	13	 230 231 232 234 235 236 237 240,
+	66	 434 435 436 437 438 439 440 441 442 444,
+	86	 514 515 516,
+	17	 512 513 514 515 516 517 518 519,
+	26	 500 501 502 503 504 505 506 507 508 509 510 511 512 513 514 515 516 517 518 519,
+	15	 498 499 500 501 502 503 504 505 506 507 508 509 510 511 512 513 514 515 516 517 518 519,
+	51	 399 400 401 402 403 404 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 463 464 465 466 467 468 469 470 471 472 473 474 475 476 477 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 504 505 506 507 508 509 510 511 512 513 514 515 516 517 518 519 524 525 553 555 556,
+	52	 399 400 401 402 403 404 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 463 464 465 466 467 468 469 470 471 472 473 474 475 476 477 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 504 505 506 507 508 509 510 511 512 513 514 515 516 517 518 519 524 525 541 542 543 553 555 556,
+	36	 405 406 407 408 409 410 411 412 413 422 423 424 425 426 427 428 429 430 431 432 433 478 479 480 520 521 522 559,
+	22	 405 406 407 408 409 410 411 412 413 414 415 416 417 418 419 420 421 422 423 424 425 426 427 428 429 430 431 432 433 478 479 480 520 521 522 559,
+	75	 357 552,
+	24	 362 363 364 365 368,
+	55	 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 357 358 359 360 361 362 363 364 365 366 367 368 398 454 523 552,
+	49	 533 534 535,
+	47	 296 297,
+	24	 458 459 460,
+	66	 291 292 293 294 295 296 297 298 299 458 459 460 461 462 486,
+	36	 302 303 304 305 306 307 308,
+	34	 300 301 302 303 304 305 306 307 308,
+	18	 336 338,
+	17	 331 334,
+	3	 331 333 334,
+	7	 57 59,
+	17	 56 57 59,
+	7	 202 203,
+	49	 243 247,
+	4	 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 355 356 374 375 376 377 378 379 380 381 382 383 384 385 386 387 388 389 390 391 392 393 481 482 483 484 485 558,
+	24	 491 492,
+	25	 491 492 494 495 496,
+	15	 399 400 401 402 403 404 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 472 473 474 475 476 477 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 504 505 506 507 508 509 510 511 512 513 514 515 516 517 518 519 524 525 553 555,
+	14	 463 464 465 466 467 468 470,
+	4	 395 399 400 401 402 403 404 405 406 407 408 409 410 411 412 413 414 415 416 417 418 419 420 421 422 423 424 425 426 427 428 429 430 431 432 433 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 463 464 465 466 467 468 469 470 471 472 473 474 475 476 477 478 479 480 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 504 505 506 507 508 509 510 511 512 513 514 515 516 517 518 519 520 521 522 524 525 541 542 543 553 555 556 559,
+	49	 212 213 215,
+	63	 455 551,
+	63	 251 252 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 455 551,
+	14	 369 370,
+	7	 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 251 252 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 272 273 274 275 276 357 358 359 360 361 362 363 364 365 366 367 368 369 370 371 398 454 455 488 523 530 531 532 533 534 535 536 537 538 551 552 557,
+	10	 291 292 293 294 295 296 297 298 299 486,
+	33	 26 27,
+	3	 34 35 36 37 39,
+	3	 146 150 151,
+	32	 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 279 280 281 282 283 284 285 315 316 372 373 394 544 545 546 547 548 549 550,
+	5	 56 58 59,
+	41	 66 67 69,
+	15	 70 71 73,
+	24	 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 161 162 163 164 165 166 167 168 526 527 528 529,
+	26	 336 337,
+	3	 336 337 339,
+	2	 328 329 330 335 336 337 338 339 340 352 353 354,
+	0	 328 329 330 335 336 337 338 339 340 341 342 343 344 345 346 347 348 349 350 351 352 353 354 456 457,
+	1	 331 333,
+	7	 332 334,
+	12	 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 161 162 163 164 165 166 167 168 328 329 330 331 332 333 334 335 336 337 338 339 340 341 342 343 344 345 346 347 348 349 350 351 352 353 354 456 457 526 527 528 529,
+	10	 502 503 504 505 506 507 508,
+	6	 502 503 504 505 506 507 508 509,
+	14	 426 427,
+	6	 399 400 401 402 403 404 405 406 407 408 409 410 411 412 413 422 423 424 425 426 427 428 429 430 431 432 433 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 463 464 465 466 467 468 469 470 471 472 473 474 475 476 477 478 479 480 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 504 505 506 507 508 509 510 511 512 513 514 515 516 517 518 519 520 521 522 524 525 541 542 543 553 555 556 559,
+	74	 359 362 363 364 365,
+	74	 359 362 363 364 365 366 367,
+	15	 224 226,
+	80	 331 332 333 334 352,
+	1	 186 190 191 192 193,
+	5	 146 147 150,
+	2	 142 143 144 145 146 147 148 149 150 151 152 157 158 159,
+	2	 142 143 144 145 146 147 148 149 150 151 152 157 158 159 160,
+	7	 108 109 110 111 112 113 122 123 124 125 126 127 128 139,
+	14	 165 168,
+	30	 281 282 283,
+	5	 327 487,
+	8	 320 321 322 326 327 487,
+	6	 317 318 319 320 321 322 325 326 327 487,
+	3	 374 375 376 377 378 379 380 381 382 383 384 385 386 387 388 389 390 391 392 393 481,
+	2	 395 482 483,
+	10	 221 222 224 225 226,
+	48	 460 461,
+	49	 303 304,
+	15	 311 312,
+	0	 129 130,
+	3	 131 132 133,
+	8	 320 321 322 323 324 326 327,
+	9	 399 400 401 402 403 404 405 406 407 408 409 410 411 412 413 414 415 416 417 418 419 420 421 422 423 424 425 426 427 428 429 430 431 432 433 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 463 464 465 466 467 468 469 470 471 472 473 474 475 476 477 478 479 480 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 504 505 506 507 508 509 510 511 512 513 514 515 516 517 518 519 520 521 522 524 525 541 542 543 553 555 556,
+	32	 1 2 3 4 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251 252 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 272 273 274 275 276 277 278 286 287 288 289 290 291 292 293 294 295 296 297 298 299 300 301 302 303 304 305 306 307 308 309 310 311 312 313 314 355 356 357 358 359 360 361 362 363 364 365 366 367 368 369 370 371 374 375 376 377 378 379 380 381 382 383 384 385 386 387 388 389 390 391 392 393 395 398 454 455 458 459 460 461 462 481 482 483 484 485 486 488 523 530 531 532 533 534 535 536 537 538 551 552 554 557 558,
+	9	 197 200,
+	4	 197 199 200,
+	18	 170 171 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 355 356 558,
+	9	 286 287 288 289 290 291 292 293 294 295 296 297 298 299 374 375 376 377 378 379 380 381 382 383 384 385 386 387 388 389 390 391 392 393 395 458 459 460 461 462 481 482 483,
+	10	 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 286 287 288 289 290 291 292 293 294 295 296 297 298 299 355 356 374 375 376 377 378 379 380 381 382 383 384 385 386 387 388 389 390 391 392 393 395 458 459 460 461 462 481 482 483 484 485 558,
+	12	 1 2 3 4 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 251 252 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 272 273 274 275 276 277 278 300 301 302 303 304 305 306 307 308 309 310 311 312 313 314 357 358 359 360 361 362 363 364 365 366 367 368 369 370 371 398 454 455 486 488 523 530 531 532 533 534 535 536 537 538 551 552 554 557,
+	18	 253 254 255 258,
+	14	 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 251 252 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 357 358 359 360 361 362 363 364 365 366 367 368 398 454 455 486 523 530 551 552,
+	16	 1 2 3 4 272 273 274 275 276 277 278 300 301 302 303 304 305 306 307 308 309 310 311 312 313 314 369 370 371 488 531 532 533 534 535 536 537 538 554 557,
+	2	 24 25 26 27 28 29 30 31 34 35 36 37,
+	23	 337 338 339,
+	3	 130 131 133,
+	4	 145 146 148 149,
+	25	 405 406 407 408 409 410,
+	26	 405 406 407 408 409 410 411 412 413 520 521 522,
+	21	 405 406 407 408 409 410 411 412 413 414 415 416 417 418 419 420 421 422 423 424 425 426 427 428 429 430 431 432 433 520 521 522,
+	12	 236 237,
+	43	 328 329 330 331 332 333 334 335 336 337 338 339 340 352 353 354,
+	1	 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 526 527 528 529,
+	2	 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139,
+	5	 399 400 401 402 403 404 472 473 474 475 476 477,
+	15	 418 419 421,
+	2	 303 304 305,
+	6	 29 30 31 39 394,
+	9	 147 150 151,
+	4	 281 284 285,
+	8	 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 279 280 281 282 283 284 285 315 316 328 329 330 331 332 333 334 335 336 337 338 339 340 341 342 343 344 345 346 347 348 349 350 351 352 353 354 372 373 394 456 457 544 545 546 547 548 549 550,
+	17	 57 58,
+	8	 67 69,
+	1	 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 396 397 526 527 528 529 539,
+	1	 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 279 280 281 282 283 284 285 315 316 328 329 330 331 332 333 334 335 336 337 338 339 340 341 342 343 344 345 346 347 348 349 350 351 352 353 354 372 373 394 396 397 456 457 526 527 528 529 539 544 545 546 547 548 549 550,
+	1	 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 279 280 281 282 283 284 285 315 316 328 329 330 331 332 333 334 335 336 337 338 339 340 341 342 343 344 345 346 347 348 349 350 351 352 353 354 372 373 394 396 397 456 457 526 527 528 529 539 544 545 546 547 548 549 550,
+	19	 169 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 484 485,
+	5	 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 355 356 484 485,
+	21	 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 355 356 484 485,
+	21	 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 355 356 484 485,
+	8	 482 483 558,
+	8	 384 385 386 387 388 389 390 481 482 483 558,
+	3	 374 375 376 377 378 379 380 381 382 383 384 385 386 387 388 389 390 391 392 393 481 482 483 558,
+	8	 374 375 376 377 378 379 380 381 382 383 384 385 386 387 388 389 390 391 392 393 395 481 482 483 558,
+	7	 415 416 417,
+	7	 399 400 401 402 403 404 414 415 416 417 418 419 420 421 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 463 464 465 466 467 468 469 470 471 472 473 474 475 476 477 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 504 505 506 507 508 509 510 511 512 513 514 515 516 517 518 519 524 525 553 555,
+	1	 399 400 401 402 403 404 405 406 407 408 409 410 411 412 413 414 415 416 417 418 419 420 421 422 423 424 425 426 427 428 429 430 431 432 433 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 463 464 465 466 467 468 469 470 471 472 473 474 475 476 477 478 479 480 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 504 505 506 507 508 509 510 511 512 513 514 515 516 517 518 519 520 521 522 524 525 553 555 559,
+	3	 541 542 543 556,
+	14	 41 42,
+	5	 348 349,
+	0	 89 90 92 93 106,
+	5	 126 127,
+	3	 145 146 148 149 150 151,
+	3	 374 375 376 377 378 379 380 381 382 383 391 392 393 482 483,
+	5	 310 311,
+	3	 145 146 147 148 149 150,
+	4	 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 279 280 281 282 283 284 285 394 544 545 546 547 548 549 550,
+	9	 66 68,
+	11	 129 130 132 133 134,
+	0	 335 336 338,
+	3	 335 336 337 338,
+	5	 345 346,
+	0	 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 384 385 386 387 388 389 390 481 482 483,
+	1	 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 355 356 384 385 386 387 388 389 390 481 482 483 484 485 558,
+	8	 374 375 376 377 378 379 380 381 382 383 391 392 393 395,
+	2	 374 375 376 377 378 379 380 381 382 383 391 392 393 395 399 400 401 402 403 404 405 406 407 408 409 410 411 412 413 414 415 416 417 418 419 420 421 422 423 424 425 426 427 428 429 430 431 432 433 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 463 464 465 466 467 468 469 470 471 472 473 474 475 476 477 478 479 480 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 504 505 506 507 508 509 510 511 512 513 514 515 516 517 518 519 520 521 522 524 525 541 542 543 553 555 556 559,
+	3	 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 251 252 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 272 273 274 275 276 357 358 359 360 361 362 363 364 365 366 367 368 369 370 371 398 454 455 486 488 523 530 531 532 533 534 535 536 537 538 551 552 557,
+	6	 1 2 3 4 277 278 286 287 288 289 290 291 292 293 294 295 296 297 298 299 300 301 302 303 304 305 306 307 308 309 310 311 312 313 314 458 459 460 461 462 554,
+	8	 14 16 17,
+	2	 45 46 47 48 49 50 51 52,
+	0	 53 54 55 526 527 528,
+	1	 45 46 47 48 49 50 51 52 53 54 55 526 527 528,
+	13	 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 279 280 281 282 283 284 285 315 316 372 373 394 526 527 528 529 544 545 546 547 548 549 550,
+	2	 317 318 319 320 321 322 323 324 325 326 327 328 329 330 331 332 333 334 335 336 337 338 339 340 341 342 343 344 345 346 347 348 349 350 351 352 353 354 396 397 456 457 487 539,
+	1	 358 552,
+	1	 357 358 552,
+	0	 286 287 288 458 459 460 461 462,
+	0	 289 290 291 292 293 294 295 296 297 298 299,
+	14	 283 284 285,
+	2	 40 41 42 43 44 279 280 281 282 283 284 285,
+	4	 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 40 41 42 43 44 279 280 281 282 283 284 285 315 316 372 373,
+	7	 30 31,
+	7	 142 144,
+	2	 129 130 131 132 133 134 135 136 137 138 161 162 163 164 165 166 167 168,
+	2	 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 114 115 116 117 118 119 120 121 129 130 131 132 133 134 135 136 137 138 161 162 163 164 165 166 167 168 526 527 528 529,
+	2	 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 129 130 131 132 133 134 135 136 137 138 161 162 163 164 165 166 167 168 526 527 528 529,
+	1	 329 330 335 336 337 338 339 340,
+	1	 329 330 335 336 337 338 339 340 341 342 343 344 345 346 347 348 349 350 351,
+	1	 328 329 330 335 336 337 338 339 340 341 342 343 344 345 346 347 348 349 350 351,
+	8	 328 329 330 335 336 337 338 339 340 341 342 343 344 345 346 347 348 349 350 351 353,
+	7	 328 329 330 335 336 337 338 339 340 341 342 343 344 345 346 347 348 349 350 351 352 353,
+	9	 328 329 330 331 332 333 334 335 336 337 338 339 340 341 342 343 344 345 346 347 348 349 350 351 352 353,
+	7	 354 456 457,
+	1	 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 279 280 281 282 283 284 285 315 316 317 318 319 320 321 322 323 324 325 326 327 328 329 330 331 332 333 334 335 336 337 338 339 340 341 342 343 344 345 346 347 348 349 350 351 352 353 354 372 373 394 456 457 487 526 527 528 529 544 545 546 547 548 549 550,
+	6	 172 173 174 175 183 184 185 186 187 188 189 190 191 192 193 194 195 196,
+	18	 197 198 200,
+	1	 228 240,
+	4	 234 236 237,
+	4	 234 235 236 237,
+	2	 232 234 235 236 237,
+	1	 232 233 234 235 236 237,
+	1	 230 232 233 234 235 236 237,
+	1	 230 231 232 233 234 235 236 237,
+	1	 229 230 231 232 233 234 235 236 237,
+	1	 229 230 231 232 233 234 235 236 237 238,
+	1	 228 229 230 231 232 233 234 235 236 237 238 240,
+	8	 473 474 477,
+	7	 472 473 474 477,
+	4	 463 464 465 466 467 468 469 470 471 472 473 474 475 476 477 553,
+	14	 505 506,
+	1	 399 400 401 402 403 404 405 406 407 408 409 410 411 412 413 422 423 424 425 426 427 428 429 430 431 432 433 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 463 464 465 466 467 468 469 470 471 472 473 474 475 476 477 478 479 480 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 504 505 506 507 508 509 510 511 512 513 514 515 516 517 518 519 520 521 522 524 525 553 555,
+	1	 414 415 416 417 418 419 420 421 541 542 543 556 559,
+	1	 374 375 376 377 378 379 380 381 382 383 384 385 386 387 388 389 390 391 392 393 395 399 400 401 402 403 404 405 406 407 408 409 410 411 412 413 414 415 416 417 418 419 420 421 422 423 424 425 426 427 428 429 430 431 432 433 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 463 464 465 466 467 468 469 470 471 472 473 474 475 476 477 478 479 480 481 482 483 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 504 505 506 507 508 509 510 511 512 513 514 515 516 517 518 519 520 521 522 524 525 541 542 543 553 555 556 559,
+	3	 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 286 287 288 289 290 291 292 293 294 295 296 297 298 299 355 356 374 375 376 377 378 379 380 381 382 383 384 385 386 387 388 389 390 391 392 393 395 399 400 401 402 403 404 405 406 407 408 409 410 411 412 413 414 415 416 417 418 419 420 421 422 423 424 425 426 427 428 429 430 431 432 433 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 458 459 460 461 462 463 464 465 466 467 468 469 470 471 472 473 474 475 476 477 478 479 480 481 482 483 484 485 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 504 505 506 507 508 509 510 511 512 513 514 515 516 517 518 519 520 521 522 524 525 541 542 543 553 555 556 558 559,
+	1	 1 2 3 4 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 251 252 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 272 273 274 275 276 277 278 300 301 302 303 304 305 306 307 308 309 310 311 312 313 314 357 358 359 360 361 362 363 364 365 366 367 368 369 370 371 398 454 455 486 488 523 530 531 532 533 534 535 536 537 538 540 551 552 554 557,
+	21	 212 213 214 215 216 217 218 219 220 398 454 523,
+	0	 357 358 359 360 361 362 363 364 365 366 367 368,
+	21	 212 213 214 215 216 217 218 219 220 357 358 359 360 361 362 363 364 365 366 367 368 398 454 523 552,
+	1	 530 540,
+	3	 251 252 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 455 530 540 551,
+	3	 212 213 214 215 216 217 218 219 220 251 252 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 357 358 359 360 361 362 363 364 365 366 367 368 398 454 455 523 530 540 551 552,
+	0	 221 222 223 224 225 226 227 486,
+	1	 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 251 252 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 357 358 359 360 361 362 363 364 365 366 367 368 398 454 455 486 523 530 540 551 552,
+	1	 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 251 252 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 272 273 274 275 276 357 358 359 360 361 362 363 364 365 366 367 368 369 370 371 398 454 455 486 488 523 530 531 532 533 534 535 536 537 538 540 551 552 557,
+	10	 309 311,
+	3	 140 141 142 143 144 145 146 147 148 149 150 151 152 157 158 159,
+	9	 399 400 401 402 403 404 414 415 416 417 418 419 420 421 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 463 464 465 466 467 468 469 470 471 472 473 474 475 476 477 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 504 505 506 507 508 509 510 511 512 513 514 515 516 517 518 519 524 525 541 542 543 553 555 556,
+	5	 405 406 407 408 409 410 411 412 413 422 423 424 425 426 427 428 429 430 431 432 433 520 521 522 559,
+	3	 399 400 401 402 403 404 405 406 407 408 409 410 411 412 413 414 415 416 417 418 419 420 421 422 423 424 425 426 427 428 429 430 431 432 433 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 463 464 465 466 467 468 469 470 471 472 473 474 475 476 477 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 504 505 506 507 508 509 510 511 512 513 514 515 516 517 518 519 520 521 522 524 525 541 542 543 553 555 556 559,
+	2	 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203,
+	1	 341 342 345 346,
+	18	 129 130 131 132 134,
+	3	 320 321 322 326 487,
+	0	 215 216,
+	2	 270 455,
+	3	 265 266 267 268 269 270 271 455,
+	3	 261 262 263 264 265 266 267 268 269 270 271 455,
+	3	 530 551,
+	16	 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 484 485,
+	2	 302 305,
+	13	 229 232 234 235 236 237 240,
+	13	 228 229 232 233 234 235 236 237 240,
+	3	 228 229 230 232 233 234 235 236 237 240,
+	0	 532 533,
+	8	 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 328 329 330 331 332 333 334 335 336 337 338 339 340 341 342 343 344 345 346 347 348 349 350 351 352 353 354 456 457 526 527 528 529,
+	3	 434 435 436 437 438 439 440 441 442 443 444 447 448 524 525 555,
+	2	 449 453,
+	5	 533 534,
+	18	 414 415 416 417 418 419 420,
+	9	 282 283,
+	2	 282 283 285,
+	9	 282 283 284 285,
+	4	 332 333,
+	1	 399 400 401 402 403 404 405 406 407 408 409 410 411 412 413 414 415 416 417 418 419 420 421 422 423 424 425 426 427 428 429 430 431 432 433 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 463 464 465 466 467 468 469 470 471 472 473 474 475 476 477 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 504 505 506 507 508 509 510 511 512 513 514 515 516 517 518 519 520 521 522 524 525 541 542 543 553 555 556,
+	1	 1 2 3 4 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251 252 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 272 273 274 275 276 277 278 286 287 288 289 290 291 292 293 294 295 296 297 298 299 300 301 302 303 304 305 306 307 308 309 310 311 312 313 314 355 356 357 358 359 360 361 362 363 364 365 366 367 368 369 370 371 374 375 376 377 378 379 380 381 382 383 384 385 386 387 388 389 390 391 392 393 395 398 454 455 458 459 460 461 462 481 482 483 484 485 486 488 523 530 531 532 533 534 535 536 537 538 540 551 552 554 557 558,
+	14	 170 171 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 355 356,
+	7	 1 2 3 4 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 251 252 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 272 273 274 275 276 277 278 286 287 288 289 290 291 292 293 294 295 296 297 298 299 300 301 302 303 304 305 306 307 308 309 310 311 312 313 314 357 358 359 360 361 362 363 364 365 366 367 368 369 370 371 398 454 455 458 459 460 461 462 486 488 523 530 531 532 533 534 535 536 537 538 540 551 552 554 557,
+	5	 1 2 3 4 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 251 252 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 272 273 274 275 276 277 278 300 301 302 303 304 305 306 307 308 309 310 311 312 313 314 357 358 359 360 361 362 363 364 365 366 367 368 369 370 371 398 454 455 488 523 530 531 532 533 534 535 536 537 538 540 551 552 554 557,
+	3	 532 535,
+	1	 251 252 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 272 273 274 275 276 369 370 371 455 488 530 531 532 533 534 535 536 537 538 551 557,
+	1	 212 213 214 215 216 217 218 219 220 251 252 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 272 273 274 275 276 357 358 359 360 361 362 363 364 365 366 367 368 369 370 371 398 454 455 488 523 530 531 532 533 534 535 536 537 538 551 552 557,
+	1	 221 222 223 224 225 226 227 540,
+	3	 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 251 252 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 272 273 274 275 276 357 358 359 360 361 362 363 364 365 366 367 368 369 370 371 398 454 455 488 523 530 531 532 533 534 535 536 537 538 540 551 552 557,
+	2	 303 305,
+	10	 188 189,
+	7	 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 251 252 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 357 358 359 360 361 362 363 364 365 366 367 368 398 454 455 523 530 540 551 552,
+	1	 309 311 312,
+	5	 7 10 11 12 13 14 15 16 17 18 19 20 21,
+	5	 5 6 7 10 11 12 13 14 15 16 17 18 19 20 21,
+	5	 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21,
+	2	 24 25 29 30 31,
+	2	 24 25 29 30 31 32 33,
+	7	 56 57 58 59 60 61 62 63 64 66 67 68 69 70 71 72 73 74 75 76 77 78 529,
+	6	 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 114 115 116 117 118 119 120 121 529,
+	6	 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 94 95 96 97 98 99 100 114 115 116 117 118 119 120 121 529,
+	7	 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 101 102 103 104 105 106 107 129 130 131 132 133 134 135 136 137 138,
+	5	 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 114 115 116 117 118 119 120 121 129 130 131 132 133 134 135 136 137 138 529,
+	15	 328 329 330,
+	13	 328 329 330 353,
+	12	 328 329 330 335 336 337 338 339 340 353,
+	6	 328 329 330 331 332 333 334 335 336 337 338 339 340 341 342 343 344 345 346 347 348 349 350 351 352 353 456 457,
+	11	 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 355 356 374 375 376 377 378 379 380 381 382 383 384 385 386 387 388 389 390 391 392 393 395 481 482 483 484 485,
+	5	 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 463 464 465 466 467 468 469 470 471 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 504 505 506 507 508 509 510 511 512 513 514 515 516 517 518 519 524 525 555,
+	2	 399 400 401 402 403 404 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 463 464 465 466 467 468 469 470 471 472 473 474 475 476 477 478 479 480 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 504 505 506 507 508 509 510 511 512 513 514 515 516 517 518 519 524 525 553 555,
+	3	 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 355 356 374 375 376 377 378 379 380 381 382 383 384 385 386 387 388 389 390 391 392 393 395 399 400 401 402 403 404 405 406 407 408 409 410 411 412 413 414 415 416 417 418 419 420 421 422 423 424 425 426 427 428 429 430 431 432 433 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 463 464 465 466 467 468 469 470 471 472 473 474 475 476 477 478 479 480 481 482 483 484 485 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 504 505 506 507 508 509 510 511 512 513 514 515 516 517 518 519 520 521 522 524 525 541 542 543 553 555 556 559,
+	5	 1 2 3 4 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 251 252 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 272 273 274 275 276 277 278 286 287 288 289 290 291 292 293 294 295 296 297 298 299 300 301 302 303 304 305 306 307 308 309 310 311 312 313 314 357 358 359 360 361 362 363 364 365 366 367 368 369 370 371 398 454 455 458 459 460 461 462 486 488 523 530 531 532 533 534 535 536 537 538 551 552 554 557 558,
+	3	 251 252 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 455 530 551 558,
+	3	 221 222 223 224 225 226 227 251 252 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 455 530 551 558,
+	5	 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 251 252 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 357 358 359 360 361 362 363 364 365 366 367 368 398 454 455 523 530 551 552 558,
+	5	 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 251 252 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 357 358 359 360 361 362 363 364 365 366 367 368 398 454 455 486 523 530 551 552 558,
+	5	 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 251 252 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 272 273 274 275 276 357 358 359 360 361 362 363 364 365 366 367 368 369 370 371 398 454 455 486 488 523 530 531 532 533 534 535 536 537 538 551 552 557 558,
+	2	 204 205 206 207 208 209 210 211 355 356,
+	2	 169 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 204 205 206 207 208 209 210 211 355 356,
+	0	 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 355 356 374 375 376 377 378 379 380 381 382 383 384 385 386 387 388 389 390 391 392 393 481 482 483 484 485,
+	7	 556 558,
+	4	 399 400 401 402 403 404 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 463 464 465 466 467 468 469 470 471 472 473 474 475 476 477 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 504 505 506 507 508 509 510 511 512 513 514 515 516 517 518 519 524 525 553 555 556 558,
+	3	 520 521 522 559,
+	3	 405 406 407 408 409 410 411 412 413 520 521 522 559,
+	1	 426 427 428 429 430 431 432,
+	5	 405 406 407 408 409 410 411 412 413 414 415 416 417 418 419 420 421 422 423 424 425 426 427 428 429 430 431 432 433 520 521 522 559,
+	3	 478 479 480 541 542 543,
+	4	 405 406 407 408 409 410 411 412 413 414 415 416 417 418 419 420 421 422 423 424 425 426 427 428 429 430 431 432 433 478 479 480 520 521 522 541 542 543 559,
+	7	 399 400 401 402 403 404 405 406 407 408 409 410 411 412 413 414 415 416 417 418 419 420 421 422 423 424 425 426 427 428 429 430 431 432 433 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 463 464 465 466 467 468 469 470 471 472 473 474 475 476 477 478 479 480 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 504 505 506 507 508 509 510 511 512 513 514 515 516 517 518 519 520 521 522 524 525 541 542 543 553 555 556 558 559,
+	0	 395 399 400 401 402 403 404 405 406 407 408 409 410 411 412 413 414 415 416 417 418 419 420 421 422 423 424 425 426 427 428 429 430 431 432 433 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 463 464 465 466 467 468 469 470 471 472 473 474 475 476 477 478 479 480 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 504 505 506 507 508 509 510 511 512 513 514 515 516 517 518 519 520 521 522 524 525 541 542 543 553 555 556 558 559,
+	7	 540 551,
+	3	 530 540 551,
+	1	 221 222 223 224 225 226 227 251 252 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 455 523 530 540 551,
+	11	 70 72,
+	4	 71 73,
+	2	 533 535,
+	3	 310 312,
+	7	 399 400 401 402 403 404 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 463 464 465 466 467 468 469 470 471 472 473 474 475 476 477 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 504 505 506 507 508 509 510 511 512 513 514 515 516 517 518 519 524 525 541 542 543 553 555 556 559,
+	2	 281 282 283 285,
+	4	 243 244 246 247,
+	1	 389 390,
+	1	 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 251 252 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 357 358 359 360 361 362 363 364 365 366 367 368 398 399 400 401 402 403 404 405 406 407 408 409 410 411 412 413 414 415 416 417 418 419 420 421 422 423 424 425 426 427 428 429 430 431 432 433 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 454 455 463 464 465 466 467 468 469 470 471 472 473 474 475 476 477 478 479 480 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 504 505 506 507 508 509 510 511 512 513 514 515 516 517 518 519 520 521 522 523 524 525 530 541 542 543 551 552 553 555 556 559,
+	1	 1 2 3 4 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 272 273 274 275 276 277 278 286 287 288 289 290 291 292 293 294 295 296 297 298 299 300 301 302 303 304 305 306 307 308 309 310 311 312 313 314 355 356 369 370 371 374 375 376 377 378 379 380 381 382 383 384 385 386 387 388 389 390 391 392 393 395 458 459 460 461 462 481 482 483 484 485 486 488 531 532 533 534 535 536 537 538 554 557 558,
+	1	 1 2 3 4 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 277 278 286 287 288 289 290 291 292 293 294 295 296 297 298 299 300 301 302 303 304 305 306 307 308 309 310 311 312 313 314 355 356 374 375 376 377 378 379 380 381 382 383 384 385 386 387 388 389 390 391 392 393 395 458 459 460 461 462 481 482 483 484 485 486 554 558,
+	13	 68 69,
+	5	 67 68 69,
+	0	 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 484 485,
+	0	 29 30 31 34 35 36 37 39 394,
+	2	 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 129 130 131 132 133 134 135 136 137 138 526 527 528 529,
+	1	 341 342 343 344 345 346 347 348 349 350 351 353,
+	1	 341 342 343 344 345 346 347 348 349 350 351 353 456 457,
+	2	 328 329 330 335 336 337 338 339 340 341 342 343 344 345 346 347 348 349 350 351 353 354 456 457,
+	8	 71 72,
+	1	 1 2 3 4 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 272 273 274 275 276 277 278 286 287 288 289 290 291 292 293 294 295 296 297 298 299 300 301 302 303 304 305 306 307 308 309 310 311 312 313 314 355 356 369 370 371 374 375 376 377 378 379 380 381 382 383 384 385 386 387 388 389 390 391 392 393 395 399 400 401 402 403 404 405 406 407 408 409 410 411 412 413 414 415 416 417 418 419 420 421 422 423 424 425 426 427 428 429 430 431 432 433 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 458 459 460 461 462 463 464 465 466 467 468 469 470 471 472 473 474 475 476 477 478 479 480 481 482 483 484 485 486 488 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 504 505 506 507 508 509 510 511 512 513 514 515 516 517 518 519 520 521 522 524 525 531 532 533 534 535 536 537 538 541 542 543 553 554 555 556 557 558 559,
+	4	 198 199,
+	3	 436 437 441 442,
+	3	 435 436 437 440 441 442,
+	5	 388 390,
+	0	 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 355 356 374 375 376 377 378 379 380 381 382 383 384 385 386 387 388 389 390 391 392 393 481 482 483 484 485 558,
+	0	 234 237 240,
+	1	 395 540,
+	1	 436 442,
+	1	 395 399 400 401 402 403 404 405 406 407 408 409 410 411 412 413 414 415 416 417 418 419 420 421 422 423 424 425 426 427 428 429 430 431 432 433 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 463 464 465 466 467 468 469 470 471 472 473 474 475 476 477 478 479 480 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 504 505 506 507 508 509 510 511 512 513 514 515 516 517 518 519 520 521 522 524 525 540 541 542 543 553 555 556 559,
+	1	 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 355 356 374 375 376 377 378 379 380 381 382 383 384 385 386 387 388 389 390 391 392 393 395 399 400 401 402 403 404 405 406 407 408 409 410 411 412 413 414 415 416 417 418 419 420 421 422 423 424 425 426 427 428 429 430 431 432 433 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 463 464 465 466 467 468 469 470 471 472 473 474 475 476 477 478 479 480 481 482 483 484 485 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 504 505 506 507 508 509 510 511 512 513 514 515 516 517 518 519 520 521 522 524 525 540 541 542 543 553 555 556 558 559,
+	8	 341 342 343 346,
+	1	 66 67 68 69 70 71 72 73 76,
+	7	 338 339,
+	5	 56 59,
+	1	 79 80 81 82 83 84 85 86 87 88 89 90 92 93 105,
+	3	 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 101 102 103 104 105 107,
+	1	 492 494 495 496,
+	2	 399 400 401 402 403 404 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 463 464 465 466 467 468 469 470 471 472 473 474 475 476 477 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 504 505 506 507 508 509 510 511 512 513 514 515 516 517 518 519 524 525 541 542 543 553 555 556 558,
+	2	 399 400 401 402 403 404 405 406 407 408 409 410 411 412 413 414 415 416 417 418 419 420 421 422 423 424 425 426 427 428 429 430 431 432 433 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 463 464 465 466 467 468 469 470 471 472 473 474 475 476 477 478 479 480 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 504 505 506 507 508 509 510 511 512 513 514 515 516 517 518 519 520 521 522 524 525 541 542 543 553 555 556 558,
+	6	 1 2 3 4 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251 252 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 272 273 274 275 276 277 278 286 287 288 289 290 291 292 293 294 295 296 297 298 299 300 301 302 303 304 305 306 307 308 309 310 311 312 313 314 355 356 357 358 359 360 361 362 363 364 365 366 367 368 369 370 371 374 375 376 377 378 379 380 381 382 383 384 385 386 387 388 389 390 391 392 393 395 398 454 455 458 459 460 461 462 481 482 483 484 485 486 488 523 530 531 532 533 534 535 536 537 538 540 551 552 554 557,
+	1	 197 198 201 202 203,
+	3	 374 375 376 377 378 379 380 381 382 383 391 392 393 395 482 483,
+	3	 523 540 551,
+	2	 212 213 214 215 216 217 218 219 220 357 358 359 360 361 362 363 364 365 366 367 368 398 454 523 540 551 552,
+	2	 221 222 223 224 225 226 227 251 252 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 455 530,
+	1	 145 146 147 148 150 151,
+	7	 186 187 188 189 190 191 192 193 194,
+	1	 343 344 346,
+	1	 341 342 343 344 346,
+	1	 399 400 401 402 403 404 414 415 416 417 418 419 420 421 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 463 464 465 466 467 468 469 470 471 472 473 474 475 476 477 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 504 505 506 507 508 509 510 511 512 513 514 515 516 517 518 519 524 525 541 542 543 553 555 556 559,
+	2	 424 425 426 427 428 429 430 431 432 433,
+	3	 129 132 133 134,
+	4	 130 131,
+	1	 142 143 144 152,
+	2	 335 336,
+	2	 337 339,
+	1	 344 345 346,
+	4	 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 23,
+	1	 281 282,
+	1	 335 337,
+	3	 335 336 337,
+	2	 328 329 330 331 332 333 334 335 336 337 338 339 340 352 353,
+	0	 551 558,
+	0	 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 315 316,
+	1	 32 33 34 35 36 37,
+	4	 145 147 148 149 150 151,
+	0	 204 211,
+	0	 205 206 208 209 210,
+	0	 261 262 263 264 270,
+	0	 251 252 253 254 255 256 257 258 259 260 261 262 263 264 270,
+	0	 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 355 356 482 483 484 485 558,
+	1	 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 384 385 386 387 388 389 390 481,
+	0	 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 374 375 376 377 378 379 380 381 382 383 384 385 386 387 388 389 390 391 392 393 395 399 400 401 402 403 404 405 406 407 408 409 410 411 412 413 414 415 416 417 418 419 420 421 422 423 424 425 426 427 428 429 430 431 432 433 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 463 464 465 466 467 468 469 470 471 472 473 474 475 476 477 478 479 480 481 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 504 505 506 507 508 509 510 511 512 513 514 515 516 517 518 519 520 521 522 524 525 541 542 543 553 555 556 559,
+	0	 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 398 454 486 523,
+	0	 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 357 358 359 360 361 362 363 364 365 366 367 368 398 454 486 523 552,
+	2	 70 71 72 73 74 75,
+	3	 458 461,
+	7	 146 147 151,
+	5	 135 137,
+	3	 427 428,
+	4	 399 400 401 402 403 404 405 406 407 408 409 410 411 412 413 414 415 416 417 418 419 420 421 422 423 424 425 426 427 428 429 430 431 432 433 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 463 464 465 466 467 468 469 470 471 472 473 474 475 476 477 478 479 480 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 504 505 506 507 508 509 510 511 512 513 514 515 516 517 518 519 520 521 522 524 525 541 542 543 553 555 559,
+	1	 186 187 188 189 190 191 192,
+	1	 145 148 150,
+	2	 147 149 151,
+	1	 146 147 149 151,
+	2	 129 130 133 134,
+	0	 129 130 131 133 134,
+	0	 122 123 124 125 139,
+	1	 335 338 339,
+	0	 335 337 338 339,
+	1	 343 345 346,
+	1	 341 343 345 346,
+	1	 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 279 280 281 282 283 284 285 315 316 317 318 319 320 321 322 323 324 325 326 327 328 329 330 331 332 333 334 335 336 337 338 339 340 341 342 343 344 345 346 347 348 349 350 351 352 353 354 372 373 394 456 457 487 526 527 528 529 540 544 545 546 547 548 549 550,
+	1	 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 355 356 482 483 484 485,
+	1	 229 230 231 232 233 234 235 236 237 238 239,
+	1	 243 245 246,
+	4	 459 461,
+	2	 459 460 461,
+	1	 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 286 287 288 289 290 291 292 293 294 295 296 297 298 299 458 459 460 461 462,
+	2	 374 375 376 377 378 379 380 381 382 383 384 385 386 387 388 389 390 391 392 393 395 481,
+	1	 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 286 287 288 289 290 291 292 293 294 295 296 297 298 299 374 375 376 377 378 379 380 381 382 383 384 385 386 387 388 389 390 391 392 393 395 458 459 460 461 462 481,
+	1	 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 286 287 288 289 290 291 292 293 294 295 296 297 298 299 355 356 374 375 376 377 378 379 380 381 382 383 384 385 386 387 388 389 390 391 392 393 395 458 459 460 461 462 481 482 483 484 485,
+	1	 399 400 401 402 403 404 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 463 464 465 466 467 468 469 470 471 472 473 474 475 476 477 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 504 505 506 507 508 509 510 511 512 513 514 515 516 517 518 519 524 525 541 542 543 553 555,
+	2	 399 400 401 402 403 404 414 415 416 417 418 419 420 421 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 463 464 465 466 467 468 469 470 471 472 473 474 475 476 477 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 504 505 506 507 508 509 510 511 512 513 514 515 516 517 518 519 524 525 541 542 543 553 555,
+	1	 1 2 3 4 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 251 252 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 272 273 274 275 276 277 278 300 301 302 303 304 305 306 307 308 309 310 311 312 313 314 357 358 359 360 361 362 363 364 365 366 367 368 369 370 371 396 397 398 454 455 486 488 523 530 531 532 533 534 535 536 537 538 539 551 552 554 557,
+	1	 1 2 3 4 272 273 274 275 276 277 278 300 301 302 303 304 305 306 307 308 309 310 311 312 313 314 369 370 371 396 397 488 531 532 533 534 535 536 537 538 539 554 557,
+	1	 272 273 274 275 276 369 370 371 396 397 488 531 532 533 534 535 536 537 538 539 557,
+	0	 504 507 508,
+	0	 504 506 507 508,
+	1	 532 533 535,
+	3	 332 333 334,
+	1	 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 40 41 42 43 44 315 316 328 329 330 331 332 333 334 335 336 337 338 339 340 341 342 343 344 345 346 347 348 349 350 351 352 353 354 372 373 456 457,
+	0	 328 329 330 331 332 333 334 352 353,
+	0	 14 15 17,
+	6	 66 67,
+	1	 540 559,
+	1	 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 279 280 281 282 283 284 285 315 316 317 318 319 320 321 322 323 324 325 326 327 328 329 330 331 332 333 334 335 336 337 338 339 340 341 342 343 344 345 346 347 348 349 350 351 352 353 354 372 373 394 396 397 456 457 487 526 527 528 529 539 540 544 545 546 547 548 549 550 559,
+	2	 458 460,
+	1	 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 286 287 288 289 290 291 292 293 294 295 296 297 298 299 355 356 374 375 376 377 378 379 380 381 382 383 384 385 386 387 388 389 390 391 392 393 395 399 400 401 402 403 404 405 406 407 408 409 410 411 412 413 414 415 416 417 418 419 420 421 422 423 424 425 426 427 428 429 430 431 432 433 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 458 459 460 461 462 463 464 465 466 467 468 469 470 471 472 473 474 475 476 477 478 479 480 481 482 483 484 485 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 504 505 506 507 508 509 510 511 512 513 514 515 516 517 518 519 520 521 522 524 525 541 542 543 553 555 556 558,
+	2	 14 15 16 17 20,
+	0	 374 375 376 377 378 379 380 381 382 383 391 392 393 395 482 483 558,
+	1	 489 490 491 492 493 494 495 496 497 519,
+	3	 170 171 197 198 199 200 201 202 203 484 485,
+	1	 414 415 416 417 418 419 420 421 541 542 543,
+	2	 197 199,
+	1	 279 280 281 282 283,
+	2	 414 415 416 417 418 419 420 421 520 521 522,
+	3	 414 415 416 417 418 419 420 421 422 423 424 425 426 427 428 429 430 431 432 433 520 521 522,
+	1	 212 213 214 215 216 217 218 219 220 251 252 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 357 358 359 360 361 362 363 364 365 366 367 368 398 454 455 523 530 552,
+	2	 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 251 252 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 357 358 359 360 361 362 363 364 365 366 367 368 398 454 455 523 530 552,
+	4	 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 524 525,
+	3	 1 2 3 4 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251 252 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 272 273 274 275 276 277 278 286 287 288 289 290 291 292 293 294 295 296 297 298 299 300 301 302 303 304 305 306 307 308 309 310 311 312 313 314 355 356 357 358 359 360 361 362 363 364 365 366 367 368 369 370 371 398 454 455 458 459 460 461 462 484 485 486 488 523 530 531 532 533 534 535 536 537 538 551 552 554 557 558,
+	1	 458 460 461,
+	1	 289 290 291 292 293 294 295 296 297 298 299 458 459 460 461 462,
+	5	 261 262 263 264 265 266 267 268 269 271,
+	4	 344 345,
+	1	 71 72 73,
+	2	 146 147 149 150 151,
+	2	 140 141 142 143 144 145 146 147 148 149 150 151 152 160,
+	0	 329 330 353,
+	4	 336 338 339,
+	0	 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 279 280 281 282 283 284 285 317 318 319 320 321 322 323 324 325 326 327 487,
+	2	 489 490 491 492 493 494 495 496 497 500 501 502 503 504 505 506 507 508 509 510 511 512 513 514 515 516 517 518 519,
+	0	 205 206 207 208 209 210 211 558,
+	0	 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 40 41 42 43 44 315 316 372 373 487,
+	0	 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 315 316 372 373 394 487 544 545 546 547 548 549 550,
+	0	 149 151,
+	0	 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 279 280 281 282 283 284 285 315 316 372 373 394 487 544 545 546 547 548 549 550,
+	0	 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 279 280 281 282 283 284 285 315 316 328 329 330 331 332 333 334 335 336 337 338 339 340 341 342 343 344 345 346 347 348 349 350 351 352 353 354 372 373 394 456 457 487 544 545 546 547 548 549 550,
+	2	 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 114 115 116 117 118 119 120 121 529,
+	0	 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 279 280 281 282 283 284 285 315 316 328 329 330 331 332 333 334 335 336 337 338 339 340 341 342 343 344 345 346 347 348 349 350 351 352 353 354 372 373 394 456 457 487 526 527 528 529 544 545 546 547 548 549 550,
+	0	 317 318 319 320 321 322 325 326 327,
+	1	 317 318 319 320 321 322 323 324 325 326 327 396 397 539,
+	0	 161 162 163 164 165 166 167 168 317 318 319 320 321 322 323 324 325 326 327 396 397 539,
+	0	 169 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 355 356 484 485,
+	1	 170 171 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211,
+	0	 229 232 234 235 236 237,
+	0	 229 230 231 232 234 235 236 237,
+	0	 228 229 230 231 232 233 234 235 236 237,
+	0	 228 229 230 231 232 233 234 235 236 237 238 239,
+	1	 286 287 288 289 290 458 459 460 461 462,
+	0	 291 292 293 294 295 296 297 298 299 558,
+	0	 286 287 288 289 290 291 292 293 294 295 296 297 298 299 458 459 460 461 462 558,
+	0	 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 286 287 288 289 290 291 292 293 294 295 296 297 298 299 384 385 386 387 388 389 390 458 459 460 461 462 481 558,
+	0	 374 375 376 377 378 379 380 381 382 383 391 392 393 395 399 400 401 402 403 404 405 406 407 408 409 410 411 412 413 414 415 416 417 418 419 420 421 422 423 424 425 426 427 428 429 430 431 432 433 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 463 464 465 466 467 468 469 470 471 472 473 474 475 476 477 478 479 480 482 483 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 504 505 506 507 508 509 510 511 512 513 514 515 516 517 518 519 520 521 522 524 525 541 542 543 553 555 556 559,
+	0	 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 286 287 288 289 290 291 292 293 294 295 296 297 298 299 374 375 376 377 378 379 380 381 382 383 384 385 386 387 388 389 390 391 392 393 395 399 400 401 402 403 404 405 406 407 408 409 410 411 412 413 414 415 416 417 418 419 420 421 422 423 424 425 426 427 428 429 430 431 432 433 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 458 459 460 461 462 463 464 465 466 467 468 469 470 471 472 473 474 475 476 477 478 479 480 481 482 483 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 504 505 506 507 508 509 510 511 512 513 514 515 516 517 518 519 520 521 522 524 525 541 542 543 553 555 556 558 559,
+	0	 486 540,
+	1	 532 534,
+	0	 358 359 360 361 362 363 364 365 366 367 368,
+	0	 212 213 214 215 216 217 218 219 220 357 358 359 360 361 362 363 364 365 366 367 368 398 454 486 523 552,
+	2	 399 400 401 402 403 404 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 504 505 506 507 508 509 510 511 512 513 514 515 516 517 518 519 524 525 555,
+	5	 341 342 343 344 345 346 347 348 349 350 351 456 457,
+	4	 328 329 330 335 336 337 338 339 340 341 342 343 344 345 346 347 348 349 350 351 353 456 457,
+	4	 328 329 330 335 336 337 338 339 340 341 342 343 344 345 346 347 348 349 350 351 352 353 456 457,
+	4	 399 400 401 402 403 404 405 406 407 408 409 410 411 412 413 414 415 416 417 418 419 420 421 422 423 424 425 426 427 428 429 430 431 432 433 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 463 464 465 466 467 468 469 470 471 472 473 474 475 476 477 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 504 505 506 507 508 509 510 511 512 513 514 515 516 517 518 519 520 521 522 524 525 553 555,
+	4	 478 479 480 541 542 543 556 559,
+	2	 221 222 223 224 225 226 227 558,
+	1	 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 357 358 359 360 361 362 363 364 365 366 367 368 398 454 523 552 558,
+	0	 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 315 316 372 373 544 545 546 547 548 549 550,
+	2	 384 385 386 387 388 389 390 395 481,
+	1	 145 146 148 150,
+	1	 1 2 3 4 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 251 252 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 272 273 274 275 276 277 278 300 301 302 303 304 305 306 307 308 309 310 311 312 313 314 357 358 359 360 361 362 363 364 365 366 367 368 369 370 371 398 454 455 488 523 530 531 532 533 534 535 536 537 538 551 552 554 557,
+	1	 24 25 26 27 28 32 33 34 35 36 37 39,
+	1	 66 67 68 69 74 75,
+	1	 341 342 344 345,
+	1	 343 346,
+	1	 265 266 267 268 269 271 455,
+	2	 131 132,
+	0	 405 406 407 408 411 412 413,
+	1	 29 30 31 32 33,
+	2	 309 312,
+	1	 145 147 148 149,
+	1	 145 147 148 149 151,
+	0	 129 131 132 133 134,
+	1	 217 218 219,
+	1	 261 262 263 264 265 266 267 268 269 270 271 455 551,
+	1	 130 133,
+	0	 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 40 41 42 43 44 161 162 163 164 165 166 167 168 315 316 328 329 330 331 332 333 334 335 336 337 338 339 340 341 342 343 344 345 346 347 348 349 350 351 352 353 354 372 373 456 457,
+	0	 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 161 162 163 164 165 166 167 168 315 316 328 329 330 331 332 333 334 335 336 337 338 339 340 341 342 343 344 345 346 347 348 349 350 351 352 353 354 372 373 456 457 526 527 528 529,
+	1	 357 359 360 362 363 364 365 366 367 368 552,
+	1	 358 361,
+	0	 228 233 238 239,
+	0	 230 232 234 235 236 237 240,
+	0	 228 230 232 233 234 235 236 237 238 239 240,
+	1	 228 230 231 232 233 234 235 236 237 238 239 240,
+	0	 45 46 47 48,
+	1	 66 67 68,
+	0	 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 94 95 96 97 98 99 100 529,
+	1	 221 222 223 224 225 226 227 251 252 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 455 530 551,
+	1	 300 301 302 303 304 305 306,
+	1	 145 147 148 150 151,
+	1	 279 281 282 283 284 285,
+	1	 335 336 337 339,
+	0	 341 342 343 344 345,
+	3	 172 173 174 175 176 177 178 179 180 181 183 184 185,
+	1	 469 470 471,
+	0	 5 6 8 9,
+	1	 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 101 102 103 104 107,
+	2	 541 542 543 559,
+	1	 281 284,
+	1	 281 283 284,
+	1	 229 230 231 232 234 235 236 237 240,
+	1	 229 230 231 232 233 234 235 236 237 240,
+	1	 229 230 231 232 233 234 235 236 237 238 239 240,
+	4	 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 355 356 558,
+	1	 384 385 386 387 388 389 390 395 481 482 483,
+	1	 57 58 59,
+	1	 414 415 416 417 418 419 420 421 478 479 480,
+	1	 204 558,
+	1	 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 355 356,
+	2	 145 148 149 150,
+	0	 384 385 386 387 481,
+	1	 443 555,
+	1	 34 35 36,
+	1	 213 215,
+	0	 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249,
+	0	 204 205 206 207 208 209 210 211 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250,
+	0	 355 356 558,
+	2	 204 205 206 207 208 209 210 211 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 355 356 558,
+	2	 169 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 204 205 206 207 208 209 210 211 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 355 356 558,
+	1	 79 80 81 82 83 84 85 86 87 91 101 102 103 104 105 107,
+	1	 281 282 283 284,
+	0	 286 287 288 289 290 291 292 293 294 295 296 297 298 299 486,
+	1	 328 329 330 331 332 333 334 335 336 337 338 339 340 341 342 343 344 345 346 347 348 349 350 351 353 354,
+	0	 108 109 112 113,
+	0	 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 279 280 281 282 283 284 285 315 316 317 318 319 320 321 322 323 324 325 326 327 372 373 394 396 397 487 526 527 528 529 539 544 545 546 547 548 549 550,
+	0	 405 406 407 408 409 410 411 412 413 559,
+	1	 169 204 205 206 207 208 209 210 211,
+	1	 169 170 171 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 355 356,
+	1	 204 205 206 207 208 209 210 211 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 558,
+	1	 359 360 361 362 363 364 365 366 367 368 552,
+	0	 279 280 281 283 284 285,
+	1	 230 231 238 239,
+	1	 230 231 232 234 235 236 237 238 239 240,
+	1	 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 279 280 281 282 283 284 285 315 316 328 329 330 331 332 333 334 335 336 337 338 339 340 341 342 343 344 345 346 347 348 349 350 351 352 353 354 372 373 394 456 457 526 527 528 529 544 545 546 547 548 549 550,
+	0	 399 400 401 402 403 404 405 406 407 408 409 410 411 412 413 414 415 416 417 418 419 420 421 422 423 424 425 426 427 428 429 430 431 432 433 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 463 464 465 466 467 468 469 470 471 472 473 474 475 476 477 478 479 480 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 504 505 506 507 508 509 510 511 512 513 514 515 516 517 518 519 520 521 522 524 525 540 541 542 543 553 555 556 559,
+	0	 146 149 150,
+	1	 244 245 246 247,
+	1	 504 505,
+	1	 435 436 437 440 442,
+	1	 558 559,
+	0	 541 542 543 558 559,
+	1	 541 542 543 556 558 559,
+	1	 399 400 401 402 403 404 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 463 464 465 466 467 468 469 470 471 472 473 474 475 476 477 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 504 505 506 507 508 509 510 511 512 513 514 515 516 517 518 519 524 525 541 542 543 553 555 556 558 559,
+	1	 169 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 355 356,
+	1	 212 213 214 215 216 217 218 219 220 251 252 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 357 358 359 360 361 362 363 364 365 366 367 368 398 454 455 552,
+	1	 523 530 540 551,
+	0	 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 161 162 163 164 165 166 167 168 315 316 372 373 394 526 527 528 529 544 545 546 547 548 549 550,
+	1	 556 558 559,
+	1	 169 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 204 205 206 207 208 209 210 211 558,
+	1	 129 130 131 132 133 134 135 136 137,
+	0	 320 321 322 325 326 327 487,
+	0	 145 146 147 148 150,
+	1	 198 199 200,
+	0	 359 360,
+	1	 359 360 362 363 364 365 368,
+	1	 359 360 362 363 364 365 366 367 368 552,
+	1	 265 266 267 268 269 270 271 455 551,
+	0	 251 252 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 530,
+	0	 212 213 214 215 216 217 218 219 220 251 252 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 357 358 359 360 361 362 363 364 365 366 367 368 398 454 455 530 551 552,
+	1	 60 61 62 63 64 65,
+	0	 199 201 202 203,
+	2	 56 57 58 59 66 67 68 69 70 71 72 73 74 75 76 77 78 529,
+	2	 147 150,
+	0	 374 375 376 377 378 379 380 381 382 383 384 385 386 387 388 389 390 391 392 393 395 399 400 401 402 403 404 405 406 407 408 409 410 411 412 413 414 415 416 417 418 419 420 421 422 423 424 425 426 427 428 429 430 431 432 433 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 463 464 465 466 467 468 469 470 471 472 473 474 475 476 477 478 479 480 481 482 483 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 504 505 506 507 508 509 510 511 512 513 514 515 516 517 518 519 520 521 522 524 525 541 542 543 553 555 556 558 559,
+	1	 26 27 28 34 35 36 37,
+	1	 145 146 147 148 149 151,
+	1	 463 464 465 466,
+	0	 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 315 316 328 329 330 331 332 333 334 335 336 337 338 339 340 341 342 343 344 345 346 347 348 349 350 351 352 353 354 372 373 394 456 457 526 527 528 529 544 545 546 547 548 549 550,
+	0	 121 526,
+	0	 114 115 116 117 118 119 120 121 526,
+	0	 45 46 47 48 49 50 51 52 53 54 55 114 115 116 117 118 119 120 121 526,
+	1	 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 286 287 288 289 290 291 292 293 294 295 296 297 298 299 374 375 376 377 378 379 380 381 382 383 384 385 386 387 388 389 390 391 392 393 395 458 459 460 461 462 481 482 483,
+	0	 1 2 3 4 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 251 252 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 272 273 274 275 276 277 278 300 301 302 303 304 305 306 307 308 309 310 311 312 313 314 357 358 359 360 361 362 363 364 365 366 367 368 369 370 371 398 454 455 486 488 523 530 551 552 554 557,
+	1	 251 252 253 254 255 256 257 258 259 260 261 262 263 264,
+	0	 1 2 3 4 272 273 274 275 276 277 278 300 301 302 303 304 305 306 307 308 309 310 311 312 313 314 369 370 371 488 554 557,
+	0	 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 315 316 372 373 394,
+	1	 129 131 132 134,
+	0	 317 318 319 320 321 322 325 326 487,
+	1	 24 25 26 27 28 29 30 31,
+	0	 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 374 375 376 377 378 379 380 381 382 383 384 385 386 387 388 389 390 391 392 393 395 399 400 401 402 403 404 405 406 407 408 409 410 411 412 413 414 415 416 417 418 419 420 421 422 423 424 425 426 427 428 429 430 431 432 433 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 463 464 465 466 467 468 469 470 471 472 473 474 475 476 477 478 479 480 481 482 483 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 504 505 506 507 508 509 510 511 512 513 514 515 516 517 518 519 520 521 522 524 525 541 542 543 553 555 556 559,
+	0	 469 471,
+	0	 32 33 544 545 546 547 548 549 550,
+	0	 24 25 26 27 28 32 33 34 35 36 37 544 545 546 547 548 549 550,
+	0	 24 25 26 27 28 29 30 31 32 33 34 35 36 37 544 545 546 547 548 549 550,
+	0	 24 25 26 27 28 29 30 31 32 33 34 35 36 37 39 394 544 545 546 547 548 549 550,
+	0	 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 160,
+	0	 328 329 330 331 332 333 334 352 353 354,
+	0	 328 329 330 335 336 337 338 339 340 341 342 343 344 345 346 347 348 349 350 351 354,
+	0	 352 353,
+	1	 232 233 234 235 236 237 240,
+	1	 230 232 233 234 235 236 237 240,
+	1	 230 231 232 233 234 235 236 237 240,
+	0	 399 400 401 402 403 404 414 415 416 417 418 419 420 421 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 463 464 465 466 467 468 469 470 471 472 473 474 475 476 477 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 504 505 506 507 508 509 510 511 512 513 514 515 516 517 518 519 524 525 553 555 556,
+	1	 478 479 480 559,
+	0	 216 217 218,
+	0	 369 371,
+	0	 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 315 316 372 373 394 526 527 528 529 544 545 546 547 548 549 550,
+	1	 281 283 285,
+	2	 459 460,
+	0	 359 360 362 363 364 365,
+	0	 434 435 436 437 438 439 440 441 442 444 445 446 447 448 524 525 555,
+	0	 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 504 505 506 507 508 509 510 511 512 513 514 515 516 517 518 519 524 525 555,
+	0	 272 273 274 275 276 488 531 532 533 534 535 536 537 538 557,
+	1	 405 406 407 408 409 410 411 412 413 422 423 424 425 426 427 428 429 430 431 432 433,
+	0	 282 284,
+	0	 281 282 284,
+	0	 283 285,
+	0	 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 355 356 384 385 386 387 388 389 390 395 481 482 483 484 485 558,
+	0	 399 400 401 402 403 404 405 406 407 408 409 410 411 412 413 422 423 424 425 426 427 428 429 430 431 432 433 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 463 464 465 466 467 468 469 470 471 472 473 474 475 476 477 478 479 480 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 504 505 506 507 508 509 510 511 512 513 514 515 516 517 518 519 520 521 522 524 525 541 542 543 553 555 556,
+	0	 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156,
+	0	 101 105,
+	0	 79 80 81 82 83 84 85 86 87 101 105,
+	0	 79 80 81 82 83 84 85 86 87 88 89 90 92 93 101 105 106,
+	0	 91 102 103 104 107,
+	1	 38 39,
+	0	 377 378 379 380 382 383,
+	0	 434 435 436 437 438 439 440 441 442 444 447 448 449 450 451 452 453 524 525,
+	0	 434 435 436 437 438 439 440 441 442 443 444 447 448 449 450 451 452 453 524 525 555,
+	1	 132 133,
+	2	 1 2,
+	0	 145 146 148 150 151,
+	1	 147 149,
+	1	 279 280 282,
+	0	 1 2 3 4 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 251 252 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 272 273 274 275 276 277 278 286 287 288 289 290 291 292 293 294 295 296 297 298 299 300 301 302 303 304 305 306 307 308 309 310 311 312 313 314 357 358 359 360 361 362 363 364 365 366 367 368 369 370 371 374 375 376 377 378 379 380 381 382 383 384 385 386 387 388 389 390 391 392 393 395 398 454 455 458 459 460 461 462 481 482 483 486 488 523 530 531 532 533 534 535 536 537 538 551 552 554 557,
+	1	 434 435 436 437 438 439 440 441 442 444 447 448,
+	0	 302 304 305,
+	1	 129 130 131 134,
+	0	 374 375 376 377 378 379 380 381 382 383,
+	0	 280 281 282 283 284 285,
+	0	 145 146 147 148 149,
+	1	 70 73,
+	0	 1 2 3 4 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251 252 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 272 273 274 275 276 277 278 286 287 288 289 290 291 292 293 294 295 296 297 298 299 300 301 302 303 304 305 306 307 308 309 310 311 312 313 314 355 356 357 358 359 360 361 362 363 364 365 366 367 368 369 370 371 384 385 386 387 388 389 390 398 454 455 458 459 460 461 462 481 482 483 484 485 486 488 523 530 531 532 533 534 535 536 537 538 551 552 554 557 558,
+	0	 198 200,
+	0	 204 205 206 207 208 209 210 211 482 483 558,
+	0	 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 355 356 482 483 558,
+	0	 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 286 287 288 289 290 291 292 293 294 295 296 297 298 299 384 385 386 387 388 389 390 458 459 460 461 462 481,
+	0	 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 286 287 288 289 290 291 292 293 294 295 296 297 298 299 355 356 384 385 386 387 388 389 390 458 459 460 461 462 481 482 483 484 485 558,
+	1	 455 530,
+	1	 270 455 530,
+	1	 265 266 267 268 269 270 271 455 530,
+	0	 261 262 263 264 265 266 267 268 269 270 271 455 530,
+	0	 251 252 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 357 358 359 360 361 362 363 364 365 366 367 368 455 530 551 552,
+	0	 1 2 3 4 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 272 273 274 275 276 277 278 300 301 302 303 304 305 306 307 308 309 310 311 312 313 314 369 370 371 398 454 486 488 523 531 532 533 534 535 536 537 538 554 557,
+	0	 212 213 214 215 216 217 218 219 220 398 454 486 523,
+	0	 310 311 312,
+	0	 302 303,
+	0	 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 315 316 328 329 330 331 332 333 334 335 336 337 338 339 340 341 342 343 344 345 346 347 348 349 350 351 352 353 354 372 373 394 456 457 487 544 545 546 547 548 549 550,
+	1	 145 147 148 151,
+	0	 34 35 36 37 394,
+	0	 335 336 337 338 339 340 352,
+	0	 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 161 162 163 164 165 166 167 168 315 316 317 318 319 320 321 322 323 324 325 326 327 328 329 330 331 332 333 334 335 336 337 338 339 340 341 342 343 344 345 346 347 348 349 350 351 352 353 354 372 373 394 396 397 456 457 487 526 527 528 529 539 544 545 546 547 548 549 550,
+	0	 399 400 401 402 403 404 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 463 464 465 466 467 468 469 470 471 472 473 474 475 476 477 524 525 553 555,
+	1	 272 488,
+	0	 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 529,
+	0	 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 161 162 163 164 165 166 167 168 526 527 528 529,
+	0	 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 279 280 281 282 283 284 285 315 316 317 318 319 320 321 322 323 324 325 326 327 372 373 394 487 526 527 528 529 544 545 546 547 548 549 550,
+	1	 335 339,
+	0	 341 343 344 345 346,
+	0	 22 23 372 373,
+	0	 8 9 22 23 372 373,
+	0	 5 6 8 9 22 23 372 373,
+	0	 5 6 7 8 9 22 23 372 373,
+	0	 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 372 373,
+	0	 331 332 333 334 335 336 337 338 339 340 352,
+	0	 399 400 401 402 403 404 553,
+	0	 396 397 539 559,
+	0	 317 318 319 320 321 322 323 324 325 326 327 396 397 487 539 559,
+	0	 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 279 280 281 282 283 284 285 315 316 317 318 319 320 321 322 323 324 325 326 327 328 329 330 331 332 333 334 335 336 337 338 339 340 341 342 343 344 345 346 347 348 349 350 351 352 353 354 372 373 394 396 397 456 457 487 526 527 528 529 539 544 545 546 547 548 549 550 559,
+	0	 178 179 181,
+	0	 286 287 288 289 290 291 292 293 294 295 296 297 298 299 458 459 460 461 462 484 485,
+	0	 286 287 288 289 290 291 292 293 294 295 296 297 298 299 374 375 376 377 378 379 380 381 382 383 384 385 386 387 388 389 390 391 392 393 395 458 459 460 461 462 481 482 483 484 485,
+	0	 405 406 407 408 409 410 411 412 413 414 415 416 417 418 419 420 421 422 423 424 425 426 427 428 429 430 431 432 433 478 479 480 520 521 522 541 542 543,
+	1	 24 25 26 27 28 32,
+	1	 33 34 35 36 37 39,
+	0	 243 245 246 247,
+	0	 169 170 171 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 355 356 558,
+	0	 335 338,
+	0	 545 546 547 548 549 550,
+	0	 169 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 558,
+	0	 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 315 316 328 329 330 331 332 333 334 335 336 337 338 339 340 341 342 343 344 345 346 347 348 349 350 351 352 353 354 372 373 394 456 457 487 526 527 528 529 544 545 546 547 548 549 550,
+	0	 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 161 162 163 164 165 166 167 168 315 316 328 329 330 331 332 333 334 335 336 337 338 339 340 341 342 343 344 345 346 347 348 349 350 351 352 353 354 372 373 394 456 457 487 526 527 528 529 544 545 546 547 548 549 550,
+	1	 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 279 280 281 282 283 284 285 315 316 328 329 330 331 332 333 334 335 336 337 338 339 340 341 342 343 344 345 346 347 348 349 350 351 352 353 354 372 373 394 456 457 487 526 527 528 529 544 545 546 547 548 549 550,
+	0	 436 438 439,
+	0	 436 437 438 439,
+	0	 436 437 438 439 442,
+	1	 212 213 214 215 216 220,
+	1	 212 213 214 215 216 219 220,
+	0	 129 132,
+	1	 341 342 343 344,
+	0	 500 501 502 503 507 508,
+	0	 331 332 333 334 341 342 343 344 345 346 347 348 349 350 351 352 353,
+	0	 279 280 284 285,
+	0	 199 200 201 202 203,
+	0	 444 447 448,
+	0	 186 187 188 189 190 191 192 193 194 195 196 484 485,
+	0	 405 406 407 408 409 410 411 412 413 422 423 424 425 426 427 428 429 430 431 432 433 478 479 480 520 521 522 556 559,
+	0	 121 526 527 528,
+	0	 38 39 394,
+	1	 395 558,
+	1	 532 533 534,
+	0	 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 94 95 96 97 98 99 100 114 115 116 117 118 119 120 121 129 130 131 132 133 134 135 136 137 138 526 527 528 529,
+	1	 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 279 280 281 282 283 284 285 396 397 539,
+	1	 1 2 3 4 272 273 274 275 276 277 278 300 301 302 303 304 305 306 307 308 309 310 311 312 313 314 369 370 371 486 488 531 532 533 534 535 536 537 538 554 557,
+	1	 1 2 3 4 277 278 300 301 302 303 304 305 306 307 308 309 310 311 312 313 314 486 554,
+	0	 286 287 288 289 290 291 292 293 294 295 296 297 298 299,
+	0	 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 279 280 281 282 283 284 285 394 544 545 546 547 548 549 550,
+	2	 1 2 3 4 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 251 252 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 272 273 274 275 276 277 278 300 301 302 303 304 305 306 307 308 309 310 311 312 313 314 357 358 359 360 361 362 363 364 365 366 367 368 369 370 371 398 454 455 486 488 523 530 531 532 533 534 535 536 537 538 551 552 554 557 558,
+	0	 281 285,
+	0	 279 280 281 282 285,
+	0	 283 284,
+	0	 70 72 73,
+	0	 169 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 204 205 206 207 208 209 210 211,
+	0	 384 385 388 389 390,
+	0	 140 141 152,
+	0	 414 415 416 417 418 419 420 421 422 423 424 425 426 427 428 429 430 431 432 433,
+	0	 414 415 416 417 418 419 420 421 559,
+	0	 328 329 330 331 332 333 334 335 336 337 338 339 340 353 354,
+	1	 228 239,
+	1	 228 233 239,
+	1	 228 229 232 233 234 235 236 237 239 240,
+	1	 228 229 230 231 232 233 234 235 236 237 239 240,
+	0	 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 101 105 106,
+	0	 221 222 223 227,
+	0	 1 2 3 4 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251 252 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 272 273 274 275 276 277 278 286 287 288 289 290 291 292 293 294 295 296 297 298 299 300 301 302 303 304 305 306 307 308 309 310 311 312 313 314 355 356 357 358 359 360 361 362 363 364 365 366 367 368 369 370 371 374 375 376 377 378 379 380 381 382 383 384 385 386 387 388 389 390 391 392 393 398 454 455 458 459 460 461 462 481 482 483 484 485 486 488 523 530 531 532 533 534 535 536 537 538 551 552 554 557 558,
+	0	 14 15 16,
+	0	 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 94 95 96 97 98 99 100 114 115 116 117 118 119 120 121 129 130 131 132 133 134 135 136 137 138 161 162 163 164 165 166 167 168 529,
+	1	 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 114 115 116 117 118 119 120 121 129 130 131 132 133 134 135 136 137 138 161 162 163 164 165 166 167 168 529,
+	1	 486 558,
+	0	 53 54 55 527 528,
+	0	 45 46 47 48 49 50 51 52 53 54 55 527 528,
+	0	 45 46 47 48 49 50 51 52 53 54 55 114 115 116 117 118 119 120 121 527 528,
+	0	 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 114 115 116 117 118 119 120 121 527 528 529,
+	0	 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 94 95 96 97 98 99 100 114 115 116 117 118 119 120 121 527 528 529,
+	0	 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 529,
+	0	 399 400 401 402 403 404 405 406 407 408 409 410 411 412 413 414 415 416 417 418 419 420 421 422 423 424 425 426 427 428 429 430 431 432 433 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 463 464 465 466 467 468 469 470 471 472 473 474 475 476 477 478 479 480 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 504 505 506 507 508 509 510 511 512 513 514 515 516 517 518 519 520 521 522 524 525 541 542 543 551 553 555 556 559,
+	0	 1 2 3 4 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251 252 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 272 273 274 275 276 277 278 286 287 288 289 290 291 292 293 294 295 296 297 298 299 300 301 302 303 304 305 306 307 308 309 310 311 312 313 314 355 356 357 358 359 360 361 362 363 364 365 366 367 368 369 370 371 374 375 376 377 378 379 380 381 382 383 384 385 386 387 388 389 390 391 392 393 395 398 454 455 458 459 460 461 462 481 482 483 484 485 486 488 523 530 531 532 533 534 535 536 537 538 552 554 557 558,
+	0	 1 2 3 4 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251 252 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 272 273 274 275 276 277 278 286 287 288 289 290 291 292 293 294 295 296 297 298 299 300 301 302 303 304 305 306 307 308 309 310 311 312 313 314 355 356 357 358 359 360 361 362 363 364 365 366 367 368 369 370 371 398 454 455 458 459 460 461 462 484 485 486 488 523 530 531 532 533 534 535 536 537 538 552 554 557 558,
+	0	 1 2 3 4 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 251 252 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 272 273 274 275 276 277 278 286 287 288 289 290 291 292 293 294 295 296 297 298 299 300 301 302 303 304 305 306 307 308 309 310 311 312 313 314 357 358 359 360 361 362 363 364 365 366 367 368 369 370 371 398 454 455 458 459 460 461 462 486 488 523 530 531 532 533 534 535 536 537 538 552 554 557 558,
+	0	 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 398 454 523,
+	0	 251 252 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 357 358 359 360 361 362 363 364 365 366 367 368 455 530 552,
+	0	 1 2 3 4 272 273 274 275 276 277 278 286 287 288 289 290 291 292 293 294 295 296 297 298 299 300 301 302 303 304 305 306 307 308 309 310 311 312 313 314 369 370 371 458 459 460 461 462 486 488 531 532 533 534 535 536 537 538 554 557 558,
+	0	 1 2 3 4 277 278 286 287 288 289 290 291 292 293 294 295 296 297 298 299 300 301 302 303 304 305 306 307 308 309 310 311 312 313 314 458 459 460 461 462 486 554 558,
+	0	 291 292 293 294 295 296 297 298 299 486 558,
+	0	 291 292 293 294 295 296 297 298 299 458 459 460 461 462 486 558,
+	0	 286 287 288 289 290 291 292 293 294 295 296 297 298 299 458 459 460 461 462 486 558,
+	0	 435 436 437 438 439 440 441 442 444,
+	0	 170 171 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 558,
+	0	 341 342 345,
+	0	 66 67 68 69 70 71 72 73 74 75 77 78 529,
+	0	 1 2 3 4 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 251 252 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 272 273 274 275 276 277 278 291 292 293 294 295 296 297 298 299 300 301 302 303 304 305 306 307 308 309 310 311 312 313 314 357 358 359 360 361 362 363 364 365 366 367 368 369 370 371 398 454 455 458 459 460 461 462 486 488 523 530 531 532 533 534 535 536 537 538 551 552 554 557,
+	0	 170 171 201 202 203,
+	0	 281 282 284 285,
+	0	 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 40 41 42 43 44 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 279 280 281 282 283 284 285 315 316 372 373,
+	0	 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 251 252 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 272 273 274 275 276 357 358 359 360 361 362 363 364 365 366 367 368 369 370 371 398 454 455 488 523 530 531 532 533 534 535 536 537 538 552 557,
+	0	 212 213 214 216,
+	0	 347 348 349 350 351,
+	0	 29 30 31 39,
+	0	 212 213 214 215 216 217 218 219 220 251 252 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 357 358 359 360 361 362 363 364 365 366 367 368 398 454 455 523 530 551 552,
+	0	 463 464 465 466 467 468 471,
+	0	 228 229 233,
+	0	 108 109 110 111 112 113 526 527 528,
+	0	 343 344,
+	0	 117 118 119 121,
+	0	 114 115 116 117 118 119 121,
+	0	 1 2 3 4 212 213 214 215 216 217 218 219 220 272 273 274 275 276 277 278 286 287 288 289 290 291 292 293 294 295 296 297 298 299 300 301 302 303 304 305 306 307 308 309 310 311 312 313 314 357 358 359 360 361 362 363 364 365 366 367 368 369 370 371 398 454 458 459 460 461 462 486 488 531 532 533 534 535 536 537 538 552 554 557,
+	0	 458 459 460 461 462 486,
+	0	 434 435 436 437 438 439 440 441 442 444 524 525,
+	0	 456 457 487,
+	0	 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 40 41 42 43 44 315 316 372 373 456 457 487,
+	0	 145 146 147 148 151,
+	0	 329 330 341 342 343 344 345 346 347 348 349 350 351,
+	0	 331 332 333 334 352 353,
+	0	 329 330 331 332 333 334 335 336 337 338 339 340 341 342 343 344 345 346 347 348 349 350 351 352 353,
+	0	 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 328 329 330 331 332 333 334 335 336 337 338 339 340 341 342 343 344 345 346 347 348 349 350 351 352 353 354 526 527 528 529,
+	0	 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 328 329 330 331 332 333 334 335 336 337 338 339 340 341 342 343 344 345 346 347 348 349 350 351 352 353 354 394 526 527 528 529 544 545 546 547 548 549 550,
+	0	 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 315 316 328 329 330 331 332 333 334 335 336 337 338 339 340 341 342 343 344 345 346 347 348 349 350 351 352 353 354 372 373 394 456 457 487 526 527 528 529 544 545 546 547 548 549 550,
+	0	 161 162 163 164 165 166 167 168 279 280 281 282 283 284 285,
+	0	 399 400 401 402 403 404 405 406 407 408 409 410 411 412 413 414 415 416 417 418 419 420 421 422 423 424 425 426 427 428 429 430 431 432 433 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 463 464 465 466 467 468 469 470 471 472 473 474 475 476 477 478 479 480 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 504 505 506 507 508 509 510 511 512 513 514 515 516 517 518 519 520 521 522 524 525 541 542 543 551 553 555 559,
+	0	 1 2 3 4 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251 252 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 272 273 274 275 276 277 278 286 287 288 289 290 291 292 293 294 295 296 297 298 299 300 301 302 303 304 305 306 307 308 309 310 311 312 313 314 355 356 357 358 359 360 361 362 363 364 365 366 367 368 369 370 371 374 375 376 377 378 379 380 381 382 383 384 385 386 387 388 389 390 391 392 393 395 398 454 455 458 459 460 461 462 481 482 483 484 485 486 488 523 530 531 532 533 534 535 536 537 538 552 554 556 557 558,
+	0	 204 205 206 207 208 209 210 211 556 558,
+	0	 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 355 356 556 558,
+	0	 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 355 356 484 485 556 558,
+	0	 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 286 287 288 289 290 291 292 293 294 295 296 297 298 299 355 356 374 375 376 377 378 379 380 381 382 383 384 385 386 387 388 389 390 391 392 393 395 458 459 460 461 462 481 482 483 484 485 556 558,
+	0	 1 2 3 4 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 251 252 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 272 273 274 275 276 277 278 300 301 302 303 304 305 306 307 308 309 310 311 312 313 314 357 358 359 360 361 362 363 364 365 366 367 368 369 370 371 398 454 455 486 488 523 530 531 532 533 534 535 536 537 538 552 554 557,
+	0	 221 222 223 224 225 226 227 251 252 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 455 523 530,
+	0	 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 251 252 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 357 358 359 360 361 362 363 364 365 366 367 368 398 454 455 486 523 530 552,
+	0	 108 109 110 111 112 113 122 123 124 125 126 127 128,
+	0	 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 526 527 528 529,
+	0	 145 148 149 151,
+	0	 341 342 343 344 345 346 350 351,
+	0	 422 423 424 425 426 427 428 429 430 431 432 433 478 479 480 520 521 522,
+	0	 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 328 329 330 331 332 333 334 335 336 337 338 339 340 341 342 343 344 345 346 347 348 349 350 351 352 353 354 394 456 457 544 545 546 547 548 549 550,
+	0	 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38,
+	0	 331 332 333 334 335 336 337 338 339 340 341 342 343 344 345 346 347 348 349 350 351 352 353,
+	0	 286 288,
+	0	 169 204 205 206 207 208 209 210 211 558,
+	0	 405 406 407 408 409 410 411 412 413 422 423 424 425 426 427 428 429 430 431 432 433 478 479 480 520 521 522 556 558 559,
+	0	 286 287 288 289 290 486,
+	0	 282 284 285,
+	0	 197 198 200 201 202 203,
+	0	 197 198 199 201 202 203,
+	0	 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 161 162 163 164 165 166 167 168 317 318 319 320 321 322 323 324 325 326 327 328 329 330 331 332 333 334 335 336 337 338 339 340 341 342 343 344 345 346 347 348 349 350 351 352 353 354 396 397 456 457 487 526 527 528 529 539,
+	0	 328 329 330 341 342 343 344 345 346 347 348 349 350 351 353 354 456 457,
+	0	 328 329 330 341 342 343 344 345 346 347 348 349 350 351 353 354,
+	0	 414 415 416 417 418 419 420 421 422 423 424 425 426 427 428 429 430 431 432 433 478 479 480 520 521 522,
+	0	 251 252 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 455 523 530 540 551,
+	0	 309 310 311 312 313 314,
+	0	 79 80 81 82 83 84 85 86 87 105 106,
+	0	 396 397 487 539,
+	0	 130 131 132 133,
+	0	 405 406 407 408 422 423 424 425 426 427 428 429 430 431 432 433 520 521 522,
+	0	 34 36 37,
+	0	 186 187 188 189 190 191 192 193 194 195 196 558,
+	0	 399 400 401 402 403 404 405 406 407 408 409 410 411 412 413 414 415 416 417 418 419 420 421 422 423 424 425 426 427 428 429 430 431 432 433 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 463 464 465 466 467 468 469 470 471 472 473 474 475 476 477 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 504 505 506 507 508 509 510 511 512 513 514 515 516 517 518 519 520 521 522 524 525 553 555 556 559,
+	0	 140 141 160,
+	0	 56 57 58 59 60 61 62 63,
+	0	 153 154 156,
+	0	 187 188 189 190 191 192 193,
+	0	 1 2 3 4 212 213 214 215 216 217 218 219 220 272 273 274 275 276 277 278 300 301 302 303 304 305 306 307 308 309 310 311 312 313 314 357 358 359 360 361 362 363 364 365 366 367 368 369 370 371 398 454 486 488 531 532 533 534 535 536 537 538 552 554 557,
+	0	 504 505 506 507 508 509,
+	0	 145 146 147 148 149 150 151 152,
+	0	 395 482 483 558,
+	0	 384 385 386 387 388 389 390 395 481 482 483 558,
+	0	 56 57 58 59 64,
+	0	 251 252 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 455 523 530 551,
+	0	 18 19 20,
+	0	 67 68,
+	0	 302 303 304 305 306 307 308 309 310 311 312,
+	0	 130 134,
+	0	 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 99 100 114 115 116 117 118 119 120 121 526 527 528 529,
+	0	 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 394 544 545 546 547 548 549 550,
+	0	 317 318 319 320 321 322 323 324 325 326,
+	0	 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 317 318 319 320 321 322 323 324 325 326 327 487,
+	0	 279 280 281 282,
+	0	 1 2 3 4 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 251 252 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 272 273 274 275 276 277 278 300 301 302 303 304 305 306 307 308 309 310 311 312 313 314 357 358 359 360 361 362 363 364 365 366 367 368 369 370 371 398 454 455 488 523 530 531 532 533 534 535 536 537 538 552 554 557,
+	0	 24 25 26 27 28 29 30 31 32 33 39 394,
+	0	 24 25 26 27 28 29 30 31 32 33 34 35 36 37 394,
+	0	 343 344 345 346,
+	0	 88 89 90 91 92 93 101 102 103 104 106 107,
+	0	 132 134,
+	0	 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 355 356,
+	0	 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 384 385 386 387 388 389 390 481 482 483 558,
+	0	 142 143 144 145 146 147 148 149 150 151 152 160,
+	0	 5 6 7 8 9 10 11 12 13 21 22 23,
+	0	 212 214,
+	0	 399 400 401 402 403 404 405 406 407 408 409 410 411 412 413 414 415 416 417 418 419 420 421 422 423 424 425 426 427 428 429 430 431 432 433 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 463 464 465 466 467 468 469 470 471 472 473 474 475 476 477 478 479 480 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 504 505 506 507 508 509 510 511 512 513 514 515 516 517 518 519 520 521 522 524 525 553 555 556 559,
+	0	 286 287 288 289 290 458 459 460 461 462 486,
+	0	 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 374 375 376 377 378 379 380 381 382 383 384 385 386 387 388 389 390 391 392 393 395 481 482 483,
+	0	 4 277 278 286 287 288 289 290 291 292 293 294 295 296 297 298 299 458 459 460 461 462 486 554,
+	0	 204 205 206 207 208 209 210 211 484 485 558,
+	0	 145 147 148 149 150,
+	0	 146 151,
+	0	 229 232,
+	0	 521 522,
+	0	 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 487,
+	0	 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 279 280 281 282 283 284 285 487,
+	0	 1 2 3 4 277 278 286 287 288 289 290 300 301 302 303 304 305 306 307 308 309 310 311 312 313 314 554,
+	0	 40 41 43 44,
+	0	 146 149 150 151,
+	0	 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 355 356 384 385 386 387 388 389 390 481 482 483 484 485,
+	0	 335 336 337 338 339 340 341 342 343 344 345 346 347 348 349 350 351 456 457,
+	0	 200 201 202 203,
+	0	 198 201 202 203,
+	0	 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 279 280 281 282 283 284 285,
+	0	 145 146 148,
+	0	 88 106,
+	0	 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 279 280 281 282 283 284 285 315 316 328 329 330 331 332 333 334 335 336 337 338 339 340 341 342 343 344 345 346 347 348 349 350 351 352 353 354 372 373 394 396 397 456 457 487 526 527 528 529 539 544 545 546 547 548 549 550,
+	0	 24 25 26 27 28 29 30 31 32 33 34 35 36 37 39 544 545 546 547 548 549 550,
+	0	 297 298,
+	0	 186 190 191 192,
+	0	 399 400 401 402 403 404 405 406 407 408 409 410 411 412 413 422 423 424 425 426 427 428 429 430 431 432 433 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 463 464 465 466 467 468 469 470 471 472 473 474 475 476 477 478 479 480 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 504 505 506 507 508 509 510 511 512 513 514 515 516 517 518 519 520 521 522 524 525 553 555 556 559,
+;
+END; [Splits]
+

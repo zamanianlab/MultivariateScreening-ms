@@ -2,3 +2,10 @@
 .Rhistory
 .RData
 .Ruserdata
+Fig3/data/all_vs_all.tsv
+Fig3/data/boost_tune.rds
+Fig3/data/final_rf_wfow.rds
+Fig3/data/gnina_scores_tocris_brugiaAF2_sitecons_eps1.5_minsamp0.5SQRTN_null_cid114.pkl
+Fig3/data/gnina_scores_tocris_humanAF2_sitecons_eps1.5_minsamp0.5SQRTN_null_cid114.pkl
+Fig3/data/rf_tune.rds
+Fig4/subplots/k_s_media.rds

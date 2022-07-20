@@ -1,0 +1,609 @@
+IQ-TREE multicore version 2.0.3 for Linux 64-bit built Dec 20 2020
+Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor,
+Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+
+Host:    ktryan2-9829038.1-parabyte2000.chtc.wisc.edu (AVX512, FMA3, 503 GB RAM)
+Command: iqtree -s work/alignments/ACVR1_HUMAN.combined_final.aln -nt AUTO -alrt 1000 -bb 1000 -redo
+Seed:    770499 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Fri Feb 18 15:06:32 2022
+Kernel:  AVX+FMA - auto-detect threads (80 CPU cores detected)
+
+Reading alignment file work/alignments/ACVR1_HUMAN.combined_final.aln ... Fasta format detected
+Alignment most likely contains protein sequences
+Alignment has 202 sequences with 297 columns, 296 distinct patterns
+288 parsimony-informative, 5 singleton sites, 4 constant sites
+                                          Gap/Ambiguity  Composition  p-value
+   1  Homo_sapiens|sp|Q12852|M3K12_HUMAN          6.06%    passed     94.64%
+   2  Homo_sapiens|sp|O43283|M3K13_HUMAN          6.06%    passed     93.24%
+   3  ancylostoma_caninum|ANCCAN_10276            8.75%    passed     36.28%
+   4  haemonchus_contortus|HCON_00004580-00002    7.74%    passed     32.48%
+   5  caenorhabditis_elegans|F33E2.2a.1           7.74%    passed     64.16%
+   6  caenorhabditis_elegans|F33E2.2d.1           9.43%    passed     64.17%
+   7  caenorhabditis_elegans|F33E2.2b.1           7.74%    passed     64.16%
+   8  caenorhabditis_elegans|F33E2.2c.1           7.74%    passed     64.16%
+   9  ascaris_suum|AgR018X_g175_t03               5.39%    passed     48.45%
+  10  ascaris_suum|AgR018X_g175_t05               5.39%    passed     48.45%
+  11  brugia_malayi|Bm3798b.1                     5.39%    passed     29.80%
+  12  brugia_malayi|Bm3798c.1                    12.79%    passed     32.46%
+  13  trichuris_muris|TMUE_1000004635.1           3.70%    passed     57.84%
+  14  ascaris_suum|AgR019X_g085_t01              10.44%    passed     98.99%
+  15  ascaris_suum|AgR019X_g085_t02              10.44%    passed     98.99%
+  16  brugia_malayi|Bm10748.1                    10.10%    passed     74.54%
+  17  trichuris_muris|TMUE_1000005692.1          11.11%    passed     95.29%
+  18  ascaris_suum|AgB18_g119_t03                24.92%    failed      3.86%
+  19  Homo_sapiens|sp|Q16584|M3K11_HUMAN          7.74%    failed      4.23%
+  20  trichuris_muris|TMUE_3000013091.1           7.07%    passed     50.15%
+  21  trichuris_muris|TMUE_3000013091.2           7.07%    passed     50.15%
+  22  ascaris_suum|AgR009X_g088_t05              10.44%    passed     61.79%
+  23  caenorhabditis_elegans|K11D12.10a.1         6.40%    passed     91.10%
+  24  ancylostoma_caninum|ANCCAN_11558            7.07%    passed     69.81%
+  25  strongyloides_ratti|SRAE_1000249600.1      14.48%    passed     51.47%
+  26  ancylostoma_caninum|ANCCAN_03940            9.43%    passed     76.90%
+  27  ascaris_suum|AgB02_g276_t01                 4.04%    passed     89.10%
+  28  caenorhabditis_elegans|Y38F1A.10b.1         4.04%    passed     59.28%
+  29  caenorhabditis_elegans|Y38F1A.10d.1        16.84%    passed     87.68%
+  30  brugia_malayi|Bm6431a.1                     4.71%    passed     62.30%
+  31  brugia_malayi|Bm6431c.1                     4.71%    passed     62.30%
+  32  brugia_malayi|Bm6431b.1                     4.71%    passed     72.32%
+  33  brugia_malayi|Bm5826.1                     10.10%    passed     80.71%
+  34  haemonchus_contortus|HCON_00162520-00001   10.10%    passed     36.27%
+  35  Homo_sapiens|sp|Q96S53|TESK2_HUMAN         10.44%    passed     83.30%
+  36  ascaris_suum|AgB05_g416_t02                 7.41%    passed     45.50%
+  37  haemonchus_contortus|HCON_00061120-00001   10.10%    passed     24.18%
+  38  Homo_sapiens|sp|P04049|RAF1_HUMAN           0.67%    passed     88.98%
+  39  Homo_sapiens|sp|P10398|ARAF_HUMAN           0.67%    passed     82.16%
+  40  Homo_sapiens|sp|P15056|BRAF_HUMAN           0.67%    passed     81.11%
+  41  ancylostoma_caninum|ANCCAN_16555           10.10%    passed     69.71%
+  42  haemonchus_contortus|HCON_00111880-00001    1.68%    passed     75.33%
+  43  caenorhabditis_elegans|Y73B6A.5a.1          2.69%    passed     87.04%
+  44  caenorhabditis_elegans|Y73B6A.5d.1          2.02%    passed     86.26%
+  45  caenorhabditis_elegans|Y73B6A.5f.1          2.69%    passed     87.04%
+  46  caenorhabditis_elegans|Y73B6A.5e.1          2.02%    passed     86.26%
+  47  caenorhabditis_elegans|Y73B6A.5c.1          2.02%    passed     83.27%
+  48  ascaris_suum|AgR051X_g055_t02               1.01%    passed     96.77%
+  49  brugia_malayi|Bm7093a.1                     3.03%    passed     89.21%
+  50  brugia_malayi|Bm7093b.1                     4.71%    passed     89.86%
+  51  trichuris_muris|TMUE_3000012672.1           0.67%    passed     54.75%
+  52  strongyloides_ratti|SRAE_X000173200.1       0.67%    passed     32.65%
+  53  Homo_sapiens|sp|Q8IVT5|KSR1_HUMAN           1.01%    passed     93.69%
+  54  ascaris_suum|AgR003_g272_t01                0.34%    passed     56.79%
+  55  ascaris_suum|AgR003_g272_t02                0.34%    passed     56.79%
+  56  ascaris_suum|AgR003_g272_t03                0.34%    passed     56.79%
+  57  ascaris_suum|AgR003_g272_t04                0.34%    passed     56.79%
+  58  ascaris_suum|AgR003_g272_t05                0.34%    passed     56.79%
+  59  ascaris_suum|AgR003_g272_t06                0.34%    passed     56.79%
+  60  ascaris_suum|AgR003_g272_t07                0.34%    passed     56.79%
+  61  trichuris_muris|TMUE_2000010315.1           1.35%    passed     60.68%
+  62  trichuris_muris|TMUE_2000010315.2           1.35%    passed     60.68%
+  63  caenorhabditis_elegans|F58D5.4a.1           1.35%    passed     67.81%
+  64  caenorhabditis_elegans|F58D5.4b.1           4.71%    passed     68.86%
+  65  caenorhabditis_elegans|F58D5.4c.1           3.03%    passed     73.21%
+  66  Homo_sapiens|sp|O00238|BMR1B_HUMAN          4.71%    passed     96.71%
+  67  Homo_sapiens|sp|P36894|BMR1A_HUMAN          5.05%    passed     87.40%
+  68  Homo_sapiens|sp|P36897|TGFR1_HUMAN          4.71%    passed     81.19%
+  69  Homo_sapiens|sp|P36896|ACV1B_HUMAN          4.71%    passed     73.22%
+  70  Homo_sapiens|sp|Q8NER5|ACV1C_HUMAN          4.71%    passed     92.99%
+  71  trichuris_muris|TMUE_3000012143.1           4.38%    passed     97.84%
+  72  trichuris_muris|TMUE_3000012143.2           4.38%    passed     97.84%
+  73  trichuris_muris|TMUE_3000012143.3           4.38%    passed     97.84%
+  74  trichuris_muris|TMUE_3000012143.4           4.38%    passed     97.84%
+  75  Homo_sapiens|sp|P37023|ACVL1_HUMAN          4.71%    passed     75.86%
+  76  Homo_sapiens|sp|Q04771|ACVR1_HUMAN          4.71%    passed     95.08%
+  77  trichuris_muris|TMUE_1000004185.1           4.38%    passed     18.43%
+  78  trichuris_muris|TMUE_1000005928.1           4.38%    passed     18.43%
+  79  ancylostoma_caninum|ANCCAN_00504            5.05%    passed     66.76%
+  80  haemonchus_contortus|HCON_00102490-00001    5.05%    passed     65.10%
+  81  ascaris_suum|AgR061_g006_t04                9.43%    passed     18.65%
+  82  ascaris_suum|AgR061_g006_t05                9.43%    passed     18.65%
+  83  ascaris_suum|AgR061_g006_t08                9.43%    passed     18.65%
+  84  ascaris_suum|AgR061_g006_t10                2.02%    passed     97.04%
+  85  ascaris_suum|AgR061_g006_t11                5.05%    passed     60.67%
+  86  brugia_malayi|Bm12004a.1                    5.05%    passed     92.90%
+  87  brugia_malayi|Bm12004b.1                    5.05%    passed     92.90%
+  88  haemonchus_contortus|HCON_00110180-00001    2.02%    passed     95.91%
+  89  caenorhabditis_elegans|C32D5.2.1            2.02%    passed     83.14%
+  90  ascaris_suum|AgR012_g129_t01                2.02%    passed     93.16%
+  91  ascaris_suum|AgR012_g129_t02               26.26%    passed     70.80%
+  92  brugia_malayi|Bm2507a.1                     2.02%    passed     97.75%
+  93  brugia_malayi|Bm2507b.1                     3.70%    passed     95.43%
+  94  strongyloides_ratti|SRAE_X000170000.1       2.02%    failed      0.53%
+  95  strongyloides_ratti|SRAE_X000145000.1       1.35%    passed      7.17%
+  96  caenorhabditis_elegans|F29C4.1a.1           1.35%    passed     74.86%
+  97  caenorhabditis_elegans|F29C4.1b.1           1.68%    passed     70.95%
+  98  Homo_sapiens|sp|P37173|TGFR2_HUMAN          3.70%    passed     52.26%
+  99  Homo_sapiens|sp|P27037|AVR2A_HUMAN          5.72%    passed     15.02%
+ 100  Homo_sapiens|sp|Q13705|AVR2B_HUMAN          6.06%    passed     66.91%
+ 101  ascaris_suum|AgB14_g061_t01                 2.36%    passed     50.26%
+ 102  brugia_malayi|Bm10177a.1                    2.36%    passed     82.34%
+ 103  brugia_malayi|Bm10177b.1                    5.39%    passed     83.23%
+ 104  trichuris_muris|TMUE_0000000050.1           1.01%    passed     73.88%
+ 105  trichuris_muris|TMUE_2000007651.1           1.01%    passed     73.88%
+ 106  ancylostoma_caninum|ANCCAN_02313            5.39%    passed     84.13%
+ 107  haemonchus_contortus|HCON_00078240-00001    4.38%    passed     86.26%
+ 108  Homo_sapiens|sp|Q13873|BMPR2_HUMAN          2.36%    passed     83.07%
+ 109  caenorhabditis_elegans|C05D2.1a.1           1.01%    passed     91.25%
+ 110  caenorhabditis_elegans|C05D2.1b.1           9.43%    passed     80.58%
+ 111  caenorhabditis_elegans|C05D2.1c.1           4.38%    passed     89.69%
+ 112  caenorhabditis_elegans|C05D2.1c.2           4.38%    passed     89.69%
+ 113  caenorhabditis_elegans|C05D2.1c.3           4.38%    passed     89.69%
+ 114  caenorhabditis_elegans|C05D2.1e.1           1.01%    passed     91.25%
+ 115  trichuris_muris|TMUE_2000007526.1           0.67%    passed     12.72%
+ 116  ancylostoma_caninum|ANCCAN_16061           12.79%    passed     37.16%
+ 117  ancylostoma_caninum|ANCCAN_28301           13.47%    passed     40.52%
+ 118  haemonchus_contortus|HCON_00134790-00001    2.02%    passed     55.66%
+ 119  haemonchus_contortus|HCON_00134790-00002    2.02%    passed     55.66%
+ 120  brugia_malayi|Bm5610.1                      2.02%    passed     87.91%
+ 121  caenorhabditis_elegans|T13H10.1.1           1.68%    passed     55.15%
+ 122  ascaris_suum|AgR024_g076_t01               13.47%    passed     87.35%
+ 123  ascaris_suum|AgR024_g076_t02                1.01%    passed     84.29%
+ 124  ascaris_suum|AgR024_g076_t03                0.67%    passed     84.82%
+ 125  ascaris_suum|AgB03_g259_t01                15.15%    passed     83.18%
+ 126  brugia_malayi|Bm3515.1                      9.76%    passed     89.72%
+ 127  ascaris_suum|AgR028_g103_t01                3.70%    passed     84.62%
+ 128  ascaris_suum|AgR028_g103_t02                3.70%    passed     84.62%
+ 129  ascaris_suum|AgR028_g103_t03                3.70%    passed     84.62%
+ 130  ascaris_suum|AgR028_g103_t04                3.70%    passed     84.62%
+ 131  ascaris_suum|AgR028_g103_t05                3.70%    passed     84.62%
+ 132  ascaris_suum|AgR028_g103_t06                4.38%    passed     80.99%
+ 133  ascaris_suum|AgR003_g230_t01                2.69%    passed     89.88%
+ 134  ascaris_suum|AgR003_g230_t02                2.69%    passed     89.88%
+ 135  ascaris_suum|AgR003_g230_t03                4.38%    passed     89.84%
+ 136  haemonchus_contortus|HCON_00013010-00001    3.03%    passed     75.71%
+ 137  haemonchus_contortus|HCON_00014530-00001    2.02%    passed     69.93%
+ 138  haemonchus_contortus|HCON_00003500-00001    1.01%    passed     13.51%
+ 139  haemonchus_contortus|HCON_00003510-00001    1.01%    passed     17.21%
+ 140  caenorhabditis_elegans|F59A3.8.1            3.70%    passed     81.00%
+ 141  ascaris_suum|AgB08X_g072_t03                0.34%    passed     74.65%
+ 142  ascaris_suum|AgB08X_g072_t04                0.67%    passed     60.97%
+ 143  brugia_malayi|Bm7182.1                      0.34%    passed     79.47%
+ 144  caenorhabditis_elegans|Y92H12A.1a.1         0.34%    passed     69.32%
+ 145  caenorhabditis_elegans|Y92H12A.1b.1         0.34%    passed     69.32%
+ 146  caenorhabditis_elegans|Y92H12A.1c.1         2.02%    passed     63.81%
+ 147  haemonchus_contortus|HCON_00026740-00001    0.34%    passed     45.72%
+ 148  strongyloides_ratti|SRAE_2000106200.1       0.34%    passed     84.34%
+ 149  ascaris_suum|AgB08X_g073_t01                1.35%    passed     92.81%
+ 150  ascaris_suum|AgB08X_g073_t02                2.36%    passed     91.25%
+ 151  trichuris_muris|TMUE_1000005973.1           0.34%    passed     55.50%
+ 152  brugia_malayi|Bm4215a.1                     1.01%    passed     99.62%
+ 153  brugia_malayi|Bm4215b.1                     2.69%    passed     99.58%
+ 154  caenorhabditis_elegans|F49B2.5.1            0.67%    passed     79.93%
+ 155  haemonchus_contortus|HCON_00013780-00001    0.67%    passed     84.04%
+ 156  strongyloides_ratti|SRAE_2000156700.1       1.01%    passed     97.66%
+ 157  trichuris_muris|TMUE_1000004991.1           1.01%    passed     92.95%
+ 158  ascaris_suum|AgB08X_g086_t02                5.05%    passed     82.54%
+ 159  ascaris_suum|AgB08X_g086_t03                9.43%    passed     92.82%
+ 160  caenorhabditis_elegans|Y48G1C.2a.1          4.04%    passed     97.26%
+ 161  caenorhabditis_elegans|Y48G1C.2a.2          4.04%    passed     97.26%
+ 162  caenorhabditis_elegans|Y48G1C.2a.3          4.04%    passed     97.26%
+ 163  caenorhabditis_elegans|Y48G1C.2b.1          3.37%    passed     96.85%
+ 164  caenorhabditis_elegans|Y47G6A.5a.1          0.67%    passed     94.90%
+ 165  caenorhabditis_elegans|Y47G6A.5b.1          0.67%    passed     94.90%
+ 166  caenorhabditis_elegans|F22B3.8.1            5.39%    passed     44.03%
+ 167  trichuris_muris|TMUE_2000008608.1           0.67%    passed     62.57%
+ 168  trichuris_muris|TMUE_2000009122.1           3.70%    passed     50.94%
+ 169  ascaris_suum|AgB13X_g016_t01                1.35%    passed     85.56%
+ 170  ascaris_suum|AgB13X_g016_t02                1.35%    passed     85.56%
+ 171  caenorhabditis_elegans|C18H7.4.1            2.36%    passed     35.25%
+ 172  caenorhabditis_elegans|C18H7.4.2            2.36%    passed     35.25%
+ 173  caenorhabditis_elegans|R151.1b.1            1.01%    passed     58.21%
+ 174  caenorhabditis_elegans|R151.1c.1            2.69%    passed     53.89%
+ 175  Homo_sapiens|sp|Q16671|AMHR2_HUMAN          1.35%    failed      0.00%
+ 176  brugia_malayi|Bm6597.1                      7.07%    passed     60.64%
+ 177  ancylostoma_caninum|ANCCAN_20537           13.13%    passed     39.54%
+ 178  ancylostoma_caninum|ANCCAN_20096           13.13%    passed     39.54%
+ 179  brugia_malayi|Bm13749.1                    11.45%    passed     53.45%
+ 180  haemonchus_contortus|HCON_00088960-00001   11.78%    passed     71.98%
+ 181  ascaris_suum|AgB02_g187_t01                10.77%    passed     90.11%
+ 182  ascaris_suum|AgB02_g187_t04                10.77%    passed     90.11%
+ 183  ascaris_suum|AgB02_g187_t05                10.77%    passed     90.11%
+ 184  brugia_malayi|Bm9350.1                     11.11%    passed     13.30%
+ 185  brugia_malayi|Bm1712a.1                    11.45%    passed     47.71%
+ 186  ancylostoma_caninum|ANCCAN_15267            4.71%    passed     71.51%
+ 187  haemonchus_contortus|HCON_00016270-00001    4.71%    passed     63.17%
+ 188  haemonchus_contortus|HCON_00024160-00001    3.37%    passed     42.90%
+ 189  ascaris_suum|AgB02_g316_t01                 8.75%    passed     98.33%
+ 190  Homo_sapiens|sp|P57078|RIPK4_HUMAN          9.76%    passed     49.45%
+ 191  ancylostoma_caninum|ANCCAN_11212           11.45%    passed     21.99%
+ 192  ancylostoma_caninum|ANCCAN_22624           11.45%    passed     21.99%
+ 193  caenorhabditis_elegans|R13F6.6c.1          11.45%    passed     52.35%
+ 194  ascaris_suum|AgR009X_g110_t03              10.77%    passed     44.80%
+ 195  strongyloides_ratti|SRAE_2000317800.1       7.74%    passed     75.10%
+ 196  trichuris_muris|TMUE_1000003991.1           0.67%    failed      1.01%
+ 197  trichuris_muris|TMUE_3000014724.1           1.01%    passed     45.76%
+ 198  trichuris_muris|TMUE_3000013188.1           5.05%    passed     41.42%
+ 199  haemonchus_contortus|HCON_00098270-00001    7.07%    passed     16.32%
+ 200  haemonchus_contortus|HCON_00098270-00002    7.07%    passed     12.61%
+ 201  caenorhabditis_elegans|K09B11.1a.1          7.41%    passed     29.50%
+ 202  caenorhabditis_elegans|K09B11.1a.2          7.41%    passed     29.50%
+****  TOTAL                                       5.01%  5 sequences failed composition chi2 test (p-value<5%; df=19)
+NOTE: caenorhabditis_elegans|F33E2.2b.1 is identical to caenorhabditis_elegans|F33E2.2a.1 but kept for subsequent analysis
+NOTE: ascaris_suum|AgR018X_g175_t05 is identical to ascaris_suum|AgR018X_g175_t03 but kept for subsequent analysis
+NOTE: ascaris_suum|AgR019X_g085_t02 is identical to ascaris_suum|AgR019X_g085_t01 but kept for subsequent analysis
+NOTE: trichuris_muris|TMUE_3000013091.2 is identical to trichuris_muris|TMUE_3000013091.1 but kept for subsequent analysis
+NOTE: brugia_malayi|Bm6431c.1 is identical to brugia_malayi|Bm6431a.1 but kept for subsequent analysis
+NOTE: caenorhabditis_elegans|Y73B6A.5f.1 is identical to caenorhabditis_elegans|Y73B6A.5a.1 but kept for subsequent analysis
+NOTE: caenorhabditis_elegans|Y73B6A.5e.1 is identical to caenorhabditis_elegans|Y73B6A.5d.1 but kept for subsequent analysis
+NOTE: ascaris_suum|AgR003_g272_t02 is identical to ascaris_suum|AgR003_g272_t01 but kept for subsequent analysis
+NOTE: trichuris_muris|TMUE_2000010315.2 is identical to trichuris_muris|TMUE_2000010315.1 but kept for subsequent analysis
+NOTE: trichuris_muris|TMUE_3000012143.2 is identical to trichuris_muris|TMUE_3000012143.1 but kept for subsequent analysis
+NOTE: trichuris_muris|TMUE_1000005928.1 is identical to trichuris_muris|TMUE_1000004185.1 but kept for subsequent analysis
+NOTE: ascaris_suum|AgR061_g006_t05 is identical to ascaris_suum|AgR061_g006_t04 but kept for subsequent analysis
+NOTE: brugia_malayi|Bm12004b.1 is identical to brugia_malayi|Bm12004a.1 but kept for subsequent analysis
+NOTE: trichuris_muris|TMUE_2000007651.1 is identical to trichuris_muris|TMUE_0000000050.1 but kept for subsequent analysis
+NOTE: caenorhabditis_elegans|C05D2.1e.1 is identical to caenorhabditis_elegans|C05D2.1a.1 but kept for subsequent analysis
+NOTE: caenorhabditis_elegans|C05D2.1c.2 is identical to caenorhabditis_elegans|C05D2.1c.1 but kept for subsequent analysis
+NOTE: haemonchus_contortus|HCON_00134790-00002 is identical to haemonchus_contortus|HCON_00134790-00001 but kept for subsequent analysis
+NOTE: ascaris_suum|AgR028_g103_t02 is identical to ascaris_suum|AgR028_g103_t01 but kept for subsequent analysis
+NOTE: ascaris_suum|AgR003_g230_t02 is identical to ascaris_suum|AgR003_g230_t01 but kept for subsequent analysis
+NOTE: caenorhabditis_elegans|Y92H12A.1b.1 is identical to caenorhabditis_elegans|Y92H12A.1a.1 but kept for subsequent analysis
+NOTE: caenorhabditis_elegans|Y48G1C.2a.2 is identical to caenorhabditis_elegans|Y48G1C.2a.1 but kept for subsequent analysis
+NOTE: caenorhabditis_elegans|Y47G6A.5b.1 is identical to caenorhabditis_elegans|Y47G6A.5a.1 but kept for subsequent analysis
+NOTE: ascaris_suum|AgB13X_g016_t02 is identical to ascaris_suum|AgB13X_g016_t01 but kept for subsequent analysis
+NOTE: caenorhabditis_elegans|C18H7.4.2 is identical to caenorhabditis_elegans|C18H7.4.1 but kept for subsequent analysis
+NOTE: ancylostoma_caninum|ANCCAN_20096 is identical to ancylostoma_caninum|ANCCAN_20537 but kept for subsequent analysis
+NOTE: ascaris_suum|AgB02_g187_t04 is identical to ascaris_suum|AgB02_g187_t01 but kept for subsequent analysis
+NOTE: ancylostoma_caninum|ANCCAN_22624 is identical to ancylostoma_caninum|ANCCAN_11212 but kept for subsequent analysis
+NOTE: caenorhabditis_elegans|K09B11.1a.2 is identical to caenorhabditis_elegans|K09B11.1a.1 but kept for subsequent analysis
+NOTE: 15 identical sequences (see below) will be ignored for subsequent analysis
+NOTE: caenorhabditis_elegans|F33E2.2c.1 (identical to caenorhabditis_elegans|F33E2.2a.1) is ignored but added at the end
+NOTE: ascaris_suum|AgR003_g272_t03 (identical to ascaris_suum|AgR003_g272_t01) is ignored but added at the end
+NOTE: ascaris_suum|AgR003_g272_t04 (identical to ascaris_suum|AgR003_g272_t01) is ignored but added at the end
+NOTE: ascaris_suum|AgR003_g272_t05 (identical to ascaris_suum|AgR003_g272_t01) is ignored but added at the end
+NOTE: ascaris_suum|AgR003_g272_t06 (identical to ascaris_suum|AgR003_g272_t01) is ignored but added at the end
+NOTE: ascaris_suum|AgR003_g272_t07 (identical to ascaris_suum|AgR003_g272_t01) is ignored but added at the end
+NOTE: trichuris_muris|TMUE_3000012143.3 (identical to trichuris_muris|TMUE_3000012143.1) is ignored but added at the end
+NOTE: trichuris_muris|TMUE_3000012143.4 (identical to trichuris_muris|TMUE_3000012143.1) is ignored but added at the end
+NOTE: ascaris_suum|AgR061_g006_t08 (identical to ascaris_suum|AgR061_g006_t04) is ignored but added at the end
+NOTE: caenorhabditis_elegans|C05D2.1c.3 (identical to caenorhabditis_elegans|C05D2.1c.1) is ignored but added at the end
+NOTE: ascaris_suum|AgR028_g103_t03 (identical to ascaris_suum|AgR028_g103_t01) is ignored but added at the end
+NOTE: ascaris_suum|AgR028_g103_t04 (identical to ascaris_suum|AgR028_g103_t01) is ignored but added at the end
+NOTE: ascaris_suum|AgR028_g103_t05 (identical to ascaris_suum|AgR028_g103_t01) is ignored but added at the end
+NOTE: caenorhabditis_elegans|Y48G1C.2a.3 (identical to caenorhabditis_elegans|Y48G1C.2a.1) is ignored but added at the end
+NOTE: ascaris_suum|AgB02_g187_t05 (identical to ascaris_suum|AgB02_g187_t01) is ignored but added at the end
+Alignment was printed to work/alignments/ACVR1_HUMAN.combined_final.aln.uniqueseq.phy
+
+For your convenience alignment with unique sequences printed to work/alignments/ACVR1_HUMAN.combined_final.aln.uniqueseq.phy
+
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.171 seconds
+Measuring multi-threading efficiency up to 80 CPU cores
+Increase to 10 rounds for branch lengths
+37 trees examined
+Threads: 1 / Time: 80.168 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -111283
+Threads: 2 / Time: 41.398 sec / Speedup: 1.937 / Efficiency: 97% / LogL: -111283
+Threads: 3 / Time: 32.263 sec / Speedup: 2.485 / Efficiency: 83% / LogL: -111283
+Threads: 4 / Time: 27.487 sec / Speedup: 2.917 / Efficiency: 73% / LogL: -111283
+Threads: 5 / Time: 26.532 sec / Speedup: 3.022 / Efficiency: 60% / LogL: -111283
+Threads: 6 / Time: 33.556 sec / Speedup: 2.389 / Efficiency: 40% / LogL: -111283
+BEST NUMBER OF THREADS: 4
+
+Perform fast likelihood tree search using LG+I+G model...
+Estimate model parameters (epsilon = 5.000)
+Perform nearest neighbor interchange...
+Estimate model parameters (epsilon = 1.000)
+1. Initial log-likelihood: -55387.271
+Optimal log-likelihood: -55387.238
+Proportion of invariable sites: 0.013
+Gamma shape alpha: 1.222
+Parameters optimization took 1 rounds (0.233 sec)
+Time for fast ML tree search: 3.120 seconds
+
+NOTE: ModelFinder requires 92 MB RAM!
+ModelFinder will test up to 546 protein models (sample size: 297) ...
+ No. Model         -LnL         df  AIC          AICc         BIC
+  1  LG            57874.236    371 116490.472   392514.472   117860.847
+  2  LG+I          57650.690    372 116045.380   393557.380   117419.449
+  3  LG+G4         55420.494    372 111584.988   389096.988   112959.056
+  4  LG+I+G4       55387.260    373 111520.520   390524.520   112898.282
+  5  LG+R2         55825.378    373 112396.755   391400.755   113774.517
+  6  LG+R3         55504.895    375 111759.789   393759.789   113144.939
+  7  LG+R4         55322.230    377 111398.459   396410.459   112790.996
+  8  LG+R5         55276.636    379 111311.272   399351.272   112711.197
+  9  LG+R6         55250.434    381 111262.868   402346.868   112670.180
+ 10  LG+R7         55236.357    383 111238.713   405382.713   112653.412
+ 11  LG+R8         55234.683    385 111239.365   408459.365   112661.452
+ 23  LG+F+R7       55207.979    402 111219.958   435231.958   112704.838
+ 24  LG+F+R8       55205.761    404 111219.521   438459.521   112711.789
+ 36  WAG+R7        55577.595    383 111921.189   406065.189   113335.889
+ 37  WAG+R8        55577.856    385 111925.713   409145.713   113347.800
+ 49  WAG+F+R7      55450.772    402 111705.545   435717.545   113190.425
+ 50  WAG+F+R8      55447.172    404 111702.345   438942.345   113194.612
+ 62  JTT+R7        56004.393    383 112774.786   406918.786   114189.485
+WARNING: Log-likelihood -56006.8 of JTT+R8 worse than JTT+R7 -56004.4
+ 63  JTT+R8        56006.827    385 112783.654   410003.654   114205.741
+ 75  JTT+F+R7      55912.775    402 112629.549   436641.549   114114.430
+WARNING: Log-likelihood -55915.5 of JTT+F+R8 worse than JTT+F+R7 -55912.8
+ 76  JTT+F+R8      55915.461    404 112638.922   439878.922   114131.190
+ 88  JTTDCMut+R7   55997.792    383 112761.584   406905.584   114176.283
+WARNING: Log-likelihood -56000 of JTTDCMut+R8 worse than JTTDCMut+R7 -55997.8
+ 89  JTTDCMut+R8   56000.035    385 112770.071   409990.071   114192.158
+101  JTTDCMut+F+R7 55900.617    402 112605.234   436617.234   114090.115
+WARNING: Log-likelihood -55903.5 of JTTDCMut+F+R8 worse than JTTDCMut+F+R7 -55900.6
+102  JTTDCMut+F+R8 55903.533    404 112615.066   439855.066   114107.334
+114  DCMut+R7      56451.699    383 113669.398   407813.398   115084.097
+115  DCMut+R8      56451.359    385 113672.718   410892.718   115094.805
+127  DCMut+F+R7    56081.899    402 112967.799   436979.799   114452.679
+128  DCMut+F+R8    56081.751    404 112971.501   440211.501   114463.769
+140  VT+R7         55594.391    383 111954.783   406098.783   113369.482
+141  VT+R8         55593.885    385 111957.771   409177.771   113379.857
+153  VT+F+R7       55534.442    402 111872.884   435884.884   113357.765
+154  VT+F+R8       55533.354    404 111874.708   439114.708   113366.976
+166  PMB+R7        55755.854    383 112277.708   406421.708   113692.408
+167  PMB+R8        55752.521    385 112275.042   409495.042   113697.129
+179  PMB+F+R7      55771.953    402 112347.906   436359.906   113832.787
+180  PMB+F+R8      55768.471    404 112344.942   439584.942   113837.209
+192  Blosum62+R7   55685.062    383 112136.123   406280.123   113550.823
+193  Blosum62+R8   55682.394    385 112134.788   409354.788   113556.875
+205  Blosum62+F+R7 55698.708    402 112201.416   436213.416   113686.297
+206  Blosum62+F+R8 55696.632    404 112201.263   439441.263   113693.531
+218  Dayhoff+R7    56452.572    383 113671.144   407815.144   115085.843
+219  Dayhoff+R8    56452.194    385 113674.387   410894.387   115096.474
+231  Dayhoff+F+R7  56082.632    402 112969.264   436981.264   114454.145
+232  Dayhoff+F+R8  56082.714    404 112973.428   440213.428   114465.696
+244  mtREV+R7      58493.373    383 117752.746   411896.746   119167.445
+245  mtREV+R8      58474.608    385 117719.216   414939.216   119141.303
+257  mtREV+F+R7    56587.702    402 113979.404   437991.404   115464.284
+258  mtREV+F+R8    56588.376    404 113984.752   441224.752   115477.020
+270  mtART+R7      58782.092    383 118330.183   412474.183   119744.883
+271  mtART+R8      58765.271    385 118300.543   415520.543   119722.629
+283  mtART+F+R7    56804.101    402 114412.202   438424.202   115897.082
+284  mtART+F+R8    56791.296    404 114390.593   441630.593   115882.861
+296  mtZOA+R7      57528.627    383 115823.255   409967.255   117237.954
+297  mtZOA+R8      57508.111    385 115786.221   413006.221   117208.308
+309  mtZOA+F+R7    56222.119    402 113248.238   437260.238   114733.118
+310  mtZOA+F+R8    56216.231    404 113240.462   440480.462   114732.730
+322  mtMet+R7      58296.380    383 117358.760   411502.760   118773.460
+323  mtMet+R8      58285.583    385 117341.165   414561.165   118763.252
+335  mtMet+F+R7    56545.557    402 113895.115   437907.115   115379.995
+336  mtMet+F+R8    56537.771    404 113883.541   441123.541   115375.809
+348  mtVer+R7      59119.113    383 119004.225   413148.225   120418.925
+349  mtVer+R8      59105.683    385 118981.365   416201.365   120403.452
+361  mtVer+F+R7    57531.711    402 115867.422   439879.422   117352.302
+362  mtVer+F+R8    57521.815    404 115851.629   443091.629   117343.897
+374  mtInv+R7      58401.863    383 117569.726   411713.726   118984.425
+375  mtInv+R8      58394.632    385 117559.264   414779.264   118981.351
+387  mtInv+F+R7    56053.463    402 112910.925   436922.925   114395.806
+388  mtInv+F+R8    56050.759    404 112909.518   440149.518   114401.786
+400  mtMAM+R7      59758.522    383 120283.044   414427.044   121697.744
+401  mtMAM+R8      59755.943    385 120281.887   417501.887   121703.974
+413  mtMAM+F+R7    57932.114    402 116668.228   440680.228   118153.109
+414  mtMAM+F+R8    57918.877    404 116645.754   443885.754   118138.022
+426  HIVb+R7       57292.117    383 115350.234   409494.234   116764.934
+WARNING: Log-likelihood -57298.5 of HIVb+R8 worse than HIVb+R7 -57292.1
+427  HIVb+R8       57298.463    385 115366.926   412586.926   116789.013
+439  HIVb+F+R7     57091.185    402 114986.370   438998.370   116471.251
+WARNING: Log-likelihood -57093.6 of HIVb+F+R8 worse than HIVb+F+R7 -57091.2
+440  HIVb+F+R8     57093.584    404 114995.167   442235.167   116487.435
+452  HIVw+R7       60246.521    383 121259.042   415403.042   122673.741
+453  HIVw+R8       60246.007    385 121262.013   418482.013   122684.100
+465  HIVw+F+R7     59131.252    402 119066.504   443078.504   120551.384
+466  HIVw+F+R8     59129.774    404 119067.548   446307.548   120559.816
+478  FLU+R7        57173.942    383 115113.885   409257.885   116528.584
+479  FLU+R8        57165.684    385 115101.368   412321.368   116523.454
+491  FLU+F+R7      56911.287    402 114626.573   438638.573   116111.454
+492  FLU+F+R8      56907.688    404 114623.377   441863.377   116115.645
+504  rtREV+R7      55688.472    383 112142.944   406286.944   113557.644
+505  rtREV+R8      55687.042    385 112144.084   409364.084   113566.171
+517  rtREV+F+R7    55338.826    402 111481.651   435493.651   112966.532
+518  rtREV+F+R8    55337.716    404 111483.432   438723.432   112975.700
+530  cpREV+R7      55997.652    383 112761.304   406905.304   114176.003
+531  cpREV+R8      55998.252    385 112766.503   409986.503   114188.590
+543  cpREV+F+R7    55829.790    402 112463.581   436475.581   113948.461
+544  cpREV+F+R8    55828.448    404 112464.896   439704.896   113957.164
+Akaike Information Criterion:           LG+F+R8
+Corrected Akaike Information Criterion: LG+G4
+Bayesian Information Criterion:         LG+R7
+Best-fit model: LG+R7 chosen according to BIC
+
+All model information printed to work/alignments/ACVR1_HUMAN.combined_final.aln.model.gz
+CPU time for ModelFinder: 35511.384 seconds (9h:51m:51s)
+Wall-clock time for ModelFinder: 9037.673 seconds (2h:30m:37s)
+Generating 1000 samples for ultrafast bootstrap (seed: 770499)...
+
+NOTE: 65 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -55236.357
+2. Current log-likelihood: -55236.231
+Optimal log-likelihood: -55236.078
+Site proportion and rates:  (0.062,0.048) (0.061,0.171) (0.155,0.345) (0.137,0.564) (0.268,1.032) (0.247,1.576) (0.070,2.720)
+Parameters optimization took 2 rounds (6.155 sec)
+Computing ML distances based on estimated model parameters... 13.115 sec
+Computing BIONJ tree...
+0.020 seconds
+Log-likelihood of BIONJ tree: -55498.391
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 13.655 second
+Computing log-likelihood of 98 initial trees ... 17.478 seconds
+Current best score: -55236.078
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -55233.233
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 7: -55232.873
+Iteration 10 / LogL: -55241.869 / Time: 0h:1m:44s
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 16: -55232.235
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 20: -55231.164
+Iteration 20 / LogL: -55231.164 / Time: 0h:2m:53s
+Finish initializing candidate tree set (20)
+Current best tree score: -55231.164 / CPU time: 162.146
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 23: -55227.746
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 28: -55227.472
+Iteration 30 / LogL: -55228.082 / Time: 0h:4m:7s (0h:13m:57s left)
+Iteration 40 / LogL: -55229.634 / Time: 0h:5m:5s (0h:11m:29s left)
+Iteration 50 / LogL: -55229.633 / Time: 0h:6m:3s (0h:9m:39s left)
+Log-likelihood cutoff on original alignment: -55273.813
+Iteration 60 / LogL: -55228.649 / Time: 0h:7m:2s (0h:8m:7s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 61: -55227.308
+Iteration 70 / LogL: -55228.496 / Time: 0h:8m:6s (0h:10m:41s left)
+Iteration 80 / LogL: -55227.343 / Time: 0h:9m:11s (0h:9m:25s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 81: -55227.152
+Estimate model parameters (epsilon = 0.100)
+UPDATE BEST LOG-LIKELIHOOD: -55227.003
+Iteration 90 / LogL: -55250.281 / Time: 0h:10m:16s (0h:10m:30s left)
+Estimate model parameters (epsilon = 0.100)
+UPDATE BEST LOG-LIKELIHOOD: -55226.859
+Iteration 100 / LogL: -55231.339 / Time: 0h:11m:16s (0h:9m:13s left)
+Log-likelihood cutoff on original alignment: -55271.312
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.998
+Iteration 110 / LogL: -55232.268 / Time: 0h:12m:14s (0h:10m:6s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 119: -55226.719
+Iteration 120 / LogL: -55227.658 / Time: 0h:13m:17s (0h:11m:3s left)
+Iteration 130 / LogL: -55227.384 / Time: 0h:14m:17s (0h:9m:51s left)
+Iteration 140 / LogL: -55231.662 / Time: 0h:15m:12s (0h:8m:38s left)
+Iteration 150 / LogL: -55233.084 / Time: 0h:16m:10s (0h:7m:29s left)
+Log-likelihood cutoff on original alignment: -55271.312
+Iteration 160 / LogL: -55226.751 / Time: 0h:17m:8s (0h:6m:21s left)
+Iteration 170 / LogL: -55227.289 / Time: 0h:18m:11s (0h:5m:16s left)
+Iteration 180 / LogL: -55226.769 / Time: 0h:19m:12s (0h:4m:11s left)
+Estimate model parameters (epsilon = 0.100)
+UPDATE BEST LOG-LIKELIHOOD: -55226.583
+Estimate model parameters (epsilon = 0.100)
+UPDATE BEST LOG-LIKELIHOOD: -55226.452
+Iteration 190 / LogL: -55226.452 / Time: 0h:20m:17s (0h:3m:6s left)
+Iteration 200 / LogL: -55228.178 / Time: 0h:21m:18s (0h:2m:2s left)
+Log-likelihood cutoff on original alignment: -55271.312
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.999
+Iteration 210 / LogL: -55231.299 / Time: 0h:22m:18s (0h:9m:36s left)
+Iteration 220 / LogL: -55227.102 / Time: 0h:23m:25s (0h:8m:33s left)
+TREE SEARCH COMPLETED AFTER 220 ITERATIONS / Time: 0h:23m:25s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -55226.452
+2. Current log-likelihood: -55226.372
+3. Current log-likelihood: -55226.271
+4. Current log-likelihood: -55226.173
+5. Current log-likelihood: -55226.074
+6. Current log-likelihood: -55225.981
+7. Current log-likelihood: -55225.888
+8. Current log-likelihood: -55225.797
+9. Current log-likelihood: -55225.710
+10. Current log-likelihood: -55225.625
+11. Current log-likelihood: -55225.542
+12. Current log-likelihood: -55225.462
+13. Current log-likelihood: -55225.384
+14. Current log-likelihood: -55225.305
+15. Current log-likelihood: -55225.230
+16. Current log-likelihood: -55225.172
+17. Current log-likelihood: -55225.098
+18. Current log-likelihood: -55225.042
+19. Current log-likelihood: -55224.971
+20. Current log-likelihood: -55224.918
+21. Current log-likelihood: -55224.863
+22. Current log-likelihood: -55224.812
+23. Current log-likelihood: -55224.762
+24. Current log-likelihood: -55224.712
+25. Current log-likelihood: -55224.664
+26. Current log-likelihood: -55224.615
+27. Current log-likelihood: -55224.568
+28. Current log-likelihood: -55224.521
+29. Current log-likelihood: -55224.475
+30. Current log-likelihood: -55224.431
+31. Current log-likelihood: -55224.387
+32. Current log-likelihood: -55224.343
+33. Current log-likelihood: -55224.301
+34. Current log-likelihood: -55224.259
+35. Current log-likelihood: -55224.218
+36. Current log-likelihood: -55224.182
+37. Current log-likelihood: -55224.145
+38. Current log-likelihood: -55224.108
+39. Current log-likelihood: -55224.069
+40. Current log-likelihood: -55224.032
+41. Current log-likelihood: -55223.998
+42. Current log-likelihood: -55223.965
+43. Current log-likelihood: -55223.945
+44. Current log-likelihood: -55223.912
+45. Current log-likelihood: -55223.892
+46. Current log-likelihood: -55223.860
+47. Current log-likelihood: -55223.830
+48. Current log-likelihood: -55223.811
+49. Current log-likelihood: -55223.780
+50. Current log-likelihood: -55223.764
+51. Current log-likelihood: -55223.746
+52. Current log-likelihood: -55223.717
+53. Current log-likelihood: -55223.703
+54. Current log-likelihood: -55223.684
+55. Current log-likelihood: -55223.669
+56. Current log-likelihood: -55223.651
+57. Current log-likelihood: -55223.637
+58. Current log-likelihood: -55223.619
+59. Current log-likelihood: -55223.604
+60. Current log-likelihood: -55223.590
+61. Current log-likelihood: -55223.573
+62. Current log-likelihood: -55223.559
+63. Current log-likelihood: -55223.542
+64. Current log-likelihood: -55223.528
+65. Current log-likelihood: -55223.515
+66. Current log-likelihood: -55223.502
+67. Current log-likelihood: -55223.486
+68. Current log-likelihood: -55223.473
+69. Current log-likelihood: -55223.461
+70. Current log-likelihood: -55223.445
+71. Current log-likelihood: -55223.432
+72. Current log-likelihood: -55223.420
+73. Current log-likelihood: -55223.408
+74. Current log-likelihood: -55223.397
+75. Current log-likelihood: -55223.382
+76. Current log-likelihood: -55223.370
+77. Current log-likelihood: -55223.358
+78. Current log-likelihood: -55223.344
+79. Current log-likelihood: -55223.332
+80. Current log-likelihood: -55223.321
+81. Current log-likelihood: -55223.310
+82. Current log-likelihood: -55223.299
+83. Current log-likelihood: -55223.288
+84. Current log-likelihood: -55223.278
+85. Current log-likelihood: -55223.268
+86. Current log-likelihood: -55223.258
+Optimal log-likelihood: -55223.243
+Site proportion and rates:  (0.055,0.032) (0.065,0.162) (0.151,0.339) (0.144,0.563) (0.245,1.015) (0.262,1.532) (0.076,2.682)
+Parameters optimization took 86 rounds (203.419 sec)
+BEST SCORE FOUND : -55223.243
+
+Testing tree branches by SH-like aLRT with 1000 replicates...
+1.335 sec.
+Creating bootstrap support values...
+Split supports printed to NEXUS file work/alignments/ACVR1_HUMAN.combined_final.aln.splits.nex
+Total tree length: 86.947
+
+Total number of iterations: 220
+CPU time used for tree search: 5476.816 sec (1h:31m:16s)
+Wall-clock time used for tree search: 1394.636 sec (0h:23m:14s)
+Total CPU time used: 6332.156 sec (1h:45m:32s)
+Total wall-clock time used: 1611.189 sec (0h:26m:51s)
+
+Computing bootstrap consensus tree...
+Reading input file work/alignments/ACVR1_HUMAN.combined_final.aln.splits.nex...
+187 taxa and 673 splits.
+Consensus tree written to work/alignments/ACVR1_HUMAN.combined_final.aln.contree
+Reading input trees file work/alignments/ACVR1_HUMAN.combined_final.aln.contree
+Log-likelihood of consensus tree: -55223.348
+
+Analysis results written to: 
+  IQ-TREE report:                work/alignments/ACVR1_HUMAN.combined_final.aln.iqtree
+  Maximum-likelihood tree:       work/alignments/ACVR1_HUMAN.combined_final.aln.treefile
+  Likelihood distances:          work/alignments/ACVR1_HUMAN.combined_final.aln.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          work/alignments/ACVR1_HUMAN.combined_final.aln.splits.nex
+  Consensus tree:                work/alignments/ACVR1_HUMAN.combined_final.aln.contree
+  Screen log file:               work/alignments/ACVR1_HUMAN.combined_final.aln.log
+
+Date and Time: Fri Feb 18 18:04:03 2022

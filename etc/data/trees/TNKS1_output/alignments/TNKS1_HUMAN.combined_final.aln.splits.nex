@@ -1,0 +1,108 @@
+#nexus
+
+BEGIN Taxa;
+DIMENSIONS ntax=25;
+TAXLABELS
+[1] 'Homo_sapiens|sp|O95271|TNKS1_HUMAN'
+[2] 'Homo_sapiens|sp|Q9H2K2|TNKS2_HUMAN'
+[3] 'trichuris_muris|TMUE_2000007991.1'
+[4] 'ascaris_suum|AgR009X_g183_t01'
+[5] 'ascaris_suum|AgR009X_g183_t02'
+[6] 'ascaris_suum|AgR009X_g183_t03'
+[7] 'ascaris_suum|AgR009X_g183_t04'
+[8] 'brugia_malayi|Bm2732.1'
+[9] 'Homo_sapiens|sp|Q12955|ANK3_HUMAN'
+[10] 'Homo_sapiens|sp|Q01484|ANK2_HUMAN'
+[11] 'haemonchus_contortus|HCON_00125210-00001'
+[12] 'haemonchus_contortus|HCON_00125210-00003'
+[13] 'caenorhabditis_elegans|B0350.2c.1'
+[14] 'caenorhabditis_elegans|B0350.2e.1'
+[15] 'ascaris_suum|AgR022_g092_t03'
+[16] 'ascaris_suum|AgR022_g092_t04'
+[17] 'brugia_malayi|Bm1770a.1'
+[18] 'brugia_malayi|Bm1770m.1'
+[19] 'strongyloides_ratti|SRAE_X000190600.1'
+[20] 'Homo_sapiens|sp|P16157|ANK1_HUMAN'
+[21] 'strongyloides_ratti|SRAE_2000231000.1'
+[22] 'Homo_sapiens|sp|Q8IWZ3|ANKH1_HUMAN'
+[23] 'Homo_sapiens|sp|Q9ULJ7|ANR50_HUMAN'
+[24] 'trichuris_muris|TMUE_2000008548.1'
+[25] 'trichuris_muris|TMUE_2000008548.2'
+;
+END; [Taxa]
+
+BEGIN Splits;
+DIMENSIONS ntax=25 nsplits=68;
+FORMAT labels=no weights=yes confidences=no intervals=no;
+MATRIX
+	100	 2,
+	100	 3,
+	100	 4,
+	100	 7,
+	83	 4 7,
+	100	 5,
+	44	 4 5 7,
+	100	 6,
+	100	 4 5 6 7,
+	100	 8,
+	100	 4 5 6 7 8,
+	100	 9,
+	100	 10,
+	99	 9 10,
+	100	 11,
+	100	 12,
+	100	 11 12,
+	100	 13,
+	100	 14,
+	100	 13 14,
+	100	 11 12 13 14,
+	100	 15,
+	100	 16,
+	100	 15 16,
+	100	 17,
+	100	 18,
+	100	 17 18,
+	100	 15 16 17 18,
+	100	 11 12 13 14 15 16 17 18,
+	100	 19,
+	100	 11 12 13 14 15 16 17 18 19,
+	9	 9 10 11 12 13 14 15 16 17 18 19,
+	100	 20,
+	100	 9 10 11 12 13 14 15 16 17 18 19 20,
+	100	 23,
+	100	 24,
+	100	 25,
+	100	 24 25,
+	100	 23 24 25,
+	14	 1 2 3 4 5 6 7 8 21 22,
+	100	 21,
+	71	 1 2 3 4 5 6 7 8 22,
+	100	 22,
+	100	 1 2 3 4 5 6 7 8,
+	100	 1 2 3,
+	100	 1 2,
+	100	 1,
+	44	 4 6 7,
+	90	 9 10 20,
+	57	 21 23 24 25,
+	10	 21 22 23 24 25,
+	27	 1 2 3 4 5 6 7 8 22 23 24 25,
+	14	 22 23 24 25,
+	3	 4 5,
+	5	 5 7,
+	4	 4 6,
+	12	 5 6,
+	3	 6 7,
+	2	 21 22,
+	4	 1 2 3 4 5 6 7 8 21 23 24 25,
+	1	 1 2 3 4 5 6 7 8 21,
+	1	 4 5 6,
+	1	 9 20,
+	0	 1 2 3 4 5 6 7,
+	1	 1 2 3 4 5 6 7 8 23 24 25,
+	0	 11 12 13 14 19,
+	1	 5 6 7,
+	1	 11 12 13 14 15 16 17 18 19 20,
+;
+END; [Splits]
+

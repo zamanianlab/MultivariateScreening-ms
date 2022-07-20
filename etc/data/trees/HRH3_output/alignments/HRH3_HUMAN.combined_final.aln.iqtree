@@ -1,0 +1,609 @@
+IQ-TREE 2.0.3 built Dec 20 2020
+
+Input file name: work/alignments/HRH3_HUMAN.combined_final.aln
+Type of analysis: ModelFinder + tree reconstruction + ultrafast bootstrap (1000 replicates)
+Random seed number: 12776
+
+REFERENCES
+----------
+
+To cite IQ-TREE please use:
+
+Bui Quang Minh, Heiko A. Schmidt, Olga Chernomor, Dominik Schrempf,
+Michael D. Woodhams, Arndt von Haeseler, and Robert Lanfear (2020)
+IQ-TREE 2: New models and efficient methods for phylogenetic inference
+in the genomic era. Mol. Biol. Evol., in press.
+https://doi.org/10.1093/molbev/msaa015
+
+To cite ModelFinder please use: 
+
+Subha Kalyaanamoorthy, Bui Quang Minh, Thomas KF Wong, Arndt von Haeseler,
+and Lars S Jermiin (2017) ModelFinder: Fast model selection for
+accurate phylogenetic estimates. Nature Methods, 14:587–589.
+https://doi.org/10.1038/nmeth.4285
+
+Since you used ultrafast bootstrap (UFBoot) please also cite: 
+
+Diep Thi Hoang, Olga Chernomor, Arndt von Haeseler, Bui Quang Minh,
+and Le Sy Vinh (2018) UFBoot2: Improving the ultrafast bootstrap
+approximation. Mol. Biol. Evol., 35:518–522.
+https://doi.org/10.1093/molbev/msx281
+
+SEQUENCE ALIGNMENT
+------------------
+
+Input data: 98 sequences with 330 amino-acid sites
+Number of constant sites: 7 (= 2.12121% of all sites)
+Number of invariant (constant or ambiguous constant) sites: 7 (= 2.12121% of all sites)
+Number of parsimony informative sites: 319
+Number of distinct site patterns: 329
+
+ModelFinder
+-----------
+
+Best-fit model according to BIC: LG+F+R6
+
+List of models sorted by BIC scores: 
+
+Model                  LogL         AIC      w-AIC        AICc     w-AICc         BIC      w-BIC
+LG+F+R6          -28262.263   56936.526 +        1   57629.892 -  6.7e-24   57719.139 +    0.998
+LG+F+R5          -28274.119   56956.238 - 5.24e-05   57625.358 - 6.47e-23   57731.252 -  0.00234
+LG+R6            -28330.690   57035.381 - 3.42e-22   57530.536 -   0.0252   57745.811 - 1.61e-06
+LG+R5            -28337.656   57045.312 - 2.38e-24   57523.229 +    0.972   57748.144 - 5.02e-07
+LG+R7            -28330.222   57038.443 - 7.39e-23   57551.443 - 7.26e-07   57756.472 -  7.8e-09
+LG+I+G4          -28373.583   57105.166 -  2.4e-37   57534.766 -  0.00304   57785.203 -  4.5e-15
+LG+R4            -28372.835   57111.670 - 9.29e-39   57572.930 - 1.57e-11   57806.904 - 8.73e-20
+LG+G4            -28391.194   57138.388 - 1.47e-44   57560.401 - 8.24e-09   57814.627 - 1.84e-21
+VT+F+R5          -28371.643   57151.286 - 2.32e-47   57820.406 - 2.86e-65   57926.301 - 1.03e-45
+VT+F+R6          -28366.327   57144.653 - 6.39e-46   57838.019 - 4.28e-69   57927.266 - 6.38e-46
+LG+R3            -28440.951   57243.902 -  1.8e-67   57689.064 - 9.48e-37   57931.538 - 7.54e-47
+WAG+F+R6         -28376.091   57164.182 - 3.67e-50   57857.548 - 2.46e-73   57946.795 - 3.67e-50
+WAG+F+R5         -28382.491   57172.983 - 4.51e-52   57842.103 - 5.56e-70   57947.998 - 2.01e-50
+mtInv+F+R6       -28392.395   57196.790 - 3.05e-57   57890.156 - 2.04e-80   57979.403 - 3.04e-57
+mtInv+F+R5       -28404.554   57217.109 - 1.18e-61   57886.229 - 1.46e-79   57992.123 - 5.26e-60
+JTT+F+R6         -28405.307   57222.614 - 7.53e-63   57915.980 - 5.04e-86   58005.227 - 7.51e-63
+JTT+F+R5         -28417.910   57243.821 - 1.87e-67   57912.941 - 2.31e-85   58018.835 - 8.33e-66
+JTTDCMut+F+R6    -28414.521   57241.042 -  7.5e-67   57934.408 - 5.03e-90   58023.655 - 7.49e-67
+JTTDCMut+F+R5    -28427.511   57263.022 - 1.27e-71   57932.142 - 1.56e-89   58038.037 - 5.64e-70
+VT+R5            -28501.061   57372.121 - 2.58e-95   57850.038 - 1.05e-71   58074.953 - 5.43e-78
+VT+R6            -28496.099   57366.198 - 4.99e-94   57861.353 - 3.67e-74   58076.629 - 2.35e-78
+rtREV+F+R6       -28455.127   57322.255 - 1.74e-84   58015.621 - 1.16e-107   58104.868 - 1.73e-84
+rtREV+F+R5       -28468.822   57345.643 - 1.45e-89   58014.763 - 1.79e-107   58120.658 - 6.46e-88
+PMB+R5           -28530.207   57430.414 - 5.67e-108   57908.331 - 2.31e-84   58133.246 - 1.19e-90
+PMB+R6           -28526.542   57427.084 -   3e-107   57922.239 - 2.21e-87   58137.514 - 1.41e-91
+cpREV+F+R6       -28471.902   57355.805 - 9.01e-92   58049.171 - 6.04e-115   58138.418 - 8.99e-92
+cpREV+F+R5       -28479.261   57366.522 - 4.24e-94   58035.642 - 5.23e-112   58141.537 - 1.89e-92
+cpREV+R6         -28542.090   57458.180 - 5.3e-114   57953.335 -  3.9e-94   58168.610 -  2.5e-98
+JTT+R6           -28542.703   57459.406 - 2.87e-114   57954.561 - 2.11e-94   58169.836 - 1.35e-98
+cpREV+R5         -28553.094   57476.187 - 6.52e-118   57954.104 - 2.66e-94   58179.020 - 1.37e-100
+JTT+R5           -28553.928   57477.855 - 2.83e-118   57955.772 - 1.15e-94   58180.687 - 5.96e-101
+WAG+R6           -28551.735   57477.471 - 3.43e-118   57972.626 - 2.53e-98   58187.901 - 1.62e-102
+Blosum62+F+R6    -28497.699   57407.397 - 5.64e-103   58100.763 - 3.78e-126   58190.010 - 5.63e-103
+Blosum62+F+R5    -28503.812   57415.624 - 9.23e-105   58084.744 - 1.14e-122   58190.639 - 4.11e-103
+WAG+R5           -28559.282   57488.564 - 1.34e-120   57966.481 - 5.45e-97   58191.396 - 2.82e-103
+JTTDCMut+R6      -28559.715   57493.430 - 1.17e-121   57988.584 - 8.65e-102   58203.860 - 5.54e-106
+JTTDCMut+R5      -28571.101   57512.201 - 9.86e-126   57990.118 - 4.02e-102   58215.033 - 2.07e-108
+Blosum62+R5      -28573.333   57516.667 - 1.06e-126   57994.584 - 4.31e-103   58219.499 - 2.22e-109
+Blosum62+R6      -28568.746   57511.493 - 1.4e-125   58006.648 - 1.03e-105   58221.923 - 6.62e-110
+PMB+F+R5         -28530.131   57468.262 - 3.43e-116   58137.382 - 4.23e-134   58243.276 - 1.53e-114
+PMB+F+R6         -28524.693   57461.385 - 1.07e-114   58154.751 - 7.15e-138   58243.998 - 1.06e-114
+mtZOA+F+R6       -28529.043   57470.087 - 1.38e-116   58163.452 - 9.22e-140   58252.700 - 1.37e-116
+mtZOA+F+R5       -28549.749   57507.497 - 1.04e-124   58176.617 - 1.28e-142   58282.512 - 4.61e-123
+Dayhoff+F+R6     -28565.471   57542.941 - 2.08e-132   58236.307 - 1.4e-155   58325.555 - 2.08e-132
+DCMut+F+R6       -28566.176   57544.351 - 1.03e-132   58237.717 - 6.89e-156   58326.964 - 1.03e-132
+Dayhoff+F+R5     -28574.790   57557.580 - 1.38e-135   58226.700 - 1.7e-153   58332.595 - 6.15e-134
+DCMut+F+R5       -28575.386   57558.773 - 7.6e-136   58227.893 - 9.37e-154   58333.788 - 3.39e-134
+mtMet+F+R6       -28588.347   57588.695 - 2.42e-142   58282.060 - 1.62e-165   58371.308 - 2.41e-142
+mtMet+F+R5       -28605.765   57619.530 - 4.87e-149   58288.650 - 6.01e-167   58394.544 - 2.17e-147
+rtREV+R6         -28685.218   57744.437 - 3.67e-176   58239.592 - 2.7e-156   58454.867 - 1.73e-160
+rtREV+R5         -28695.175   57760.350 - 1.29e-179   58238.266 - 5.24e-156   58463.182 - 2.7e-162
+LG+R2            -28729.571   57817.142 - 5.98e-192   58246.742 - 7.56e-158   58497.180 - 1.12e-169
+mtREV+F+R6       -28693.180   57798.360 - 7.16e-188   58491.726 - 4.8e-211   58580.973 - 7.15e-188
+mtREV+F+R5       -28708.490   57824.979 - 1.19e-193   58494.099 - 1.46e-211   58599.994 - 5.29e-192
+mtZOA+R6         -28888.808   58151.616 - 1.4e-264   58646.771 - 1.03e-244   58862.046 - 6.6e-249
+FLU+F+R6         -28836.213   58084.426 - 5.45e-250   58777.792 - 3.65e-273   58867.040 - 5.44e-250
+FLU+F+R5         -28847.562   58103.124 - 4.75e-254   58772.244 - 5.85e-272   58878.138 - 2.12e-252
+mtZOA+R5         -28905.284   58180.568 - 7.24e-271   58658.485 - 2.95e-247   58883.400 - 1.52e-253
+Dayhoff+R6       -28913.809   58201.618 - 1.94e-275   58696.773 - 1.43e-255   58912.049 - 9.16e-260
+DCMut+R6         -28914.216   58202.432 - 1.29e-275   58697.587 - 9.53e-256   58912.862 - 6.1e-260
+Dayhoff+R5       -28926.514   58223.028 - 4.36e-280   58700.945 - 1.78e-256   58925.860 - 9.18e-263
+DCMut+R5         -28926.840   58223.680 - 3.15e-280   58701.597 - 1.28e-256   58926.512 - 6.63e-263
+mtART+F+R6       -28896.866   58205.732 - 2.49e-276   58899.097 - 1.67e-299   58988.345 - 2.48e-276
+mtART+F+R5       -28917.753   58243.505 - 1.56e-284   58912.625 - 1.92e-302   59018.520 - 6.95e-283
+HIVb+F+R6        -28921.438   58254.876 - 5.3e-287   58948.241 - 3.55e-310   59037.489 - 5.28e-287
+HIVb+F+R5        -28934.755   58277.510 - 6.44e-292   58946.630 - 7.94e-310   59052.525 - 2.87e-290
+mtVer+F+R6       -28967.113   58346.227 - 7.71e-307   59039.593 -        0   59128.840 - 7.7e-307
+mtVer+F+R5       -28983.174   58374.349 - 6.04e-313   59043.469 -        0   59149.363 - 2.69e-311
+HIVb+R6          -29058.873   58491.746 -        0   58986.901 - 1.43e-318   59202.177 - 9.39e-323
+HIVb+R5          -29072.742   58515.484 -        0   58993.400 - 5.54e-320   59218.316 -        0
+FLU+R6           -29079.513   58533.026 -        0   59028.181 -        0   59243.457 -        0
+FLU+R5           -29094.491   58558.982 -        0   59036.899 -        0   59261.814 -        0
+mtMet+R6         -29252.661   58879.323 -        0   59374.478 -        0   59589.753 -        0
+mtMet+R5         -29267.997   58905.993 -        0   59383.910 -        0   59608.826 -        0
+mtMAM+F+R6       -29283.766   58979.533 -        0   59672.898 -        0   59762.146 -        0
+mtMAM+F+R5       -29302.806   59013.612 -        0   59682.732 -        0   59788.627 -        0
+mtInv+R6         -29356.871   59087.742 -        0   59582.897 -        0   59798.172 -        0
+mtInv+R5         -29367.997   59105.994 -        0   59583.911 -        0   59808.827 -        0
+mtREV+R6         -29421.816   59217.631 -        0   59712.786 -        0   59928.062 -        0
+mtREV+R5         -29435.238   59240.475 -        0   59718.392 -        0   59943.308 -        0
+mtART+R6         -29516.366   59406.732 -        0   59901.886 -        0   60117.162 -        0
+mtART+R5         -29527.914   59425.828 -        0   59903.744 -        0   60128.660 -        0
+HIVw+F+R6        -29498.228   59408.456 -        0   60101.822 -        0   60191.069 -        0
+HIVw+F+R5        -29509.928   59427.856 -        0   60096.976 -        0   60202.871 -        0
+mtVer+R6         -29700.062   59774.124 -        0   60269.279 -        0   60484.554 -        0
+mtVer+R5         -29723.751   59817.502 -        0   60295.419 -        0   60520.334 -        0
+LG+I             -29796.596   59949.192 -        0   60371.205 -        0   60625.430 -        0
+LG               -29955.258   60264.515 -        0   60679.068 -        0   60936.955 -        0
+mtMAM+R6         -30016.935   60407.869 -        0   60903.024 -        0   61118.299 -        0
+mtMAM+R5         -30035.970   60441.940 -        0   60919.856 -        0   61144.772 -        0
+HIVw+R6          -30265.983   60905.965 -        0   61401.120 -        0   61616.395 -        0
+HIVw+R5          -30276.886   60923.771 -        0   61401.688 -        0   61626.603 -        0
+
+AIC, w-AIC   : Akaike information criterion scores and weights.
+AICc, w-AICc : Corrected AIC scores and weights.
+BIC, w-BIC   : Bayesian information criterion scores and weights.
+
+Plus signs denote the 95% confidence sets.
+Minus signs denote significant exclusion.
+
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: LG+F+R6
+
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.0745
+  pi(R) = 0.0607
+  pi(N) = 0.0368
+  pi(D) = 0.0243
+  pi(C) = 0.0302
+  pi(Q) = 0.0262
+  pi(E) = 0.0266
+  pi(G) = 0.0395
+  pi(H) = 0.0145
+  pi(I) = 0.0860
+  pi(L) = 0.1225
+  pi(K) = 0.0414
+  pi(M) = 0.0300
+  pi(F) = 0.0609
+  pi(P) = 0.0411
+  pi(S) = 0.0753
+  pi(T) = 0.0620
+  pi(W) = 0.0246
+  pi(Y) = 0.0403
+  pi(V) = 0.0827
+
+Model of rate heterogeneity: FreeRate with 6 categories
+Site proportion and rates:  (0.1009,0.0522) (0.1450,0.1720) (0.1749,0.3873) (0.3124,0.8319) (0.1940,1.7968) (0.0729,4.0293)
+
+ Category  Relative_rate  Proportion
+  1         0.0522         0.1009
+  2         0.1720         0.1450
+  3         0.3873         0.1749
+  4         0.8319         0.3124
+  5         1.7968         0.1940
+  6         4.0293         0.0729
+
+MAXIMUM LIKELIHOOD TREE
+-----------------------
+
+Log-likelihood of the tree: -28252.9239 (s.e. 700.6631)
+Unconstrained log-likelihood (without tree): -1912.3143
+Number of free parameters (#branches + #model parameters): 206
+Akaike information criterion (AIC) score: 56917.8478
+Corrected Akaike information criterion (AICc) score: 57611.2136
+Bayesian information criterion (BIC) score: 57700.4608
+
+Total tree length (sum of branch lengths): 56.5648
+Sum of internal branch lengths: 29.2185 (51.6549% of tree length)
+
+WARNING: 7 near-zero internal branches (<0.0030) should be treated with caution
+         Such branches are denoted by '**' in the figure below
+
+NOTE: Tree is UNROOTED although outgroup taxon 'Homo_sapiens|sp|P20309|ACM3_HUMAN' is drawn at root
+Numbers in parentheses are SH-aLRT support (%) / ultrafast bootstrap support (%)
+
++--Homo_sapiens|sp|P20309|ACM3_HUMAN
+|
+|  +--Homo_sapiens|sp|P11229|ACM1_HUMAN
++--| (82.7/100)
+|  +--Homo_sapiens|sp|P08912|ACM5_HUMAN
+|
+|                  +**ascaris_suum|AgR016_g081_t01
+|               +--| (91.5/100)
+|               |  +**ascaris_suum|AgR016_g081_t02
+|            +--| (100/100)
+|            |  |     +**brugia_malayi|Bm13584a.1
+|            |  |  +**| (0/95)
+|            |  |  |  +**brugia_malayi|Bm13584b.1
+|            |  +--| (100/100)
+|            |     +**brugia_malayi|Bm13584c.1
+|         +--| (21.8/76)
+|         |  |        +**caenorhabditis_elegans|Y40H4A.1a.1
+|         |  |     +**| (0/47)
+|         |  |     |  +**caenorhabditis_elegans|Y40H4A.1b.1
+|         |  |  +--| (99.6/98)
+|         |  |  |  +**caenorhabditis_elegans|Y40H4A.1a.2
+|         |  +--| (96.8/78)
+|         |     |  +**haemonchus_contortus|HCON_00146030-00001
+|         |     +--| (99.8/100)
+|         |        +**haemonchus_contortus|HCON_00146030-00002
+|  +------| (99.9/100)
+|  |      +--strongyloides_ratti|SRAE_2000432600.1
++--| (95/100)
+   |                                         +--ancylostoma_caninum|ANCCAN_02879
+   |                                      +--| (76.9/99)
+   |                                      |  +--haemonchus_contortus|HCON_00190370-00001
+   |                                   +--| (92.7/73)
+   |                                   |  |        +**ascaris_suum|AgB16X_g037_t02
+   |                                   |  |     +**| (0/47)
+   |                                   |  |     |  +**ascaris_suum|AgB16X_g037_t03
+   |                                   |  |  +--| (100/100)
+   |                                   |  |  |  +**ascaris_suum|AgB16X_g037_t04
+   |                                   |  +--| (99.3/91)
+   |                                   |     +--strongyloides_ratti|SRAE_X000198400.1
+   |                       +-----------| (100/100)
+   |                       |           +--caenorhabditis_elegans|C52B11.3.1
+   |                    +--| (36.3/30)
+   |                    |  |                         +--ascaris_suum|AgR009X_g059_t02
+   |                    |  |                      +--| (96.3/100)
+   |                    |  |                      |  +--strongyloides_ratti|SRAE_2000116900.1
+   |                    |  |                   +--| (67.3/99)
+   |                    |  |                   |  +--caenorhabditis_elegans|F16D3.7.1
+   |                    |  +-------------------| (100/100)
+   |                    |                      +--haemonchus_contortus|HCON_00005750-00001
+   |                 +--| (58.5/29)
+   |                 |  |                      +--ancylostoma_caninum|ANCCAN_02889
+   |                 |  |                   +--| (93.8/99)
+   |                 |  |                   |  +--haemonchus_contortus|HCON_00185650-00001
+   |                 |  |                +--| (99.7/99)
+   |                 |  |                |  |  +**caenorhabditis_elegans|F14D12.6a.1
+   |                 |  |                |  +--| (98/100)
+   |                 |  |                |     +**caenorhabditis_elegans|F14D12.6b.1
+   |                 |  |             +--| (88.6/95)
+   |                 |  |             |  +--ascaris_suum|AgB16X_g041_t01
+   |                 |  |     +-------| (100/100)
+   |                 |  |     |       +--strongyloides_ratti|SRAE_X000041900.1
+   |                 |  |  +--| (85.9/75)
+   |                 |  |  |  |       +--Homo_sapiens|sp|P18089|ADA2B_HUMAN
+   |                 |  |  |  +-------| (100/100)
+   |                 |  |  |          +---Homo_sapiens|sp|P18825|ADA2C_HUMAN
+   |                 |  +--| (88.5/67)
+   |                 |     |                           +**ascaris_suum|AgB02_g118_t01
+   |                 |     |                        +--| (95.3/100)
+   |                 |     |                        |  +--ascaris_suum|AgB02_g118_t02
+   |                 |     |                     +--| (98.2/99)
+   |                 |     |                     |  |  +**brugia_malayi|Bm17961a.1
+   |                 |     |                     |  +--| (100/100)
+   |                 |     |                     |     +**brugia_malayi|Bm17961b.1
+   |                 |     |                  +--| (98.5/44)
+   |                 |     |                  |  +--strongyloides_ratti|SRAE_X000053200.1
+   |                 |     |               +--| (82.5/44)
+   |                 |     |               |  +--haemonchus_contortus|HCON_00188280-00001
+   |                 |     |     +---------| (100/100)
+   |                 |     |     |         |        +**caenorhabditis_elegans|C02D4.2a.1
+   |                 |     |     |         |     +**| (0/67)
+   |                 |     |     |         |     |  |  +**caenorhabditis_elegans|C02D4.2f.1
+   |                 |     |     |         |     |  +**| (0/74)
+   |                 |     |     |         |     |     +**caenorhabditis_elegans|C02D4.2b.1
+   |                 |     |     |         |  +--| (73.9/90)
+   |                 |     |     |         |  |  +**caenorhabditis_elegans|C02D4.2e.1
+   |                 |     |     |         +--| (48.7/92)
+   |                 |     |     |            +--caenorhabditis_elegans|C02D4.2g.1
+   |                 |     |  +--| (74.9/66)
+   |                 |     |  |  |        +--brugia_malayi|Bm7828.1
+   |                 |     |  |  |     +--| (99.1/100)
+   |                 |     |  |  |     |  |     +--caenorhabditis_elegans|Y22D7AR.13.1
+   |                 |     |  |  |     |  |  +--| (96.3/100)
+   |                 |     |  |  |     |  |  |  +--haemonchus_contortus|HCON_00092730-00001
+   |                 |     |  |  |     |  +--| (65/95)
+   |                 |     |  |  |     |     +--strongyloides_ratti|SRAE_2000311400.1
+   |                 |     |  |  +-----| (99.9/100)
+   |                 |     |  |        |     +**trichuris_muris|TMUE_2000007816.1
+   |                 |     |  |        +-----| (100/100)
+   |                 |     |  |              +**trichuris_muris|TMUE_0000002003.1
+   |                 |     +--| (7.9/51)
+   |                 |        |              +**ascaris_suum|AgR014X_g062_t01
+   |                 |        |           +--| (88.2/100)
+   |                 |        |           |  +--ascaris_suum|AgR014X_g062_t04
+   |                 |        +-----------| (100/100)
+   |                 |                    |  +**caenorhabditis_elegans|F01E11.5a.1
+   |                 |                    +--| (85.6/100)
+   |                 |                       +**caenorhabditis_elegans|F01E11.5c.1
+   |              +--| (73.9/31)
+   |              |  |               +**caenorhabditis_elegans|M03F4.3a.1
+   |              |  |            +--| (91.7/100)
+   |              |  |            |  |  +**caenorhabditis_elegans|M03F4.3c.1
+   |              |  |            |  +**| (0/89)
+   |              |  |            |     +--caenorhabditis_elegans|M03F4.3b.1
+   |              |  |  +---------| (100/100)
+   |              |  |  |         |  +**haemonchus_contortus|HCON_00190700-00001
+   |              |  |  |         +--| (91.9/100)
+   |              |  |  |            +**haemonchus_contortus|HCON_00190700-00002
+   |              |  +--| (92.2/53)
+   |              |     |               +**ancylostoma_caninum|ANCCAN_19797
+   |              |     |            +--| (97.3/100)
+   |              |     |            |  +--haemonchus_contortus|HCON_00025975-00001
+   |              |     |   +--------| (99.9/100)
+   |              |     |   |        +--ascaris_suum|AgB04_g355_t01
+   |              |     +---| (95.6/91)
+   |              |         +--------------caenorhabditis_elegans|Y54G2A.35a.1
+   |           +--| (79.3/53)
+   |           |  |                   +--ascaris_suum|AgR040X_g061_t01
+   |           |  |                +--| (97.3/100)
+   |           |  |                |  +--brugia_malayi|Bm2086.1
+   |           |  |             +--| (91.3/100)
+   |           |  |             |  +----strongyloides_ratti|SRAE_X000126000.1
+   |           |  |     +-------| (99.9/100)
+   |           |  |     |       |     +**caenorhabditis_elegans|C09B7.1a.1
+   |           |  |     |       |  +--| (100/100)
+   |           |  |     |       |  |  +**caenorhabditis_elegans|C09B7.1b.1
+   |           |  |     |       +--| (94.8/100)
+   |           |  |     |          +--haemonchus_contortus|HCON_00011320-00001
+   |           |  |  +--| (94.2/74)
+   |           |  |  |  |             +**brugia_malayi|Bm3382a.1
+   |           |  |  |  |         +---| (98.9/100)
+   |           |  |  |  |         |   +**brugia_malayi|Bm3382b.1
+   |           |  |  |  +---------| (100/100)
+   |           |  |  |            |    +**caenorhabditis_elegans|F15A8.5a.1
+   |           |  |  |            +----| (99.8/100)
+   |           |  |  |                 +**caenorhabditis_elegans|F15A8.5a.2
+   |           |  +--| (63.5/35)
+   |           |     |  +--------------Homo_sapiens|sp|P50406|5HT6R_HUMAN
+   |           |     +--| (85.7/82)
+   |           |        |      +--Homo_sapiens|sp|P08588|ADRB1_HUMAN
+   |           |        +------| (99.9/100)
+   |           |               +-----Homo_sapiens|sp|P13945|ADRB3_HUMAN
+   |        +--| (89.9/83)
+   |        |  |                          +**ascaris_suum|AgR001_g487_t01
+   |        |  |          +---------------| (100/100)
+   |        |  |          |               +**ascaris_suum|AgR001_g487_t02
+   |        |  |     +----| (93.4/99)
+   |        |  |     |    +------------caenorhabditis_elegans|T14E8.3d.1
+   |        |  |  +--| (86/90)
+   |        |  |  |  +-----------------ancylostoma_caninum|ANCCAN_13248
+   |        |  +--| (77.9/61)
+   |        |     +----------------ancylostoma_caninum|ANCCAN_25712
+   |     +--| (47.7/91)
+   |     |  |                 +----------------------------Homo_sapiens|sp|P46094|XCR1_HUMAN
+   |     |  +-----------------| (99.8/100)
+   |     |                    |                    +--ancylostoma_caninum|ANCCAN_09070
+   |     |                    |                +---| (95.9/99)
+   |     |                    |                |   |     +**caenorhabditis_elegans|T05A1.1b.1
+   |     |                    |                |   |  +**| (0/41)
+   |     |                    |                |   |  |  +**caenorhabditis_elegans|T05A1.1c.1
+   |     |                    |                |   +--| (99.6/100)
+   |     |                    |                |      +**caenorhabditis_elegans|T05A1.1b.2
+   |     |                    +----------------| (100/100)
+   |     |                                     |   +--ascaris_suum|AgR018X_g075_t01
+   |     |                                     +---| (94.2/100)
+   |     |                                         +**ascaris_suum|AgR018X_g075_t05
+   +-----| (99.8/100)
+         |       +--------Homo_sapiens|sp|Q9H3N8|HRH4_HUMAN
+         +-------| (99.7/100)
+                 +-----Homo_sapiens|sp|Q9Y5N1|HRH3_HUMAN
+
+Tree in newick format:
+
+(Homo_sapiens|sp|P20309|ACM3_HUMAN:0.0969797552,(Homo_sapiens|sp|P11229|ACM1_HUMAN:0.3305834922,Homo_sapiens|sp|P08912|ACM5_HUMAN:0.1950945867)82.7/100:0.0910560159,(((((ascaris_suum|AgR016_g081_t01:0.0000026818,ascaris_suum|AgR016_g081_t02:0.0000021579)91.5/100:0.0669364192,((brugia_malayi|Bm13584a.1:0.0000021565,brugia_malayi|Bm13584b.1:0.0000021565)0/95:0.0000022246,brugia_malayi|Bm13584c.1:0.0000027432)100/100:0.2853605105)100/100:0.2142195954,(((caenorhabditis_elegans|Y40H4A.1a.1:0.0000021565,caenorhabditis_elegans|Y40H4A.1b.1:0.0000021565)0/47:0.0000021567,caenorhabditis_elegans|Y40H4A.1a.2:0.0000021565)99.6/98:0.1459893430,(haemonchus_contortus|HCON_00146030-00001:0.0000021565,haemonchus_contortus|HCON_00146030-00002:0.0000021565)99.8/100:0.1489694552)96.8/78:0.1151901492)21.8/76:0.0446621738,strongyloides_ratti|SRAE_2000432600.1:0.3336766950)99.9/100:0.8441589359,((((((((((ancylostoma_caninum|ANCCAN_02879:0.0234132038,haemonchus_contortus|HCON_00190370-00001:0.0563632237)76.9/99:0.0344701989,(((ascaris_suum|AgB16X_g037_t02:0.0000021565,ascaris_suum|AgB16X_g037_t03:0.0000025816)0/47:0.0000021567,ascaris_suum|AgB16X_g037_t04:0.0000021565)100/100:0.2468252641,strongyloides_ratti|SRAE_X000198400.1:0.3639080922)99.3/91:0.1670885929)92.7/73:0.1795763887,caenorhabditis_elegans|C52B11.3.1:0.0217631889)100/100:1.3569026550,(((ascaris_suum|AgR009X_g059_t02:0.3844282604,strongyloides_ratti|SRAE_2000116900.1:0.2291125170)96.3/100:0.1095390313,caenorhabditis_elegans|F16D3.7.1:0.0826585338)67.3/99:0.0586414154,haemonchus_contortus|HCON_00005750-00001:0.0707059312)100/100:2.1933452530)36.3/30:0.0700475413,((((((ancylostoma_caninum|ANCCAN_02889:0.0166114694,haemonchus_contortus|HCON_00185650-00001:0.0622291875)93.8/99:0.0750407896,(caenorhabditis_elegans|F14D12.6a.1:0.0000021565,caenorhabditis_elegans|F14D12.6b.1:0.0000021565)98/100:0.1174620271)99.7/99:0.2544396167,ascaris_suum|AgB16X_g041_t01:0.4117473901)88.6/95:0.1517314920,strongyloides_ratti|SRAE_X000041900.1:0.1979842747)100/100:0.9142345956,(Homo_sapiens|sp|P18089|ADA2B_HUMAN:0.3754972989,Homo_sapiens|sp|P18825|ADA2C_HUMAN:0.4512317537)100/100:0.9672423887)85.9/75:0.1527435875,(((((((ascaris_suum|AgB02_g118_t01:0.0000023724,ascaris_suum|AgB02_g118_t02:0.0098795918)95.3/100:0.0780663366,(brugia_malayi|Bm17961a.1:0.0000021565,brugia_malayi|Bm17961b.1:0.0000021565)100/100:0.2846554735)98.2/99:0.1150620497,strongyloides_ratti|SRAE_X000053200.1:0.1854056898)98.5/44:0.1164659466,haemonchus_contortus|HCON_00188280-00001:0.0957437793)82.5/44:0.0872736550,(((caenorhabditis_elegans|C02D4.2a.1:0.0000021565,(caenorhabditis_elegans|C02D4.2f.1:0.0000021565,caenorhabditis_elegans|C02D4.2b.1:0.0000021565)0/74:0.0000021567)0/67:0.0000021567,caenorhabditis_elegans|C02D4.2e.1:0.0000021565)73.9/90:0.0032658768,caenorhabditis_elegans|C02D4.2g.1:0.0125259015)48.7/92:0.0334457979)100/100:1.1766798630,((brugia_malayi|Bm7828.1:0.3254269056,((caenorhabditis_elegans|Y22D7AR.13.1:0.1123186957,haemonchus_contortus|HCON_00092730-00001:0.2247927900)96.3/100:0.1355805192,strongyloides_ratti|SRAE_2000311400.1:0.2806476000)65/95:0.0750991440)99.1/100:0.4296677616,(trichuris_muris|TMUE_2000007816.1:0.0000021565,trichuris_muris|TMUE_0000002003.1:0.0000021565)100/100:0.7531644239)99.9/100:0.7006572947)74.9/66:0.2795119566,((ascaris_suum|AgR014X_g062_t01:0.0000029744,ascaris_suum|AgR014X_g062_t04:0.1769160426)88.2/100:0.1162727815,(caenorhabditis_elegans|F01E11.5a.1:0.0000021565,caenorhabditis_elegans|F01E11.5c.1:0.0000023248)85.6/100:0.1081400163)100/100:1.4002310050)7.9/51:0.0750356418)88.5/67:0.1101069667)58.5/29:0.1290729338,(((caenorhabditis_elegans|M03F4.3a.1:0.0000025708,(caenorhabditis_elegans|M03F4.3c.1:0.0000021565,caenorhabditis_elegans|M03F4.3b.1:0.0031598715)0/89:0.0000028250)91.7/100:0.1237632540,(haemonchus_contortus|HCON_00190700-00001:0.0000021565,haemonchus_contortus|HCON_00190700-00002:0.0000022727)91.9/100:0.1280773036)100/100:1.1418844110,(((ancylostoma_caninum|ANCCAN_19797:0.0002010536,haemonchus_contortus|HCON_00025975-00001:0.0258249941)97.3/100:0.1992998937,ascaris_suum|AgB04_g355_t01:0.1548611282)99.9/100:1.0348843630,caenorhabditis_elegans|Y54G2A.35a.1:1.6877197192)95.6/91:0.4448737484)92.2/53:0.2000470009)73.9/31:0.1195764137,(((((ascaris_suum|AgR040X_g061_t01:0.2867754134,brugia_malayi|Bm2086.1:0.2388684132)97.3/100:0.1810206747,strongyloides_ratti|SRAE_X000126000.1:0.5898746623)91.3/100:0.1703864492,((caenorhabditis_elegans|C09B7.1a.1:0.0000021565,caenorhabditis_elegans|C09B7.1b.1:0.0000021565)100/100:0.2867523219,haemonchus_contortus|HCON_00011320-00001:0.3389178701)94.8/100:0.1943392208)99.9/100:0.9204478100,((brugia_malayi|Bm3382a.1:0.0000022248,brugia_malayi|Bm3382b.1:0.0000026825)98.9/100:0.4582111827,(caenorhabditis_elegans|F15A8.5a.1:0.0000021565,caenorhabditis_elegans|F15A8.5a.2:0.0000021565)99.8/100:0.6167055808)100/100:1.0906182190)94.2/74:0.2936811499,(Homo_sapiens|sp|P50406|5HT6R_HUMAN:1.6921291620,(Homo_sapiens|sp|P08588|ADRB1_HUMAN:0.3480468455,Homo_sapiens|sp|P13945|ADRB3_HUMAN:0.7515386684)99.9/100:0.8411276809)85.7/82:0.2388555259)63.5/35:0.0869848106)79.3/53:0.0958989661,((((ascaris_suum|AgR001_g487_t01:0.0000021565,ascaris_suum|AgR001_g487_t02:0.0000021565)100/100:1.7868828910,caenorhabditis_elegans|T14E8.3d.1:1.4387562303)93.4/99:0.6223868017,ancylostoma_caninum|ANCCAN_13248:1.9972899075)86/90:0.4047531967,ancylostoma_caninum|ANCCAN_25712:1.8572066113)77.9/61:0.1302877561)89.9/83:0.4321604316,(Homo_sapiens|sp|P46094|XCR1_HUMAN:3.1440996657,((ancylostoma_caninum|ANCCAN_09070:0.2189625659,((caenorhabditis_elegans|T05A1.1b.1:0.0000030992,caenorhabditis_elegans|T05A1.1c.1:0.0000021565)0/41:0.0000022050,caenorhabditis_elegans|T05A1.1b.2:0.0000021565)99.6/100:0.2719292528)95.9/99:0.5394309863,(ascaris_suum|AgR018X_g075_t01:0.0033718955,ascaris_suum|AgR018X_g075_t05:0.0000023506)94.2/100:0.5163224983)100/100:1.8655277880)99.8/100:2.0087025540)47.7/91:0.2964720864,(Homo_sapiens|sp|Q9H3N8|HRH4_HUMAN:1.0540563641,Homo_sapiens|sp|Q9Y5N1|HRH3_HUMAN:0.6775605501)99.7/100:0.9193281970)99.8/100:0.7497179783)95/100:0.3031418017);
+
+CONSENSUS TREE
+--------------
+
+Consensus tree is constructed from 1000 bootstrap trees
+Log-likelihood of consensus tree: -28253.252669
+Robinson-Foulds distance between ML tree and consensus tree: 10
+
+Branches with support >0.000000% are kept (extended consensus)
+Branch lengths are optimized by maximum likelihood on original alignment
+Numbers in parentheses are bootstrap supports (%)
+
++--Homo_sapiens|sp|P20309|ACM3_HUMAN
+|
+|  +--Homo_sapiens|sp|P11229|ACM1_HUMAN
++--| (100)
+|  +--Homo_sapiens|sp|P08912|ACM5_HUMAN
+|
+|                  +--ascaris_suum|AgR016_g081_t01
+|               +--| (100)
+|               |  +--ascaris_suum|AgR016_g081_t02
+|            +--| (100)
+|            |  |     +--brugia_malayi|Bm13584a.1
+|            |  |  +--| (95)
+|            |  |  |  +--brugia_malayi|Bm13584b.1
+|            |  +--| (100)
+|            |     +--brugia_malayi|Bm13584c.1
+|         +--| (76)
+|         |  |        +**caenorhabditis_elegans|Y40H4A.1a.1
+|         |  |     +--|
+|         |  |     |  +**caenorhabditis_elegans|Y40H4A.1a.3
+|         |  |  +--| (98)
+|         |  |  |  |  +--caenorhabditis_elegans|Y40H4A.1a.2
+|         |  |  |  +--| (53)
+|         |  |  |     +--caenorhabditis_elegans|Y40H4A.1b.1
+|         |  +--| (78)
+|         |     |  +--haemonchus_contortus|HCON_00146030-00001
+|         |     +--| (100)
+|         |        +--haemonchus_contortus|HCON_00146030-00002
+|  +------| (100)
+|  |      +--strongyloides_ratti|SRAE_2000432600.1
++--| (100)
+   |                                         +--ancylostoma_caninum|ANCCAN_02879
+   |                                      +--| (99)
+   |                                      |  +--haemonchus_contortus|HCON_00190370-00001
+   |                                   +--| (73)
+   |                                   |  |     +--ascaris_suum|AgB16X_g037_t02
+   |                                   |  |  +--| (100)
+   |                                   |  |  |  |  +--ascaris_suum|AgB16X_g037_t03
+   |                                   |  |  |  +--| (51)
+   |                                   |  |  |     +--ascaris_suum|AgB16X_g037_t04
+   |                                   |  +--| (91)
+   |                                   |     +--strongyloides_ratti|SRAE_X000198400.1
+   |                       +-----------| (100)
+   |                       |           +--caenorhabditis_elegans|C52B11.3.1
+   |                    +--| (30)
+   |                    |  |                         +--ascaris_suum|AgR009X_g059_t02
+   |                    |  |                      +--| (100)
+   |                    |  |                      |  +--strongyloides_ratti|SRAE_2000116900.1
+   |                    |  |                   +--| (99)
+   |                    |  |                   |  +--caenorhabditis_elegans|F16D3.7.1
+   |                    |  +-------------------| (100)
+   |                    |                      +--haemonchus_contortus|HCON_00005750-00001
+   |                 +--| (29)
+   |                 |  |                      +--ancylostoma_caninum|ANCCAN_02889
+   |                 |  |                   +--| (99)
+   |                 |  |                   |  +--haemonchus_contortus|HCON_00185650-00001
+   |                 |  |                +--| (99)
+   |                 |  |                |  |  +--caenorhabditis_elegans|F14D12.6a.1
+   |                 |  |                |  +--| (100)
+   |                 |  |                |     +--caenorhabditis_elegans|F14D12.6b.1
+   |                 |  |             +--| (95)
+   |                 |  |             |  +--ascaris_suum|AgB16X_g041_t01
+   |                 |  |     +-------| (100)
+   |                 |  |     |       +--strongyloides_ratti|SRAE_X000041900.1
+   |                 |  |  +--| (75)
+   |                 |  |  |  |       +--Homo_sapiens|sp|P18089|ADA2B_HUMAN
+   |                 |  |  |  +-------| (100)
+   |                 |  |  |          +---Homo_sapiens|sp|P18825|ADA2C_HUMAN
+   |                 |  +--| (67)
+   |                 |     |                     +--ascaris_suum|AgB02_g118_t01
+   |                 |     |                  +--| (100)
+   |                 |     |                  |  +--ascaris_suum|AgB02_g118_t02
+   |                 |     |               +--| (99)
+   |                 |     |               |  |  +--brugia_malayi|Bm17961a.1
+   |                 |     |               |  +--| (100)
+   |                 |     |               |     +--brugia_malayi|Bm17961b.1
+   |                 |     |     +---------| (100)
+   |                 |     |     |         |  +--strongyloides_ratti|SRAE_X000053200.1
+   |                 |     |     |         +--| (56)
+   |                 |     |     |            |           +--caenorhabditis_elegans|C02D4.2a.1
+   |                 |     |     |            |        +--| (67)
+   |                 |     |     |            |        |  |  +--caenorhabditis_elegans|C02D4.2f.1
+   |                 |     |     |            |        |  +--| (74)
+   |                 |     |     |            |        |     +--caenorhabditis_elegans|C02D4.2b.1
+   |                 |     |     |            |     +--| (90)
+   |                 |     |     |            |     |  +--caenorhabditis_elegans|C02D4.2e.1
+   |                 |     |     |            |  +--| (92)
+   |                 |     |     |            |  |  +--caenorhabditis_elegans|C02D4.2g.1
+   |                 |     |     |            +--| (56)
+   |                 |     |     |               +--haemonchus_contortus|HCON_00188280-00001
+   |                 |     |  +--| (66)
+   |                 |     |  |  |        +--brugia_malayi|Bm7828.1
+   |                 |     |  |  |     +--| (100)
+   |                 |     |  |  |     |  |     +--caenorhabditis_elegans|Y22D7AR.13.1
+   |                 |     |  |  |     |  |  +--| (100)
+   |                 |     |  |  |     |  |  |  +--haemonchus_contortus|HCON_00092730-00001
+   |                 |     |  |  |     |  +--| (95)
+   |                 |     |  |  |     |     +--strongyloides_ratti|SRAE_2000311400.1
+   |                 |     |  |  +-----| (100)
+   |                 |     |  |        |      +--trichuris_muris|TMUE_2000007816.1
+   |                 |     |  |        +------| (100)
+   |                 |     |  |               +--trichuris_muris|TMUE_0000002003.1
+   |                 |     +--| (51)
+   |                 |        |               +--ascaris_suum|AgR014X_g062_t01
+   |                 |        |            +--| (100)
+   |                 |        |            |  +--ascaris_suum|AgR014X_g062_t04
+   |                 |        +------------| (100)
+   |                 |                     |  +--caenorhabditis_elegans|F01E11.5a.1
+   |                 |                     +--| (100)
+   |                 |                        +--caenorhabditis_elegans|F01E11.5c.1
+   |              +--| (31)
+   |              |  |               +--caenorhabditis_elegans|M03F4.3a.1
+   |              |  |            +--| (100)
+   |              |  |            |  |  +--caenorhabditis_elegans|M03F4.3c.1
+   |              |  |            |  +--| (89)
+   |              |  |            |     +--caenorhabditis_elegans|M03F4.3b.1
+   |              |  |  +---------| (100)
+   |              |  |  |         |  +--haemonchus_contortus|HCON_00190700-00001
+   |              |  |  |         +--| (100)
+   |              |  |  |            +--haemonchus_contortus|HCON_00190700-00002
+   |              |  +--| (53)
+   |              |     |               +--ancylostoma_caninum|ANCCAN_19797
+   |              |     |            +--| (100)
+   |              |     |            |  +--haemonchus_contortus|HCON_00025975-00001
+   |              |     |   +--------| (100)
+   |              |     |   |        +--ascaris_suum|AgB04_g355_t01
+   |              |     +---| (91)
+   |              |         +--------------caenorhabditis_elegans|Y54G2A.35a.1
+   |           +--| (53)
+   |           |  |                   +--ascaris_suum|AgR040X_g061_t01
+   |           |  |                +--| (100)
+   |           |  |                |  +--brugia_malayi|Bm2086.1
+   |           |  |             +--| (100)
+   |           |  |             |  +----strongyloides_ratti|SRAE_X000126000.1
+   |           |  |     +-------| (100)
+   |           |  |     |       |        +**caenorhabditis_elegans|C09B7.1a.1
+   |           |  |     |       |     +--|
+   |           |  |     |       |     |  +**caenorhabditis_elegans|C09B7.1c.1
+   |           |  |     |       |  +--| (100)
+   |           |  |     |       |  |  +--caenorhabditis_elegans|C09B7.1b.1
+   |           |  |     |       +--| (100)
+   |           |  |     |          +--haemonchus_contortus|HCON_00011320-00001
+   |           |  |  +--| (74)
+   |           |  |  |  |             +--brugia_malayi|Bm3382a.1
+   |           |  |  |  |         +---| (100)
+   |           |  |  |  |         |   +--brugia_malayi|Bm3382b.1
+   |           |  |  |  +---------| (100)
+   |           |  |  |            |                   +**caenorhabditis_elegans|F15A8.5a.1
+   |           |  |  |            |                +**|
+   |           |  |  |            |                |  +**caenorhabditis_elegans|F15A8.5b.2
+   |           |  |  |            |             +**|
+   |           |  |  |            |             |  +**caenorhabditis_elegans|F15A8.5b.3
+   |           |  |  |            |          +**|
+   |           |  |  |            |          |  +**caenorhabditis_elegans|F15A8.5b.1
+   |           |  |  |            |       +**|
+   |           |  |  |            |       |  +**caenorhabditis_elegans|F15A8.5c.1
+   |           |  |  |            |    +--|
+   |           |  |  |            |    |  +**caenorhabditis_elegans|F15A8.5a.3
+   |           |  |  |            +----| (100)
+   |           |  |  |                 +--caenorhabditis_elegans|F15A8.5a.2
+   |           |  +--| (35)
+   |           |     |  +--------------Homo_sapiens|sp|P50406|5HT6R_HUMAN
+   |           |     +--| (82)
+   |           |        |      +--Homo_sapiens|sp|P08588|ADRB1_HUMAN
+   |           |        +------| (100)
+   |           |               +-----Homo_sapiens|sp|P13945|ADRB3_HUMAN
+   |        +--| (83)
+   |        |  |                             +**ascaris_suum|AgR001_g487_t01
+   |        |  |                          +--|
+   |        |  |                          |  +**ascaris_suum|AgR001_g487_t03
+   |        |  |          +---------------| (100)
+   |        |  |          |               +--ascaris_suum|AgR001_g487_t02
+   |        |  |     +----| (99)
+   |        |  |     |    +------------caenorhabditis_elegans|T14E8.3d.1
+   |        |  |  +--| (90)
+   |        |  |  |  +-----------------ancylostoma_caninum|ANCCAN_13248
+   |        |  +--| (61)
+   |        |     +----------------ancylostoma_caninum|ANCCAN_25712
+   |     +--| (91)
+   |     |  |                 +---------------------------Homo_sapiens|sp|P46094|XCR1_HUMAN
+   |     |  +-----------------| (100)
+   |     |                    |                     +--ancylostoma_caninum|ANCCAN_09070
+   |     |                    |                +----| (99)
+   |     |                    |                |    |  +--caenorhabditis_elegans|T05A1.1b.1
+   |     |                    |                |    +--| (100)
+   |     |                    |                |       |  +--caenorhabditis_elegans|T05A1.1b.2
+   |     |                    |                |       +--| (57)
+   |     |                    |                |          +--caenorhabditis_elegans|T05A1.1c.1
+   |     |                    +----------------| (100)
+   |     |                                     |   +--ascaris_suum|AgR018X_g075_t01
+   |     |                                     +---| (100)
+   |     |                                         +--ascaris_suum|AgR018X_g075_t05
+   +-----| (100)
+         |       +--------Homo_sapiens|sp|Q9H3N8|HRH4_HUMAN
+         +-------| (100)
+                 +-----Homo_sapiens|sp|Q9Y5N1|HRH3_HUMAN
+
+
+Consensus tree in newick format: 
+
+(Homo_sapiens|sp|P20309|ACM3_HUMAN:0.0984802433,(Homo_sapiens|sp|P11229|ACM1_HUMAN:0.3302187544,Homo_sapiens|sp|P08912|ACM5_HUMAN:0.1951519434)100:0.0895917953,(((((ascaris_suum|AgR016_g081_t01:0.0000024840,ascaris_suum|AgR016_g081_t02:0.0000024840)100:0.0670454647,((brugia_malayi|Bm13584a.1:0.0000024840,brugia_malayi|Bm13584b.1:0.0000024840)95:0.0000027676,brugia_malayi|Bm13584c.1:0.0000024840)100:0.2852183342)100:0.2142697656,(((caenorhabditis_elegans|Y40H4A.1a.1:0.0000000000,caenorhabditis_elegans|Y40H4A.1a.3:0.0000000000):0.0000024840,(caenorhabditis_elegans|Y40H4A.1a.2:0.0000024840,caenorhabditis_elegans|Y40H4A.1b.1:0.0000024989)53:0.0000024989)98:0.1465194072,(haemonchus_contortus|HCON_00146030-00001:0.0000024840,haemonchus_contortus|HCON_00146030-00002:0.0000024840)100:0.1489238090)78:0.1152869378)76:0.0457643667,strongyloides_ratti|SRAE_2000432600.1:0.3328453857)100:0.8441135394,((((((((((ancylostoma_caninum|ANCCAN_02879:0.0233858522,haemonchus_contortus|HCON_00190370-00001:0.0562905688)99:0.0347072155,((ascaris_suum|AgB16X_g037_t02:0.0000024840,(ascaris_suum|AgB16X_g037_t03:0.0000021317,ascaris_suum|AgB16X_g037_t04:0.0000024840)51:0.0000021317)100:0.2465385962,strongyloides_ratti|SRAE_X000198400.1:0.3634919396)91:0.1666342305)73:0.1722474310,caenorhabditis_elegans|C52B11.3.1:0.0287546724)100:1.3562045741,(((ascaris_suum|AgR009X_g059_t02:0.3837521894,strongyloides_ratti|SRAE_2000116900.1:0.2288169462)100:0.1096514955,caenorhabditis_elegans|F16D3.7.1:0.0821134368)99:0.0523444916,haemonchus_contortus|HCON_00005750-00001:0.0769989556)100:2.1851763565)30:0.0763860595,((((((ancylostoma_caninum|ANCCAN_02889:0.0164513682,haemonchus_contortus|HCON_00185650-00001:0.0622887002)99:0.0750801154,(caenorhabditis_elegans|F14D12.6a.1:0.0000024840,caenorhabditis_elegans|F14D12.6b.1:0.0000024840)100:0.1172935343)99:0.2536334326,ascaris_suum|AgB16X_g041_t01:0.4128349191)95:0.1551553908,strongyloides_ratti|SRAE_X000041900.1:0.1952657987)100:0.9239869765,(Homo_sapiens|sp|P18089|ADA2B_HUMAN:0.3628404455,Homo_sapiens|sp|P18825|ADA2C_HUMAN:0.4632235213)100:0.9604759542)75:0.1440272403,(((((ascaris_suum|AgB02_g118_t01:0.0034204122,ascaris_suum|AgB02_g118_t02:0.0065870689)100:0.0738062963,(brugia_malayi|Bm17961a.1:0.0000020548,brugia_malayi|Bm17961b.1:0.0000024840)100:0.2865343821)99:0.0632701112,(strongyloides_ratti|SRAE_X000053200.1:0.1850478125,((((caenorhabditis_elegans|C02D4.2a.1:0.0000024840,(caenorhabditis_elegans|C02D4.2f.1:0.0000024840,caenorhabditis_elegans|C02D4.2b.1:0.0000024840)74:0.0000024840)67:0.0000024840,caenorhabditis_elegans|C02D4.2e.1:0.0000024840)90:0.0033247736,caenorhabditis_elegans|C02D4.2g.1:0.0124382388)92:0.1201754626,haemonchus_contortus|HCON_00188280-00001:0.0947524716)56:0.1196085808)56:0.0528244697)100:1.1279084412,((brugia_malayi|Bm7828.1:0.3274419944,((caenorhabditis_elegans|Y22D7AR.13.1:0.1116152029,haemonchus_contortus|HCON_00092730-00001:0.2252378812)100:0.1360541920,strongyloides_ratti|SRAE_2000311400.1:0.2797610859)95:0.0714077963)100:0.4098153357,(trichuris_muris|TMUE_2000007816.1:0.0000024840,trichuris_muris|TMUE_0000002003.1:0.0000024840)100:0.7677892714)100:0.7231210014)66:0.2323856968,((ascaris_suum|AgR014X_g062_t01:0.0000020953,ascaris_suum|AgR014X_g062_t04:0.1771169645)100:0.1120827811,(caenorhabditis_elegans|F01E11.5a.1:0.0000024840,caenorhabditis_elegans|F01E11.5c.1:0.0000021205)100:0.1121831661)100:1.4309398977)51:0.0838776581)67:0.1124088459)29:0.1215666913,(((caenorhabditis_elegans|M03F4.3a.1:0.0000024840,(caenorhabditis_elegans|M03F4.3c.1:0.0000024840,caenorhabditis_elegans|M03F4.3b.1:0.0030806983)89:0.0000872754)100:0.1359173449,(haemonchus_contortus|HCON_00190700-00001:0.0000024840,haemonchus_contortus|HCON_00190700-00002:0.0000024840)100:0.1153031067)100:1.1351648919,(((ancylostoma_caninum|ANCCAN_19797:0.0006572867,haemonchus_contortus|HCON_00025975-00001:0.0253646985)100:0.1976878044,ascaris_suum|AgB04_g355_t01:0.1560330292)100:1.0497002739,caenorhabditis_elegans|Y54G2A.35a.1:1.6644581926)91:0.4413698101)53:0.1893781840)31:0.1213986119,(((((ascaris_suum|AgR040X_g061_t01:0.2861386993,brugia_malayi|Bm2086.1:0.2399716262)100:0.1808917272,strongyloides_ratti|SRAE_X000126000.1:0.5891168858)100:0.1712232688,(((caenorhabditis_elegans|C09B7.1a.1:0.0000000000,caenorhabditis_elegans|C09B7.1c.1:0.0000000000):0.0000024840,caenorhabditis_elegans|C09B7.1b.1:0.0000024840)100:0.2896409884,haemonchus_contortus|HCON_00011320-00001:0.3348290095)100:0.1941373747)100:0.8987493253,((brugia_malayi|Bm3382a.1:0.0000024840,brugia_malayi|Bm3382b.1:0.0000024840)100:0.4577988819,((((((caenorhabditis_elegans|F15A8.5a.1:0.0000000000,caenorhabditis_elegans|F15A8.5b.2:0.0000000000):0.0000000000,caenorhabditis_elegans|F15A8.5b.3:0.0000000000):0.0000000000,caenorhabditis_elegans|F15A8.5b.1:0.0000000000):0.0000000000,caenorhabditis_elegans|F15A8.5c.1:0.0000000000):0.0000000000,caenorhabditis_elegans|F15A8.5a.3:0.0000000000):0.0000024840,caenorhabditis_elegans|F15A8.5a.2:0.0000024840)100:0.6148598462)100:1.1054301222)74:0.2895553577,(Homo_sapiens|sp|P50406|5HT6R_HUMAN:1.6904930952,(Homo_sapiens|sp|P08588|ADRB1_HUMAN:0.3497258420,Homo_sapiens|sp|P13945|ADRB3_HUMAN:0.7478751791)100:0.8392517835)82:0.2504487427)35:0.0803786903)53:0.0981330345,(((((ascaris_suum|AgR001_g487_t01:0.0000000000,ascaris_suum|AgR001_g487_t03:0.0000000000):0.0000024840,ascaris_suum|AgR001_g487_t02:0.0000024840)100:1.7710541045,caenorhabditis_elegans|T14E8.3d.1:1.4398644221)99:0.6175175678,ancylostoma_caninum|ANCCAN_13248:1.9954971361)90:0.4022581528,ancylostoma_caninum|ANCCAN_25712:1.8524747872)61:0.1310658235)83:0.4281200193,(Homo_sapiens|sp|P46094|XCR1_HUMAN:3.1139135688,((ancylostoma_caninum|ANCCAN_09070:0.2186173812,(caenorhabditis_elegans|T05A1.1b.1:0.0000024840,(caenorhabditis_elegans|T05A1.1b.2:0.0000024840,caenorhabditis_elegans|T05A1.1c.1:0.0000024840)57:0.0000024840)100:0.2728733771)99:0.5408796134,(ascaris_suum|AgR018X_g075_t01:0.0033703747,ascaris_suum|AgR018X_g075_t05:0.0000024840)100:0.5171730798)100:1.8398894670)100:2.0067938141)91:0.3027608006,(Homo_sapiens|sp|Q9H3N8|HRH4_HUMAN:1.0491702951,Homo_sapiens|sp|Q9Y5N1|HRH3_HUMAN:0.6797729226)100:0.9132541646)100:0.7551081766)100:0.3041517890);
+
+TIME STAMP
+----------
+
+Date and time: Fri Feb 18 19:12:06 2022
+Total CPU time used: 2016.5401 seconds (0h:33m:36s)
+Total wall-clock time used: 514.2079878 seconds (0h:8m:34s)
+

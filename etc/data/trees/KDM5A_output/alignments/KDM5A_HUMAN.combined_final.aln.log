@@ -1,0 +1,284 @@
+IQ-TREE multicore version 2.0.3 for Linux 64-bit built Dec 20 2020
+Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor,
+Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+
+Host:    ktryan2-9829186.1-parabyte2000.chtc.wisc.edu (AVX512, FMA3, 503 GB RAM)
+Command: iqtree -s work/alignments/KDM5A_HUMAN.combined_final.aln -nt AUTO -alrt 1000 -bb 1000 -redo
+Seed:    987863 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Sat Feb 19 03:07:14 2022
+Kernel:  AVX+FMA - auto-detect threads (80 CPU cores detected)
+
+Reading alignment file work/alignments/KDM5A_HUMAN.combined_final.aln ... Fasta format detected
+Alignment most likely contains protein sequences
+Alignment has 14 sequences with 1262 columns, 1130 distinct patterns
+990 parsimony-informative, 108 singleton sites, 164 constant sites
+                                          Gap/Ambiguity  Composition  p-value
+   1  Homo_sapiens|sp|P41229|KDM5C_HUMAN          2.54%    failed      0.15%
+   2  Homo_sapiens|sp|Q9BY66|KDM5D_HUMAN          2.93%    failed      3.10%
+   3  Homo_sapiens|sp|Q9UGL1|KDM5B_HUMAN          1.90%    passed     35.00%
+   4  Homo_sapiens|sp|P29375|KDM5A_HUMAN          0.24%    passed      6.86%
+   5  trichuris_muris|TMUE_3000012252.1           8.87%    passed     82.79%
+   6  ascaris_suum|AgR010_g263_t01               23.45%    passed     69.29%
+   7  ascaris_suum|AgR010_g263_t04                0.24%    passed     99.61%
+   8  ascaris_suum|AgR010_g263_t05                4.20%    passed     99.54%
+   9  ascaris_suum|AgR010_g263_t06                4.20%    passed     99.54%
+  10  ascaris_suum|AgR010_g263_t07                0.24%    passed     99.61%
+  11  brugia_malayi|Bm7498.1                      0.24%    passed      5.64%
+  12  caenorhabditis_elegans|ZK593.4a.1           0.95%    failed      2.83%
+  13  caenorhabditis_elegans|ZK593.4b.1           0.95%    failed      2.85%
+  14  haemonchus_contortus|HCON_00111910-00001    0.95%    passed     99.03%
+****  TOTAL                                       3.71%  4 sequences failed composition chi2 test (p-value<5%; df=19)
+NOTE: ascaris_suum|AgR010_g263_t07 is identical to ascaris_suum|AgR010_g263_t04 but kept for subsequent analysis
+NOTE: ascaris_suum|AgR010_g263_t06 is identical to ascaris_suum|AgR010_g263_t05 but kept for subsequent analysis
+
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.004 seconds
+Measuring multi-threading efficiency up to 80 CPU cores
+Increase to 10 rounds for branch lengths
+149 trees examined
+Threads: 1 / Time: 80.074 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -26981
+Threads: 2 / Time: 50.146 sec / Speedup: 1.597 / Efficiency: 80% / LogL: -26981
+Threads: 3 / Time: 36.403 sec / Speedup: 2.200 / Efficiency: 73% / LogL: -26981
+Threads: 4 / Time: 28.686 sec / Speedup: 2.791 / Efficiency: 70% / LogL: -26981
+Threads: 5 / Time: 23.769 sec / Speedup: 3.369 / Efficiency: 67% / LogL: -26981
+Threads: 6 / Time: 30.414 sec / Speedup: 2.633 / Efficiency: 44% / LogL: -26981
+BEST NUMBER OF THREADS: 5
+
+Perform fast likelihood tree search using LG+I+G model...
+Estimate model parameters (epsilon = 5.000)
+Perform nearest neighbor interchange...
+Estimate model parameters (epsilon = 1.000)
+1. Initial log-likelihood: -20702.864
+Optimal log-likelihood: -20702.768
+Proportion of invariable sites: 0.077
+Gamma shape alpha: 1.918
+Parameters optimization took 1 rounds (0.069 sec)
+Time for fast ML tree search: 0.457 seconds
+
+NOTE: ModelFinder requires 29 MB RAM!
+ModelFinder will test up to 546 protein models (sample size: 1262) ...
+ No. Model         -LnL         df  AIC          AICc         BIC
+  1  LG            21131.142    25  42312.285    42313.336    42440.796
+  2  LG+I          20860.231    26  41772.462    41773.599    41906.114
+  3  LG+G4         20722.510    26  41497.019    41498.156    41630.671
+  4  LG+I+G4       20702.731    27  41459.462    41460.687    41598.254
+  5  LG+R2         20729.426    27  41512.853    41514.078    41651.645
+  6  LG+R3         20695.237    29  41448.473    41449.886    41597.547
+  7  LG+R4         20694.964    31  41451.928    41453.541    41611.282
+ 17  LG+F+I+G4     20666.628    46  41425.256    41428.815    41661.717
+ 19  LG+F+R3       20660.658    48  41417.316    41421.194    41664.058
+ 30  WAG+I+G4      20791.990    27  41637.980    41639.205    41776.772
+ 32  WAG+R3        20784.694    29  41627.388    41628.800    41776.461
+ 43  WAG+F+I+G4    20698.257    46  41488.514    41492.073    41724.975
+ 45  WAG+F+R3      20692.364    48  41480.729    41484.607    41727.471
+ 56  JTT+I+G4      20783.580    27  41621.161    41622.386    41759.953
+ 58  JTT+R3        20773.208    29  41604.416    41605.828    41753.489
+ 69  JTT+F+I+G4    20698.839    46  41489.677    41493.236    41726.138
+ 71  JTT+F+R3      20690.065    48  41476.131    41480.009    41722.872
+ 82  JTTDCMut+I+G4 20781.583    27  41617.165    41618.391    41755.958
+ 84  JTTDCMut+R3   20771.539    29  41601.077    41602.490    41750.151
+ 95  JTTDCMut+F+I+G4 20695.254    46  41482.509    41486.068    41718.970
+ 97  JTTDCMut+F+R3 20686.723    48  41469.445    41473.323    41716.187
+108  DCMut+I+G4    20966.422    27  41986.843    41988.068    42125.635
+110  DCMut+R3      20960.899    29  41979.799    41981.211    42128.872
+121  DCMut+F+I+G4  20768.569    46  41629.138    41632.696    41865.598
+123  DCMut+F+R3    20763.236    48  41622.473    41626.351    41869.214
+134  VT+I+G4       20789.970    27  41633.940    41635.165    41772.732
+136  VT+R3         20779.605    29  41617.209    41618.621    41766.282
+147  VT+F+I+G4     20732.255    46  41556.511    41560.070    41792.972
+149  VT+F+R3       20723.644    48  41543.289    41547.167    41790.031
+160  PMB+I+G4      20915.817    27  41885.633    41886.859    42024.426
+162  PMB+R3        20907.772    29  41873.544    41874.957    42022.618
+173  PMB+F+I+G4    20823.773    46  41739.546    41743.105    41976.007
+175  PMB+F+R3      20818.200    48  41732.401    41736.279    41979.143
+186  Blosum62+I+G4 20897.595    27  41849.189    41850.415    41987.981
+188  Blosum62+R3   20889.732    29  41837.463    41838.876    41986.536
+199  Blosum62+F+I+G4 20813.398    46  41718.795    41722.354    41955.256
+201  Blosum62+F+R3 20807.697    48  41711.395    41715.273    41958.136
+212  Dayhoff+I+G4  20965.689    27  41985.377    41986.603    42124.170
+214  Dayhoff+R3    20960.251    29  41978.502    41979.915    42127.575
+225  Dayhoff+F+I+G4 20768.111    46  41628.222    41631.781    41864.683
+227  Dayhoff+F+R3  20762.837    48  41621.674    41625.552    41868.416
+238  mtREV+I+G4    22100.929    27  44255.858    44257.084    44394.651
+240  mtREV+R3      22093.226    29  44244.453    44245.865    44393.526
+251  mtREV+F+I+G4  20930.843    46  41953.686    41957.245    42190.147
+253  mtREV+F+R3    20927.200    48  41950.401    41954.279    42197.143
+264  mtART+I+G4    22287.324    27  44628.648    44629.873    44767.440
+266  mtART+R3      22300.104    29  44658.207    44659.620    44807.280
+277  mtART+F+I+G4  21052.389    46  42196.777    42200.336    42433.238
+279  mtART+F+R3    21062.756    48  42221.513    42225.391    42468.254
+290  mtZOA+I+G4    21847.689    27  43749.379    43750.604    43888.171
+292  mtZOA+R3      21841.129    29  43740.258    43741.670    43889.331
+303  mtZOA+F+I+G4  20880.786    46  41853.571    41857.130    42090.032
+305  mtZOA+F+R3    20881.775    48  41859.550    41863.428    42106.292
+316  mtMet+I+G4    22105.189    27  44264.377    44265.603    44403.170
+318  mtMet+R3      22083.259    29  44224.519    44225.931    44373.592
+329  mtMet+F+I+G4  20884.772    46  41861.544    41865.102    42098.004
+331  mtMet+F+R3    20880.247    48  41856.494    41860.372    42103.236
+342  mtVer+I+G4    22272.630    27  44599.261    44600.486    44738.053
+344  mtVer+R3      22245.560    29  44549.120    44550.533    44698.193
+355  mtVer+F+I+G4  21114.003    46  42320.006    42323.565    42556.467
+357  mtVer+F+R3    21115.891    48  42327.783    42331.661    42574.524
+368  mtInv+I+G4    22273.724    27  44601.448    44602.673    44740.240
+370  mtInv+R3      22254.195    29  44566.390    44567.802    44715.463
+381  mtInv+F+I+G4  20800.182    46  41692.364    41695.923    41928.825
+383  mtInv+F+R3    20796.187    48  41688.374    41692.252    41935.116
+394  mtMAM+I+G4    22370.030    27  44794.060    44795.285    44932.852
+396  mtMAM+R3      22364.707    29  44787.413    44788.826    44936.487
+407  mtMAM+F+I+G4  21183.143    46  42458.286    42461.845    42694.747
+409  mtMAM+F+R3    21191.078    48  42478.157    42482.035    42724.899
+420  HIVb+I+G4     21050.382    27  42154.764    42155.989    42293.556
+422  HIVb+R3       21045.959    29  42149.918    42151.330    42298.991
+433  HIVb+F+I+G4   20886.675    46  41865.349    41868.908    42101.810
+435  HIVb+F+R3     20884.309    48  41864.618    41868.496    42111.360
+446  HIVw+I+G4     21886.436    27  43826.871    43828.097    43965.663
+448  HIVw+R3       21887.038    29  43832.077    43833.489    43981.150
+459  HIVw+F+I+G4   21263.607    46  42619.214    42622.773    42855.675
+461  HIVw+F+R3     21259.862    48  42615.725    42619.603    42862.466
+472  FLU+I+G4      21165.765    27  42385.531    42386.756    42524.323
+474  FLU+R3        21162.556    29  42383.112    42384.524    42532.185
+485  FLU+F+I+G4    20867.382    46  41826.764    41830.323    42063.225
+487  FLU+F+R3      20863.383    48  41822.767    41826.645    42069.509
+498  rtREV+I+G4    20906.282    27  41866.564    41867.790    42005.357
+500  rtREV+R3      20900.182    29  41858.364    41859.776    42007.437
+511  rtREV+F+I+G4  20726.197    46  41544.394    41547.953    41780.855
+513  rtREV+F+R3    20721.947    48  41539.893    41543.771    41786.635
+524  cpREV+I+G4    20933.571    27  41921.142    41922.367    42059.934
+526  cpREV+R3      20927.826    29  41913.653    41915.065    42062.726
+537  cpREV+F+I+G4  20781.319    46  41654.639    41658.198    41891.100
+539  cpREV+F+R3    20777.403    48  41650.806    41654.684    41897.547
+Akaike Information Criterion:           LG+F+R3
+Corrected Akaike Information Criterion: LG+F+R3
+Bayesian Information Criterion:         LG+R3
+Best-fit model: LG+R3 chosen according to BIC
+
+All model information printed to work/alignments/KDM5A_HUMAN.combined_final.aln.model.gz
+CPU time for ModelFinder: 952.379 seconds (0h:15m:52s)
+Wall-clock time for ModelFinder: 305.461 seconds (0h:5m:5s)
+Generating 1000 samples for ultrafast bootstrap (seed: 987863)...
+
+NOTE: 11 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -20695.237
+Optimal log-likelihood: -20695.136
+Site proportion and rates:  (0.230,0.124) (0.460,0.822) (0.310,1.914)
+Parameters optimization took 1 rounds (0.117 sec)
+Computing ML distances based on estimated model parameters... 0.040 sec
+Computing BIONJ tree...
+0.000 seconds
+Log-likelihood of BIONJ tree: -20695.131
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 0.346 second
+Computing log-likelihood of 98 initial trees ... 1.341 seconds
+Current best score: -20695.131
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -20695.042
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 2: -20694.477
+UPDATE BEST LOG-LIKELIHOOD: -20694.471
+Iteration 10 / LogL: -20694.949 / Time: 0h:0m:4s
+UPDATE BEST LOG-LIKELIHOOD: -20694.471
+UPDATE BEST LOG-LIKELIHOOD: -20694.471
+UPDATE BEST LOG-LIKELIHOOD: -20694.471
+UPDATE BEST LOG-LIKELIHOOD: -20694.471
+Iteration 20 / LogL: -20694.471 / Time: 0h:0m:7s
+Finish initializing candidate tree set (9)
+Current best tree score: -20694.471 / CPU time: 6.820
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+UPDATE BEST LOG-LIKELIHOOD: -20694.470
+Iteration 30 / LogL: -20694.471 / Time: 0h:0m:10s (0h:0m:26s left)
+UPDATE BEST LOG-LIKELIHOOD: -20694.470
+UPDATE BEST LOG-LIKELIHOOD: -20694.470
+Iteration 40 / LogL: -20694.471 / Time: 0h:0m:13s (0h:0m:22s left)
+Iteration 50 / LogL: -20758.431 / Time: 0h:0m:17s (0h:0m:18s left)
+Log-likelihood cutoff on original alignment: -20707.483
+UPDATE BEST LOG-LIKELIHOOD: -20694.470
+Iteration 60 / LogL: -20694.471 / Time: 0h:0m:19s (0h:0m:14s left)
+Iteration 70 / LogL: -20694.470 / Time: 0h:0m:22s (0h:0m:10s left)
+Iteration 80 / LogL: -20695.768 / Time: 0h:0m:25s (0h:0m:6s left)
+Iteration 90 / LogL: -20694.471 / Time: 0h:0m:28s (0h:0m:3s left)
+UPDATE BEST LOG-LIKELIHOOD: -20694.470
+Iteration 100 / LogL: -20694.471 / Time: 0h:0m:31s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -20707.483
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.998
+TREE SEARCH COMPLETED AFTER 103 ITERATIONS / Time: 0h:0m:32s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -20694.470
+2. Current log-likelihood: -20694.415
+3. Current log-likelihood: -20694.339
+4. Current log-likelihood: -20694.267
+5. Current log-likelihood: -20694.200
+6. Current log-likelihood: -20694.137
+7. Current log-likelihood: -20694.079
+8. Current log-likelihood: -20694.024
+9. Current log-likelihood: -20693.973
+10. Current log-likelihood: -20693.927
+11. Current log-likelihood: -20693.879
+12. Current log-likelihood: -20693.836
+13. Current log-likelihood: -20693.795
+14. Current log-likelihood: -20693.755
+15. Current log-likelihood: -20693.720
+16. Current log-likelihood: -20693.687
+17. Current log-likelihood: -20693.662
+18. Current log-likelihood: -20693.638
+19. Current log-likelihood: -20693.608
+20. Current log-likelihood: -20693.588
+21. Current log-likelihood: -20693.562
+22. Current log-likelihood: -20693.543
+23. Current log-likelihood: -20693.525
+24. Current log-likelihood: -20693.509
+25. Current log-likelihood: -20693.493
+26. Current log-likelihood: -20693.479
+27. Current log-likelihood: -20693.465
+28. Current log-likelihood: -20693.451
+29. Current log-likelihood: -20693.439
+30. Current log-likelihood: -20693.428
+31. Current log-likelihood: -20693.417
+32. Current log-likelihood: -20693.407
+Optimal log-likelihood: -20693.393
+Site proportion and rates:  (0.218,0.107) (0.486,0.812) (0.296,1.968)
+Parameters optimization took 32 rounds (3.275 sec)
+BEST SCORE FOUND : -20693.393
+
+Testing tree branches by SH-like aLRT with 1000 replicates...
+0.178 sec.
+Creating bootstrap support values...
+Split supports printed to NEXUS file work/alignments/KDM5A_HUMAN.combined_final.aln.splits.nex
+Total tree length: 6.804
+
+Total number of iterations: 103
+CPU time used for tree search: 158.429 sec (0h:2m:38s)
+Wall-clock time used for tree search: 32.165 sec (0h:0m:32s)
+Total CPU time used: 176.754 sec (0h:2m:56s)
+Total wall-clock time used: 35.903 sec (0h:0m:35s)
+
+Computing bootstrap consensus tree...
+Reading input file work/alignments/KDM5A_HUMAN.combined_final.aln.splits.nex...
+14 taxa and 49 splits.
+Consensus tree written to work/alignments/KDM5A_HUMAN.combined_final.aln.contree
+Reading input trees file work/alignments/KDM5A_HUMAN.combined_final.aln.contree
+Log-likelihood of consensus tree: -20693.402
+
+Analysis results written to: 
+  IQ-TREE report:                work/alignments/KDM5A_HUMAN.combined_final.aln.iqtree
+  Maximum-likelihood tree:       work/alignments/KDM5A_HUMAN.combined_final.aln.treefile
+  Likelihood distances:          work/alignments/KDM5A_HUMAN.combined_final.aln.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          work/alignments/KDM5A_HUMAN.combined_final.aln.splits.nex
+  Consensus tree:                work/alignments/KDM5A_HUMAN.combined_final.aln.contree
+  Screen log file:               work/alignments/KDM5A_HUMAN.combined_final.aln.log
+
+Date and Time: Sat Feb 19 03:12:56 2022

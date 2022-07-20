@@ -1,0 +1,11 @@
+IQ-TREE multicore version 2.0.3 for Linux 64-bit built Dec 20 2020
+Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor,
+Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+
+Host:    ktryan2-9829372.3-parabyte2000.chtc.wisc.edu (AVX512, FMA3, 503 GB RAM)
+Command: iqtree -s work/alignments/KS6C1_HUMAN.combined_final.aln -nt AUTO -alrt 1000 -bb 1000 -redo
+Seed:    759164 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Sun Feb 20 21:40:06 2022
+Kernel:  AVX+FMA - auto-detect threads (80 CPU cores detected)
+
+Reading alignment file work/alignments/KS6C1_HUMAN.combined_final.aln ... ERROR: File not found work/alignments/KS6C1_HUMAN.combined_final.aln

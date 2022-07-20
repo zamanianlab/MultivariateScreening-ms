@@ -1,0 +1,1139 @@
+IQ-TREE multicore version 2.0.3 for Linux 64-bit built Dec 20 2020
+Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor,
+Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+
+Host:    ktryan2-9829097.3-parabyte2000.chtc.wisc.edu (AVX512, FMA3, 503 GB RAM)
+Command: iqtree -s work/alignments/ARF6_HUMAN.combined_final.aln -nt AUTO -alrt 1000 -bb 1000 -redo
+Seed:    184382 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Fri Feb 18 19:48:09 2022
+Kernel:  AVX+FMA - auto-detect threads (80 CPU cores detected)
+
+Reading alignment file work/alignments/ARF6_HUMAN.combined_final.aln ... Fasta format detected
+Alignment most likely contains protein sequences
+Alignment has 677 sequences with 171 columns, 171 distinct patterns
+171 parsimony-informative, 0 singleton sites, 0 constant sites
+                                             Gap/Ambiguity  Composition  p-value
+   1  Homo_sapiens|sp|P09471|GNAO_HUMAN              0.58%    passed     30.70%
+   2  ascaris_suum|AgB04_g138_t02                    0.58%    passed     46.35%
+   3  ascaris_suum|AgB04_g138_t04                    0.58%    passed     46.35%
+   4  strongyloides_ratti|SRAE_1000354700.1          0.58%    passed     46.35%
+   5  caenorhabditis_elegans|C26C6.2.1               0.58%    passed     43.32%
+   6  haemonchus_contortus|HCON_00015060-00001       0.58%    passed     43.32%
+   7  brugia_malayi|Bm8284.1                         0.58%    passed     46.35%
+   8  trichuris_muris|TMUE_1000004997.1              0.58%    passed     46.35%
+   9  trichuris_muris|TMUE_1000004997.2              0.58%    passed     46.35%
+  10  trichuris_muris|TMUE_1000004997.3              0.58%    passed     46.35%
+  11  trichuris_muris|TMUE_1000004997.4              0.58%    passed     46.35%
+  12  trichuris_muris|TMUE_1000004997.5              0.58%    passed     46.35%
+  13  trichuris_muris|TMUE_1000004997.6              0.58%    passed     46.35%
+  14  ascaris_suum|AgB04_g138_t05                   14.62%    passed     26.63%
+  15  Homo_sapiens|sp|P08754|GNAI3_HUMAN             0.00%    passed     38.21%
+  16  Homo_sapiens|sp|P63096|GNAI1_HUMAN             0.00%    passed     29.18%
+  17  ascaris_suum|AgB26_g011_t01                    0.00%    passed     72.82%
+  18  ascaris_suum|AgB26_g011_t02                    0.00%    passed     72.82%
+  19  brugia_malayi|Bm5631.1                         0.00%    passed     66.66%
+  20  haemonchus_contortus|HCON_00127690-00001       0.00%    passed     66.78%
+  21  trichuris_muris|TMUE_3000012887.1              0.00%    passed     85.58%
+  22  caenorhabditis_elegans|Y95B8A.5a.1             0.00%    passed     63.45%
+  23  strongyloides_ratti|SRAE_X000164800.1          0.00%    passed     53.56%
+  24  caenorhabditis_elegans|T07A9.7.1               0.00%    passed     46.41%
+  25  ancylostoma_caninum|ANCCAN_05677              28.65%    passed     17.65%
+  26  haemonchus_contortus|HCON_00133890-00001       0.58%    passed     27.77%
+  27  strongyloides_ratti|SRAE_1000244900.1          0.58%    passed     25.14%
+  28  caenorhabditis_elegans|E02C12.5a.1             0.58%    passed     12.49%
+  29  brugia_malayi|Bm3092a.1                        0.58%    passed     60.57%
+  30  brugia_malayi|Bm3092b.1                       15.79%    passed     32.29%
+  31  haemonchus_contortus|HCON_00155510-00001       0.58%    passed     37.65%
+  32  strongyloides_ratti|SRAE_2000369300.1          0.58%    passed     18.90%
+  33  brugia_malayi|Bm7714.1                        17.54%    passed     55.25%
+  34  ascaris_suum|AgR008_g264_t01                   0.00%    passed     51.94%
+  35  ascaris_suum|AgR008_g264_t03                   0.00%    passed     51.94%
+  36  brugia_malayi|Bm2569a.1                        0.00%    passed     46.58%
+  37  brugia_malayi|Bm2569b.1                       16.96%    passed     42.78%
+  38  caenorhabditis_elegans|C34D1.3.1               0.00%    passed     44.28%
+  39  haemonchus_contortus|HCON_00138660-00001       1.17%    passed     20.28%
+  40  strongyloides_ratti|SRAE_2000361900.1          0.00%    passed     56.43%
+  41  caenorhabditis_elegans|F38E1.5.1               0.58%    passed     53.15%
+  42  haemonchus_contortus|HCON_00134230-00001       0.58%    passed     79.24%
+  43  ascaris_suum|AgB03_g028_t02                    1.75%    passed     94.11%
+  44  caenorhabditis_elegans|T19C4.6a.1              0.58%    passed     63.40%
+  45  caenorhabditis_elegans|T19C4.6b.1             15.79%    passed     73.84%
+  46  caenorhabditis_elegans|M04C7.1.1               0.00%    passed     31.42%
+  47  ascaris_suum|AgR027X_g036_t01                 20.47%    passed     49.11%
+  48  caenorhabditis_elegans|R10H10.5.1              0.58%    passed     57.75%
+  49  haemonchus_contortus|HCON_00096720-00001      15.79%    passed     48.36%
+  50  haemonchus_contortus|HCON_00096720-00002       0.58%    passed     38.30%
+  51  brugia_malayi|Bm5336a.1                        0.58%    passed     43.48%
+  52  brugia_malayi|Bm5336b.1                       15.79%    passed     41.28%
+  53  strongyloides_ratti|SRAE_X000046600.1          0.58%    passed     64.48%
+  54  trichuris_muris|TMUE_3000014683.1              0.58%    passed     73.03%
+  55  haemonchus_contortus|HCON_00158110-00001       0.58%    passed     68.81%
+  56  ascaris_suum|AgR037_g127_t01                   0.58%    passed     90.06%
+  57  ascaris_suum|AgR037_g127_t02                   0.58%    passed     90.06%
+  58  ancylostoma_caninum|ANCCAN_23476               1.75%    passed     49.00%
+  59  haemonchus_contortus|HCON_00137730-00001       1.75%    passed     38.22%
+  60  caenorhabditis_elegans|F56H9.3.1               1.75%    passed     31.55%
+  61  strongyloides_ratti|SRAE_1000018100.1          1.17%    passed     38.76%
+  62  ancylostoma_caninum|ANCCAN_13522              17.54%    passed     86.56%
+  63  ascaris_suum|AgR025_g016_t01                   0.58%    passed     82.85%
+  64  ascaris_suum|AgR025_g016_t02                   0.58%    passed     82.85%
+  65  brugia_malayi|Bm5038.1                         0.58%    passed     81.45%
+  66  caenorhabditis_elegans|M01D7.7a.1              0.58%    passed     87.51%
+  67  caenorhabditis_elegans|M01D7.7b.1             15.79%    passed     78.49%
+  68  haemonchus_contortus|HCON_00020330-00001       0.58%    passed     87.51%
+  69  strongyloides_ratti|SRAE_2000020700.1          0.58%    passed     89.64%
+  70  trichuris_muris|TMUE_1000004632.1              0.58%    passed     85.87%
+  71  ancylostoma_caninum|ANCCAN_24462               0.00%    passed     71.38%
+  72  ancylostoma_caninum|ANCCAN_14025              16.96%    passed     66.41%
+  73  haemonchus_contortus|HCON_00038950-00001       0.00%    passed     59.71%
+  74  caenorhabditis_elegans|C16A11.1a.1             0.00%    passed     25.13%
+  75  caenorhabditis_elegans|C16A11.1a.2             0.00%    passed     25.13%
+  76  caenorhabditis_elegans|C16A11.1b.1             0.00%    passed     25.13%
+  77  ascaris_suum|AgR009X_g265_t01                  8.19%    passed     76.79%
+  78  caenorhabditis_elegans|C55H1.2.1               1.75%    passed     72.85%
+  79  ascaris_suum|AgR002_g369_t01                  28.65%    passed     32.86%
+  80  ascaris_suum|AgR002_g369_t03                   0.58%    passed     45.68%
+  81  ascaris_suum|AgR002_g369_t02                  17.54%    passed     51.50%
+  82  haemonchus_contortus|HCON_00166010-00001       0.58%    failed      3.90%
+  83  strongyloides_ratti|SRAE_1000012000.1          0.58%    passed     48.72%
+  84  caenorhabditis_elegans|F53B1.7.1               0.00%    passed     68.24%
+  85  haemonchus_contortus|HCON_00016240-00001       0.00%    passed     21.62%
+  86  caenorhabditis_elegans|R06A10.2a.1             0.00%    passed     19.09%
+  87  caenorhabditis_elegans|R06A10.2b.1            16.96%    passed      6.07%
+  88  brugia_malayi|Bm5243a.1                        0.00%    passed     10.11%
+  89  brugia_malayi|Bm5243b.1                       15.20%    failed      2.37%
+  90  strongyloides_ratti|SRAE_1000335500.1          8.19%    passed     67.15%
+  91  trichuris_muris|TMUE_1000003960.1              0.00%    passed     20.96%
+  92  caenorhabditis_elegans|F48C11.1.1              0.00%    passed     24.84%
+  93  brugia_malayi|Bm4199.1                         0.00%    passed      9.31%
+  94  strongyloides_ratti|SRAE_X000048900.1          0.00%    passed     30.31%
+  95  ascaris_suum|AgR027X_g121_t01                 26.90%    passed     24.07%
+  96  brugia_malayi|Bm3442a.1                        0.58%    passed     27.33%
+  97  brugia_malayi|Bm3442b.1                        0.58%    passed     10.34%
+  98  caenorhabditis_elegans|F18G5.3.1               0.58%    passed      9.57%
+  99  caenorhabditis_elegans|F18G5.3.2               0.58%    passed      9.57%
+ 100  haemonchus_contortus|HCON_00164270-00001       0.58%    passed     31.89%
+ 101  strongyloides_ratti|SRAE_X000212100.1          0.58%    passed     50.47%
+ 102  trichuris_muris|TMUE_2000010565.1              0.58%    passed     70.81%
+ 103  ancylostoma_caninum|ANCCAN_15439              21.64%    passed     61.37%
+ 104  haemonchus_contortus|HCON_00138710-00001       4.68%    passed     45.92%
+ 105  caenorhabditis_elegans|F18E2.5a.1              1.75%    passed     77.55%
+ 106  caenorhabditis_elegans|F18E2.5b.1              1.75%    passed     77.55%
+ 107  ascaris_suum|AgB19_g058_t01                    2.92%    passed     89.01%
+ 108  ascaris_suum|AgB19_g058_t03                   19.88%    passed     98.63%
+ 109  strongyloides_ratti|SRAE_1000176100.1          2.92%    passed      9.19%
+ 110  ascaris_suum|AgB04_g213_t01                   24.56%    failed      0.09%
+ 111  ascaris_suum|AgB04_g213_t02                   22.22%    failed      1.59%
+ 112  caenorhabditis_elegans|B0207.3.1               0.00%    passed     42.42%
+ 113  Homo_sapiens|tr|A0A0G2JMH3|A0A0G2JMH3_HUMAN   21.05%    failed      0.26%
+ 114  Homo_sapiens|sp|Q8IVW1|ARL17_HUMAN            21.05%    failed      0.44%
+ 115  Homo_sapiens|sp|Q8N8L6|ARL10_HUMAN             4.68%    failed      0.08%
+ 116  Homo_sapiens|sp|Q6T311|ARL9_HUMAN              4.09%    passed     13.63%
+ 117  Homo_sapiens|sp|Q96KC2|ARL5B_HUMAN             4.09%    passed     77.07%
+ 118  Homo_sapiens|sp|Q9Y689|ARL5A_HUMAN             4.09%    passed     69.74%
+ 119  ascaris_suum|AgR025_g122_t02                   4.68%    failed      1.66%
+ 120  ascaris_suum|AgR025_g122_t03                   4.68%    failed      1.66%
+ 121  ascaris_suum|AgR025_g122_t04                   4.68%    failed      1.66%
+ 122  ascaris_suum|AgR025_g122_t06                   4.68%    failed      1.66%
+ 123  ascaris_suum|AgR025_g122_t08                   4.68%    failed      1.66%
+ 124  ascaris_suum|AgR025_g122_t09                   4.68%    failed      1.66%
+ 125  ascaris_suum|AgR025_g122_t10                   4.68%    failed      1.66%
+ 126  ascaris_suum|AgR025_g122_t07                   1.17%    passed     27.62%
+ 127  trichuris_muris|TMUE_2000009072.1              4.09%    passed     40.54%
+ 128  strongyloides_ratti|SRAE_2000196800.1          4.68%    passed     46.67%
+ 129  strongyloides_ratti|SRAE_2000196800.2          4.68%    passed     46.67%
+ 130  ancylostoma_caninum|ANCCAN_04321               4.68%    passed     15.08%
+ 131  caenorhabditis_elegans|ZK632.8.1               5.26%    passed     41.80%
+ 132  Homo_sapiens|sp|A6NH57|ARL5C_HUMAN             4.09%    passed     54.91%
+ 133  ascaris_suum|AgR025_g122_t05                  23.98%    passed      5.15%
+ 134  Homo_sapiens|sp|P40616|ARL1_HUMAN              2.92%    passed     90.29%
+ 135  ascaris_suum|AgB15X_g112_t01                   7.02%    passed     98.61%
+ 136  ascaris_suum|AgB15X_g112_t02                   4.09%    passed     98.27%
+ 137  ascaris_suum|AgB15X_g112_t03                   4.09%    passed     98.27%
+ 138  ascaris_suum|AgB15X_g112_t04                   2.92%    passed     97.00%
+ 139  brugia_malayi|Bm4354.1                         2.92%    passed     97.80%
+ 140  brugia_malayi|Bm4354.2                         2.92%    passed     97.80%
+ 141  trichuris_muris|TMUE_2000006947.1              2.92%    passed     99.40%
+ 142  caenorhabditis_elegans|F54C9.10.1              2.92%    passed     54.33%
+ 143  haemonchus_contortus|HCON_00036810-00001       2.92%    passed     83.90%
+ 144  haemonchus_contortus|HCON_00036810-00002       2.92%    passed     83.90%
+ 145  strongyloides_ratti|SRAE_1000131900.1          2.92%    passed     83.51%
+ 146  Homo_sapiens|sp|P84077|ARF1_HUMAN              2.92%    passed     88.90%
+ 147  Homo_sapiens|sp|P61204|ARF3_HUMAN              2.92%    passed     87.87%
+ 148  ancylostoma_caninum|ANCCAN_12127               2.92%    passed     88.14%
+ 149  haemonchus_contortus|HCON_00070580-00001       2.92%    passed     88.14%
+ 150  strongyloides_ratti|SRAE_2000164400.1          2.92%    passed     76.31%
+ 151  ascaris_suum|AgB21_g080_t01                    2.92%    passed     88.13%
+ 152  brugia_malayi|Bm4102.1                         2.92%    passed     89.02%
+ 153  caenorhabditis_elegans|B0336.2.1               2.92%    passed     95.03%
+ 154  caenorhabditis_elegans|B0336.2.2               2.92%    passed     95.03%
+ 155  ancylostoma_caninum|ANCCAN_05902               9.94%    passed     97.34%
+ 156  ascaris_suum|AgR010_g332_t01                   3.51%    passed     98.57%
+ 157  ascaris_suum|AgR010_g332_t02                   3.51%    passed     98.57%
+ 158  ascaris_suum|AgR010_g332_t03                   3.51%    passed     98.57%
+ 159  ascaris_suum|AgR010_g332_t04                   3.51%    passed     98.57%
+ 160  ascaris_suum|AgR010_g332_t05                   3.51%    passed     98.57%
+ 161  caenorhabditis_elegans|F57H12.1.1              3.51%    passed     94.85%
+ 162  brugia_malayi|Bm4531.1                         3.51%    passed     99.21%
+ 163  trichuris_muris|TMUE_3000013906.1              3.51%    passed     90.17%
+ 164  trichuris_muris|TMUE_3000013906.2              3.51%    passed     90.17%
+ 165  trichuris_muris|TMUE_3000013906.3              3.51%    passed     90.17%
+ 166  trichuris_muris|TMUE_3000013906.4              3.51%    passed     90.17%
+ 167  strongyloides_ratti|SRAE_X000217800.1          3.51%    passed     88.43%
+ 168  Homo_sapiens|sp|P84085|ARF5_HUMAN              3.51%    passed     94.32%
+ 169  Homo_sapiens|sp|P18085|ARF4_HUMAN              3.51%    passed     85.37%
+ 170  ancylostoma_caninum|ANCCAN_16077              29.24%    passed     65.76%
+ 171  Homo_sapiens|sp|P62330|ARF6_HUMAN              4.09%    passed     92.37%
+ 172  ancylostoma_caninum|ANCCAN_17195              28.65%    passed     81.25%
+ 173  ancylostoma_caninum|ANCCAN_24417              28.65%    passed     81.25%
+ 174  haemonchus_contortus|HCON_00116530-00001       4.09%    passed     85.26%
+ 175  caenorhabditis_elegans|Y116A8C.12.1            4.09%    passed     91.78%
+ 176  ascaris_suum|AgR036X_g090_t01                  4.09%    passed     99.51%
+ 177  ascaris_suum|AgR036X_g090_t02                  4.09%    passed     99.51%
+ 178  ascaris_suum|AgR036X_g090_t03                  4.09%    passed     99.51%
+ 179  brugia_malayi|Bm7308.1                         4.09%    passed     97.65%
+ 180  trichuris_muris|TMUE_3000012550.1              4.09%    passed     90.75%
+ 181  trichuris_muris|TMUE_3000012550.2              4.09%    passed     90.75%
+ 182  strongyloides_ratti|SRAE_X000216500.1          4.09%    passed     99.87%
+ 183  ancylostoma_caninum|ANCCAN_03305               3.51%    passed     28.80%
+ 184  haemonchus_contortus|HCON_00146360-00001       4.09%    passed     75.49%
+ 185  ancylostoma_caninum|ANCCAN_03293               4.68%    passed     84.21%
+ 186  haemonchus_contortus|HCON_00110450-00001       3.51%    passed     36.58%
+ 187  Homo_sapiens|sp|P36406|TRI23_HUMAN             1.17%    passed     80.62%
+ 188  caenorhabditis_elegans|F45E4.1.1               4.09%    passed     59.64%
+ 189  Homo_sapiens|sp|P36404|ARL2_HUMAN              1.17%    passed     56.16%
+ 190  brugia_malayi|Bm13656.1                        1.17%    passed     50.31%
+ 191  ancylostoma_caninum|ANCCAN_22479               1.17%    passed     64.94%
+ 192  haemonchus_contortus|HCON_00061700-00001       1.17%    passed     67.47%
+ 193  caenorhabditis_elegans|F22B5.1.1               1.17%    passed     40.46%
+ 194  trichuris_muris|TMUE_3000013016.1              1.17%    passed     92.26%
+ 195  strongyloides_ratti|SRAE_1000239400.1          1.17%    failed      2.28%
+ 196  Homo_sapiens|sp|P36405|ARL3_HUMAN              2.34%    passed     77.97%
+ 197  ascaris_suum|AgR003_g137_t01                   1.75%    passed     63.67%
+ 198  brugia_malayi|Bm10979.1                        1.75%    passed     59.35%
+ 199  strongyloides_ratti|SRAE_X000259700.1          1.75%    passed     55.81%
+ 200  trichuris_muris|TMUE_2000010201.1              3.51%    passed     98.32%
+ 201  ancylostoma_caninum|ANCCAN_10563              23.98%    passed     70.60%
+ 202  haemonchus_contortus|HCON_00057432-00001       3.51%    passed     36.55%
+ 203  caenorhabditis_elegans|F19H8.3.1               1.75%    passed     71.76%
+ 204  Homo_sapiens|sp|Q8N4G2|ARL14_HUMAN             1.17%    passed     78.80%
+ 205  Homo_sapiens|sp|P49703|ARL4D_HUMAN             1.17%    passed     13.94%
+ 206  Homo_sapiens|sp|P40617|ARL4A_HUMAN             1.17%    passed     87.01%
+ 207  Homo_sapiens|sp|P56559|ARL4C_HUMAN             1.17%    passed     96.79%
+ 208  ascaris_suum|AgR014X_g154_t02                  1.75%    passed     41.75%
+ 209  ascaris_suum|AgR014X_g154_t03                  1.75%    passed     31.19%
+ 210  strongyloides_ratti|SRAE_X000008300.1          1.17%    passed     78.02%
+ 211  haemonchus_contortus|HCON_00048990-00001       2.34%    failed      0.51%
+ 212  haemonchus_contortus|HCON_00048990-00002      26.32%    passed     12.10%
+ 213  caenorhabditis_elegans|ZK1320.6.1              8.77%    passed     78.00%
+ 214  brugia_malayi|Bm7667.1                         1.75%    passed     98.76%
+ 215  Homo_sapiens|sp|Q9H0F7|ARL6_HUMAN              1.75%    passed     88.74%
+ 216  ancylostoma_caninum|ANCCAN_03698               0.58%    passed     72.13%
+ 217  haemonchus_contortus|HCON_00085860-00001       0.58%    passed     62.77%
+ 218  ascaris_suum|AgB11_g124_t01                    0.58%    passed     99.20%
+ 219  ascaris_suum|AgB11_g124_t02                    0.58%    passed     99.20%
+ 220  strongyloides_ratti|SRAE_1000327800.1          0.58%    passed     69.22%
+ 221  brugia_malayi|Bm2664.1                         0.58%    passed     23.22%
+ 222  caenorhabditis_elegans|C38D4.8.1               0.58%    passed     15.84%
+ 223  Homo_sapiens|sp|Q969Q4|ARL11_HUMAN             1.75%    failed      0.05%
+ 224  Homo_sapiens|sp|Q13795|ARFRP_HUMAN             1.75%    passed     82.20%
+ 225  trichuris_muris|TMUE_1000004079.1              1.17%    passed     66.76%
+ 226  ancylostoma_caninum|ANCCAN_01625              22.22%    passed     98.19%
+ 227  haemonchus_contortus|HCON_00005300-00001       1.17%    passed     57.78%
+ 228  caenorhabditis_elegans|Y54E10BR.2.1            1.17%    passed     75.65%
+ 229  caenorhabditis_elegans|Y54E10BR.2.2            1.17%    passed     75.65%
+ 230  caenorhabditis_elegans|Y54E10BR.2.3            1.17%    passed     75.65%
+ 231  ascaris_suum|AgR011_g011_t01                   7.60%    passed     20.54%
+ 232  ascaris_suum|AgR011_g011_t02                   7.60%    passed     20.54%
+ 233  ascaris_suum|AgR011_g011_t05                   7.60%    passed     20.54%
+ 234  ascaris_suum|AgR011_g011_t08                   7.60%    passed     20.54%
+ 235  ascaris_suum|AgR011_g011_t03                   1.17%    passed     92.33%
+ 236  ascaris_suum|AgR011_g011_t04                   1.17%    passed     92.33%
+ 237  ascaris_suum|AgR011_g011_t06                   1.17%    passed     92.33%
+ 238  ascaris_suum|AgR011_g011_t07                   1.17%    passed     92.33%
+ 239  brugia_malayi|Bm6801b.1                        1.17%    passed     96.07%
+ 240  Homo_sapiens|sp|Q3SXY8|AR13B_HUMAN             1.17%    passed     26.58%
+ 241  Homo_sapiens|sp|Q9NVJ2|ARL8B_HUMAN             1.75%    passed     88.03%
+ 242  Homo_sapiens|sp|Q96BM9|ARL8A_HUMAN             1.75%    passed     93.53%
+ 243  ascaris_suum|AgB17_g015_t01                    2.34%    passed     84.34%
+ 244  ascaris_suum|AgB17_g015_t02                    2.34%    passed     84.34%
+ 245  brugia_malayi|Bm6909.1                         2.34%    passed     86.06%
+ 246  caenorhabditis_elegans|Y57G11C.13.1            2.34%    passed     81.43%
+ 247  haemonchus_contortus|HCON_00111680-00001       2.34%    passed     84.83%
+ 248  strongyloides_ratti|SRAE_X000131700.1          1.17%    passed     75.68%
+ 249  trichuris_muris|TMUE_3000014197.1              1.75%    passed     80.98%
+ 250  Homo_sapiens|sp|Q9Y6B6|SAR1B_HUMAN             4.68%    passed     50.29%
+ 251  Homo_sapiens|sp|Q9NR31|SAR1A_HUMAN             4.68%    passed     91.47%
+ 252  ancylostoma_caninum|ANCCAN_00417               4.68%    passed     46.36%
+ 253  haemonchus_contortus|HCON_00119180-00001       4.68%    passed     51.58%
+ 254  ascaris_suum|AgR021X_g175_t01                  4.68%    passed     22.79%
+ 255  ascaris_suum|AgR021X_g175_t02                  4.68%    passed     22.79%
+ 256  brugia_malayi|Bm13657a.1                       4.68%    passed     26.44%
+ 257  brugia_malayi|Bm13657a.2                       4.68%    passed     26.44%
+ 258  brugia_malayi|Bm13657b.1                      19.30%    passed     24.81%
+ 259  strongyloides_ratti|SRAE_1000107600.1          4.68%    passed     58.38%
+ 260  strongyloides_ratti|SRAE_X000013300.1          4.68%    passed     36.46%
+ 261  caenorhabditis_elegans|ZK180.4.1               5.26%    passed     31.04%
+ 262  trichuris_muris|TMUE_3000012388.1              4.68%    passed     42.64%
+ 263  ascaris_suum|AgR013X_g048_t01                 17.54%    passed     74.04%
+ 264  ascaris_suum|AgR013X_g048_t02                 18.13%    passed     76.63%
+ 265  brugia_malayi|Bm8676.1                         1.75%    passed     13.97%
+ 266  Homo_sapiens|sp|Q8WXH6|RB40A_HUMAN             0.58%    passed     95.01%
+ 267  Homo_sapiens|sp|P0C0E4|RB40L_HUMAN             0.58%    passed     91.40%
+ 268  Homo_sapiens|sp|Q12829|RB40B_HUMAN             0.58%    passed     77.73%
+ 269  ascaris_suum|AgR009X_g300_t01                  2.34%    passed     15.98%
+ 270  ascaris_suum|AgR009X_g300_t02                  2.34%    passed     15.98%
+ 271  ascaris_suum|AgR009X_g300_t03                  2.34%    passed     15.98%
+ 272  brugia_malayi|Bm10915a.1                       2.34%    passed     65.25%
+ 273  brugia_malayi|Bm10915c.1                       2.34%    passed     65.25%
+ 274  brugia_malayi|Bm10915b.1                       2.34%    passed     68.99%
+ 275  brugia_malayi|Bm10915d.1                       2.34%    passed     68.99%
+ 276  Homo_sapiens|sp|Q96AX2|RAB37_HUMAN             0.00%    passed     98.18%
+ 277  ascaris_suum|AgR001_g533_t01                  19.88%    passed     91.44%
+ 278  ascaris_suum|AgR001_g533_t02                  19.88%    passed     91.44%
+ 279  brugia_malayi|Bm9897.1                         0.00%    passed     65.27%
+ 280  caenorhabditis_elegans|W01H2.3a.1              7.02%    passed     89.57%
+ 281  caenorhabditis_elegans|W01H2.3a.2              7.02%    passed     89.57%
+ 282  caenorhabditis_elegans|W01H2.3a.3              7.02%    passed     89.57%
+ 283  caenorhabditis_elegans|W01H2.3a.4              7.02%    passed     89.57%
+ 284  caenorhabditis_elegans|W01H2.3b.1              1.17%    passed     84.81%
+ 285  caenorhabditis_elegans|W01H2.3c.1              1.17%    passed     79.33%
+ 286  strongyloides_ratti|SRAE_X000047000.1          0.00%    passed     72.25%
+ 287  Homo_sapiens|sp|O95716|RAB3D_HUMAN             0.00%    passed     82.95%
+ 288  ascaris_suum|AgB12_g071_t01                    0.00%    passed     66.47%
+ 289  ascaris_suum|AgB12_g071_t02                    0.00%    passed     66.47%
+ 290  ascaris_suum|AgB12_g071_t03                    0.00%    passed     66.47%
+ 291  ascaris_suum|AgB12_g071_t04                    0.00%    passed     66.47%
+ 292  brugia_malayi|Bm2288.1                         0.00%    passed     62.65%
+ 293  caenorhabditis_elegans|C18A3.6a.1              0.00%    passed     64.96%
+ 294  caenorhabditis_elegans|C18A3.6b.1              0.00%    passed     64.96%
+ 295  haemonchus_contortus|HCON_00037230-00001       0.00%    passed     73.64%
+ 296  trichuris_muris|TMUE_1000002930.1              0.00%    passed     76.02%
+ 297  trichuris_muris|TMUE_1000002930.2              0.00%    passed     76.02%
+ 298  trichuris_muris|TMUE_1000002930.3              0.00%    passed     76.02%
+ 299  trichuris_muris|TMUE_1000002930.4              0.00%    passed     76.02%
+ 300  trichuris_muris|TMUE_1000002930.5              0.00%    passed     76.02%
+ 301  strongyloides_ratti|SRAE_X000074600.1          0.00%    passed     52.98%
+ 302  ancylostoma_caninum|ANCCAN_22775              15.20%    passed     90.53%
+ 303  ancylostoma_caninum|ANCCAN_17456               0.00%    passed     91.95%
+ 304  haemonchus_contortus|HCON_00004780-00001       0.00%    passed     83.24%
+ 305  ascaris_suum|AgR029_g081_t01                   0.00%    passed     68.20%
+ 306  ascaris_suum|AgR029_g081_t02                   0.00%    passed     68.20%
+ 307  brugia_malayi|Bm4321.1                         0.00%    passed     73.53%
+ 308  strongyloides_ratti|SRAE_1000347300.1          0.00%    passed     66.64%
+ 309  caenorhabditis_elegans|F53G12.1.1              0.00%    passed     67.53%
+ 310  ascaris_suum|AgR002_g447_t01                   0.00%    passed     87.98%
+ 311  ascaris_suum|AgR002_g447_t03                   0.00%    passed     87.98%
+ 312  ascaris_suum|AgR002_g447_t05                   0.00%    passed     87.98%
+ 313  ascaris_suum|AgR002_g447_t02                   0.00%    passed     87.98%
+ 314  ascaris_suum|AgR002_g447_t04                   0.00%    passed     87.98%
+ 315  caenorhabditis_elegans|W04G5.2a.1              1.17%    passed     67.05%
+ 316  ancylostoma_caninum|ANCCAN_09776               0.00%    passed     56.14%
+ 317  haemonchus_contortus|HCON_00110530-00001       0.00%    passed     90.14%
+ 318  ancylostoma_caninum|ANCCAN_09778               2.34%    passed     93.49%
+ 319  haemonchus_contortus|HCON_00110540-00001       0.58%    passed     96.49%
+ 320  ancylostoma_caninum|ANCCAN_14585               0.00%    passed     88.91%
+ 321  haemonchus_contortus|HCON_00167000-00001       0.00%    passed     89.45%
+ 322  caenorhabditis_elegans|K09A9.2.1               0.00%    passed     80.70%
+ 323  caenorhabditis_elegans|K09A9.2.2               0.00%    passed     80.70%
+ 324  brugia_malayi|Bm4940.1                         0.00%    passed     78.48%
+ 325  trichuris_muris|TMUE_3000014107.1              8.77%    passed     98.60%
+ 326  strongyloides_ratti|SRAE_1000170300.1         18.71%    passed     82.45%
+ 327  ascaris_suum|AgB01_g785_t02                    2.34%    passed     47.88%
+ 328  caenorhabditis_elegans|F53F10.4a.1             0.58%    passed     88.89%
+ 329  caenorhabditis_elegans|F53F10.4b.1             0.00%    passed     86.05%
+ 330  caenorhabditis_elegans|F53F10.4c.1            26.32%    passed     56.67%
+ 331  haemonchus_contortus|HCON_00001500-00001       0.58%    passed     88.89%
+ 332  strongyloides_ratti|SRAE_2000112100.1          0.58%    passed     87.95%
+ 333  trichuris_muris|TMUE_1000003926.1              0.58%    passed     75.67%
+ 334  brugia_malayi|Bm4317a.1                        0.58%    passed     77.71%
+ 335  brugia_malayi|Bm4317b.1                       26.32%    passed     38.25%
+ 336  ascaris_suum|AgB04_g108_t01                   18.13%    passed     60.49%
+ 337  caenorhabditis_elegans|F11A5.3.1               1.17%    passed     76.92%
+ 338  caenorhabditis_elegans|F11A5.4.1               1.17%    passed     22.80%
+ 339  ascaris_suum|AgR059_g027_t06                   0.00%    passed     81.40%
+ 340  ascaris_suum|AgR059_g027_t07                   0.00%    passed     81.40%
+ 341  ascaris_suum|AgR059_g027_t08                   0.00%    passed     83.39%
+ 342  ascaris_suum|AgR059_g027_t09                   0.00%    passed     83.39%
+ 343  trichuris_muris|TMUE_3000013259.1              0.00%    passed     84.32%
+ 344  trichuris_muris|TMUE_0000000950.1              0.00%    passed     84.32%
+ 345  trichuris_muris|TMUE_0000000950.2              0.00%    passed     84.32%
+ 346  trichuris_muris|TMUE_0000000950.3              0.00%    passed     84.32%
+ 347  trichuris_muris|TMUE_0000000950.4              0.00%    passed     84.32%
+ 348  ancylostoma_caninum|ANCCAN_04483               0.00%    passed     74.43%
+ 349  haemonchus_contortus|HCON_00048570-00001       0.00%    passed     62.45%
+ 350  caenorhabditis_elegans|D2013.1.1               0.00%    passed     81.37%
+ 351  ascaris_suum|AgR001_g114_t01                   0.00%    passed     49.22%
+ 352  brugia_malayi|Bm3030a.1                        0.00%    passed     92.27%
+ 353  brugia_malayi|Bm3030a.2                        0.00%    passed     92.27%
+ 354  brugia_malayi|Bm3030b.1                       26.32%    passed     74.46%
+ 355  strongyloides_ratti|SRAE_X000133200.1          0.00%    passed     90.75%
+ 356  ancylostoma_caninum|ANCCAN_13634               0.00%    passed     98.08%
+ 357  caenorhabditis_elegans|C39F7.4.1               0.00%    passed     97.24%
+ 358  haemonchus_contortus|HCON_00143120-00001       0.00%    passed     98.57%
+ 359  ascaris_suum|AgR004_g030_t02                   0.00%    passed     97.36%
+ 360  ascaris_suum|AgR004_g030_t03                   0.00%    passed     97.36%
+ 361  brugia_malayi|Bm13658.1                        0.00%    passed     98.45%
+ 362  strongyloides_ratti|SRAE_0000015700.1          0.00%    passed     97.01%
+ 363  trichuris_muris|TMUE_3000014506.1              0.00%    passed     90.67%
+ 364  ancylostoma_caninum|ANCCAN_08284               0.00%    passed     68.46%
+ 365  ancylostoma_caninum|ANCCAN_15093               0.00%    passed     68.46%
+ 366  haemonchus_contortus|HCON_00015530-00001       0.00%    passed     64.37%
+ 367  haemonchus_contortus|HCON_00015530-00002       0.00%    passed     64.37%
+ 368  ascaris_suum|AgB27X_g020_t01                  22.81%    passed     31.26%
+ 369  brugia_malayi|Bm3010.1                         0.00%    passed     40.33%
+ 370  caenorhabditis_elegans|D1037.4.1               0.00%    passed     25.45%
+ 371  trichuris_muris|TMUE_1000004183.1              0.00%    passed     79.10%
+ 372  ancylostoma_caninum|ANCCAN_07392               0.00%    passed     58.47%
+ 373  haemonchus_contortus|HCON_00014510-00001       0.00%    passed     68.21%
+ 374  caenorhabditis_elegans|T23H2.5.1               0.00%    passed     72.47%
+ 375  ascaris_suum|AgR019X_g169_t01                  0.00%    passed     37.54%
+ 376  brugia_malayi|Bm5972a.1                        0.00%    passed     44.58%
+ 377  brugia_malayi|Bm5972b.1                        0.00%    passed     44.58%
+ 378  strongyloides_ratti|SRAE_1000218200.1          0.00%    passed     97.19%
+ 379  trichuris_muris|TMUE_1000003545.1              0.00%    passed     49.26%
+ 380  trichuris_muris|TMUE_1000003545.2              0.00%    passed     49.26%
+ 381  trichuris_muris|TMUE_0000001253.1              0.00%    passed     51.21%
+ 382  ascaris_suum|AgE10_g007_t01                    0.00%    passed     32.33%
+ 383  ascaris_suum|AgB05_g066_t01                    0.58%    passed     98.69%
+ 384  ascaris_suum|AgB05_g066_t02                    0.58%    passed     98.69%
+ 385  ascaris_suum|AgB05_g066_t03                    0.58%    passed     98.69%
+ 386  ascaris_suum|AgB05_g066_t05                    0.58%    passed     98.69%
+ 387  brugia_malayi|Bm6601.1                         0.58%    passed     97.69%
+ 388  haemonchus_contortus|HCON_00091650-00001       0.58%    passed     98.93%
+ 389  strongyloides_ratti|SRAE_1000289100.1          0.58%    passed     96.27%
+ 390  caenorhabditis_elegans|Y47D3A.25.1             0.58%    passed     95.13%
+ 391  trichuris_muris|TMUE_2000006389.1              0.58%    passed     96.79%
+ 392  haemonchus_contortus|HCON_00143130-00001       0.00%    passed     88.25%
+ 393  ancylostoma_caninum|ANCCAN_28111              26.90%    passed     48.47%
+ 394  caenorhabditis_elegans|K02E10.1.1              1.17%    passed     55.87%
+ 395  strongyloides_ratti|SRAE_X000230300.1          1.17%    passed     38.79%
+ 396  brugia_malayi|Bm4761a.1                        1.17%    passed     24.92%
+ 397  brugia_malayi|Bm4761b.1                        4.09%    passed     24.02%
+ 398  ascaris_suum|AgB15X_g113_t01                   6.43%    passed     26.46%
+ 399  ascaris_suum|AgR019X_g082_t01                  0.00%    passed     85.64%
+ 400  caenorhabditis_elegans|Y87G2A.4.1              0.00%    passed     83.57%
+ 401  haemonchus_contortus|HCON_00008840-00001       0.00%    passed     86.92%
+ 402  brugia_malayi|Bm8312.1                         0.00%    passed     83.84%
+ 403  strongyloides_ratti|SRAE_2000295700.1          0.00%    passed     93.42%
+ 404  haemonchus_contortus|HCON_00008840-00002       3.51%    passed     80.19%
+ 405  trichuris_muris|TMUE_2000009871.1              0.00%    passed     41.57%
+ 406  ancylostoma_caninum|ANCCAN_01410               0.00%    passed     70.14%
+ 407  haemonchus_contortus|HCON_00105595-00001       0.00%    passed     78.63%
+ 408  caenorhabditis_elegans|Y62E10A.9.1             0.00%    passed     69.93%
+ 409  caenorhabditis_elegans|Y62E10A.9.2             0.00%    passed     69.93%
+ 410  ascaris_suum|AgR010_g274_t01                   9.36%    passed     95.77%
+ 411  ascaris_suum|AgR010_g274_t02                   0.00%    passed     98.22%
+ 412  brugia_malayi|Bm6951.1                         9.36%    passed     96.22%
+ 413  strongyloides_ratti|SRAE_X000217400.1          0.00%    passed     41.17%
+ 414  trichuris_muris|TMUE_3000014489.1              0.00%    passed     97.73%
+ 415  ancylostoma_caninum|ANCCAN_19787               6.43%    passed     91.01%
+ 416  ascaris_suum|AgR008_g081_t01                   0.00%    passed     99.09%
+ 417  ascaris_suum|AgR008_g081_t02                   0.00%    passed     99.09%
+ 418  brugia_malayi|Bm13660.1                        0.00%    passed     99.00%
+ 419  strongyloides_ratti|SRAE_1000164400.1          0.58%    passed     96.40%
+ 420  ascaris_suum|AgR008_g081_t03                  21.05%    passed     58.18%
+ 421  trichuris_muris|TMUE_3000014410.1              0.58%    passed     96.90%
+ 422  haemonchus_contortus|HCON_00058650-00001       0.00%    passed     97.56%
+ 423  caenorhabditis_elegans|T25G12.4.1              0.00%    passed     90.82%
+ 424  caenorhabditis_elegans|F59B2.7.1               0.00%    passed     97.74%
+ 425  ascaris_suum|AgB05_g184_t03                    0.00%    passed     88.61%
+ 426  ascaris_suum|AgB05_g184_t04                    0.00%    passed     88.61%
+ 427  ascaris_suum|AgB05_g184_t05                    0.00%    passed     88.61%
+ 428  ancylostoma_caninum|ANCCAN_09007              26.32%    passed     46.01%
+ 429  ancylostoma_caninum|ANCCAN_11332               0.00%    passed     98.78%
+ 430  ancylostoma_caninum|ANCCAN_14380               0.00%    passed     98.78%
+ 431  haemonchus_contortus|HCON_00123550-00001       0.00%    passed     93.95%
+ 432  caenorhabditis_elegans|4R79.2a.1               0.00%    passed     35.54%
+ 433  caenorhabditis_elegans|4R79.2b.1               0.00%    passed     35.54%
+ 434  brugia_malayi|Bm1670a.1                       12.28%    passed     13.64%
+ 435  brugia_malayi|Bm1670b.1                        1.17%    passed     43.45%
+ 436  ascaris_suum|AgR010_g313_t03                   5.85%    passed     35.18%
+ 437  Homo_sapiens|sp|P51148|RAB5C_HUMAN             0.00%    passed     38.00%
+ 438  ascaris_suum|AgR009X_g070_t04                  0.00%    passed     50.42%
+ 439  ascaris_suum|AgR009X_g070_t05                  0.00%    passed     50.42%
+ 440  brugia_malayi|Bm3640.1                         0.00%    passed     65.44%
+ 441  brugia_malayi|Bm13659.1                        0.00%    passed     65.44%
+ 442  caenorhabditis_elegans|F26H9.6.1               0.00%    passed     40.06%
+ 443  haemonchus_contortus|HCON_00013630-00001       0.00%    passed     24.31%
+ 444  strongyloides_ratti|SRAE_2000178900.1          0.00%    passed     57.02%
+ 445  trichuris_muris|TMUE_1000004620.1              0.00%    passed     52.29%
+ 446  ancylostoma_caninum|ANCCAN_06983               0.00%    passed     88.17%
+ 447  haemonchus_contortus|HCON_00055215-00001       0.00%    passed     92.07%
+ 448  ascaris_suum|AgR042X_g006_t01                  0.00%    passed     88.05%
+ 449  ascaris_suum|AgR042X_g006_t02                  0.00%    passed     88.05%
+ 450  ascaris_suum|AgR042X_g006_t03                  0.00%    passed     88.05%
+ 451  brugia_malayi|Bm5453.1                         5.26%    passed     81.56%
+ 452  caenorhabditis_elegans|T01B7.3.1               0.00%    passed     99.41%
+ 453  ascaris_suum|AgR017_g160_t01                   0.58%    passed     97.07%
+ 454  ascaris_suum|AgR017_g160_t02                   0.58%    passed     97.07%
+ 455  ascaris_suum|AgR017_g160_t03                   0.58%    passed     97.07%
+ 456  ascaris_suum|AgR017_g160_t04                   6.43%    passed     98.58%
+ 457  brugia_malayi|Bm7181.1                         4.09%    passed     95.67%
+ 458  caenorhabditis_elegans|Y92C3B.3a.1            13.45%    passed     96.37%
+ 459  caenorhabditis_elegans|Y92C3B.3a.2            13.45%    passed     96.37%
+ 460  caenorhabditis_elegans|Y92C3B.3b.1             0.58%    passed     99.59%
+ 461  caenorhabditis_elegans|Y92C3B.3b.2             0.58%    passed     99.59%
+ 462  haemonchus_contortus|HCON_00067560-00001       0.58%    passed     99.02%
+ 463  strongyloides_ratti|SRAE_2000193900.1          0.58%    passed     99.44%
+ 464  ancylostoma_caninum|ANCCAN_12900               0.00%    passed     62.66%
+ 465  haemonchus_contortus|HCON_00053040-00001       0.00%    passed     91.44%
+ 466  caenorhabditis_elegans|C56E6.2.1               0.58%    passed     80.06%
+ 467  ascaris_suum|AgR042X_g004_t01                  1.75%    passed     96.03%
+ 468  ascaris_suum|AgR042X_g004_t03                  1.75%    passed     96.03%
+ 469  ascaris_suum|AgR042X_g004_t04                  1.75%    passed     96.03%
+ 470  ascaris_suum|AgR042X_g004_t05                  1.75%    passed     96.03%
+ 471  ascaris_suum|AgR014X_g198_t02                  0.00%    passed      7.82%
+ 472  ascaris_suum|AgR014X_g198_t03                 22.81%    failed      4.18%
+ 473  brugia_malayi|Bm12841a.1                       4.68%    passed     60.41%
+ 474  ancylostoma_caninum|ANCCAN_24853              17.54%    passed     97.51%
+ 475  ascaris_suum|AgR005_g106_t01                   0.00%    passed     99.93%
+ 476  brugia_malayi|Bm6560.1                         0.00%    passed     99.92%
+ 477  strongyloides_ratti|SRAE_1000190800.1          0.00%    passed     99.77%
+ 478  caenorhabditis_elegans|Y45F3A.2.1              0.00%    passed     99.94%
+ 479  caenorhabditis_elegans|Y45F3A.2.2              0.00%    passed     99.94%
+ 480  haemonchus_contortus|HCON_00076120-00001       0.00%    passed     99.96%
+ 481  trichuris_muris|TMUE_2000009420.1              0.00%    passed     98.01%
+ 482  haemonchus_contortus|HCON_00076110-00001       0.00%    passed     81.06%
+ 483  ancylostoma_caninum|ANCCAN_13896               0.00%    passed     95.62%
+ 484  caenorhabditis_elegans|F43D9.2.1               0.00%    passed     52.70%
+ 485  ascaris_suum|AgR017_g132_t01                   0.00%    passed     80.14%
+ 486  brugia_malayi|Bm4055.1                         0.00%    passed     78.49%
+ 487  trichuris_muris|TMUE_2000009488.1              1.17%    passed     41.08%
+ 488  strongyloides_ratti|SRAE_1000309900.1          0.00%    passed     92.87%
+ 489  haemonchus_contortus|HCON_00073690-00001      29.82%    passed     36.17%
+ 490  ancylostoma_caninum|ANCCAN_20855              29.24%    passed     93.57%
+ 491  ancylostoma_caninum|ANCCAN_26122              19.30%    passed     66.68%
+ 492  haemonchus_contortus|HCON_00078680-00001       0.58%    passed     78.85%
+ 493  caenorhabditis_elegans|Y71H2AM.12.1            2.34%    passed     94.26%
+ 494  ancylostoma_caninum|ANCCAN_12420               0.00%    passed     21.11%
+ 495  haemonchus_contortus|HCON_00044480-00001       0.00%    passed     14.98%
+ 496  caenorhabditis_elegans|W03C9.3.1               0.00%    passed     59.49%
+ 497  ascaris_suum|AgR015_g055_t01                   0.00%    passed     90.12%
+ 498  ascaris_suum|AgR015_g055_t02                   0.00%    passed     90.12%
+ 499  brugia_malayi|Bm13717a.1                       0.00%    passed     89.07%
+ 500  brugia_malayi|Bm13717b.1                      13.45%    passed     61.78%
+ 501  trichuris_muris|TMUE_3000011527.1              0.58%    passed     94.10%
+ 502  strongyloides_ratti|SRAE_X000130300.1          0.58%    passed     98.04%
+ 503  strongyloides_ratti|SRAE_1000223100.1          0.58%    passed     19.80%
+ 504  ascaris_suum|AgR013X_g205_t05                  1.17%    passed     87.52%
+ 505  ascaris_suum|AgR013X_g205_t06                 18.13%    passed     60.99%
+ 506  brugia_malayi|Bm5264.1                         1.17%    passed     87.88%
+ 507  caenorhabditis_elegans|R07B1.12.1              1.17%    passed     89.84%
+ 508  haemonchus_contortus|HCON_00023890-00001       1.17%    passed     71.87%
+ 509  strongyloides_ratti|SRAE_2000403300.1          1.17%    passed     63.97%
+ 510  trichuris_muris|TMUE_3000013280.1              0.58%    passed     96.94%
+ 511  brugia_malayi|Bm6292.1                         0.00%    passed     99.04%
+ 512  caenorhabditis_elegans|Y11D7A.4.1              0.00%    passed     58.73%
+ 513  haemonchus_contortus|HCON_00097000-00001       0.00%    passed     61.97%
+ 514  strongyloides_ratti|SRAE_X000072300.1          0.00%    passed     46.22%
+ 515  trichuris_muris|TMUE_3000012730.1              0.00%    passed     49.62%
+ 516  trichuris_muris|TMUE_0000000826.1              0.00%    passed     49.62%
+ 517  trichuris_muris|TMUE_3000014880.1              0.00%    passed     49.62%
+ 518  ancylostoma_caninum|ANCCAN_30471              13.45%    passed     50.20%
+ 519  ascaris_suum|AgR037_g086_t01                   2.92%    passed     88.49%
+ 520  brugia_malayi|Bm17816.1                        2.92%    passed     89.53%
+ 521  caenorhabditis_elegans|C25D7.7.1               3.51%    passed     49.25%
+ 522  haemonchus_contortus|HCON_00134840-00001       3.51%    passed     65.24%
+ 523  trichuris_muris|TMUE_3000011203.1             25.73%    passed     65.96%
+ 524  strongyloides_ratti|SRAE_2000375800.1          2.92%    passed     81.34%
+ 525  ancylostoma_caninum|ANCCAN_01487              19.88%    passed     58.35%
+ 526  ancylostoma_caninum|ANCCAN_01479               3.51%    passed     54.76%
+ 527  haemonchus_contortus|HCON_00096020-00001       3.51%    passed     56.73%
+ 528  caenorhabditis_elegans|C27B7.8.1               3.51%    passed     49.95%
+ 529  strongyloides_ratti|SRAE_X000250800.1          3.51%    passed     57.23%
+ 530  brugia_malayi|Bm2428.1                         3.51%    passed     95.61%
+ 531  trichuris_muris|TMUE_3000014875.1              3.51%    passed     51.66%
+ 532  trichuris_muris|TMUE_0000001318.1              3.51%    passed     51.66%
+ 533  strongyloides_ratti|SRAE_X000195400.1          3.51%    passed     87.22%
+ 534  strongyloides_ratti|SRAE_X000088600.1          3.51%    passed     96.81%
+ 535  ancylostoma_caninum|ANCCAN_00538               2.92%    passed     24.81%
+ 536  haemonchus_contortus|HCON_00102730-00001       1.75%    passed     35.41%
+ 537  caenorhabditis_elegans|ZK792.6.1               2.92%    passed     65.77%
+ 538  ascaris_suum|AgR012_g225_t01                   2.92%    passed     45.75%
+ 539  ascaris_suum|AgR012_g225_t02                   2.92%    passed     45.75%
+ 540  brugia_malayi|Bm16898.1                        2.92%    passed     64.51%
+ 541  trichuris_muris|TMUE_3000012067.1              2.92%    passed     39.74%
+ 542  trichuris_muris|TMUE_3000012067.2              2.92%    passed     39.74%
+ 543  trichuris_muris|TMUE_3000012067.3              2.92%    passed     39.74%
+ 544  trichuris_muris|TMUE_3000012067.4              2.92%    passed     39.74%
+ 545  strongyloides_ratti|SRAE_2000220900.1          1.75%    passed     87.42%
+ 546  strongyloides_ratti|SRAE_X000105700.1          2.34%    passed     92.17%
+ 547  ascaris_suum|AgR002_g312_t01                   0.00%    passed     93.93%
+ 548  ascaris_suum|AgR002_g312_t02                   0.00%    passed     93.93%
+ 549  ascaris_suum|AgR002_g312_t03                   0.00%    passed     93.93%
+ 550  brugia_malayi|Bm6769a.1                        0.00%    passed     96.36%
+ 551  brugia_malayi|Bm6769b.1                        6.43%    passed     93.94%
+ 552  brugia_malayi|Bm6769c.1                        0.00%    passed     96.36%
+ 553  strongyloides_ratti|SRAE_2000048100.1          0.00%    passed     70.28%
+ 554  caenorhabditis_elegans|Y53G8AR.3a.1            0.00%    passed     35.84%
+ 555  caenorhabditis_elegans|Y53G8AR.3b.1            0.00%    passed     35.84%
+ 556  haemonchus_contortus|HCON_00071310-00001       0.00%    passed     40.84%
+ 557  haemonchus_contortus|HCON_00071310-00002       0.00%    passed     40.84%
+ 558  haemonchus_contortus|HCON_00071310-00003       0.00%    passed     40.84%
+ 559  trichuris_muris|TMUE_2000010629.1              0.00%    passed     99.26%
+ 560  ancylostoma_caninum|ANCCAN_20415              15.79%    passed     86.20%
+ 561  haemonchus_contortus|HCON_00112220-00001       3.51%    passed     77.16%
+ 562  ascaris_suum|AgR015_g105_t01                   0.00%    passed     24.73%
+ 563  ascaris_suum|AgR015_g105_t02                   0.00%    passed     15.73%
+ 564  ascaris_suum|AgR015_g105_t03                   0.00%    passed     24.73%
+ 565  brugia_malayi|Bm2760a.1                        0.00%    passed     52.65%
+ 566  brugia_malayi|Bm2760a.2                        0.00%    passed     52.65%
+ 567  brugia_malayi|Bm2760b.1                       19.30%    passed     52.22%
+ 568  caenorhabditis_elegans|C44C11.1a.1             0.00%    passed     72.26%
+ 569  haemonchus_contortus|HCON_00063910-00001       0.00%    passed     52.27%
+ 570  strongyloides_ratti|SRAE_X000171100.1          0.00%    passed     71.68%
+ 571  trichuris_muris|TMUE_1000003311.1              0.00%    passed      7.69%
+ 572  ascaris_suum|AgR005_g053_t01                   2.34%    passed     96.92%
+ 573  ascaris_suum|AgR003_g232_t02                   0.00%    passed     32.22%
+ 574  ascaris_suum|AgR003_g232_t03                   0.00%    passed     32.22%
+ 575  brugia_malayi|Bm3416.1                         0.00%    passed     40.05%
+ 576  strongyloides_ratti|SRAE_2000311600.1          0.00%    passed     34.55%
+ 577  caenorhabditis_elegans|F17C8.4.1               0.00%    passed     55.73%
+ 578  caenorhabditis_elegans|F17C8.4.2               0.00%    passed     55.73%
+ 579  haemonchus_contortus|HCON_00095270-00001       0.00%    passed     94.52%
+ 580  caenorhabditis_elegans|C08F8.7.1               2.34%    passed     76.44%
+ 581  ascaris_suum|AgR001_g640_t03                   0.58%    passed     59.19%
+ 582  brugia_malayi|Bm2920.1                         0.00%    passed     87.18%
+ 583  haemonchus_contortus|HCON_00036100-00001       0.00%    passed     87.33%
+ 584  caenorhabditis_elegans|C54A12.4.1              0.00%    passed     26.53%
+ 585  strongyloides_ratti|SRAE_X000138700.1          0.00%    passed     20.19%
+ 586  haemonchus_contortus|HCON_00119430-00001       2.92%    passed     20.61%
+ 587  ascaris_suum|AgR017_g158_t01                  11.70%    passed     97.88%
+ 588  brugia_malayi|Bm4347.1                         1.17%    passed     91.91%
+ 589  haemonchus_contortus|HCON_00065560-00001       0.00%    passed     74.82%
+ 590  haemonchus_contortus|HCON_00065560-00002       0.00%    passed     74.82%
+ 591  caenorhabditis_elegans|F54C8.5.1               0.00%    passed     56.10%
+ 592  trichuris_muris|TMUE_2000010142.1              7.02%    passed     59.65%
+ 593  ancylostoma_caninum|ANCCAN_19015               3.51%    failed      3.94%
+ 594  haemonchus_contortus|HCON_00111750-00001       3.51%    failed      3.94%
+ 595  ascaris_suum|AgR005_g037_t01                   3.51%    failed      3.94%
+ 596  brugia_malayi|Bm10155.1                        3.51%    failed      3.94%
+ 597  ascaris_suum|AgR045_g055_t01                   3.51%    failed      2.62%
+ 598  ascaris_suum|AgR045_g055_t02                   3.51%    failed      2.62%
+ 599  ascaris_suum|AgR045_g055_t03                   3.51%    failed      2.62%
+ 600  brugia_malayi|Bm9534.1                         3.51%    passed      6.86%
+ 601  caenorhabditis_elegans|Y51H4A.3a.1             3.51%    failed      3.88%
+ 602  trichuris_muris|TMUE_3000013458.1              3.51%    passed     10.19%
+ 603  ascaris_suum|AgR027X_g046_t01                  3.51%    passed      7.34%
+ 604  ascaris_suum|AgR027X_g046_t02                  3.51%    passed      7.34%
+ 605  brugia_malayi|Bm6727.1                         3.51%    passed     11.65%
+ 606  strongyloides_ratti|SRAE_X000073900.1          3.51%    passed     26.74%
+ 607  strongyloides_ratti|SRAE_1000259200.1          1.17%    passed     34.97%
+ 608  ascaris_suum|AgR005_g032_t01                   5.26%    passed      9.07%
+ 609  ascaris_suum|AgR005_g032_t05                   0.58%    passed     12.51%
+ 610  ascaris_suum|AgR005_g032_t06                   0.58%    passed     12.51%
+ 611  ancylostoma_caninum|ANCCAN_19868               1.75%    failed      1.23%
+ 612  haemonchus_contortus|HCON_00170580-00001       1.75%    failed      3.23%
+ 613  caenorhabditis_elegans|C35C5.4a.1              1.75%    failed      1.16%
+ 614  ascaris_suum|AgR055_g020_t01                   1.75%    failed      1.09%
+ 615  brugia_malayi|Bm2610.1                         1.75%    failed      0.37%
+ 616  trichuris_muris|TMUE_3000013356.1              1.75%    failed      0.51%
+ 617  trichuris_muris|TMUE_3000013439.1              1.75%    failed      0.51%
+ 618  ancylostoma_caninum|ANCCAN_24495               8.19%    failed      2.65%
+ 619  brugia_malayi|Bm5286a.1                        2.92%    failed      1.14%
+ 620  caenorhabditis_elegans|R07G3.1.1               2.92%    failed      0.61%
+ 621  haemonchus_contortus|HCON_00061470-00001       2.92%    failed      0.39%
+ 622  strongyloides_ratti|SRAE_0000018100.1          2.92%    failed      1.14%
+ 623  trichuris_muris|TMUE_3000011836.1              2.92%    failed      2.02%
+ 624  trichuris_muris|TMUE_3000011836.2              2.92%    failed      2.02%
+ 625  trichuris_muris|TMUE_3000011836.3              2.92%    failed      2.02%
+ 626  ascaris_suum|AgR009X_g157_t01                  2.92%    failed      2.16%
+ 627  brugia_malayi|Bm2115a.1                        2.92%    failed      0.46%
+ 628  brugia_malayi|Bm2115b.1                       28.07%    failed      0.34%
+ 629  caenorhabditis_elegans|C09G12.8b.1             2.92%    failed      4.94%
+ 630  haemonchus_contortus|HCON_00101255-00001       1.17%    failed      3.09%
+ 631  caenorhabditis_elegans|K03D3.10.1              2.92%    passed     14.75%
+ 632  strongyloides_ratti|SRAE_X000220600.1          2.92%    passed     11.79%
+ 633  trichuris_muris|TMUE_3000011589.1              2.92%    passed     15.01%
+ 634  trichuris_muris|TMUE_3000011589.2              2.92%    passed     15.01%
+ 635  ascaris_suum|AgE05_g005_t09                    2.92%    passed     23.66%
+ 636  ascaris_suum|AgE05_g005_t10                    2.92%    passed     23.66%
+ 637  ascaris_suum|AgE05_g005_t12                    2.92%    passed     23.66%
+ 638  ascaris_suum|AgE11_g005_t03                   16.96%    passed     21.80%
+ 639  haemonchus_contortus|HCON_00136325-00001       0.58%    passed     11.79%
+ 640  caenorhabditis_elegans|F22E12.2.1              1.17%    passed     87.64%
+ 641  ascaris_suum|AgB17_g085_t01                    0.58%    passed      6.02%
+ 642  ascaris_suum|AgB17_g085_t02                    0.58%    passed      6.02%
+ 643  strongyloides_ratti|SRAE_2000346700.1          1.17%    passed     18.78%
+ 644  ascaris_suum|AgR002_g299_t01                   1.75%    passed     54.42%
+ 645  ascaris_suum|AgR002_g299_t02                   1.75%    passed     54.42%
+ 646  brugia_malayi|Bm12718.1                        1.75%    passed     35.55%
+ 647  caenorhabditis_elegans|Y32F6B.3.1              2.34%    passed     62.52%
+ 648  haemonchus_contortus|HCON_00135620-00001       1.17%    passed     48.63%
+ 649  ancylostoma_caninum|ANCCAN_17391              26.32%    passed     10.61%
+ 650  ancylostoma_caninum|ANCCAN_17390              20.47%    failed      1.74%
+ 651  ascaris_suum|AgB01_g409_t01                    1.75%    passed     30.38%
+ 652  ascaris_suum|AgB01_g409_t02                    1.75%    passed     30.38%
+ 653  ascaris_suum|AgB01_g409_t03                    1.75%    passed     30.38%
+ 654  brugia_malayi|Bm4731.1                         1.75%    passed     26.82%
+ 655  strongyloides_ratti|SRAE_2000146300.1          1.75%    passed     24.57%
+ 656  caenorhabditis_elegans|K01G5.4.1               1.75%    passed     18.96%
+ 657  haemonchus_contortus|HCON_00089320-00001       1.75%    passed     25.71%
+ 658  trichuris_muris|TMUE_1000004212.1              4.09%    passed     19.80%
+ 659  strongyloides_ratti|SRAE_2000222800.1          1.17%    passed     10.57%
+ 660  trichuris_muris|TMUE_1000005857.1              1.75%    passed     62.31%
+ 661  haemonchus_contortus|HCON_00008470-00001       2.92%    passed     45.76%
+ 662  trichuris_muris|TMUE_1000004120.1              6.43%    passed     63.97%
+ 663  Homo_sapiens|sp|Q9NXU5|ARL15_HUMAN             1.17%    passed     20.35%
+ 664  brugia_malayi|Bm10951.1                        7.02%    passed     58.27%
+ 665  ascaris_suum|AgR020_g224_t01                   4.09%    passed     76.05%
+ 666  ascaris_suum|AgR020_g224_t02                   4.09%    passed     76.05%
+ 667  ascaris_suum|AgR020_g224_t03                   4.09%    passed     76.05%
+ 668  ascaris_suum|AgR020_g224_t05                   4.09%    passed     76.05%
+ 669  ascaris_suum|AgR020_g224_t06                   8.19%    passed     75.57%
+ 670  caenorhabditis_elegans|R186.3.1                3.51%    passed     83.18%
+ 671  trichuris_muris|TMUE_3000012560.1              4.09%    failed      0.00%
+ 672  trichuris_muris|TMUE_3000012560.2              4.09%    failed      0.00%
+ 673  trichuris_muris|TMUE_3000011576.1              1.75%    passed     83.46%
+ 674  trichuris_muris|TMUE_2000010047.1              4.68%    passed     16.70%
+ 675  trichuris_muris|TMUE_0000000095.1              4.68%    passed     16.70%
+ 676  trichuris_muris|TMUE_0000002118.1              4.68%    passed     16.70%
+ 677  brugia_malayi|Bm6077.1                         1.75%    passed     47.69%
+****  TOTAL                                          3.49%  49 sequences failed composition chi2 test (p-value<5%; df=19)
+NOTE: ascaris_suum|AgB04_g138_t04 is identical to ascaris_suum|AgB04_g138_t02 but kept for subsequent analysis
+NOTE: haemonchus_contortus|HCON_00015060-00001 is identical to caenorhabditis_elegans|C26C6.2.1 but kept for subsequent analysis
+NOTE: ascaris_suum|AgB26_g011_t02 is identical to ascaris_suum|AgB26_g011_t01 but kept for subsequent analysis
+NOTE: ascaris_suum|AgR008_g264_t03 is identical to ascaris_suum|AgR008_g264_t01 but kept for subsequent analysis
+NOTE: ascaris_suum|AgR037_g127_t02 is identical to ascaris_suum|AgR037_g127_t01 but kept for subsequent analysis
+NOTE: ascaris_suum|AgR025_g016_t02 is identical to ascaris_suum|AgR025_g016_t01 but kept for subsequent analysis
+NOTE: haemonchus_contortus|HCON_00020330-00001 is identical to caenorhabditis_elegans|M01D7.7a.1 but kept for subsequent analysis
+NOTE: caenorhabditis_elegans|C16A11.1a.2 is identical to caenorhabditis_elegans|C16A11.1a.1 but kept for subsequent analysis
+NOTE: caenorhabditis_elegans|F18G5.3.2 is identical to caenorhabditis_elegans|F18G5.3.1 but kept for subsequent analysis
+NOTE: caenorhabditis_elegans|F18E2.5b.1 is identical to caenorhabditis_elegans|F18E2.5a.1 but kept for subsequent analysis
+NOTE: ascaris_suum|AgR025_g122_t03 is identical to ascaris_suum|AgR025_g122_t02 but kept for subsequent analysis
+NOTE: strongyloides_ratti|SRAE_2000196800.2 is identical to strongyloides_ratti|SRAE_2000196800.1 but kept for subsequent analysis
+NOTE: ascaris_suum|AgB15X_g112_t03 is identical to ascaris_suum|AgB15X_g112_t02 but kept for subsequent analysis
+NOTE: brugia_malayi|Bm4354.2 is identical to brugia_malayi|Bm4354.1 but kept for subsequent analysis
+NOTE: haemonchus_contortus|HCON_00036810-00002 is identical to haemonchus_contortus|HCON_00036810-00001 but kept for subsequent analysis
+NOTE: haemonchus_contortus|HCON_00070580-00001 is identical to ancylostoma_caninum|ANCCAN_12127 but kept for subsequent analysis
+NOTE: caenorhabditis_elegans|B0336.2.2 is identical to caenorhabditis_elegans|B0336.2.1 but kept for subsequent analysis
+NOTE: ascaris_suum|AgR010_g332_t02 is identical to ascaris_suum|AgR010_g332_t01 but kept for subsequent analysis
+NOTE: trichuris_muris|TMUE_3000013906.2 is identical to trichuris_muris|TMUE_3000013906.1 but kept for subsequent analysis
+NOTE: ancylostoma_caninum|ANCCAN_24417 is identical to ancylostoma_caninum|ANCCAN_17195 but kept for subsequent analysis
+NOTE: ascaris_suum|AgR036X_g090_t02 is identical to ascaris_suum|AgR036X_g090_t01 but kept for subsequent analysis
+NOTE: trichuris_muris|TMUE_3000012550.2 is identical to trichuris_muris|TMUE_3000012550.1 but kept for subsequent analysis
+NOTE: ascaris_suum|AgB11_g124_t02 is identical to ascaris_suum|AgB11_g124_t01 but kept for subsequent analysis
+NOTE: caenorhabditis_elegans|Y54E10BR.2.2 is identical to caenorhabditis_elegans|Y54E10BR.2.1 but kept for subsequent analysis
+NOTE: ascaris_suum|AgR011_g011_t02 is identical to ascaris_suum|AgR011_g011_t01 but kept for subsequent analysis
+NOTE: ascaris_suum|AgR011_g011_t04 is identical to ascaris_suum|AgR011_g011_t03 but kept for subsequent analysis
+NOTE: ascaris_suum|AgB17_g015_t02 is identical to ascaris_suum|AgB17_g015_t01 but kept for subsequent analysis
+NOTE: ascaris_suum|AgR021X_g175_t02 is identical to ascaris_suum|AgR021X_g175_t01 but kept for subsequent analysis
+NOTE: brugia_malayi|Bm13657a.2 is identical to brugia_malayi|Bm13657a.1 but kept for subsequent analysis
+NOTE: ascaris_suum|AgR009X_g300_t02 is identical to ascaris_suum|AgR009X_g300_t01 but kept for subsequent analysis
+NOTE: brugia_malayi|Bm10915c.1 is identical to brugia_malayi|Bm10915a.1 but kept for subsequent analysis
+NOTE: brugia_malayi|Bm10915d.1 is identical to brugia_malayi|Bm10915b.1 but kept for subsequent analysis
+NOTE: ascaris_suum|AgR001_g533_t02 is identical to ascaris_suum|AgR001_g533_t01 but kept for subsequent analysis
+NOTE: caenorhabditis_elegans|W01H2.3a.2 is identical to caenorhabditis_elegans|W01H2.3a.1 but kept for subsequent analysis
+NOTE: ascaris_suum|AgB12_g071_t02 is identical to ascaris_suum|AgB12_g071_t01 but kept for subsequent analysis
+NOTE: caenorhabditis_elegans|C18A3.6b.1 is identical to caenorhabditis_elegans|C18A3.6a.1 but kept for subsequent analysis
+NOTE: trichuris_muris|TMUE_1000002930.2 is identical to trichuris_muris|TMUE_1000002930.1 but kept for subsequent analysis
+NOTE: ascaris_suum|AgR029_g081_t02 is identical to ascaris_suum|AgR029_g081_t01 but kept for subsequent analysis
+NOTE: ascaris_suum|AgR002_g447_t03 is identical to ascaris_suum|AgR002_g447_t01 but kept for subsequent analysis
+NOTE: caenorhabditis_elegans|K09A9.2.2 is identical to caenorhabditis_elegans|K09A9.2.1 but kept for subsequent analysis
+NOTE: haemonchus_contortus|HCON_00001500-00001 is identical to caenorhabditis_elegans|F53F10.4a.1 but kept for subsequent analysis
+NOTE: ascaris_suum|AgR059_g027_t07 is identical to ascaris_suum|AgR059_g027_t06 but kept for subsequent analysis
+NOTE: ascaris_suum|AgR059_g027_t09 is identical to ascaris_suum|AgR059_g027_t08 but kept for subsequent analysis
+NOTE: trichuris_muris|TMUE_0000000950.1 is identical to trichuris_muris|TMUE_3000013259.1 but kept for subsequent analysis
+NOTE: brugia_malayi|Bm3030a.2 is identical to brugia_malayi|Bm3030a.1 but kept for subsequent analysis
+NOTE: ascaris_suum|AgR004_g030_t03 is identical to ascaris_suum|AgR004_g030_t02 but kept for subsequent analysis
+NOTE: ancylostoma_caninum|ANCCAN_15093 is identical to ancylostoma_caninum|ANCCAN_08284 but kept for subsequent analysis
+NOTE: haemonchus_contortus|HCON_00015530-00002 is identical to haemonchus_contortus|HCON_00015530-00001 but kept for subsequent analysis
+NOTE: brugia_malayi|Bm5972b.1 is identical to brugia_malayi|Bm5972a.1 but kept for subsequent analysis
+NOTE: trichuris_muris|TMUE_1000003545.2 is identical to trichuris_muris|TMUE_1000003545.1 but kept for subsequent analysis
+NOTE: ascaris_suum|AgB05_g066_t02 is identical to ascaris_suum|AgB05_g066_t01 but kept for subsequent analysis
+NOTE: caenorhabditis_elegans|Y62E10A.9.2 is identical to caenorhabditis_elegans|Y62E10A.9.1 but kept for subsequent analysis
+NOTE: ascaris_suum|AgR008_g081_t02 is identical to ascaris_suum|AgR008_g081_t01 but kept for subsequent analysis
+NOTE: ascaris_suum|AgB05_g184_t04 is identical to ascaris_suum|AgB05_g184_t03 but kept for subsequent analysis
+NOTE: ancylostoma_caninum|ANCCAN_14380 is identical to ancylostoma_caninum|ANCCAN_11332 but kept for subsequent analysis
+NOTE: caenorhabditis_elegans|4R79.2b.1 is identical to caenorhabditis_elegans|4R79.2a.1 but kept for subsequent analysis
+NOTE: ascaris_suum|AgR009X_g070_t05 is identical to ascaris_suum|AgR009X_g070_t04 but kept for subsequent analysis
+NOTE: brugia_malayi|Bm13659.1 is identical to brugia_malayi|Bm3640.1 but kept for subsequent analysis
+NOTE: ascaris_suum|AgR042X_g006_t02 is identical to ascaris_suum|AgR042X_g006_t01 but kept for subsequent analysis
+NOTE: ascaris_suum|AgR017_g160_t02 is identical to ascaris_suum|AgR017_g160_t01 but kept for subsequent analysis
+NOTE: caenorhabditis_elegans|Y92C3B.3a.2 is identical to caenorhabditis_elegans|Y92C3B.3a.1 but kept for subsequent analysis
+NOTE: caenorhabditis_elegans|Y92C3B.3b.2 is identical to caenorhabditis_elegans|Y92C3B.3b.1 but kept for subsequent analysis
+NOTE: ascaris_suum|AgR042X_g004_t03 is identical to ascaris_suum|AgR042X_g004_t01 but kept for subsequent analysis
+NOTE: caenorhabditis_elegans|Y45F3A.2.2 is identical to caenorhabditis_elegans|Y45F3A.2.1 but kept for subsequent analysis
+NOTE: ascaris_suum|AgR015_g055_t02 is identical to ascaris_suum|AgR015_g055_t01 but kept for subsequent analysis
+NOTE: trichuris_muris|TMUE_0000000826.1 is identical to trichuris_muris|TMUE_3000012730.1 but kept for subsequent analysis
+NOTE: trichuris_muris|TMUE_0000001318.1 is identical to trichuris_muris|TMUE_3000014875.1 but kept for subsequent analysis
+NOTE: ascaris_suum|AgR012_g225_t02 is identical to ascaris_suum|AgR012_g225_t01 but kept for subsequent analysis
+NOTE: trichuris_muris|TMUE_3000012067.2 is identical to trichuris_muris|TMUE_3000012067.1 but kept for subsequent analysis
+NOTE: ascaris_suum|AgR002_g312_t02 is identical to ascaris_suum|AgR002_g312_t01 but kept for subsequent analysis
+NOTE: brugia_malayi|Bm6769c.1 is identical to brugia_malayi|Bm6769a.1 but kept for subsequent analysis
+NOTE: caenorhabditis_elegans|Y53G8AR.3b.1 is identical to caenorhabditis_elegans|Y53G8AR.3a.1 but kept for subsequent analysis
+NOTE: haemonchus_contortus|HCON_00071310-00002 is identical to haemonchus_contortus|HCON_00071310-00001 but kept for subsequent analysis
+NOTE: ascaris_suum|AgR015_g105_t03 is identical to ascaris_suum|AgR015_g105_t01 but kept for subsequent analysis
+NOTE: brugia_malayi|Bm2760a.2 is identical to brugia_malayi|Bm2760a.1 but kept for subsequent analysis
+NOTE: ascaris_suum|AgR003_g232_t03 is identical to ascaris_suum|AgR003_g232_t02 but kept for subsequent analysis
+NOTE: caenorhabditis_elegans|F17C8.4.2 is identical to caenorhabditis_elegans|F17C8.4.1 but kept for subsequent analysis
+NOTE: haemonchus_contortus|HCON_00065560-00002 is identical to haemonchus_contortus|HCON_00065560-00001 but kept for subsequent analysis
+NOTE: haemonchus_contortus|HCON_00111750-00001 is identical to ancylostoma_caninum|ANCCAN_19015 but kept for subsequent analysis
+NOTE: ascaris_suum|AgR045_g055_t02 is identical to ascaris_suum|AgR045_g055_t01 but kept for subsequent analysis
+NOTE: ascaris_suum|AgR027X_g046_t02 is identical to ascaris_suum|AgR027X_g046_t01 but kept for subsequent analysis
+NOTE: ascaris_suum|AgR005_g032_t06 is identical to ascaris_suum|AgR005_g032_t05 but kept for subsequent analysis
+NOTE: trichuris_muris|TMUE_3000013439.1 is identical to trichuris_muris|TMUE_3000013356.1 but kept for subsequent analysis
+NOTE: trichuris_muris|TMUE_3000011836.2 is identical to trichuris_muris|TMUE_3000011836.1 but kept for subsequent analysis
+NOTE: trichuris_muris|TMUE_3000011589.2 is identical to trichuris_muris|TMUE_3000011589.1 but kept for subsequent analysis
+NOTE: ascaris_suum|AgE05_g005_t10 is identical to ascaris_suum|AgE05_g005_t09 but kept for subsequent analysis
+NOTE: ascaris_suum|AgB17_g085_t02 is identical to ascaris_suum|AgB17_g085_t01 but kept for subsequent analysis
+NOTE: ascaris_suum|AgR002_g299_t02 is identical to ascaris_suum|AgR002_g299_t01 but kept for subsequent analysis
+NOTE: ascaris_suum|AgB01_g409_t02 is identical to ascaris_suum|AgB01_g409_t01 but kept for subsequent analysis
+NOTE: ascaris_suum|AgR020_g224_t02 is identical to ascaris_suum|AgR020_g224_t01 but kept for subsequent analysis
+NOTE: trichuris_muris|TMUE_3000012560.2 is identical to trichuris_muris|TMUE_3000012560.1 but kept for subsequent analysis
+NOTE: trichuris_muris|TMUE_0000000095.1 is identical to trichuris_muris|TMUE_2000010047.1 but kept for subsequent analysis
+NOTE: 60 identical sequences (see below) will be ignored for subsequent analysis
+NOTE: strongyloides_ratti|SRAE_1000354700.1 (identical to ascaris_suum|AgB04_g138_t02) is ignored but added at the end
+NOTE: brugia_malayi|Bm8284.1 (identical to ascaris_suum|AgB04_g138_t02) is ignored but added at the end
+NOTE: trichuris_muris|TMUE_1000004997.1 (identical to ascaris_suum|AgB04_g138_t02) is ignored but added at the end
+NOTE: trichuris_muris|TMUE_1000004997.2 (identical to ascaris_suum|AgB04_g138_t02) is ignored but added at the end
+NOTE: trichuris_muris|TMUE_1000004997.3 (identical to ascaris_suum|AgB04_g138_t02) is ignored but added at the end
+NOTE: trichuris_muris|TMUE_1000004997.4 (identical to ascaris_suum|AgB04_g138_t02) is ignored but added at the end
+NOTE: trichuris_muris|TMUE_1000004997.5 (identical to ascaris_suum|AgB04_g138_t02) is ignored but added at the end
+NOTE: trichuris_muris|TMUE_1000004997.6 (identical to ascaris_suum|AgB04_g138_t02) is ignored but added at the end
+NOTE: caenorhabditis_elegans|C16A11.1b.1 (identical to caenorhabditis_elegans|C16A11.1a.1) is ignored but added at the end
+NOTE: ascaris_suum|AgR025_g122_t04 (identical to ascaris_suum|AgR025_g122_t02) is ignored but added at the end
+NOTE: ascaris_suum|AgR025_g122_t06 (identical to ascaris_suum|AgR025_g122_t02) is ignored but added at the end
+NOTE: ascaris_suum|AgR025_g122_t08 (identical to ascaris_suum|AgR025_g122_t02) is ignored but added at the end
+NOTE: ascaris_suum|AgR025_g122_t09 (identical to ascaris_suum|AgR025_g122_t02) is ignored but added at the end
+NOTE: ascaris_suum|AgR025_g122_t10 (identical to ascaris_suum|AgR025_g122_t02) is ignored but added at the end
+NOTE: ascaris_suum|AgR010_g332_t03 (identical to ascaris_suum|AgR010_g332_t01) is ignored but added at the end
+NOTE: ascaris_suum|AgR010_g332_t04 (identical to ascaris_suum|AgR010_g332_t01) is ignored but added at the end
+NOTE: ascaris_suum|AgR010_g332_t05 (identical to ascaris_suum|AgR010_g332_t01) is ignored but added at the end
+NOTE: trichuris_muris|TMUE_3000013906.3 (identical to trichuris_muris|TMUE_3000013906.1) is ignored but added at the end
+NOTE: trichuris_muris|TMUE_3000013906.4 (identical to trichuris_muris|TMUE_3000013906.1) is ignored but added at the end
+NOTE: ascaris_suum|AgR036X_g090_t03 (identical to ascaris_suum|AgR036X_g090_t01) is ignored but added at the end
+NOTE: caenorhabditis_elegans|Y54E10BR.2.3 (identical to caenorhabditis_elegans|Y54E10BR.2.1) is ignored but added at the end
+NOTE: ascaris_suum|AgR011_g011_t05 (identical to ascaris_suum|AgR011_g011_t01) is ignored but added at the end
+NOTE: ascaris_suum|AgR011_g011_t08 (identical to ascaris_suum|AgR011_g011_t01) is ignored but added at the end
+NOTE: ascaris_suum|AgR011_g011_t06 (identical to ascaris_suum|AgR011_g011_t03) is ignored but added at the end
+NOTE: ascaris_suum|AgR011_g011_t07 (identical to ascaris_suum|AgR011_g011_t03) is ignored but added at the end
+NOTE: ascaris_suum|AgR009X_g300_t03 (identical to ascaris_suum|AgR009X_g300_t01) is ignored but added at the end
+NOTE: caenorhabditis_elegans|W01H2.3a.3 (identical to caenorhabditis_elegans|W01H2.3a.1) is ignored but added at the end
+NOTE: caenorhabditis_elegans|W01H2.3a.4 (identical to caenorhabditis_elegans|W01H2.3a.1) is ignored but added at the end
+NOTE: ascaris_suum|AgB12_g071_t03 (identical to ascaris_suum|AgB12_g071_t01) is ignored but added at the end
+NOTE: ascaris_suum|AgB12_g071_t04 (identical to ascaris_suum|AgB12_g071_t01) is ignored but added at the end
+NOTE: trichuris_muris|TMUE_1000002930.3 (identical to trichuris_muris|TMUE_1000002930.1) is ignored but added at the end
+NOTE: trichuris_muris|TMUE_1000002930.4 (identical to trichuris_muris|TMUE_1000002930.1) is ignored but added at the end
+NOTE: trichuris_muris|TMUE_1000002930.5 (identical to trichuris_muris|TMUE_1000002930.1) is ignored but added at the end
+NOTE: ascaris_suum|AgR002_g447_t05 (identical to ascaris_suum|AgR002_g447_t01) is ignored but added at the end
+NOTE: ascaris_suum|AgR002_g447_t02 (identical to ascaris_suum|AgR002_g447_t01) is ignored but added at the end
+NOTE: ascaris_suum|AgR002_g447_t04 (identical to ascaris_suum|AgR002_g447_t01) is ignored but added at the end
+NOTE: trichuris_muris|TMUE_0000000950.2 (identical to trichuris_muris|TMUE_3000013259.1) is ignored but added at the end
+NOTE: trichuris_muris|TMUE_0000000950.3 (identical to trichuris_muris|TMUE_3000013259.1) is ignored but added at the end
+NOTE: trichuris_muris|TMUE_0000000950.4 (identical to trichuris_muris|TMUE_3000013259.1) is ignored but added at the end
+NOTE: ascaris_suum|AgB05_g066_t03 (identical to ascaris_suum|AgB05_g066_t01) is ignored but added at the end
+NOTE: ascaris_suum|AgB05_g066_t05 (identical to ascaris_suum|AgB05_g066_t01) is ignored but added at the end
+NOTE: ascaris_suum|AgB05_g184_t05 (identical to ascaris_suum|AgB05_g184_t03) is ignored but added at the end
+NOTE: ascaris_suum|AgR042X_g006_t03 (identical to ascaris_suum|AgR042X_g006_t01) is ignored but added at the end
+NOTE: ascaris_suum|AgR017_g160_t03 (identical to ascaris_suum|AgR017_g160_t01) is ignored but added at the end
+NOTE: ascaris_suum|AgR042X_g004_t04 (identical to ascaris_suum|AgR042X_g004_t01) is ignored but added at the end
+NOTE: ascaris_suum|AgR042X_g004_t05 (identical to ascaris_suum|AgR042X_g004_t01) is ignored but added at the end
+NOTE: trichuris_muris|TMUE_3000014880.1 (identical to trichuris_muris|TMUE_3000012730.1) is ignored but added at the end
+NOTE: trichuris_muris|TMUE_3000012067.3 (identical to trichuris_muris|TMUE_3000012067.1) is ignored but added at the end
+NOTE: trichuris_muris|TMUE_3000012067.4 (identical to trichuris_muris|TMUE_3000012067.1) is ignored but added at the end
+NOTE: ascaris_suum|AgR002_g312_t03 (identical to ascaris_suum|AgR002_g312_t01) is ignored but added at the end
+NOTE: haemonchus_contortus|HCON_00071310-00003 (identical to haemonchus_contortus|HCON_00071310-00001) is ignored but added at the end
+NOTE: ascaris_suum|AgR005_g037_t01 (identical to ancylostoma_caninum|ANCCAN_19015) is ignored but added at the end
+NOTE: brugia_malayi|Bm10155.1 (identical to ancylostoma_caninum|ANCCAN_19015) is ignored but added at the end
+NOTE: ascaris_suum|AgR045_g055_t03 (identical to ascaris_suum|AgR045_g055_t01) is ignored but added at the end
+NOTE: trichuris_muris|TMUE_3000011836.3 (identical to trichuris_muris|TMUE_3000011836.1) is ignored but added at the end
+NOTE: ascaris_suum|AgE05_g005_t12 (identical to ascaris_suum|AgE05_g005_t09) is ignored but added at the end
+NOTE: ascaris_suum|AgB01_g409_t03 (identical to ascaris_suum|AgB01_g409_t01) is ignored but added at the end
+NOTE: ascaris_suum|AgR020_g224_t03 (identical to ascaris_suum|AgR020_g224_t01) is ignored but added at the end
+NOTE: ascaris_suum|AgR020_g224_t05 (identical to ascaris_suum|AgR020_g224_t01) is ignored but added at the end
+NOTE: trichuris_muris|TMUE_0000002118.1 (identical to trichuris_muris|TMUE_2000010047.1) is ignored but added at the end
+Alignment was printed to work/alignments/ARF6_HUMAN.combined_final.aln.uniqueseq.phy
+
+For your convenience alignment with unique sequences printed to work/alignments/ARF6_HUMAN.combined_final.aln.uniqueseq.phy
+
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.604 seconds
+Measuring multi-threading efficiency up to 80 CPU cores
+Increase to 10 rounds for branch lengths
+13 trees examined
+Threads: 1 / Time: 81.692 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -215719
+Threads: 2 / Time: 48.785 sec / Speedup: 1.675 / Efficiency: 84% / LogL: -215719
+Threads: 3 / Time: 42.121 sec / Speedup: 1.939 / Efficiency: 65% / LogL: -215719
+Threads: 4 / Time: 36.325 sec / Speedup: 2.249 / Efficiency: 56% / LogL: -215719
+Threads: 5 / Time: 31.162 sec / Speedup: 2.622 / Efficiency: 52% / LogL: -215719
+Threads: 6 / Time: 37.043 sec / Speedup: 2.205 / Efficiency: 37% / LogL: -215719
+BEST NUMBER OF THREADS: 5
+
+Perform fast likelihood tree search using LG+G model...
+Estimate model parameters (epsilon = 5.000)
+Perform nearest neighbor interchange...
+Estimate model parameters (epsilon = 1.000)
+1. Initial log-likelihood: -73669.693
+Optimal log-likelihood: -73669.554
+Gamma shape alpha: 1.306
+Parameters optimization took 1 rounds (0.647 sec)
+Time for fast ML tree search: 9.349 seconds
+
+NOTE: ModelFinder requires 183 MB RAM!
+ModelFinder will test up to 462 protein models (sample size: 171) ...
+ No. Model         -LnL         df  AIC          AICc         BIC
+  1  LG            76914.661    1231 156291.322   3189475.322  160158.710
+  2  LG+G4         73669.552    1232 149803.105   3187915.105  153673.634
+  3  LG+R2         74496.186    1233 151458.372   3194502.372  155332.043
+  4  LG+R3         73910.333    1235 150290.667   3203210.667  154170.621
+  5  LG+R4         73655.021    1237 149784.043   3212596.043  153670.281
+  6  LG+R5         73593.422    1239 149664.845   3222384.845  153557.366
+  7  LG+R6         73528.641    1241 149539.282   3232183.282  153438.087
+  8  LG+R7         73502.160    1243 149490.321   3242074.321  153395.409
+  9  LG+R8         73490.645    1245 149471.290   3252011.290  153382.661
+ 10  LG+R9         73485.357    1247 149464.715   3261976.715  153382.369
+ 11  LG+R10        73485.159    1249 149468.319   3271968.319  153392.256
+ 20  LG+F+R8       73523.021    1264 149574.042   3347494.042  153545.104
+ 21  LG+F+R9       73519.021    1266 149570.042   3357614.042  153547.388
+ 31  WAG+R8        74229.255    1245 150948.510   3253488.510  154859.881
+ 32  WAG+R9        74217.737    1247 150929.474   3263441.474  154847.129
+ 33  WAG+R10       74217.459    1249 150932.919   3273432.919  154856.857
+ 42  WAG+F+R8      74107.017    1264 150742.033   3348662.033  154713.096
+ 43  WAG+F+R9      74099.111    1266 150730.223   3358774.223  154707.569
+ 44  WAG+F+R10     74099.102    1268 150734.205   3368918.205  154717.834
+ 53  JTT+R8        74387.054    1245 151264.108   3253804.108  155175.480
+ 54  JTT+R9        74379.593    1247 151253.185   3263765.185  155170.840
+ 55  JTT+R10       74379.494    1249 151256.988   3273756.988  155180.926
+ 64  JTT+F+R8      74272.687    1264 151073.375   3348993.375  155044.437
+ 65  JTT+F+R9      74266.021    1266 151064.042   3359108.042  155041.388
+ 66  JTT+F+R10     74265.953    1268 151067.906   3369251.906  155051.535
+ 75  JTTDCMut+R8   74385.419    1245 151260.838   3253800.838  155172.209
+ 76  JTTDCMut+R9   74378.152    1247 151250.303   3263762.303  155167.958
+ 77  JTTDCMut+R10  74378.056    1249 151254.112   3273754.112  155178.050
+ 86  JTTDCMut+F+R8 74271.336    1264 151070.672   3348990.672  155041.735
+ 87  JTTDCMut+F+R9 74264.894    1266 151061.789   3359105.789  155039.135
+ 88  JTTDCMut+F+R10 74264.827    1268 151065.653   3369249.653  155049.282
+ 97  DCMut+R8      75220.135    1245 152930.271   3255470.271  156841.642
+ 98  DCMut+R9      75212.351    1247 152918.702   3265430.702  156836.357
+ 99  DCMut+R10     75210.190    1249 152918.379   3275418.379  156842.317
+108  DCMut+F+R8    74881.849    1264 152291.699   3350211.699  156262.762
+109  DCMut+F+R9    74875.798    1266 152283.596   3360327.596  156260.942
+110  DCMut+F+R10   74875.759    1268 152287.517   3370471.517  156271.147
+119  VT+R8         74190.549    1245 150871.098   3253411.098  154782.469
+120  VT+R9         74181.833    1247 150857.666   3263369.666  154775.320
+121  VT+R10        74179.529    1249 150857.059   3273357.059  154780.996
+130  VT+F+R8       74120.221    1264 150768.442   3348688.442  154739.505
+131  VT+F+R9       74113.706    1266 150759.412   3358803.412  154736.758
+132  VT+F+R10      74110.588    1268 150757.176   3368941.176  154740.805
+141  PMB+R8        74651.917    1245 151793.835   3254333.835  155705.206
+142  PMB+R9        74649.205    1247 151792.409   3264304.409  155710.064
+152  PMB+F+R8      74753.903    1264 152035.806   3349955.806  156006.869
+153  PMB+F+R9      74750.881    1266 152033.762   3360077.762  156011.108
+163  Blosum62+R8   74536.182    1245 151562.364   3254102.364  155473.735
+164  Blosum62+R9   74532.768    1247 151559.536   3264071.536  155477.190
+174  Blosum62+F+R8 74632.013    1264 151792.026   3349712.026  155763.089
+175  Blosum62+F+R9 74626.860    1266 151785.720   3359829.720  155763.067
+176  Blosum62+F+R10 74624.336    1268 151784.673   3369968.673  155768.302
+185  Dayhoff+R8    75217.171    1245 152924.341   3255464.341  156835.713
+186  Dayhoff+R9    75209.497    1247 152912.994   3265424.994  156830.649
+187  Dayhoff+R10   75207.164    1249 152912.327   3275412.327  156836.265
+196  Dayhoff+F+R8  74881.282    1264 152290.563   3350210.563  156261.626
+197  Dayhoff+F+R9  74875.258    1266 152282.515   3360326.515  156259.861
+198  Dayhoff+F+R10 74875.214    1268 152286.428   3370470.428  156270.057
+207  mtREV+R8      77810.956    1245 158111.913   3260651.913  162023.284
+208  mtREV+R9      77809.242    1247 158112.483   3270624.483  162030.138
+218  mtREV+F+R8    75408.777    1264 153345.555   3351265.555  157316.618
+219  mtREV+F+R9    75408.290    1266 153348.580   3361392.580  157325.926
+229  mtART+R8      78155.064    1245 158800.129   3261340.129  162711.500
+230  mtART+R9      78154.493    1247 158802.986   3271314.986  162720.640
+240  mtART+F+R8    75886.030    1264 154300.059   3352220.059  158271.122
+241  mtART+F+R9    75879.614    1266 154291.228   3362335.228  158268.574
+242  mtART+F+R10   75877.460    1268 154290.919   3372474.919  158274.548
+251  mtZOA+R8      76278.959    1245 155047.918   3257587.918  158959.289
+252  mtZOA+R9      76276.864    1247 155047.728   3267559.728  158965.383
+262  mtZOA+F+R8    74890.190    1264 152308.380   3350228.380  156279.442
+263  mtZOA+F+R9    74876.737    1266 152285.473   3360329.473  156262.819
+264  mtZOA+F+R10   74873.924    1268 152283.847   3370467.847  156267.477
+273  mtMet+R8      77352.518    1245 157195.036   3259735.036  161106.407
+274  mtMet+R9      77349.055    1247 157192.110   3269704.110  161109.764
+284  mtMet+F+R8    75282.265    1264 153092.531   3351012.531  157063.593
+285  mtMet+F+R9    75281.392    1266 153094.783   3361138.783  157072.129
+295  mtVer+R8      78734.532    1245 159959.064   3262499.064  163870.435
+296  mtVer+R9      78734.552    1247 159963.105   3272475.105  163880.759
+306  mtVer+F+R8    76817.866    1264 156163.732   3354083.732  160134.795
+307  mtVer+F+R9    76812.988    1266 156157.977   3364201.977  160135.323
+317  mtInv+R8      77393.463    1245 157276.926   3259816.926  161188.297
+318  mtInv+R9      77371.849    1247 157237.699   3269749.699  161155.353
+319  mtInv+R10     77369.810    1249 157237.620   3279737.620  161161.557
+328  mtInv+F+R8    74606.924    1264 151741.849   3349661.849  155712.912
+329  mtInv+F+R9    74603.669    1266 151739.338   3359783.338  155716.684
+339  mtMAM+R8      79847.521    1245 162185.042   3264725.042  166096.413
+340  mtMAM+R9      79842.423    1247 162178.845   3274690.845  166096.500
+350  mtMAM+F+R8    77498.417    1264 157524.834   3355444.834  161495.897
+351  mtMAM+F+R9    77476.250    1266 157484.500   3365528.500  161461.846
+352  mtMAM+F+R10   77473.698    1268 157483.396   3375667.396  161467.026
+361  HIVb+R8       76625.191    1245 155740.382   3258280.382  159651.754
+362  HIVb+R9       76617.003    1247 155728.006   3268240.006  159645.660
+363  HIVb+R10      76614.522    1249 155727.044   3278227.044  159650.982
+372  HIVb+F+R8     76529.134    1264 155586.268   3353506.268  159557.331
+373  HIVb+F+R9     76520.627    1266 155573.254   3363617.254  159550.600
+374  HIVb+F+R10    76517.442    1268 155570.885   3373754.885  159554.514
+383  HIVw+R8       80398.479    1245 163286.959   3265826.959  167198.330
+384  HIVw+R9       80390.884    1247 163275.768   3275787.768  167193.422
+385  HIVw+R10      80388.513    1249 163275.026   3285775.026  167198.964
+394  HIVw+F+R8     79153.378    1264 160834.756   3358754.756  164805.819
+395  HIVw+F+R9     79144.240    1266 160820.481   3368864.481  164797.827
+396  HIVw+F+R10    79141.826    1268 160819.653   3379003.653  164803.282
+405  FLU+R8        76333.931    1245 155157.862   3257697.862  159069.233
+406  FLU+R9        76331.455    1247 155156.910   3267668.910  159074.564
+416  FLU+F+R8      76319.181    1264 155166.362   3353086.362  159137.425
+417  FLU+F+R9      76318.805    1266 155169.611   3363213.611  159146.957
+427  rtREV+R8      74196.293    1245 150882.586   3253422.586  154793.957
+428  rtREV+R9      74190.932    1247 150875.865   3263387.865  154793.519
+429  rtREV+R10     74186.556    1249 150871.112   3273371.112  154795.050
+438  rtREV+F+R8    73805.931    1264 150139.863   3348059.863  154110.925
+439  rtREV+F+R9    73801.934    1266 150135.868   3358179.868  154113.214
+449  cpREV+R8      74701.486    1245 151892.972   3254432.972  155804.344
+450  cpREV+R9      74695.837    1247 151885.675   3264397.675  155803.329
+451  cpREV+R10     74694.158    1249 151886.316   3274386.316  155810.254
+460  cpREV+F+R8    74874.872    1264 152277.743   3350197.743  156248.806
+461  cpREV+F+R9    74869.295    1266 152270.589   3360314.589  156247.935
+462  cpREV+F+R10   74867.502    1268 152271.003   3370455.003  156254.633
+Akaike Information Criterion:           LG+R9
+Corrected Akaike Information Criterion: LG+G4
+Bayesian Information Criterion:         LG+R9
+Best-fit model: LG+R9 chosen according to BIC
+
+All model information printed to work/alignments/ARF6_HUMAN.combined_final.aln.model.gz
+CPU time for ModelFinder: 18774.758 seconds (5h:12m:54s)
+Wall-clock time for ModelFinder: 4118.426 seconds (1h:8m:38s)
+Generating 1000 samples for ultrafast bootstrap (seed: 184382)...
+
+NOTE: 165 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -73485.357
+Optimal log-likelihood: -73485.352
+Site proportion and rates:  (0.051,0.067) (0.059,0.179) (0.057,0.303) (0.160,0.458) (0.212,0.652) (0.141,0.966) (0.093,1.283) (0.135,1.832) (0.092,2.778)
+Parameters optimization took 1 rounds (6.479 sec)
+Computing ML distances based on estimated model parameters... 132.168 sec
+WARNING: Some pairwise ML distances are too long (saturated)
+Computing BIONJ tree...
+0.388 seconds
+Log-likelihood of BIONJ tree: -75177.199
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 52.937 second
+Computing log-likelihood of 98 initial trees ... 40.248 seconds
+Current best score: -73485.352
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -73477.022
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 2: -73448.666
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 6: -73441.931
+Iteration 10 / LogL: -73507.792 / Time: 0h:5m:3s
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 16: -73437.132
+Iteration 20 / LogL: -73534.409 / Time: 0h:7m:39s
+Finish initializing candidate tree set (20)
+Current best tree score: -73437.132 / CPU time: 420.717
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 21: -73427.009
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 27: -73412.964
+Iteration 30 / LogL: -73459.531 / Time: 0h:10m:13s (0h:34m:12s left)
+Iteration 40 / LogL: -73424.662 / Time: 0h:12m:18s (0h:27m:26s left)
+Iteration 50 / LogL: -73424.012 / Time: 0h:14m:24s (0h:22m:37s left)
+Log-likelihood cutoff on original alignment: -73511.436
+Iteration 60 / LogL: -73450.053 / Time: 0h:16m:26s (0h:18m:40s left)
+Iteration 70 / LogL: -73457.761 / Time: 0h:18m:34s (0h:15m:20s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 78: -73410.232
+Iteration 80 / LogL: -73436.652 / Time: 0h:20m:40s (0h:25m:39s left)
+Iteration 90 / LogL: -73750.943 / Time: 0h:22m:43s (0h:22m:28s left)
+Iteration 100 / LogL: -73435.626 / Time: 0h:24m:50s (0h:19m:34s left)
+Log-likelihood cutoff on original alignment: -73509.920
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.989
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 110 / LogL: -73452.260 / Time: 0h:27m:0s (0h:22m:18s left)
+Iteration 120 / LogL: -73417.883 / Time: 0h:29m:4s (0h:19m:32s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 121: -73401.117
+Iteration 130 / LogL: -73415.965 / Time: 0h:31m:17s (0h:22m:4s left)
+Iteration 140 / LogL: -73450.233 / Time: 0h:33m:23s (0h:19m:27s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 145: -73396.009
+Iteration 150 / LogL: -73398.307 / Time: 0h:35m:43s (0h:22m:46s left)
+Log-likelihood cutoff on original alignment: -73509.920
+Iteration 160 / LogL: -73497.162 / Time: 0h:37m:52s (0h:20m:14s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 162: -73392.981
+Iteration 170 / LogL: -73414.552 / Time: 0h:40m:0s (0h:21m:46s left)
+Iteration 180 / LogL: -73538.195 / Time: 0h:41m:51s (0h:19m:10s left)
+Iteration 190 / LogL: -73403.487 / Time: 0h:43m:51s (0h:16m:42s left)
+Iteration 200 / LogL: -73480.830 / Time: 0h:45m:48s (0h:14m:16s left)
+Log-likelihood cutoff on original alignment: -73509.920
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.987
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 210 / LogL: -73421.390 / Time: 0h:47m:52s (0h:20m:36s left)
+Iteration 220 / LogL: -73418.764 / Time: 0h:49m:44s (0h:18m:10s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 221: -73391.177
+Iteration 230 / LogL: -73414.014 / Time: 0h:51m:52s (0h:20m:36s left)
+Iteration 240 / LogL: -73436.598 / Time: 0h:54m:6s (0h:18m:20s left)
+Iteration 250 / LogL: -73430.013 / Time: 0h:56m:12s (0h:16m:1s left)
+Log-likelihood cutoff on original alignment: -73509.920
+Iteration 260 / LogL: -73411.736 / Time: 0h:58m:21s (0h:13m:44s left)
+Iteration 270 / LogL: -73397.699 / Time: 1h:0m:24s (0h:11m:27s left)
+Iteration 280 / LogL: -73452.154 / Time: 1h:2m:48s (0h:9m:13s left)
+Iteration 290 / LogL: -73430.158 / Time: 1h:5m:7s (0h:6m:59s left)
+Iteration 300 / LogL: -73394.226 / Time: 1h:7m:25s (0h:4m:44s left)
+Log-likelihood cutoff on original alignment: -73509.920
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.992
+Iteration 310 / LogL: -73404.053 / Time: 1h:9m:42s (0h:20m:18s left)
+Iteration 320 / LogL: -73439.354 / Time: 1h:12m:7s (0h:18m:5s left)
+TREE SEARCH COMPLETED AFTER 322 ITERATIONS / Time: 1h:12m:35s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -73391.177
+Optimal log-likelihood: -73391.168
+Site proportion and rates:  (0.052,0.068) (0.061,0.179) (0.053,0.304) (0.154,0.453) (0.205,0.637) (0.150,0.948) (0.116,1.318) (0.118,1.891) (0.092,2.739)
+Parameters optimization took 1 rounds (3.242 sec)
+BEST SCORE FOUND : -73391.168
+
+Testing tree branches by SH-like aLRT with 1000 replicates...
+Alternative NNI shows better log-likelihood -73391.167 > -73391.168
+Alternative NNI shows better log-likelihood -73391.068 > -73391.168
+Alternative NNI shows better log-likelihood -73390.882 > -73391.168
+2.138 sec.
+Creating bootstrap support values...
+Split supports printed to NEXUS file work/alignments/ARF6_HUMAN.combined_final.aln.splits.nex
+Total tree length: 157.122
+
+Total number of iterations: 322
+CPU time used for tree search: 20944.063 sec (5h:49m:4s)
+Wall-clock time used for tree search: 4316.354 sec (1h:11m:56s)
+Total CPU time used: 21154.510 sec (5h:52m:34s)
+Total wall-clock time used: 4363.565 sec (1h:12m:43s)
+
+Computing bootstrap consensus tree...
+Reading input file work/alignments/ARF6_HUMAN.combined_final.aln.splits.nex...
+617 taxa and 2738 splits.
+Consensus tree written to work/alignments/ARF6_HUMAN.combined_final.aln.contree
+Reading input trees file work/alignments/ARF6_HUMAN.combined_final.aln.contree
+Log-likelihood of consensus tree: -73383.324
+
+Analysis results written to: 
+  IQ-TREE report:                work/alignments/ARF6_HUMAN.combined_final.aln.iqtree
+  Maximum-likelihood tree:       work/alignments/ARF6_HUMAN.combined_final.aln.treefile
+  Likelihood distances:          work/alignments/ARF6_HUMAN.combined_final.aln.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          work/alignments/ARF6_HUMAN.combined_final.aln.splits.nex
+  Consensus tree:                work/alignments/ARF6_HUMAN.combined_final.aln.contree
+  Screen log file:               work/alignments/ARF6_HUMAN.combined_final.aln.log
+
+Date and Time: Fri Feb 18 22:09:37 2022
