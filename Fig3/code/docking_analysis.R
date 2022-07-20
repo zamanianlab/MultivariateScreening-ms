@@ -1,0 +1,814 @@
+# data wrangling
+library(tidyverse)
+
+#stats
+library(tidymodels)
+library(themis)
+library(finetune)
+library(ZamanianLabVSTools)
+
+# misc
+library(conflicted)
+library(here)
+library(janitor)
+
+# plotting
+library(ggridges)
+library(ggbeeswarm)
+library(ggtext)
+library(cowplot)
+library(ZamanianLabThemes)
+library(magick)
+
+conflict_prefer("filter", "dplyr")
+conflict_prefer("select", "dplyr")
+
+# interfacing with python
+library(reticulate)
+use_condaenv('r_base')
+source_python(here('Fig3', 'code', "pickle_reader.py"))
+
+
+# human data --------------------------------------------------------------
+
+
+id_map <- read_tsv(here('Fig3', 'metadata', 'id_map.tab')) %>% 
+  clean_names() %>% 
+  select(-protein_names) %>% 
+  mutate(gene_name = str_remove(gene_names, '\\s.*$'))
+
+clusters <- read_csv(here('Fig3', 'metadata', 'human_clusters.csv')) %>% 
+  clean_names() %>% 
+  rename(target = uni_prot_kb)
+
+truth <- read_csv(here('Fig3', 'metadata', 'compound_target_info.csv')) %>% 
+  filter(!is.na(cat_no)) %>% 
+  rename(molid = cat_no) %>% 
+  left_join(id_map) %>% 
+  left_join(clusters) %>% 
+  rename(tocris_target_class = target_class,
+         tocris_primary_target = primary_target,
+         nw_target_class = cluster,
+         target_name = entry_name) %>% 
+  mutate(molid = as.numeric(molid))
+
+human_results <- read_pickle_file(here('Fig3', 'data', "gnina_scores_tocris_humanAF2_sitecons_eps1.5_minsamp0.5SQRTN_null_cid114.pkl")) %>% 
+  rename(nw_target_class = target_class,
+         nw_target_class_id = cid) %>%
+  # center and scale
+  group_by(molid) %>%
+  mutate(scaled_vs = scale(CNN_VS)) %>% 
+  # rank the targets for each molecule 
+  arrange(-scaled_vs) %>% 
+  mutate(target_rank = row_number()) %>%
+  ungroup() %>% 
+  # rank the molecules for each target
+  group_by(target) %>% 
+  arrange(-scaled_vs) %>%
+  mutate(mol_rank = row_number()) %>% 
+  ungroup() %>% 
+  # get the median and norm rank for each molecule
+  group_by(molid) %>% 
+  mutate(median_mol_rank = median(mol_rank),
+         norm_mol_rank = mol_rank / median_mol_rank) %>% 
+  ungroup() %>% 
+  # get the median and norm rank for each target
+  group_by(target) %>% 
+  mutate(median_target_rank = median(target_rank),
+         norm_target_rank = target_rank / median_target_rank) %>% 
+  ungroup() %>% 
+  # calculate a merged rank
+  mutate(merged_rank = norm_target_rank * norm_mol_rank) %>% 
+  select(-contains('median'))
+
+
+# truth data --------------------------------------------------------------
+
+truth_nest <- truth %>% 
+  select(molid, compound_name, target, target_name, tocris_primary_target, tocris_target_class, nw_target_class) %>% 
+  group_by(molid, compound_name) %>% 
+  group_nest(.key = 'truth_data') %>% 
+  mutate(molid = as.numeric(molid))
+
+docking_analysis <- human_results %>% 
+  left_join(truth_nest) %>% 
+  # keep only data that we have truth data for
+  filter(!is.na(truth_data)
+  ) %>% 
+  mutate(truth = map2_chr(truth_data, target, ~.y %in% .x$target))
+
+model_data <- docking_analysis %>%
+  select(compound_name, molid, target, isoform, nw_target_class, nw_target_class_id, truth, where(is.numeric), -site_cluster, -contains('centroid')) %>%
+  rename(cnn_score = CNNscore,
+         cnn_affinity = CNNaffinity,
+         cnn_vs = CNN_VS) %>% 
+  mutate(truth = factor(truth, levels = c('TRUE', 'FALSE'))) %>%
+  replace_na(list(site_consensus = max(.$site_consensus, na.rm = TRUE))) %>% 
+  ungroup()
+
+set.seed(123)
+data_split <- initial_split(model_data,
+                            strata = truth)
+
+train_data <- training(data_split)
+test_data <- testing(data_split)
+
+set.seed(234)
+folds <- vfold_cv(train_data,
+                  v = 10,
+                  strata = truth)
+
+
+# model tuning ------------------------------------------------------------
+
+base_rec <-
+  recipe(truth ~ ., data = model_data) %>% 
+  remove_role(all_predictors(), old_role = 'predictor') %>% 
+  update_role(contains('cnn'), new_role = 'predictor') %>% 
+  update_role(has_role(NA), new_role = 'ID') %>% 
+  update_role(contains('rank'), minimizedAffinity, scaled_vs, site_consensus, new_role = 'predictor') %>%
+  themis::step_downsample(truth, under_ratio = 2) 
+
+prep <- prep(base_rec)
+juice <- juice(prep)
+
+### XGBoost
+
+boost_tree_xgboost_spec <-
+  boost_tree(tree_depth = tune(), mtry = tune(), trees = tune(), learn_rate = tune(),
+             min_n = tune(), loss_reduction = tune(), sample_size = tune(),
+             stop_iter = tune()) %>%
+  set_engine('xgboost') %>%
+  set_mode('classification')
+
+boost_grid <- grid_latin_hypercube(
+  tree_depth(),
+  trees(),
+  min_n(),
+  loss_reduction(),
+  sample_size = sample_prop(),
+  finalize(mtry(), train_data),
+  learn_rate(),
+  stop_iter(),
+  size = 30
+)
+
+boost_control <- control_grid(
+  verbose = TRUE,
+  allow_par = FALSE,
+  save_pred = TRUE,
+  event_level = 'first',
+  pkgs = c('themis', 'ZamanianLabVSTools'),
+  save_workflow = TRUE
+)
+
+# boost_results <-
+#   tune_grid(
+#     boost_tree_xgboost_spec,
+#     preprocessor = base_rec,
+#     resamples = folds,
+#     grid = boost_grid,
+#     metrics = metric_set(ef, roc_auc, bedroc, rie),
+#     control = boost_control
+#   )
+
+### Random forest
+
+rand_forest_ranger_spec <-
+  rand_forest(mtry = tune(), min_n = tune(), trees = tune()) %>%
+  set_engine('ranger') %>%
+  set_mode('classification')
+
+rf_grid <- grid_latin_hypercube(finalize(mtry(), train_data),
+                                min_n(),
+                                trees(range = c(1, 100)),
+                                size = 30)
+
+
+rf_control <- control_grid(
+  verbose = TRUE,
+  allow_par = FALSE,
+  save_pred = TRUE,
+  event_level = 'first',
+  pkgs = c('themis', 'ZamanianLabVSTools'),
+  save_workflow = TRUE
+)
+
+# rf_results <-
+#   tune_grid(
+#     rand_forest_ranger_spec,
+#     preprocessor = base_rec,
+#     resamples = folds,
+#     grid = rf_grid,
+#     metrics = metric_set(ef, roc_auc, bedroc, rie),
+#     control = rf_control
+#   )
+
+# model evaluation --------------------------------------------------------
+
+
+boost_results <- read_rds(here('Fig3', 'data', 'boost_tune.rds'))
+rf_results <- read_rds(here('Fig3', 'data', 'rf_tune.rds'))
+
+results <- as_workflow_set(rf = rf_results, boost = boost_results)
+
+best_result <- 
+  results %>% 
+  extract_workflow_set_result('rf') %>% 
+  select_best(metric = 'bedroc')
+
+last_result <- 
+  results %>% 
+  extract_workflow('rf') %>% 
+  finalize_workflow(best_result) %>% 
+  last_fit(data_split,
+           metrics = metric_set(ef, bedroc, rie, roc_auc))
+
+ef(collect_predictions(last_result), truth, estimate = .pred_TRUE, cutoff = 0.01)
+bedroc(collect_predictions(last_result), truth, estimate = .pred_TRUE)
+rie(collect_predictions(last_result), truth, estimate = .pred_TRUE, alpha = 100)
+
+last_wflw <- extract_workflow(last_result)
+
+write_rds(last_wflw, here('Fig3', 'data', 'final_rf_wfow.rds'))
+
+
+# brugia analysis ---------------------------------------------------------
+
+rm(boost_results, data_split, docking_analysis, juice, model_data, prep, results, rf_results, test_data, train_data)
+
+library(biomaRt)
+
+brugia_results <- read_pickle_file(here('Fig3', 'data', "gnina_scores_tocris_brugiaAF2_sitecons_eps1.5_minsamp0.5SQRTN_null_cid114.pkl")) %>% 
+  rename(nw_target_class = target_class,
+         nw_target_class_id = cid) %>%
+  # center and scale
+  group_by(molid) %>%
+  mutate(scaled_vs = scale(CNN_VS)) %>% 
+  # rank the targets for each molecule 
+  arrange(-scaled_vs) %>% 
+  mutate(target_rank = row_number()) %>%
+  ungroup() %>% 
+  # rank the molecules for each target
+  group_by(target) %>% 
+  arrange(-scaled_vs) %>%
+  mutate(mol_rank = row_number()) %>% 
+  ungroup() %>% 
+  # get the median and norm rank for each molecule
+  group_by(molid) %>% 
+  mutate(median_mol_rank = median(mol_rank),
+         norm_mol_rank = mol_rank / median_mol_rank) %>% 
+  ungroup() %>% 
+  # get the median and norm rank for each target
+  group_by(target) %>% 
+  mutate(median_target_rank = median(target_rank),
+         norm_target_rank = target_rank / median_target_rank) %>% 
+  ungroup() %>% 
+  # calculate a merged rank
+  mutate(merged_rank = norm_target_rank * norm_mol_rank) %>% 
+  dplyr::select(-contains('median'))
+
+mart <- useMart("parasite_mart", dataset = "wbps_gene", host = "https://parasite.wormbase.org", port = 443)
+
+# biomart parameters
+filters <- c("uniprot_sptrembl", 'species_id_1010')
+value <- list(brugia_results$target, 'brmalaprjna10729')
+attributes <- c("wbps_peptide_id", 
+                'uniprot_sptrembl',
+                "hsapiens_homolog_ensembl_peptide", 
+                "hsapiens_homolog_perc_id")
+
+human_liftover <- read_csv(here('Fig3', 'metadata', 'human_liftover.csv'),
+                           col_names = c('human_peptide', 'uniprot', 'uniprot_entry')) %>% 
+  slice(2:n()) %>% 
+  dplyr::select(-uniprot_entry) %>%
+  separate_rows(human_peptide, sep = ',')
+
+orthologs <- getBM(mart = mart, 
+                   filters = filters,
+                   value = value,
+                   attributes = attributes) %>%
+  clean_names() %>% 
+  rename(brugia_wbps = 1, brugia_peptide = 2, human_peptide = 3, perc_id = 4) %>% 
+  left_join(human_liftover) %>% 
+  group_by(brugia_wbps, brugia_peptide) %>% 
+  arrange(-perc_id) %>% 
+  slice_head(n = 1)
+
+detach("package:biomaRt")
+
+brugia_augment <- augment(last_wflw, brugia_results %>% 
+                            left_join(select(truth, compound_name, molid) %>% distinct()) %>%
+                            rename(cnn_score = CNNscore,
+                                   cnn_affinity = CNNaffinity,
+                                   cnn_vs = CNN_VS) %>% 
+                            replace_na(list(site_consensus = max(.$site_consensus, na.rm = TRUE))))
+
+smiles <- read_csv(here('Fig3', 'metadata', 'SupplementaryTable2.csv'))
+primary_hits <- read_csv(here('Fig2', 'tables', 'Table1.csv'))
+
+brugia_augment %>% 
+  select(-compound_name) %>% 
+  left_join(select(smiles, molid = catalog_id, compound_name = product_name)) %>% 
+  mutate(primary_hit = case_when(
+    compound_name %in% primary_hits$treatment ~ TRUE,
+    TRUE ~ FALSE
+  )) %>% 
+  group_by(primary_hit) %>% 
+  summarise(mean_prob = mean(.pred_TRUE))
+
+topone <- brugia_augment %>% 
+  arrange(-.pred_TRUE) %>% 
+  select(-compound_name) %>% 
+  left_join(select(smiles, molid = catalog_id, compound_name = product_name)) %>%
+  # distinct(compound_name) %>%
+  group_by(compound_name) %>% 
+  mutate(order = row_number(),
+         primary_hit = case_when(
+           compound_name %in% primary_hits$treatment ~ TRUE,
+           TRUE ~ FALSE
+         )) %>% 
+  filter(order < 2)
+
+topone %>%
+  filter(primary_hit == TRUE) %>% 
+  select(compound_name, molid, target, cnn_affinity, cnn_score, .pred_TRUE) %>% 
+  write_csv(here('Fig3', 'supplementary', 'SupplementaryTable3.csv'))
+
+thresh <- tibble(library_frac = seq(.01, 1, .01),
+                 data = list(topone %>% ungroup())) %>% 
+  mutate(perc_of_primary = map2(data, library_frac, ~slice_head(.x, prop = .y) %>% 
+                                 group_by(primary_hit) %>%
+                                 tally())) %>% 
+  unnest(perc_of_primary) %>% 
+  select(-data) %>% 
+  mutate(perc_of_primary = case_when(
+    primary_hit == TRUE ~ n / 35,
+    primary_hit == FALSE ~ n / 1245
+  ))
+
+(fig3a <- thresh %>% 
+    ggplot(aes(library_frac, perc_of_primary)) +
+    geom_line(aes(color = primary_hit, linetype = primary_hit)) +
+    annotate('point', x = 0.5, y = 0.6, color = 'red', size = 2) +
+    labs(x = 'Fraction of compound library', y = 'Percent recovery', 
+         color = 'Hit against<br>*B. malayi*<br>microfilariae', linetype = 'Hit against<br>*B. malayi*<br>microfilariae',
+         # title = 'What if we had used a virtual screen to filter<br>compounds prior to a primary screen?'
+         ) +
+    scale_y_continuous(labels = scales::percent, breaks = seq(0, 1, 0.2)) +
+    scale_color_manual(values = c('grey', 'black')) +
+    scale_linetype_manual(values = c('dashed', 'solid')) +
+    coord_equal() +
+    theme_minimal() +
+    theme(
+      axis.ticks = element_line(size = 0.25, color = 'black'),
+      axis.text.x = element_text(color = 'black'),
+      axis.text.y = element_text(color = 'black'),
+      axis.line = element_line(color = 'black'),
+      strip.text = element_markdown(color = 'black'),
+      legend.title = element_markdown(size = 9),
+      legend.text = element_markdown(size = 8),
+      legend.position = 'right'
+    ) +
+    NULL)
+
+save_plot(here('Fig3', 'subplots', 'Fig3a.pdf'),
+          fig3a)
+
+nested_brugia <- brugia_augment %>% 
+  group_by(target) %>% 
+  group_nest()
+
+human_augment <- augment(last_wflw, human_results %>% 
+                           left_join(select(truth, compound_name, molid) %>% distinct()) %>%
+                           rename(cnn_score = CNNscore,
+                                  cnn_affinity = CNNaffinity,
+                                  cnn_vs = CNN_VS) %>% 
+                           replace_na(list(site_consensus = max(.$site_consensus, na.rm = TRUE))))
+
+nested_human <- human_augment %>% 
+  group_by(target) %>% 
+  group_nest()
+
+giant_df <- orthologs %>% 
+  left_join(nested_brugia, by = c('brugia_peptide' = 'target')) %>% 
+  rename(brugia_data = data, human_uniprot = uniprot) %>% 
+  left_join(nested_human, by = c('human_uniprot' = 'target')) %>% 
+  drop_na(data) 
+
+working_df <- giant_df %>% 
+  rename(human_data = data) %>% 
+  mutate(brugia_data = map(brugia_data, ~.x %>% 
+                             rename(
+                               true_brugia = .pred_TRUE,
+                               cnn_affinity_brugia = cnn_affinity,
+                               cnn_score_brugia = cnn_score,
+                               site_consensus_brugia = site_consensus,
+                               site_cluster_brugia = site_cluster) %>% 
+                             filter(site_cluster_brugia != -1) %>%
+                             select(true_brugia, cnn_affinity_brugia, cnn_score_brugia, site_consensus_brugia, site_cluster_brugia, molid))) %>% 
+  mutate(human_data = map(human_data, ~.x %>% 
+                            rename(
+                              true_human = .pred_TRUE,
+                              cnn_affinity_human = cnn_affinity,
+                              cnn_score_human = cnn_score,
+                              site_consensus_human = site_consensus,
+                              site_cluster_human = site_cluster) %>% 
+                            filter(site_cluster_human != -1) %>%
+                            select(true_human, cnn_affinity_human, cnn_score_human, site_consensus_human, site_cluster_human, molid))) %>% 
+  mutate(merged_data = map2(brugia_data, human_data, left_join)) %>% 
+  unnest(cols = c(merged_data))
+
+delta_df <- working_df %>% 
+  drop_na() %>% 
+  mutate(d = (cnn_affinity_human - cnn_affinity_brugia) / sqrt(2))
+
+targets <- tibble(
+  brugia_peptide = c('A0A0I9N586', 'A0A0H5S5H1', 'A0A0K0JRT7', 'A0A0K0JE97', 
+                     'A0A0J9XW62', 'A0A0K0IM79', 'A0A0J9Y7A7', 'A0A0J9XY57',
+                     'A0A0H5S867', 'A0A0K0IXR1', 'A0A0H5S7Y7', 'A0A0J9XSQ0',
+                     'A0A0H5S5E5', 'A0A0J9XRC5', 'A0A0J9XMF3', 'A0A1P6CD63',
+                     'A0A0H5S6M8', 'A0A0K0J3W9', 'A0A0K0INR8', 'A0A0K0JWF5',
+                     'A0A0K0JGG5', 'A0A0H5S9P3', 'A0A1P6C408', 'A0A0H5RZC7',
+                     'A0A0H5RZT4', 'A0A0H5S053', 'A0A0H5S0E7', 'A0A0H5S0H8',
+                     'A0A0H5S0V5', 'A0A0H5S0W7', 'A0A0H5S155', 'A0A1I9GAV3', 
+                     'A0A0J9XXG7', 'A0A0K0JLY7', 'A0A0H5S1X5', 'A0A0J9YC06',
+                     'A0A0H5S556'),
+  name = c('RPGFR/Bma-EPAC-1', 'KDM5A/Bma-RBR-2', 'ARF6/Bma-ARF-6', 'TRPM8/Bma-GTL-2',
+           'PIM1/Bma-PRK-3', 'PIM2/Bma-CDK-1.3', 'CCNA2/Bma-CYB-1', 'CDK1/Bma-CDK-1.2',
+           'TUBB3/Bma-TBA-5', 'GNRHR/Bm13407', 'HSP90A/Bma-DAF-21', 'PRLHR/Bma-NPR-4',
+           'PDIA2/Bma-ERP-44.2', 'MAP3K9/Bma-MLK-1', 'MAPK4/Bma-LIT-1', 'H2AFX/Bm7652',
+           'DHX37/Bma-RHA-2', 'MAPK7/Bma-MPK-2', 'TSSK2/Bm10582', 'SERPINB9/Bm8611',
+           'CAMK1/Bma-CMK-1', 'KIF5B/Bma-UNC-116', 'CDC42/Bma-CDC-42', 'HSD17B11/Bm7726',
+           'ACOX1/Bma-ACOX-1.6', 'HDAC1/Bma-HDA-1', 'MAPK12/Bma-SMA-5', 'ACTL6B/Bma-SWSN-6',
+           'PRKCA/Bma-PKC-3', 'MRAS/Bma-RAS-2', 'ADIPOR2/Bma-PAQR-2', 'PMP2/Bma-LBP-9',
+           'GAPDH/Bm5699', 'SLC6A7/Bma-SNF-1', 'HDAC9/Bma-HDA-2', 'CTNNB1/Bma-BAR-1.2', 
+           'SLC22A2/Bm6718'),
+  rmsd = c(2.80, 4.91, 0.99, 3.61, 
+           0.48, 1.537, 1.541, 0.866,
+           0.988, 1.608, 0.398, 1.118,
+           4.314, 5.353, 0.919, 0.097,
+           1.120, 0.705, 0.757, 1.285,
+           0.511, 2.447, 0.086, 1.136,
+           0.907, 0.374, 1.227, 0.689,
+           0.696, 0.309, 0.380, 0.670,
+           0.183, 1.626, 1.280, 4.725, 
+           1.627))
+
+rs <- delta_df %>% 
+  group_by(brugia_peptide, site_cluster_brugia) %>% 
+  group_nest() %>% 
+  mutate(
+    lm = map(data, ~lm(cnn_affinity_brugia ~ cnn_affinity_human, data = .x)),
+    d_mean = map(data, ~mean(.x$d)),
+    site_compounds_docked = map(data, ~length(.x$molid))) %>%
+  mutate(glance = map(lm, glance)) %>% 
+  mutate(tidy = map(lm, tidy)) %>% 
+  unnest(c(glance, tidy, d_mean, site_compounds_docked), names_repair = 'unique') %>%
+  select(brugia_peptide, site_cluster_brugia, r.squared, d_mean, site_compounds_docked, term, estimate) %>% 
+  mutate(term = case_when(
+    term == '(Intercept)' ~ 'intercept',
+    term == 'cnn_affinity_human' ~ 'slope',
+  )) %>% 
+  pivot_wider(names_from = term, values_from = estimate) %>% 
+  left_join(targets)
+
+# quants <- delta_df %>%
+#   group_by(brugia_peptide) %>%
+#   summarise(target_mean = mean(d)) %>%
+#   ungroup() %>%
+#   summarise(quant = quantile(target_mean))
+# 
+# (d_dist <- delta_df %>%
+#     group_by(brugia_peptide, site_cluster_brugia) %>%
+#     summarise(target_mean = mean(d)) %>% 
+#     ggplot(aes(x = target_mean)) +
+#     geom_histogram(aes(y = ..density..)) +
+#     geom_vline(
+#       data = quants,
+#       aes(xintercept = quant),
+#       color = 'indianred', linetype = 'dashed'
+#     ) +
+#     scale_y_continuous(expand = c(0, 0)) +
+#     labs(x = 'M<sub>d</sub>', y = 'Density') +
+#     theme_minimal() +
+#     theme(
+#       axis.line = element_line(size = 0.25),
+#       axis.ticks = element_line(size = 0.25),
+#       axis.title.x = element_markdown()
+#     ) +
+#     NULL)
+
+plot_data <- delta_df %>% 
+  select(-contains('data')) %>% 
+  left_join(rs) %>% 
+  drop_na(name) %>% 
+  ungroup() %>% 
+  mutate(
+    ord = fct_reorder(brugia_peptide, r.squared, max, .desc = TRUE),
+  ) %>% 
+  # select(ord, brugia_peptide, name, brugia_wbps, human_uniprot, perc_id, contains('true'), contains('CNN'), contains('site'), molid, d_mean, r.squared, rmsd, slope) %>% 
+  # order by d_mean
+  mutate(name = fct_reorder(name, d_mean, .fun = mean)) %>% 
+  ungroup() %>% 
+  group_by(brugia_peptide, site_cluster_brugia) %>% 
+  mutate(n_compounds_site = n()) %>% 
+  arrange(-n_compounds_site) %>% 
+  group_by(brugia_peptide) %>% 
+  mutate(new_cluster = match(site_consensus_brugia, unique(site_consensus_brugia))) %>% 
+  ungroup() %>% 
+  filter(new_cluster < 4,
+         site_compounds_docked > 10)
+
+text_data <- plot_data %>% 
+  select(name, d_mean, r.squared, rmsd, perc_id, new_cluster) %>% 
+  distinct() %>% 
+  mutate(y = case_when(
+    new_cluster == 1 ~ 9.5,
+    new_cluster == 2 ~ 8.5,
+    new_cluster == 3 ~ 7.5,
+  ))
+
+(plot <- plot_data %>%
+    ggplot(aes(x = cnn_affinity_human, y = cnn_affinity_brugia)) +
+    # y = x
+    geom_abline(slope = 1, intercept = 0, color = 'white', linetype = 'longdash') +
+    # fit line
+    geom_abline(
+      aes(slope = slope, intercept = intercept, color = as.factor(new_cluster)
+      )) +
+    geom_point(
+      aes(color = as.factor(new_cluster)),
+      size = 0.2,
+    ) +
+    annotate('rect', xmin = 2.9, xmax = 6.75, ymin = 7, ymax = 10,
+             color = 'grey', fill = 'grey20',  alpha = 0.75) +
+    # percent identity
+    geom_text(
+      data = text_data %>% select(name, perc_id) %>% distinct(),
+      aes(label = str_c(round(perc_id, digits = 0), '%')),
+      x = 9, y = 3.5, color = 'white', size = 3) +
+    # RMSD
+    geom_text(
+      data = text_data %>% select(name, rmsd) %>% distinct(),
+      aes(label = str_c(rmsd, ' Å')),
+      x = 6, y = 3.5, color = 'white', size = 3) +
+    # d
+    geom_text(
+      data = text_data,
+      aes(y = y, 
+          label = round(d_mean, digits = 2), 
+          color = as.factor(new_cluster)),
+      x = 4.5, size = 3, hjust = 1
+    ) +
+    # R2
+    geom_text(
+      data = text_data,
+      aes(y = y,
+          label = round(r.squared, digits = 2), 
+          color = as.factor(new_cluster)),
+      x = 6.5, size = 3, hjust = 1) +
+    scale_x_continuous(limits = c(2.9, 10)) +
+    scale_y_continuous(limits = c(3, 10)) +
+    scale_color_manual(values = c("#17BEBB", "#E9C46A", "#E76F51")) +
+    labs(x = 'CNN affinity (human)', y = 'CNN affinity (parasite)') +
+    facet_wrap(facets = vars(name), ncol = 6) +
+    coord_equal() +
+    theme_minimal() +
+    theme(
+      legend.position = 'bottom',
+      axis.ticks = element_line(size = 0.25),
+      axis.text.x = element_text(angle = 45, hjust = 1),
+      panel.background = element_rect(fill = 'black'),
+      panel.grid = element_line(color = 'black')
+    ) +
+    remove_legend() +
+    NULL)
+
+(fig3b <- corrr::correlate(plot_data %>% 
+                                group_by(brugia_peptide, new_cluster) %>% 
+                                mutate(mean_d_mean = mean(d_mean),
+                                       mean_r = mean(r.squared)) %>% 
+                                distinct(brugia_peptide, rmsd, mean_r, perc_id, mean_d_mean) %>%
+                                ungroup() %>% 
+                                select(-brugia_peptide, -new_cluster)) %>% 
+    corrr::stretch() %>% 
+    mutate(across(c(x, y), ~case_when(
+      . == 'perc_id' ~ " % ID",
+      . == 'mean_r' ~ 'R<sup>2</sup>',
+      . == 'rmsd' ~ 'RMSD',
+      . == 'mean_d_mean' ~ 'M<sub>d</sub>',
+      TRUE ~ .
+    ))) %>% 
+    ggplot(aes(x = x, y = y)) +
+    geom_tile(aes(fill = r)) +
+    geom_text(aes(label = round(r, digits = 2)), size = 3) +
+    scale_fill_distiller(limits = c(-1, 1), palette = 'PuOr', na.value = 'white') +
+    scale_x_discrete(expand = c(0, 0)) +
+    scale_y_discrete(expand = c(0, 0)) +
+    labs(fill = '*r*') +
+    coord_equal() +
+    theme_minimal() +
+    theme(
+      legend.position = 'right',
+      panel.grid = element_blank(),
+      legend.title = element_markdown(size = 9),
+      legend.text = element_markdown(size = 8),
+      axis.title = element_blank(),
+      axis.text.x = element_markdown(),
+      axis.text.y = element_markdown(),
+      ) +
+    NULL)
+
+save_plot(here('Fig3', 'subplots', 'Fig3b.pdf'),
+          fig3b)
+
+text_data <- text_data %>%
+  mutate(name = str_replace(name, '/', '<br>')) 
+
+boxes <- tibble(name = c('RPGFR<br>Bma-EPAC-1', 'ARF6<br>Bma-ARF-6', 'KDM5A<br>Bma-RBR-2', 'TRPM8<br>Bma-GTL-2', 'PIM1<br>Bma-PRK-3'),
+                xmin = 2,
+                xmax = 8.25,
+                ymin = c(6.9, 6.9, 7.9, 6.9, 8.9),
+                ymax = 10.1)
+
+fig3c <- plot_data %>%
+  mutate(name = str_replace(name, '/', '<br>')) %>% 
+  filter(name %in% c('RPGFR<br>Bma-EPAC-1', 'ARF6<br>Bma-ARF-6', 'KDM5A<br>Bma-RBR-2', 'TRPM8<br>Bma-GTL-2', 'PIM1<br>Bma-PRK-3')) %>% 
+  ggplot() +
+  # y = x
+  geom_abline(slope = 1, intercept = 0, color = 'white', linetype = 'longdash') +
+  # fit line
+  geom_abline(
+    aes(slope = slope, intercept = intercept, color = as.factor(new_cluster)
+    )) +
+  geom_point(
+    aes(x = cnn_affinity_human, y = cnn_affinity_brugia, color = as.factor(new_cluster)),
+    size = 0.2,
+  ) +
+  geom_rect(
+    data = boxes,
+    aes(xmin = xmin, xmax = xmax, ymin = ymin, ymax = ymax),
+    color = 'grey', fill = 'grey20', alpha = 0.75
+  ) +
+  # percent identity
+  geom_text(
+    data = text_data %>% filter(name %in% c('RPGFR<br>Bma-EPAC-1', 'ARF6<br>Bma-ARF-6', 'KDM5A<br>Bma-RBR-2', 'TRPM8<br>Bma-GTL-2', 'PIM1<br>Bma-PRK-3')) %>% select(name, perc_id) %>% distinct(),
+    aes(label = str_c(round(perc_id, digits = 0), '%')),
+    x = 9, y = 2.5, color = 'white', size = 3) +
+  # RMSD
+  geom_text(
+    data = text_data %>% filter(name %in% c('RPGFR<br>Bma-EPAC-1', 'ARF6<br>Bma-ARF-6', 'KDM5A<br>Bma-RBR-2', 'TRPM8<br>Bma-GTL-2', 'PIM1<br>Bma-PRK-3')) %>% select(name, rmsd) %>% distinct(),
+    aes(label = str_c(rmsd, ' Å')),
+    x = 5, y = 2.5, color = 'white', size = 3) +
+  # d
+  geom_text(
+    data = text_data %>% filter(name %in% c('RPGFR<br>Bma-EPAC-1', 'ARF6<br>Bma-ARF-6', 'KDM5A<br>Bma-RBR-2', 'TRPM8<br>Bma-GTL-2', 'PIM1<br>Bma-PRK-3')),
+    aes(y = y,
+        label = round(d_mean, digits = 2),
+        color = as.factor(new_cluster)),
+    x = 5, size = 3, hjust = 1
+  ) +
+  # R2
+  geom_text(
+    data = text_data %>% filter(name %in% c('RPGFR<br>Bma-EPAC-1', 'ARF6<br>Bma-ARF-6', 'KDM5A<br>Bma-RBR-2', 'TRPM8<br>Bma-GTL-2', 'PIM1<br>Bma-PRK-3')),
+    aes(y = y,
+        label = round(r.squared, digits = 2),
+        color = as.factor(new_cluster)),
+    x = 8, size = 3, hjust = 1) +
+  scale_x_continuous(limits = c(1.75, 10), breaks = seq(2, 10, 2)) +
+  scale_y_continuous(limits = c(2, 10.25)) +
+  scale_color_manual(values = c("#17BEBB", "#E9C46A", "#E76F51")) +
+  labs(x = 'CNN affinity (human)', y = 'CNN affinity (parasite)') +
+  facet_wrap(facets = vars(name), ncol = 6) +
+  coord_equal() +
+  theme_minimal() +
+  theme(
+    legend.position = 'bottom',
+    axis.ticks = element_line(size = 0.25, color = 'black'),
+    axis.text.x = element_text(color = 'black'),
+    axis.text.y = element_text(color = 'black'),
+    axis.line = element_line(color = 'black'),
+    strip.text = element_markdown(color = 'black'),
+    panel.background = element_rect(fill = 'black'),
+    panel.grid = element_line(color = 'black')
+  ) +
+  remove_legend() +
+  NULL
+# rep
+
+save_plot(here('Fig3', 'subplots', 'Fig3c.pdf'),
+          fig3c)
+
+structures <- image_read(here('Fig3', 'subplots', 'Fig3d.png'))
+fig3d <- ggdraw() + draw_image(structures)
+
+# save_plot(here('Fig6', 'subplots', 'Fig6b.pdf'),
+#           fig6b)
+
+top <- plot_grid(fig3a, fig3b, labels = c('a', 'b'),
+                 align = 'h', axis = 'tb',
+                 nrow = 1)
+
+bottom <- plot_grid(fig3c, fig3d, ncol = 1, labels = c('c', 'd'), vjust = c(1.5, 0),
+                    rel_heights = c(1, 0.5), align = 'v', axis = 'lr')
+
+final <- plot_grid(top, bottom, ncol = 1, 
+                   rel_heights = c(0.5, 1))
+
+save_plot(here('Fig3', 'Fig3.pdf'),
+          final, base_width = 7, base_height = 6)
+
+save_plot(here('Fig3', 'Fig3.png'),
+          final, base_width = 7, base_height = 6)
+
+
+
+
+
+
+
+
+
+# arf6 --------------------------------------------------------------------
+
+library(factoextra)
+
+bm_arf <- brugia_results %>% 
+  filter(target == 'A0A0K0JRT7') %>% 
+  mutate(species = 'brugia')
+
+hs_arf <- human_results %>% 
+  filter(target == 'P62330') %>% 
+  mutate(species = 'human')
+
+arf <- bind_rows(bm_arf, hs_arf) %>% 
+  ungroup() %>% 
+  mutate(new_cluster = cutree(hclust(dist(centroid_x, centroid_y))))
+
+arf_m <- arf %>%
+  select(molid, species, contains('centroid')) %>% 
+  mutate(docking = str_c(molid, species, sep = '_')) %>% 
+  select(-molid, -species) %>% 
+  column_to_rownames('docking')
+
+arf_dist <- arf_m %>% 
+  get_dist() 
+
+arf_hclust <- hclust(arf_dist, method = "ward.D2")
+plot(arf_hclust, cex = 0.6, hang = -1)
+
+fviz_nbclust(arf_m, kmeans, method = "wss")
+fviz_nbclust(arf_m, kmeans, method = "silhouette")
+
+gap_stat <- cluster::clusGap(arf_m, FUN = kmeans, nstart = 25,
+                    K.max = 20, B = 50)
+fviz_gap_stat(gap_stat)
+
+arf_m %>% 
+  kmeans(centers = 10, nstart = 25) %>% 
+  fviz_cluster(data = arf_m, geom = 'point')
+
+arf_k <- arf_m %>% 
+  kmeans(centers = 10, nstart = 25) 
+
+arf_m_c <- arf_m %>% 
+  mutate(cluster = arf_k$cluster) %>% 
+  rownames_to_column('docking')
+
+(arf_coord_plot <- arf_m_c %>%
+    separate(docking, into = c('molid', 'species'), sep = '_') %>% 
+    group_by(molid) %>% 
+    # only keep the compounds that are in the same site cluster
+    filter(n_distinct(cluster) == 1,
+           cluster == 1) %>%
+    ggplot(aes(centroid_x, centroid_y, color = as.factor(cluster))) +
+    geom_line(aes(group = molid)) +
+    geom_point(aes(size = centroid_z, shape = species),
+               alpha = 0.75) +
+    ggrepel::geom_text_repel(aes(label = molid)) +
+    # geom_vline(xintercept = -20, size = 0.5) +
+    # scale_x_continuous(limits = c(-20, 20), expand = c(0, 0), breaks = c(-10, 0, 10)) +
+    labs(title = 'ARF6 binding profile') +
+    # facet_wrap(facets = vars(species)) +
+    theme_minimal() +
+    theme(
+      axis.line = element_line(size = 0.25),
+      axis.ticks = element_line(size = 0.25)
+    ) +
+    NULL)
+
+arf %>% 
+  # filter(site_cluster != -1) %>%
+  ggplot(aes(centroid_x, centroid_y, size = centroid_z, color = as.factor(new_cluster))) +
+  geom_point() +
+  geom_vline(xintercept = -20, size = 0.5) +
+  scale_x_continuous(limits = c(-20, 20), expand = c(0, 0), breaks = c(-10, 0, 10)) +
+  labs(title = 'ARF6 binding profile') +
+  facet_wrap(facets = vars(species)) +
+  theme_minimal() +
+  theme(
+    axis.line = element_line(size = 0.25),
+    axis.ticks = element_line(size = 0.25)
+  ) +
+  NULL

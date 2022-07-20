@@ -8,7 +8,7 @@ primary_hits <- read_csv(here("Fig2/tables/Table1.csv")) %>%
 dose_response <- read_rds(here('Fig2/data/ec50.rds')) %>%
   mutate(treatment = str_remove(treatment, " hydrochloride| maleate| citrate"))
 
-cel_hits <- read_rds(here('Fig6/data/cel_hits.rds')) %>%
+cel_hits <- read_rds(here('Fig7/data/cel_hits.rds')) %>%
   mutate(treatment = str_remove(treatment, " hydrochloride| maleate| citrate")) %>% 
   rename(cel = conc)
 
@@ -36,7 +36,7 @@ final_table <- left_join(primary_hits, dose_response) %>%
   left_join(fecundity_hits) %>%
   left_join(metabolism_hits) %>% 
   left_join(cel_hits) %>%
-  select(-motility_hit_type) %>% 
+  select(-adult_motility_hit_type) %>%
   filter(treatment != "GNF 5837") %>% 
   rename(Number = number, Compound = treatment, 'Target class' = target_class,
          'Primary target' = primary_target, 'Primary action' = primary_action,
@@ -47,3 +47,7 @@ final_table <- left_join(primary_hits, dose_response) %>%
          'C. elegans hit (concentration)' = cel)
 
 write_csv(final_table, here('Fig2/tables/Table1_final.csv'))
+
+cor.test(final_table$`Z-total`, final_table$`EC50 (36 hr. motility)`)
+
+

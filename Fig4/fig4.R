@@ -5,65 +5,62 @@ library(magick)
 library(patchwork)
 library(here)
 
+conflict_prefer("filter", "dplyr")
 
-# Figure 4 ----------------------------------------------------------------
 
-a_motility <- read_rds(here('Fig4/subplots/motility.rds')) +
+# Figure 6 ----------------------------------------------------------------
+
+cutoff <- -1
+
+a_screen <- read_rds(here('Fig4/subplots/cel_screen_dev.rds')) +
+  labs(color = '') +
+  theme(legend.position = 'bottom',
+        axis.text.x = element_blank(),
+        axis.title.x = element_blank())
+
+b_followup <- read_rds(here('Fig4/subplots/cel_followup.rds'))  +
+  scale_fill_manual(values = c("#FAD510", "#CB2314", '#00AFB5'), guide = 'none') 
+
+drug_label <- tibble(x = c(3.5, 1.5),
+                     y = 1.7,
+                     label = c('ML 228', 'NAV 2729'),
+                     panel = c('ML 228', 'NAV 2729'))
+
+c_deconvolution <- read_rds(here('Fig4/subplots/deconvolution.rds')) +
+  geom_text(data = drug_label, aes(x = x, y = y, label = label)) +
+  labs(fill = '') +
   theme(
-    axis.title.x = element_blank(),
-    legend.position = 'empty'
-    )
-
-b_distinct_lines <- read_rds(here('Fig4/subplots/distinct_lines.rds'))
-
-c_fecundity <- read_rds(here('Fig4/subplots/proportions.rds')) +
-  theme(
-    legend.position = 'empty'
+    strip.text.x = element_blank(),
+    # axis.text.x = element_markdown(angle = 0, hjust = 0.5),
+    legend.position = 'right'
   )
 
-c_inset <- read_rds(here('Fig4/subplots/baseline.rds')) +
-  theme(
-    axis.text.y =  element_markdown(size = 7),
-    axis.title.y = element_markdown(size = 9),
-    # axis.ticks.y = element_blank(),
-    panel.grid.major = element_blank(),
-    panel.grid.minor = element_blank(),
-    panel.border = element_blank(),
-    panel.background = element_rect(fill = 'white', colour = 'black', size = 0.25),
-    plot.background = element_rect(fill = NA, colour = NA)
-    )
+hypoxia <- image_read_pdf(here('Fig4/subplots/hypoxia_reporter.pdf'))
 
-c <- c_fecundity + 
-  inset_element(c_inset,
-                left = 0.75, bottom = 0.5, right = 1, top = 1, align_to = 'full', ignore_tag = TRUE)
+d_hypoxia <- ggdraw() +
+  draw_image(hypoxia)
 
-d_lactate <- read_rds(here('Fig4/subplots/lactate.rds')) +
-  theme(
-    legend.position = 'bottom'
-  )
-
-e_viability <- image_read_pdf(here('Fig4/subplots/Fig4e.pdf'))
-e <- ggdraw() + draw_image(e_viability)
-
-legend <- get_legend(d_lactate)
+e_iron <- read_rds(here('Fig4/subplots/k_s_media.rds'))
 
 
 # cowplot -----------------------------------------------------------------
 
-left <- plot_grid(a_motility, c, d_lactate + theme(legend.position = 'empty'), legend,
-                 nrow = 4, align = 'v', axis = 'l', rel_heights = c(1, 0.5, 1, 0.1),
-                 labels = c('a', 'c', 'd'), label_size = 12)
+legend <- get_legend(a_screen)
 
-right <- plot_grid(b_distinct_lines, e,
-                   # scale = c(1, 1.05),
-                   nrow = 2, rel_heights = c(1, 0.5),
-                   # align = 'v', axis = 'lr',
-                   labels = c('b', 'e'), label_size = 12)
+(top <- plot_grid(a_screen, b_followup, axis = 't', align = 'h', rel_widths = c(0.85, 1),
+                 labels = c('a', 'b'), label_size = 12))
 
-fig4 <- plot_grid(left, right,
-                  ncol = 2, rel_widths = c(1, 0.5))
+bottom <- plot_grid(d_hypoxia, e_iron, axis = 't', align = 'h', rel_widths = c(0.65, 1),
+                    labels = c('d', 'e'), label_x = c(0, -0.03), label_size = 12)
+
+fig4 <- plot_grid(top, c_deconvolution, bottom, nrow = 3, labels = c('', 'c', ''),
+                  rel_heights = c(1.15, 0.35, 0.5), label_y = 1.15, label_size = 12)
 
 save_plot(here('Fig4/Fig4.pdf'),
-          fig4, base_width = 8.66, base_height = 11)
+          fig4, base_width = 8, base_height = 8)
+
 save_plot(here('Fig4/Fig4.png'),
-          fig4, base_width = 8.66, base_height = 11)
+          fig4, base_width = 8, base_height = 8)
+
+
+
