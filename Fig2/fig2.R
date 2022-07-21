@@ -137,10 +137,10 @@ save_plot(here('Fig2/Fig2.png'),
 
 # Supplementary Figure 2 --------------------------------------------------
 
-sf_a <- read_rds(here('Fig2/supplementary/SupplementaryFig2a.rds'))
-sf_b <- read_rds(here('Fig2/supplementary/SupplementaryFig2b.rds'))
+sf_a <- read_rds(here('Fig2/supplementary/SupplementaryFig3a.rds'))
+sf_b <- read_rds(here('Fig2/supplementary/SupplementaryFig3b.rds'))
 
 sf2 <- plot_grid(sf_a, sf_b, nrow = 2, labels = 'auto')
 
-save_plot(here('Fig2', 'supplementary', 'SupplementaryFig2.pdf'),
-          sf2, base_width = 6, base_height = 8)
+save_plot(here('Fig2', 'supplementary', 'SupplementaryFig3.pdf'),
+          sf2, base_width = 6.5, base_height = 8)

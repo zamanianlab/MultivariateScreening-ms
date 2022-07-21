@@ -234,8 +234,8 @@ repeated <- rescaled_data %>%
     NULL
 )
 
-write_rds(repeated_plot, here('Fig2', 'supplementary', 'SupplementaryFig2a.rds'))
-save_plot(here('Fig2', 'supplementary', 'SupplementaryFig2a.pdf'), 
+write_rds(repeated_plot, here('Fig2', 'supplementary', 'SupplementaryFig3a.rds'))
+save_plot(here('Fig2', 'supplementary', 'SupplementaryFig3a.pdf'), 
           repeated_plot, base_width = 8, base_height = 4)
 
 repeated_summary <- repeated %>%
@@ -473,8 +473,8 @@ area_between_curves <- comp_predict %>%
     ) +
     NULL)
 
-write_rds(comp_plot, here('Fig2', 'supplementary', 'SupplementaryFig2b.rds'))
-save_plot(here('Fig2/supplementary/SupplementaryFig2b.pdf'), comp_plot, base_width = 8, base_height = 6)
+write_rds(comp_plot, here('Fig2', 'supplementary', 'SupplementaryFig3b.rds'))
+save_plot(here('Fig2/supplementary/SupplementaryFig3b.pdf'), comp_plot, base_width = 8, base_height = 6)
 
 
 # export data -------------------------------------------------------------
