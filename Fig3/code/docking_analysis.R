@@ -230,7 +230,7 @@ rie(collect_predictions(last_result), truth, estimate = .pred_TRUE, alpha = 100)
 
 last_wflw <- extract_workflow(last_result)
 
-write_rds(last_wflw, here('Fig3', 'data', 'final_rf_wfow.rds'))
+# write_rds(last_wflw, here('Fig3', 'data', 'final_rf_wfow.rds'))
 
 
 # brugia analysis ---------------------------------------------------------
@@ -239,7 +239,7 @@ rm(boost_results, data_split, docking_analysis, juice, model_data, prep, results
 
 library(biomaRt)
 
-brugia_results <- read_pickle_file(here('Fig3', 'data', "gnina_scores_tocris_brugiaAF2_sitecons_eps1.5_minsamp0.5SQRTN_null_cid114.pkl")) %>% 
+brugia_results <- read_pickle_file(here('Fig3', 'data', "gnina_scores_tocris_brugiaAF2_sitecons_eps1.5_minsamp0.5SQRTN_null_cid114_complete.pkl")) %>% 
   rename(nw_target_class = target_class,
          nw_target_class_id = cid) %>%
   # center and scale
@@ -272,7 +272,7 @@ mart <- useMart("parasite_mart", dataset = "wbps_gene", host = "https://parasite
 
 # biomart parameters
 filters <- c("uniprot_sptrembl", 'species_id_1010')
-value <- list(brugia_results$target, 'brmalaprjna10729')
+value <- list(unique(brugia_results$target), 'brmalaprjna10729')
 attributes <- c("wbps_peptide_id", 
                 'uniprot_sptrembl',
                 "hsapiens_homolog_ensembl_peptide", 
@@ -288,12 +288,14 @@ orthologs <- getBM(mart = mart,
                    filters = filters,
                    value = value,
                    attributes = attributes) %>%
-  clean_names() %>% 
+  # clean_names() %>% 
   rename(brugia_wbps = 1, brugia_peptide = 2, human_peptide = 3, perc_id = 4) %>% 
+  drop_na() %>% 
   left_join(human_liftover) %>% 
+  distinct() %>% 
   group_by(brugia_wbps, brugia_peptide) %>% 
   arrange(-perc_id) %>% 
-  slice_head(n = 1)
+  slice_head(n = 1) 
 
 detach("package:biomaRt")
 
@@ -350,7 +352,7 @@ thresh <- tibble(library_frac = seq(.01, 1, .01),
 (fig3a <- thresh %>% 
     ggplot(aes(library_frac, perc_of_primary)) +
     geom_line(aes(color = primary_hit, linetype = primary_hit)) +
-    annotate('point', x = 0.5, y = 0.6, color = 'red', size = 2) +
+    annotate('point', x = 0.5, y = 0.542857143, color = 'red', size = 2) +
     labs(x = 'Fraction of compound library', y = 'Percent recovery', 
          color = 'Hit against<br>*B. malayi*<br>microfilariae', linetype = 'Hit against<br>*B. malayi*<br>microfilariae',
          # title = 'What if we had used a virtual screen to filter<br>compounds prior to a primary screen?'
@@ -472,32 +474,6 @@ rs <- delta_df %>%
   )) %>% 
   pivot_wider(names_from = term, values_from = estimate) %>% 
   left_join(targets)
-
-# quants <- delta_df %>%
-#   group_by(brugia_peptide) %>%
-#   summarise(target_mean = mean(d)) %>%
-#   ungroup() %>%
-#   summarise(quant = quantile(target_mean))
-# 
-# (d_dist <- delta_df %>%
-#     group_by(brugia_peptide, site_cluster_brugia) %>%
-#     summarise(target_mean = mean(d)) %>% 
-#     ggplot(aes(x = target_mean)) +
-#     geom_histogram(aes(y = ..density..)) +
-#     geom_vline(
-#       data = quants,
-#       aes(xintercept = quant),
-#       color = 'indianred', linetype = 'dashed'
-#     ) +
-#     scale_y_continuous(expand = c(0, 0)) +
-#     labs(x = 'M<sub>d</sub>', y = 'Density') +
-#     theme_minimal() +
-#     theme(
-#       axis.line = element_line(size = 0.25),
-#       axis.ticks = element_line(size = 0.25),
-#       axis.title.x = element_markdown()
-#     ) +
-#     NULL)
 
 plot_data <- delta_df %>% 
   select(-contains('data')) %>% 
@@ -722,93 +698,3 @@ save_plot(here('Fig3', 'Fig3.pdf'),
 save_plot(here('Fig3', 'Fig3.png'),
           final, base_width = 7, base_height = 6)
 
-
-
-
-
-
-
-
-
-# arf6 --------------------------------------------------------------------
-
-library(factoextra)
-
-bm_arf <- brugia_results %>% 
-  filter(target == 'A0A0K0JRT7') %>% 
-  mutate(species = 'brugia')
-
-hs_arf <- human_results %>% 
-  filter(target == 'P62330') %>% 
-  mutate(species = 'human')
-
-arf <- bind_rows(bm_arf, hs_arf) %>% 
-  ungroup() %>% 
-  mutate(new_cluster = cutree(hclust(dist(centroid_x, centroid_y))))
-
-arf_m <- arf %>%
-  select(molid, species, contains('centroid')) %>% 
-  mutate(docking = str_c(molid, species, sep = '_')) %>% 
-  select(-molid, -species) %>% 
-  column_to_rownames('docking')
-
-arf_dist <- arf_m %>% 
-  get_dist() 
-
-arf_hclust <- hclust(arf_dist, method = "ward.D2")
-plot(arf_hclust, cex = 0.6, hang = -1)
-
-fviz_nbclust(arf_m, kmeans, method = "wss")
-fviz_nbclust(arf_m, kmeans, method = "silhouette")
-
-gap_stat <- cluster::clusGap(arf_m, FUN = kmeans, nstart = 25,
-                    K.max = 20, B = 50)
-fviz_gap_stat(gap_stat)
-
-arf_m %>% 
-  kmeans(centers = 10, nstart = 25) %>% 
-  fviz_cluster(data = arf_m, geom = 'point')
-
-arf_k <- arf_m %>% 
-  kmeans(centers = 10, nstart = 25) 
-
-arf_m_c <- arf_m %>% 
-  mutate(cluster = arf_k$cluster) %>% 
-  rownames_to_column('docking')
-
-(arf_coord_plot <- arf_m_c %>%
-    separate(docking, into = c('molid', 'species'), sep = '_') %>% 
-    group_by(molid) %>% 
-    # only keep the compounds that are in the same site cluster
-    filter(n_distinct(cluster) == 1,
-           cluster == 1) %>%
-    ggplot(aes(centroid_x, centroid_y, color = as.factor(cluster))) +
-    geom_line(aes(group = molid)) +
-    geom_point(aes(size = centroid_z, shape = species),
-               alpha = 0.75) +
-    ggrepel::geom_text_repel(aes(label = molid)) +
-    # geom_vline(xintercept = -20, size = 0.5) +
-    # scale_x_continuous(limits = c(-20, 20), expand = c(0, 0), breaks = c(-10, 0, 10)) +
-    labs(title = 'ARF6 binding profile') +
-    # facet_wrap(facets = vars(species)) +
-    theme_minimal() +
-    theme(
-      axis.line = element_line(size = 0.25),
-      axis.ticks = element_line(size = 0.25)
-    ) +
-    NULL)
-
-arf %>% 
-  # filter(site_cluster != -1) %>%
-  ggplot(aes(centroid_x, centroid_y, size = centroid_z, color = as.factor(new_cluster))) +
-  geom_point() +
-  geom_vline(xintercept = -20, size = 0.5) +
-  scale_x_continuous(limits = c(-20, 20), expand = c(0, 0), breaks = c(-10, 0, 10)) +
-  labs(title = 'ARF6 binding profile') +
-  facet_wrap(facets = vars(species)) +
-  theme_minimal() +
-  theme(
-    axis.line = element_line(size = 0.25),
-    axis.ticks = element_line(size = 0.25)
-  ) +
-  NULL
