@@ -335,7 +335,7 @@ topone <- brugia_augment %>%
 topone %>%
   filter(primary_hit == TRUE) %>% 
   select(compound_name, molid, target, cnn_affinity, cnn_score, .pred_TRUE) %>% 
-  write_csv(here('Fig3', 'supplementary', 'SupplementaryTable3.csv'))
+  write_csv(here('Fig3', 'supplementary', 'SupplementaryTable2.csv'))
 
 thresh <- tibble(library_frac = seq(.01, 1, .01),
                  data = list(topone %>% ungroup())) %>% 
