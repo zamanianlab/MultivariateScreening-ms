@@ -306,8 +306,8 @@ brugia_augment <- augment(last_wflw, brugia_results %>%
                                    cnn_vs = CNN_VS) %>% 
                             replace_na(list(site_consensus = max(.$site_consensus, na.rm = TRUE))))
 
-smiles <- read_csv(here('Fig3', 'metadata', 'SupplementaryTable2.csv'))
-primary_hits <- read_csv(here('Fig2', 'tables', 'Table1.csv'))
+smiles <- read_csv(here('Fig3', 'metadata', 'SupplementaryTable3.csv'))
+primary_hits <- read_csv(here('Fig2', 'tables', 'SupplementaryTable2.csv'))
 
 brugia_augment %>% 
   select(-compound_name) %>% 
@@ -376,6 +376,44 @@ thresh <- tibble(library_frac = seq(.01, 1, .01),
 
 save_plot(here('Fig3', 'subplots', 'Fig3a.pdf'),
           fig3a)
+
+
+# corr --------------------------------------------------------------------
+
+rescaled <- read_rds(here('Fig2', 'data', 'rescaled_data.rds')) %>% 
+  mutate(ave = (motility + viability) / 2)
+
+plate_summary <- rescaled %>%
+  group_by(assay_date, plate) %>%
+  summarise(
+    mean_motility = mean(motility), sd_motility = sd(motility),
+    mean_viability = mean(viability), sd_viability = sd(viability)
+  )
+
+z <- rescaled %>%
+  select(assay_date:conc, type, motility, viability) %>%
+  left_join(., plate_summary) %>%
+  mutate(
+    z_motility = (motility - mean_motility) / sd_motility,
+    z_viability = (viability - mean_viability) / sd_viability,
+    z_total = z_motility + z_viability
+  )
+
+(temp <- topone %>% 
+   left_join(select(z, treatment, z_total), by = c('compound_name' = 'treatment')) %>% 
+   ggplot() +
+   geom_point(aes(x = .pred_TRUE, y = z_total, color = primary_hit),
+              alpha = 0.5) +
+   # geom_rug(aes(x = order, y = .pred_TRUE, color = primary_hit),
+   #          alpha = 0.5) +
+   labs(x = 'Virtual binding score', y = 'Total Z-score\n(Motility + Viability)', color = 'Hit in primary screen', size = 'Hit in primary screen') +
+   scale_color_manual(values = c('indianred', 'steelblue')) +
+   theme_half_open() +
+   NULL)
+
+save_plot(here('Fig3', 'supplementary', 'SupplementaryFig4.pdf'),
+          temp)
+
 
 nested_brugia <- brugia_augment %>% 
   group_by(target) %>% 

@@ -359,7 +359,7 @@ save_plot(here('Fig2/subplots/Fig2g.pdf'), z_plot,
 
 # 100 uM screen -----------------------------------------------------------
 
-hundred_data <- readRDS("data/motility_data.rds") %>%
+hundred_data <- readRDS(here('Fig2', 'data', 'motility_data.rds')) %>%
   mutate(assay_date = str_extract(plate, "20[0-9]{6}"), .before = plate) %>%
   mutate(
     norm_flow = optical_flow / log2(worm_area), .after = worm_area,
@@ -410,7 +410,7 @@ save_plot(here('Fig2/subplots/Fig2a_inset.pdf'), hundred_plot,
 
 # Hits table --------------------------------------------------------------
 
-compound_info <- read_csv("metadata/compound_information_mini.csv") %>%
+compound_info <- read_csv(here('Fig2', "metadata", 'compound_information_mini.csv')) %>%
   clean_names() %>%
   mutate(plate_number = str_c("p", str_pad(plate_number, 2, "left", "0"))) %>%
   drop_na(cat_no)
@@ -423,7 +423,7 @@ hits_table <- hits %>%
   left_join(., compound_info, by = c("treatment" = "compound_name", "plate" = "plate_number", "well" = "plate_location")) %>%
   select(number, treatment, target_class, primary_target, primary_action, contains("z"), hit_type)
 
-write_csv(hits_table, "tables/Table1.csv")
+write_csv(hits_table, here('Fig2', "tables/SupplementaryTable2.csv"))
 
 
 

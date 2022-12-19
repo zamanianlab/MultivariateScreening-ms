@@ -279,6 +279,7 @@ d_pal <- d_pal[-c(4, 5, 6, 7, 8)]
       low = "#ffbf46", high = "grey20", mid = "#575761",
       na.value = "black"
     ) +
+    # labs(fill = "Scaled distance", color  = "Scaled distance") +
     coord_fixed() +
     theme_void() +
     theme(
@@ -287,7 +288,7 @@ d_pal <- d_pal[-c(4, 5, 6, 7, 8)]
       axis.ticks = element_line(size = 0.25, linetype = "solid"),
       axis.ticks.length = unit(3, "pt"),
       plot.margin = unit(c(7, 0, 2, 7), "pt"),
-      legend.position = "empty"
+      legend.position = 'empty'
     ) +
     NULL)
 
@@ -327,12 +328,13 @@ d_pal <- d_pal[-c(4, 5, 6, 7, 8)]
     ) +
     coord_fixed() +
     theme_void() +
+    labs(fill = "Scaled inhibition", color  = "Scaled inhibition") +
     theme(
       axis.text.y = element_markdown(size = 8, hjust = 1, margin = margin(r = 3)),
       axis.ticks.y = element_line(size = 0.25, linetype = "solid"),
       axis.ticks.length = unit(3, "pt"),
       plot.margin = unit(c(0, 7, 7, 7), "pt"),
-      legend.position = "empty"
+      legend.position = "right"
     ) +
     NULL)
 

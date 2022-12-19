@@ -6,6 +6,8 @@ library(wesanderson)
 library(ZamanianLabThemes)
 library(here)
 
+conflict_prefer("filter", "dplyr")
+
 # frame correlation -------------------------------------------------------
 
 # snake order of the IX recording
@@ -46,7 +48,7 @@ frame_cor <- frame_data %>%
 
 label <- tibble(
   n_frames = c("40", "20", "10", "5"),
-  x = 0,
+  x = -2,
   y = c(104514356, 49801758, 23594987, 10426864)
 )
 
@@ -59,7 +61,9 @@ label <- tibble(
     ) %>%
     left_join(record_order) %>%
     ggplot() +
-    geom_line(aes(x = well_number, y = log10(optical_flow), color = n_frames)) +
+    # geom_line(aes(x = well_number, y = log10(optical_flow), color = n_frames)) +
+    geom_point(aes(x = well_number, y = log10(optical_flow), color = n_frames, fill = n_frames),
+               size = 1) +
     geom_richtext(
       data = label,
       aes(label = n_frames, x = x, y = log10(y), color = n_frames),
@@ -67,7 +71,8 @@ label <- tibble(
       hjust = 0.7, show.legend = FALSE
     ) +
     scale_color_manual(values = wes_palette("Moonrise2"), guide = "none") +
-    scale_x_continuous(limits = c(0, 96), breaks = seq(1, 96, 8)) +
+    scale_fill_manual(values = wes_palette("Moonrise2"), guide = "none") +
+    scale_x_continuous(limits = c(-2, 96), breaks = seq(1, 96, 8)) +
     labs(x = "Well number", y = "log<sub>10</sub>Motility", color = "Number of frames") +
     theme_nw2() +
     theme(

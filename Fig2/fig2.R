@@ -91,6 +91,7 @@ abc_layout <- c(
   area(t = 1, l = 1, b = 8, r = 12),   # a
   area(t = 1, l = 13, b = 3, r = 20),  # b
   area(t = 4, l = 13, b = 8, r = 20)   # c
+  
 )
 
 abc_patch <- 
@@ -101,11 +102,13 @@ abc_patch <-
 
 de_layout <- c(
   area(t = 1, l = 1, b = 4, r = 12),   # d
-  area(t = 1, l = 13, b = 4, r = 20)   # e
+  area(t = 1, l = 13, b = 4, r = 20),  # e
+  area(t = 5, l = 1, b = 5.1, r = 20)
 )
 
 de_patch <-
-    d + e_z_factor +
+    d + e_z_factor + get_legend(a_hundred_drift + theme(legend.position = 'bottom',
+                                                        legend.title = element_blank())) +
     plot_layout(design = de_layout)
 
 # abc_patch / de_patch / f
@@ -123,7 +126,7 @@ ghi_patch <-
   plot_layout(design = ghi_layout)
 
 fig2 <- abc_patch / de_patch / f / ghi_patch +
-  plot_layout(heights = c(0.6, 0.6, 1, 1)) +
+  plot_layout(heights = c(0.6, 0.7, 1, 1)) +
   plot_annotation(tag_levels = 'a') &
   theme(
     plot.tag = element_text(size = 12, face = 'bold')
